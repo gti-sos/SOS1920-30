@@ -49,7 +49,6 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/loadInitialData",(req,res) => {
 });
 
 //POST CONTACTS
-
 app.post(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 	var newindice_de_masa_corporal = req.body;
 	if((newindice_de_masa_corporal == "") || (newindice_de_masa_corporal.place == null)){
