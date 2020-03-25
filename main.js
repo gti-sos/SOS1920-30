@@ -13,7 +13,7 @@ app.use("/",express.static("./public"));
 app.get("/cool",(request,response) => {
 	response.send("<html>"+cool()+"</html>");
 });
- //Parte Raúl Ojeda
+
 var indice_de_masa_corporal = [
 	{
 		place: "Alemania",
@@ -129,7 +129,7 @@ app.put(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
-//Parte Fran Zanjara
+//Fran zanjara
 var sugarconsume = [
 	{
 		place: "Europe",
