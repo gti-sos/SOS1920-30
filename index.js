@@ -40,6 +40,8 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 	res.send(JSON.stringify(indice_de_masa_corporal, null, 2));
 	console.log("Data sent:"+JSON.stringify(indice_de_masa_corporal,null,2));
 });
+//Loadinitialdata
+
 
 //POST CONTACTS
 
