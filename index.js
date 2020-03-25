@@ -40,8 +40,13 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 	res.send(JSON.stringify(indice_de_masa_corporal, null, 2));
 	console.log("Data sent:"+JSON.stringify(indice_de_masa_corporal,null,2));
 });
-//Loadinitialdata
 
+//Loadinitialdata
+const predeterminado = indice_de_masa_corporal;
+app.get(BASE_API_URL+"/indice_de_masa_corporal/loadInitialData",(req,res) => {
+	indice_de_masa_corporal = predeterminado;
+	res.sendStatus(201, "CREATED");
+});
 
 //POST CONTACTS
 
