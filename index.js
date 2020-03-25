@@ -160,9 +160,6 @@ var sugarconsume = [
 
 const base = sugarconsume;
 
-const BASE_API_URL = "/api/v1";
-
-
 //DELETE CONTACTS
 	app.delete(BASE_API_URL+"/sugarconsume",(req,res) => {
 		if(sugarconsume.length == 0){
