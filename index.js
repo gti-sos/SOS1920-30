@@ -14,7 +14,23 @@ app.get("/cool",(request,response) => {
 	response.send("<html>"+cool()+"</html>");
 });
 
-
+var indice_de_masa_corporal = [
+	{
+		place: "Alemania",
+		indice_de_masa_corporal: 25.32
+		
+	},
+	{
+		place: "Polonia",
+		indice_de_masa_corporal: 23.21
+		
+	},
+	{
+		place: "Hungría",
+		indice_de_masa_corporal: 24.45
+		
+	}
+];
 const predeterminado = [
 	{
 		place: "Alemania",
