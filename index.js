@@ -31,7 +31,23 @@ var indice_de_masa_corporal = [
 		
 	}
 ];
-
+const predeterminado = [
+	{
+		place: "Alemania",
+		indice_de_masa_corporal: 25.32
+		
+	},
+	{
+		place: "Polonia",
+		indice_de_masa_corporal: 23.21
+		
+	},
+	{
+		place: "Hungría",
+		indice_de_masa_corporal: 24.45
+		
+	}
+];
 const BASE_API_URL = "/api/v1";
 
 //GET CONTACTS
@@ -42,7 +58,7 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 });
 
 //Loadinitialdata
-const predeterminado = indice_de_masa_corporal;
+
 app.get(BASE_API_URL+"/indice_de_masa_corporal/loadInitialData",(req,res) => {
 	indice_de_masa_corporal = predeterminado;
 	res.sendStatus(201, "CREATED");
