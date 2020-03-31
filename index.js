@@ -1,7 +1,7 @@
 const cool = require("cool-ascii-faces");
 const express = require("express");
 const bodyParser = require("body-parser");
-const parametros = 3;
+const parametros = 2;
 var app = express();
 
 app.use(bodyParser.json());
