@@ -13,19 +13,8 @@ app.use("/",express.static("./public"));
 app.get("/cool",(request,response) => {
 	response.send("<html>"+cool()+"</html>");
 });
-const BASE_API_URL = "/api/v1";
 
-//GET CONTACTS
-
-app.get(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
-	res.send(JSON.stringify(indice_de_masa_corporal, null, 2));
-	console.log("Data sent:"+JSON.stringify(indice_de_masa_corporal,null,2));
-});
-
-//Loadinitialdata
-app.get('/loadInitialData',(req,res)=>{
-	//var init = require("./initaldata.json");
-	var indice_de_masa_corporal = [
+var indice_de_masa_corporal = [
 	{
 		place: "Alemania",
 		indice_de_masa_corporal: 25.32
@@ -41,10 +30,23 @@ app.get('/loadInitialData',(req,res)=>{
 		indice_de_masa_corporal: 24.45
 		
 	}
-	];
-	res.sendStatus(201,"DATA CREATED");
+];
+
+const BASE_API_URL = "/api/v1";
+
+//GET CONTACTS
+
+app.get(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
+	res.send(JSON.stringify(indice_de_masa_corporal, null, 2));
+	console.log("Data sent:"+JSON.stringify(indice_de_masa_corporal,null,2));
 });
 
+//Loadinitialdata
+const predeterminado = indice_de_masa_corporal;
+app.get(BASE_API_URL+"/indice_de_masa_corporal/loadInitialData",(req,res) => {
+	indice_de_masa_corporal = predeterminado;
+	res.sendStatus(201, "CREATED");
+});
 
 //POST CONTACTS
 app.post(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
