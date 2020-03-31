@@ -1,7 +1,7 @@
 const cool = require("cool-ascii-faces");
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const parametros = 3;
 var app = express();
 
 app.use(bodyParser.json());
@@ -107,15 +107,33 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 //PUT CONTACT/XXX
 app.put(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 	var place = req.params.place;
-	if(!place){
-		res.sendStatus(404);
+	var filteredindice_de_masa_corporal = indice_de_masa_corporal.filter((c) =>{
+		return (c.place != place);
+	});
+	if(filteredindice_de_masa_corporal.length==0){
+		res.sendStatus(404,"place not found");
 	}
 	else{
 		if(place == ""){
 			res.sendStatus(400, "PLACE DOES NOT EXIST")
 		}else{
-			place == req.body.place;
-			res.sendStatus(200, "PLACE PUT OK")
+			var body= req.body;
+			var len = 0
+			for (x in body) {
+				len+=1;
+  			} 
+			if (len!=parametros){
+				res.sendStatus(400,"BAD REQUEST");
+			}else{
+		
+				var newindice_de_masa_corporal=indice_de_masa_corporal.map((c)=>{
+				if(c.place==place){
+					c.place=body["place"];
+					c.indice_de_masa_corporal=body["indice_de_masa_corporal"];
+				}
+			});
+			res.sendStatus(200,"OK");
+		}
 		}
 	}
 	
