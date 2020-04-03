@@ -12,9 +12,9 @@ Our sources of information are aimed at analyzing the relationship between sugar
 https://sos1920-30.herokuapp.com
 # APIs
     - https://sos1920-30.herokuapp.com/api/v1/indice_de_masa_corporal (developed by [Raul Ojeda Robles](https://github.com/rauojerob))
+    
     - https://documenter.getpostman.com/view/10694026/SzYT5242 (heroku)
--https://documenter.getpostman.com/view/10694026/SzYT4gsk
-(goormide)
+     -https://documenter.getpostman.com/view/10694026/SzYT4gsk(goormide)
 	(developed by [Fran Zรกjara Gomez](https://github.com/FranZajara))
 # POSTMAN
 	- https://documenter.getpostman.com/view/10696117/SzYT4M6D
