@@ -3,6 +3,7 @@ Este es el repositorio de SOS principal de los alumnos Raúl Ojeda y Fran Zajara
 ## SOS1920-30
 # Team
    **Fran Zajara Gomez** (https://github.com/FranZajara)
+   
    **Raul Ojeda Robles**(https://github.com/rauojerob)
 # Project description  
 Our sources of information are aimed at analyzing the relationship between sugar consumption and the quantity of obese people
