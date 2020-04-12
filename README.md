@@ -18,7 +18,6 @@ https://sos1920-30.herokuapp.com
      -https://documenter.getpostman.com/view/10694026/SzYT4gsk(goormide)
 	(developed by [Fran Zรกjara Gomez](https://github.com/FranZajara))
 # POSTMAN
-	- https://documenter.getpostman.com/view/10696117/SzYT4M6D
-	(en goormide) y https://documenter.getpostman.com/view/10696117/SzYT4MUK (en heroku)(developed by [Raul Ojeda Robles](https://github.com/rauojerob)) /al hacer los cambios de db creare bn el postman.
+	- https://documenter.getpostman.com/view/10696117/SzYT4M6D(en goormide) yhttps://documenter.getpostman.com/view/10696117/SzYT4MUK (en heroku)(developed by [Raul Ojeda Robles](https://github.com/rauojerob)) 
 <<<<<<< HEAD
 =======
