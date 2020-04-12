@@ -16,19 +16,41 @@ module.exports = function (app) {
 var initialimc = [
 	{
 		place: "Alemania",
-		indice_de_masa_corporal: 25.32
+		indice_de_masa_corporal: 25.32,
+		year: 2019
 		
 	},
 	{
 		place: "Polonia",
-		indice_de_masa_corporal: 23.21
+		indice_de_masa_corporal: 23.21,
+		year: 2019
 		
 	},
 	{
 		place: "Hungría",
-		indice_de_masa_corporal: 24.45
+		indice_de_masa_corporal: 24.45,
+		year: 2019
+		
+	},
+	{
+		place: "Alemania",
+		indice_de_masa_corporal: 27.03,
+		year: 2020
+		
+	},
+	{
+		place: "Polonia",
+		indice_de_masa_corporal: 25.00,
+		year: 2020
+		
+	},
+	{
+		place: "Hungría",
+		indice_de_masa_corporal: 2,
+		year: 2020
 		
 	}
+	
 ];
 
 
@@ -86,20 +108,20 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 		res.sendStatus(404, "CONTACT NOT FOUND");
 	}
 		
-	
+});	
 	
 //DELETE CONTACTS
 	app.delete(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 		if(indice_de_masa_corporal.length == 0){
 			res.sendStatus(404, "masa corporal NOT FOUND");
 		}else{
-			indice_de_masa_corporal = "";
+			db.delete();
 			res.sendStatus(200,"OK")
 		}
 	});
 	
 	
-});
+
 //PUT CONTACT/XXX
 app.put(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 	var place = req.params.place;
