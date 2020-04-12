@@ -112,10 +112,10 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 	
 //DELETE CONTACTS
 	app.delete(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
-		if(indice_de_masa_corporal.length == 0){
+		if(db.length == 0){
 			res.sendStatus(404, "masa corporal NOT FOUND");
 		}else{
-			db.delete();
+			db.delete(indice_de_masa_corporal);
 			res.sendStatus(200,"OK")
 		}
 	});
