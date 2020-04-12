@@ -99,14 +99,26 @@ app.post(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 //GET CONTACT/XXX
 app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 	var place = req.params.place;
-	var filteredindice_de_masa_corporal = indice_de_masa_corporal.filter((c) =>{
-		return (c.place == place);
-	});
-	if(filteredindice_de_masa_corporal.length >= 1){
-		res.send(filteredindice_de_masa_corporal[0]);
-	}else{
-		res.sendStatus(404, "CONTACT NOT FOUND");
-	}
+	//var filteredindice_de_masa_corporal = indice_de_masa_corporal.filter((c) =>{
+		//return (c.place == place);
+	//});
+	//if(filteredindice_de_masa_corporal.length >= 1){
+		//res.send(filteredindice_de_masa_corporal[0]);
+	//}else{
+		//res.sendStatus(404, "CONTACT NOT FOUND");
+	//}
+	db.find({"place" :place},(error, indice_de_masa_corporal)=>{
+			if(indice_de_masa_corporal.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(indice_de_masa_corporal.map((i)=>{
+					delete i._id;
+					return(i);
+				}));
+				console.log("Recurso mostrado");
+			}
+		})
 		
 });	
 	
@@ -115,7 +127,7 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 		if(db.length == 0){
 			res.sendStatus(404, "masa corporal NOT FOUND");
 		}else{
-			db.delete(indice_de_masa_corporal);
+			db.remove({},{multi:true});
 			res.sendStatus(200,"OK")
 		}
 	});
@@ -123,37 +135,24 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 	
 
 //PUT CONTACT/XXX
-app.put(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
+app.put(BASE_API_URL+"/indice_de_masa_corporal/:place/:year",(req,res) => {
 	var place = req.params.place;
-	var filteredindice_de_masa_corporal = indice_de_masa_corporal.filter((c) =>{
-		return (c.place != place);
-	});
-	if(filteredindice_de_masa_corporal.length==0){
-		res.sendStatus(404,"place not found");
-	}
-	else{
-		if(place == ""){
-			res.sendStatus(400, "PLACE DOES NOT EXIST")
-		}else{
-			var body= req.body;
-			var len = 0
-			for (x in body) {
-				len+=1;
-  			} 
-			if (len!=parametros){
-				res.sendStatus(400,"BAD REQUEST");
-			}else{
-		
-				var newindice_de_masa_corporal=indice_de_masa_corporal.map((c)=>{
-				if(c.place==place){
-					c.place=body["place"];
-					c.indice_de_masa_corporal=body["indice_de_masa_corporal"];
+	var year = parseInt(req.params.year);
+	var updated = req.body;
+	db.find({"place":place, "year": year},(error,indice_de_masa_corporal)=>{
+		console.log(indice_de_masa_corporal);
+		if(indice_de_masa_corporal.length == 0){
+			console.log("Error 404, no se ha encontrado el recurso");
+			res.sendStatus(404);
+			}else if(!updated.place || !updated.indice_de_masa_corporal ||!updated.year || updated.place != place || updated.year != year){				
+				console.log("mal uso de put");
+				res.sendStatus(400);
+				}else{
+					db.update({"place":place,"year":year},{$set: updated});
+					console.log("recurso actualizado")
+					res.sendStatus(200);
 				}
-			});
-			res.sendStatus(200,"OK");
-		}
-		}
-	}
+	});
 	
 	
 });
@@ -161,17 +160,35 @@ app.put(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 
 app.delete(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 	var place = req.params.place;
-	var filteredindice_de_masa_corporal = indice_de_masa_corporal.filter((c) =>{
-		return (c.place != place);
-	});
-	if(filteredindice_de_masa_corporal.length < indice_de_masa_corporal.length){
-		indice_de_masa_corporal = filteredindice_de_masa_corporal;
-		res.sendStatus(200, "OK");
-		
-	}else{
-		res.sendStatus(404, "masa corporal PLACE NOT FOUND");
-	}
+		db.find({"place":place},(error, indice_de_masa_corporal)=>{
+			if(indice_de_masa_corporal.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				console.log("borrando recurso especificacio");
+                res.sendStatus(200);
+                db.remove({ "place":place });
+			}
+		})
 });
+	
+//DELETE CONTACT/XXX/YYYY
+		app.delete(BASE_API_URL+"/indice_de_masa_corporal/:place/:year", (req,res)=>{
+
+		var place = req.params.province;
+		var year = parseInt(req.params.year);
+
+		db.find({"place":place, "year":year},(error, indice_de_masa_corporal)=>{
+			 db.remove({ "place":place, "year":year });
+			if(indice_de_masa_corporal.length == 0){
+				console.log("borrando un solo recurso");
+                res.sendStatus(200);
+			}else{
+				console.log("Error 404, no se ha encontrado el recurso");
+				res.sendStatus(404);
+			}
+		})
+	});
 
 //POST CONTACT/XXX
 
