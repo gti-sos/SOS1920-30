@@ -123,7 +123,24 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 		})
 		
 });	
-	
+//GET CONTACT/XXX/YYYY
+	app.get(BASE_API_URL+"/indice_de_masa_corporal/:place/:year",(req,res) => {
+	var place = req.params.place;
+	var year = parseInt(req.params.year);
+	db.find({"place":place, "year": year},(error, indice_de_masa_corporal)=>{
+			if(indice_de_masa_corporal.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(indice_de_masa_corporal.map((i)=>{
+					delete i._id;
+					return(i);
+				}));
+				console.log("Recurso mostrado");
+			}
+		})
+		
+});	
 //DELETE CONTACTS
 	app.delete(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 		if(db.length == 0){
