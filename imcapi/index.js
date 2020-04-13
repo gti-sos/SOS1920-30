@@ -66,20 +66,30 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/loadInitialData",(req,res) => {
 
 
 //GET CONTACTS
-app.get(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
+app.get(BASE_API_URL+"/indice_de_masa_corporal", (req,res) =>{   //?limit=8&offset=0
+	var query = {};
+	let offset = 0;
+	let limit = Number.MAX_SAFE_INTEGER;
+        if (req.query.offset) {
+            offset = parseInt(req.query.offset);
+            delete req.query.offset;
+        }
 	
-	console.log("New Get .../indice_de_masa_corporal")
+        if (req.query.limit) {
+            limit = parseInt(req.query.limit);
+            delete req.query.limit;
+        }
 	
-	db.find({},(err,indice_de_masa_corporal) => {
-		indice_de_masa_corporal.forEach( (c) => {
-			delete c._id;
+		db.find({}).sort({place:1,year:-1}).skip(offset).limit(limit).exec((error, indice_de_masa_corporal) =>{
+			console.log("valor del offset: " +offset);
+			console.log("valor del limit: " +limit);
+			indice_de_masa_corporal.forEach((r)=>{
+				delete r._id
+			});
+			res.send(JSON.stringify(indice_de_masa_corporal,null,2));
+			console.log("mostrando recursos");
 		});
-		res.send(JSON.stringify(indice_de_masa_corporal, null, 2));
-		console.log("Data sent:"+JSON.stringify(indice_de_masa_corporal,null,2));
-	}); 
-});
-
-	
+	});
 //POST CONTACTS
 app.post(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 	var newindice_de_masa_corporal = req.body;
@@ -113,7 +123,24 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/:place",(req,res) => {
 		})
 		
 });	
-	
+//GET CONTACT/XXX/YYYY
+	app.get(BASE_API_URL+"/indice_de_masa_corporal/:place/:year",(req,res) => {
+	var place = req.params.place;
+	var year = parseInt(req.params.year);
+	db.find({"place":place, "year": year},(error, indice_de_masa_corporal)=>{
+			if(indice_de_masa_corporal.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(indice_de_masa_corporal.map((i)=>{
+					delete i._id;
+					return(i);
+				}));
+				console.log("Recurso mostrado");
+			}
+		})
+		
+});	
 //DELETE CONTACTS
 	app.delete(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 		if(db.length == 0){
@@ -198,4 +225,3 @@ app.put(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 	
 	console.log("OK");
 }	
-
