@@ -66,11 +66,11 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal/loadInitialData",(req,res) => {
 
 
 //GET CONTACTS
-app.get(BASE_API_URL+"/indice_de_masa_corporal", (req,res) =>{   //?limit=8&offset=0
-	var query = {};
+	app.get(BASE_API_URL+"/indice_de_masa_corporal", (req,res) =>{
+	
 	let offset = 0;
 	let limit = Number.MAX_SAFE_INTEGER;
-        if (req.query.offset) {
+       if (req.query.offset) {
             offset = parseInt(req.query.offset);
             delete req.query.offset;
         }
@@ -79,8 +79,34 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal", (req,res) =>{   //?limit=8&offs
             limit = parseInt(req.query.limit);
             delete req.query.limit;
         }
+		
+	let error_400 = false;
+			
+			for(query in req.query){
+				
+				if( (query != "place") && (query != "indice_de_masa_corporal") && (query != "year")){
+					error_400 = true;
+				}
+			}
+			if(error_400){
+				res.sendStatus(400, "ERROR IN DATA FIELDS.");
+			}
+			else{
+				
+				var search = {};
+				
+				if(req.query.place){
+					search["place"] = req.query.place;
+				} 
+				if(req.query.indice_de_masa_corporal){
+					search["indice_de_masa_corporal"] = parseInt(req.query.indice_de_masa_corporal);
+				}
+				if(req.query.year){
+					search["year"] = parseInt(req.query.year);
+				}
 	
-		db.find({}).sort({place:1,year:-1}).skip(offset).limit(limit).exec((error, indice_de_masa_corporal) =>{
+			
+		db.find(search).sort({place:1,year:-1}).skip(offset).limit(limit).exec((error, indice_de_masa_corporal) =>{
 			console.log("valor del offset: " +offset);
 			console.log("valor del limit: " +limit);
 			indice_de_masa_corporal.forEach((r)=>{
@@ -89,6 +115,7 @@ app.get(BASE_API_URL+"/indice_de_masa_corporal", (req,res) =>{   //?limit=8&offs
 			res.send(JSON.stringify(indice_de_masa_corporal,null,2));
 			console.log("mostrando recursos");
 		});
+}
 	});
 //POST CONTACTS
 app.post(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
