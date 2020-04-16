@@ -10,14 +10,22 @@ Our sources of information are aimed at analyzing the relationship between sugar
 # Repository 
 [gti-sos/SOS1920-30](https://github.com/gti-sos/SOS1920-30)
 # URL
-https://sos1920-30.herokuapp.com
+- https://sos1920-30.herokuapp.com
 # APIs
-    - https://sos1920-30.herokuapp.com/api/v1/indice_de_masa_corporal (developed by [Raul Ojeda Robles](https://github.com/rauojerob))
-    
-    - https://documenter.getpostman.com/view/10694026/SzYT5242 (heroku)
-     -https://documenter.getpostman.com/view/10694026/SzYT4gsk(goormide)
-	(developed by [Fran Zรกjara Gomez](https://github.com/FranZajara))
+- https://sos1920-30.herokuapp.com/api/v1/indice_de_masa_corporal	
+(developed by [Raul Ojeda Robles](https://github.com/rauojerob))
+------------------------------------------------------
+- https://sos1920-30.herokuapp.com/api/v1/sugarconsume
+(developed by [Fran Zájara Gomez] (https://github.com/FranZajara))
 # POSTMAN
-	- https://documenter.getpostman.com/view/10696117/SzYT4M6D(en goormide) y https://documenter.getpostman.com/view/10696117/SzYT4MUK (en heroku)(developed by [Raul Ojeda Robles](https://github.com/rauojerob)) 
+- https://documenter.getpostman.com/view/10696117/SzYT4M6D (en goormide) 
+  
+- https://documenter.getpostman.com/view/10696117/SzYT4MUK (en heroku)
+(developed by [Raul Ojeda Robles](https://github.com/rauojerob)) 
+
+------------------------------------------------------
+- https://documenter.getpostman.com/view/10694026/Szf3bAqd (heroku)
+- https://documenter.getpostman.com/view/10694026/SzYT4gsk (goormide)
+(developed by [Fran Zájara Gomez] (https://github.com/FranZajara))
 <<<<<<< HEAD
 =======
