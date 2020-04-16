@@ -267,7 +267,12 @@ app.put(BASE_API_URL+"/sugarconsume/:place/:year",(req,res) => {
 	
 });
 	
-
+	//PUT SUGARCONSUME/XXX
+app.put(BASE_API_URL+"/sugarconsume/:place",(req,res) => {
+	var place = req.params.place;
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+	
 	
 	//PUT SUGARCONSUME
 app.put(BASE_API_URL+"/sugarconsume",(req,res) => {
@@ -285,7 +290,7 @@ app.delete(BASE_API_URL+"/sugarconsume/:place",(req,res) => {
 			}else{
 				console.log("borrando recurso especificacio");
                 res.sendStatus(200);
-                db.remove({ "place":place });
+                db.remove({"place":place}, {multi:true});
 			}
 		})
 });
