@@ -1,0 +1,287 @@
+<script>
+
+	//IMPORTACIONES
+
+	import  {
+		onMount
+	}
+	from "svelte";
+	import {
+        pop
+    } from "svelte-spa-router";
+	
+	import Table from "sveltestrap/src/Table.svelte";
+	import Button from "sveltestrap/src/Button.svelte";
+	import Input from "sveltestrap/src/Input.svelte";
+	import Label from "sveltestrap/src/Label.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
+	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
+	
+	//VARIABLES PARA PAGINACIÓN Y FUNCIONES
+	
+	let sugarconsume = [];
+	let newsugarconsume = {
+		"place": "",
+		"sugarconsume": 0,
+		"year": ""	
+	};
+	let places = [];
+	let years = [];
+	let currentplace = "-";
+	let currentYear = "-";
+	let numberElementsPages = 10;
+	let offset = 0;
+	let currentPage = 1; 
+	let moreData = true; 
+	
+	
+	onMount(getsugarconsume);
+	onMount(getyears);
+
+	//FUNCIÓN PARA OBTENER LOS AÑOS QUE EXISTEN EN SUGARCONSUME
+	
+	async function getyears() {
+		const res = await fetch("/api/v1/sugarconsume");
+		if (res.ok) {
+			const json = await res.json();
+			places = json.map((d) => {
+					return d.place;
+			});
+			places = Array.from(new Set(places)); 
+			
+			years = json.map((d) => {
+					return d.year;
+			});
+
+			years = Array.from(new Set(years)); 
+			console.log("Existen " + places.length + "paises y " + years.length + "años.");
+		} else {
+			console.log("ERROR!");
+		}
+	}
+
+
+	//FUNCIÓN PARA EJECUTAR EL LOADINITIALDATA Y ASÍ CARGAR LA PÁGINA CON LOS RECURSOS INICIALES
+	
+	async function loading(){
+		deletesugarconsumeAll();
+		const res = await fetch("/api/v1/sugarconsume/loadInitialData");
+		getsugarconsume()
+	}
+
+	//FUNCIÓN PARA OBTENER LA LISTA DE RECURSOS PAGINADA
+
+	async function getsugarconsume() {
+		console.log("Fetching sugarconsume resources...");	
+		const res = await fetch("/api/v1/sugarconsume?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const next = await fetch("/api/v1/sugarconsume?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		if (res.ok && next.ok) {
+			console.log("Ok:");
+			const json = await res.json();
+			const jsonNext = await next.json();
+			sugarconsume = json;
+			
+			if (jsonNext.length == 0) {
+				moreData = false;
+			} else {
+				moreData = true;
+			}
+			console.log("Existen " + sugarconsume.length + " recursos.");
+		} else {
+			console.log("ERROR!");
+		}
+	}
+
+	
+	//FUNCIÓN PARA INSERTAR UN RECURSO
+
+
+	async function insertsugarconsume() {
+		console.log("Inserting sugarconsume resource...");
+		if (newsugarconsume.place == ""
+			|| newsugarconsume.place == null
+			|| newsugarconsume.year == "" 
+			|| newsugarconsume.year == null) {
+			
+			alert("No se ha rellenado algún hueco");
+		} else {
+			const json = JSON.stringify(newsugarconsume);
+			const res = await fetch("/api/v1/sugarconsume", {
+				method: "POST",
+				
+				headers: {
+					Accept: 'application/json',
+			'Content-Type': 'application/json',
+			body: json 
+				}
+			}).then(function(res) {
+				getsugarconsume();
+				getyears();
+			}); 
+			
+		}
+	}
+
+
+	//FUNCIÓN PARA BORRAR UN RECURSO CONCRETO
+
+
+	async function deletesugarconsume(place, year) {
+		console.log("Deleting sugarconsume resource...");
+		const res = await fetch("/api/v1/sugarconsume/" + place + "/" + year, {
+			method: "DELETE"
+		}).then(function (res) {
+			getsugarconsume();
+			getyears();
+		});
+		alert("Éxito");
+	}
+
+
+	//FUNCIÓN PARA BORRAR TODOS LOS RECURSOS DE SUGARCONSUME
+
+
+	async function deletesugarconsumeAll() {
+		console.log("Deleting sugarconsume...");
+		const res = await fetch("/api/v1/sugarconsume/", {
+			method: "DELETE"
+		}).then(function (res) {
+			getsugarconsume();
+			getyears();
+		});
+		alert("Éxito");
+	}
+
+
+	//FUNCIÓN PARA REALIZAR LAS BÚSQUEDAS
+
+
+	async function search(place, year) {
+		console.log("Buscando país: " + place + " en año: " + year);
+		var url = "/api/v1/sugarconsume";
+		if (place != "-" && year != "-") {
+			url = url + "?place=" + place + "&year=" + year; 
+		} else if (place != "-" && year == "-") {
+			url = url + "?place=" + place;
+		} else if (place == "-" && year != "-") {
+			url = url + "?year=" + year;
+		}
+		const res = await fetch(url);
+		if (res.ok) {
+			console.log("Ok:");
+			const json = await res.json();
+			sugarconsume = json;			
+			console.log("Existen " + sugarconsume.length + " recursos.");
+		} else {
+			console.log("ERROR!");
+		}
+		
+	}
+	function addOffset (increment) {
+		offset += increment;
+		currentPage += increment;
+		getsugarconsume();
+	}
+	
+</script>
+
+
+<main>
+	{#await sugarconsume}
+		Loading sugarconsume resources...
+	{:then sugarconsume}
+		
+		<!--SELECT PARA ELEGIR EL LUGAR A BUSCAR -->
+		<FormGroup> 
+			<Label for="selectCountry"> Búsqueda por lugar </Label>
+			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
+				{#each places as place}
+				<option>{place}</option>
+				{/each}
+				<option>-</option>
+			</Input>
+		</FormGroup>
+				
+		<!--SELECT PARA ELGIR EL AÑO A BUSCAR  -->
+		<FormGroup>
+			<Label for="selectYear"> Búsqueda por año </Label>
+			<Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+				{#each years as year}
+				<option>{year}</option>
+				{/each}
+				<option>-</option>
+			</Input>
+		</FormGroup>
+
+		<!-- BOTÓN PARA REALIZAR LA BÚSQUEDA -->
+		<Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" > <i class="fas fa-search"></i> Buscar </Button>
+		
+
+		<Table bordered>
+			<thead>
+				<tr>
+					<th> Lugar </th>
+					<th> Consumición de azúcar </th>
+					<th> Año </th>
+					<th> Acciones </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td> <Input type="text" placeholder="lugar" bind:value="{newsugarconsume.place}" /> </td>
+					<td> <Input type="number" placeholder="consumo de azúcar" bind:value="{newsugarconsume.sugarconsume}" /> </td>
+					<td> <Input type="number" placeholder="año" bind:value="{newsugarconsume.year}" /> </td>
+					<td> <Button outline color="primary" on:click={insertsugarconsume}> <i class="far fa-edit"></i> Insertar </Button> </td>
+				</tr>
+				{#each sugarconsume as sugarconsumeresource}
+				<tr>
+					<td>			
+						<a href="#/sugarconsume/{sugarconsumeresource.place}/{sugarconsumeresource.year}">		
+							{sugarconsumeresource.place}
+						</a>
+					</td> 
+					<td>{sugarconsumeresource.sugarconsume} </td>
+					<td> {sugarconsumeresource.year} </td>
+					<td> <Button outline color="danger" on:click="{deletesugarconsume(sugarconsumeresource.place, sugarconsumeresource.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
+				</tr>
+				{/each}
+			</tbody>
+		</Table>
+	{/await}
+
+	<!-- PAGINACIÓN -->
+	<Pagination style="float:right;" ariaLabel="Cambiar de página">
+
+
+		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+		  <PaginationLink previous href="#/" on:click="{() => addOffset(-1)}" />
+		</PaginationItem>
+		
+		{#if currentPage != 1}
+		<PaginationItem>
+			<PaginationLink href="#/" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+		<PaginationItem active>
+			<PaginationLink href="#/" >{currentPage}</PaginationLink>
+		</PaginationItem>
+
+		{#if moreData}
+		<PaginationItem >
+			<PaginationLink href="#/" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+
+		<PaginationItem class="{moreData ? '' : 'disabled'}">
+		  <PaginationLink next href="#/" on:click="{() => addOffset(1)}"/>
+		</PaginationItem>
+
+	</Pagination>
+
+	<!-- BOTÓN POP PARA VOLVER ATRÁS -->
+	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+	<!-- BOTÓN PARA BORRAR TODO EL CONTENIDO DE SUGARCONSUME -->
+	<Button outline on:click={deletesugarconsumeAll} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
+	<!-- BOTÓN PARA CARGAR EL CONTENIDO COMO ESTABA INICIALMENTE -->
+	<Button outline on:click={loading} color="primary"> <i class="fa fa-trash" aria-hidden="true"></i> Cargar </Button>
+</main>
