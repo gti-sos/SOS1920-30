@@ -54,7 +54,7 @@
 			});
 
 			years = Array.from(new Set(years)); 
-			console.log("Existen " + places.length + "paises y " + years.length + "años.");
+			console.log("Existen " + places.length + "paises y " + years.length + "años diferentes.");
 		} else {
 			console.log("ERROR!");
 		}
@@ -108,17 +108,16 @@
 			const json = JSON.stringify(newsugarconsume);
 			const res = await fetch("/api/v1/sugarconsume", {
 				method: "POST",
-				
+				body: json,
 				headers: {
 					Accept: 'application/json',
-			'Content-Type': 'application/json',
-			body: json 
+					"Content-Type": "application/json",
 				}
 			}).then(function(res) {
 				getsugarconsume();
 				getyears();
 			}); 
-			
+			alert("Insertado con éxito.")
 		}
 	}
 

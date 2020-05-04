@@ -143,7 +143,7 @@ app.get(BASE_API_URL+"/sugarconsume/:place",(req,res) => {
 	
 	
 	 
-		 //GET SUGARCONSUME/XXX/YYY
+	 //GET SUGARCONSUME/XXX/YYY
 	 
 app.get(BASE_API_URL+"/sugarconsume/:place/:year",(req,res) => {
 	var place = req.params.place;
@@ -223,7 +223,7 @@ app.get(BASE_API_URL+"/sugarconsume", (req,res) =>{
 	//POST SUGARCONSUME
 
 app.post(BASE_API_URL+"/sugarconsume",(req,res) => {
-	var newSugarconsume = req.body;
+	console.log(req.body);
 	if((newSugarconsume == "") || (newSugarconsume.place == null || newSugarconsume.year == null)){
 			res.sendStatus(400, "BAD REQUEST(no name provided or no year provided)");
 	}

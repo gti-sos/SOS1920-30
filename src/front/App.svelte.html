@@ -1,9 +1,9 @@
 <script>
-	import Router from 'svelte-spa-router';
+	
 	import MyContentTable from './MyContentTable.svelte.html';
 	import NotFound from './NotFound.svelte.html';
 	import editResource from './editResource.svelte.html'
-
+	import Router from 'svelte-spa-router';
 	const routes = {
 		"/" : MyContentTable,
 		"/sugarconsume/:placename/:year" : editResource,
