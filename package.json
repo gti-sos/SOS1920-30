@@ -24,6 +24,7 @@
     "cool-ascii-faces": "^1.3.4",
     "express": "^4.17.1",
     "nedb-models": "^3.0.3",
+    "node-modules": "^1.0.1",
     "svelte-spa-router": "^2.1.0",
     "sveltestrap": "^3.3.3"
   }
