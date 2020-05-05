@@ -1,6 +1,6 @@
 
 const express = require("express");
-const back = require("./src/back");
+const back = require("./src/back/sugarconsumeAPI");
 const bodyParser = require("body-parser");
 var app = express();
 app.use(bodyParser.json());
