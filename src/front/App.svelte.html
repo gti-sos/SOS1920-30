@@ -1,0 +1,25 @@
+<script>
+	
+	import Inicio from './Inicio.svelte.html';
+	import MyContentTable from './sugarconsumeAPI/MyContentTable.svelte.html';
+	import imcTable from './imcAPI/imcTable.svelte.html';
+	import EditValue from './imcAPI/EditValue.svelte.html';
+	import NotFound from './NotFound.svelte.html';
+	import editResource from './sugarconsumeAPI/editResource.svelte.html'
+	import Router from 'svelte-spa-router';
+	const routes = {
+		"/" : Inicio,
+		"/sugarconsumeAPI" : MyContentTable,
+		"/indice_de_masa_corporal/:placename/:year" : EditValue,
+		"/indice_de_masa_corporal" : imcTable,
+		"/sugarconsume/:placename/:year" : editResource,
+		"*" : NotFound
+	}
+
+</script>
+
+
+<main>
+	<h1>API Manager</h1>
+	<Router {routes} />
+</main>

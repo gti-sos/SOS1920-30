@@ -1,0 +1,99 @@
+<script>
+    //IMPORTACIONES
+    import {
+		onMount
+	} from "svelte";
+    import {pop} from "svelte-spa-router";
+    import Table from "sveltestrap/src/Table.svelte";
+    import Button from "sveltestrap/src/Button.svelte";
+    import Input from "sveltestrap/src/Input.svelte";
+
+
+    export let params = {};
+    let sugarconsume = {};
+    let updatedPlace = "";
+    let updatedSugarconsume = 0;
+    let updatedYear = 0;
+    let errorMsg = "";
+
+    onMount(getsugarconsumes);
+
+    //FUNCIÓN PARA OBTENER UN RECURSO ESPECÍFICO
+
+	async function getsugarconsumes() {
+        
+		console.log("Fetching sugarconsume resource...");
+		const res = await fetch("/api/v1/sugarconsume/" + params.placename + "/" + params.year);
+
+		if (res.ok) {
+			console.log("Ok:");
+            const json = await res.json();
+            sugarconsume = json;
+            updatedPlace = sugarconsume[0].place;
+            updatedSugarconsume = sugarconsume[0].sugarconsume;
+            updatedYear = sugarconsume[0].year;
+			console.log("Received sugarconsume resource.");
+		} else {
+            errorMsg = res.status + ": " + res.statusText;
+            console.log("ERROR!" + errorMsg);
+            
+        }
+	}
+
+
+    //FUNCIÓN PARA ACTUALIZAR UN RECURSO
+    
+    async function updatesugarconsume(){
+
+        console.log("Updating sugarconsume resources..." + JSON.stringify(params.placename));
+        console.log(params.placename);
+        console.log(updatedSugarconsume);
+        console.log(parseInt(params.year));
+		const res = await fetch("/api/v1/sugarconsume/" + params.placename + "/" + params.year, {
+            method: "PUT",
+			body: JSON.stringify({
+                place : params.placename,
+                sugarconsume : updatedSugarconsume,
+                year : parseInt(params.year)
+            }  
+            ),
+			headers: {
+				"Content-Type": "application/json"
+            }
+		}).then(function (res) {
+			getsugarconsumes();
+		});
+        alert("Recurso actualizado con éxito");
+        
+
+    }
+</script>
+<main>
+    <h3>Edit Sugarconsume <strong>{params.placename} </strong></h3>
+{#await sugarconsume}
+    Loading sugarconsume...
+{:then sugarconsume}
+    <Table bordered>
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Sugar consume</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{updatedPlace}</td>
+                <td><input bind:value="{updatedSugarconsume}"></td>
+                <td>{updatedYear}</td>
+                <td> <Button outline  color="primary" on:click={updatesugarconsume}>Update</Button> </td>
+            </tr>
+        </tbody>
+    </Table>
+{/await}
+{#if errorMsg}
+    <p style="color:red"> ERROR: {errorMsg}</p>
+{/if}
+<Button outline color="secondary" on:click="{pop}">Atrás</Button>
+</main>
