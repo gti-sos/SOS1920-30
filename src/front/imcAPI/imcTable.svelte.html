@@ -1,0 +1,295 @@
+<script>
+
+	//IMPORTACIONES
+
+	import  {
+		onMount
+	}
+	from "svelte";
+	import {
+        pop
+    } from "svelte-spa-router";
+	
+	import Table from "sveltestrap/src/Table.svelte";
+	import Button from "sveltestrap/src/Button.svelte";
+	import Input from "sveltestrap/src/Input.svelte";
+	import Label from "sveltestrap/src/Label.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
+	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
+	
+	//VARIABLES PARA PAGINACIÓN Y FUNCIONES
+	
+	let indice_de_masa_corporal = [];
+	let newindice_de_masa_corporal = {
+		"place": "",
+		"indice_de_masa_corporal": 0,
+		"year": ""	
+	};
+	let places = [];
+	let years = [];
+	let currentplace = "-";
+	let currentYear = "-";
+	let numberElementsPages = 10;
+	let offset = 0;
+	let currentPage = 1; 
+	let moreData = true; 
+	
+	
+	onMount(getindice_de_masa_corporal);
+	onMount(getyears);
+
+
+	
+	async function getyears() {
+		const res = await fetch("/api/v1/indice_de_masa_corporal");
+		if (res.ok) {
+			const json = await res.json();
+			places = json.map((d) => {
+					return d.place;
+			});
+			places = Array.from(new Set(places)); 
+			
+			years = json.map((d) => {
+					return d.year;
+			});
+
+			years = Array.from(new Set(years)); 
+			console.log("Paises: " + places.length + "Años " + years.length);
+		} else {
+			console.log("ERROR!");
+		}
+	}
+
+
+	//FUNCIÓN PARA INICIALIZAR VALORES
+	
+	async function loading(){
+		deleteindice_de_masa_corporalAll();
+		const res = await fetch("/api/v1/indice_de_masa_corporal/loadInitialData");
+		getindice_de_masa_corporal()
+	}
+
+	//FUNCIÓN PARA PAGINAR GET
+
+	async function getindice_de_masa_corporal() {
+		console.log("Fetching indice_de_masa_corporal resources...");	
+		const res = await fetch("/api/v1/indice_de_masa_corporal?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const next = await fetch("/api/v1/indice_de_masa_corporal?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		if (res.ok && next.ok) {
+			console.log("Ok:");
+			const json = await res.json();
+			const jsonNext = await next.json();
+			indice_de_masa_corporal = json;
+			
+			if (jsonNext.length == 0) {
+				moreData = false;
+			} else {
+				moreData = true;
+			}
+			console.log("Existen " + indice_de_masa_corporal.length + " recursos.");
+		} else {
+			console.log("ERROR!");
+		}
+	}
+
+	
+	//FUNCIÓN PARA INSERTAR UN RECURSO
+
+
+	async function insertindice_de_masa_corporal() {
+		console.log("Inserting indice_de_masa_corporal resource...");
+		if (newindice_de_masa_corporal.place == ""
+			|| newindice_de_masa_corporal.place == null
+			|| newindice_de_masa_corporal.year == "" 
+			|| newindice_de_masa_corporal.year == null) {
+			
+			alert("No se ha rellenado algún hueco");
+		} else {
+			const json = JSON.stringify(newindice_de_masa_corporal);
+			const res = await fetch("/api/v1/indice_de_masa_corporal", {
+				method: "POST",
+				body: json,
+				headers: {
+					Accept: 'application/json',
+					"Content-Type": "application/json",
+				}
+			}).then(function(res) {
+				getindice_de_masa_corporal();
+				getyears();
+			}); 
+			alert("Insertado con éxito.")
+		}
+	}
+
+
+	//FUNCIÓN PARA BORRAR UN RECURSO CONCRETO
+
+
+	async function deleteindice_de_masa_corporal(place, year) {
+		console.log("Deleting indice_de_masa_corporal resource...");
+		const res = await fetch("/api/v1/indice_de_masa_corporal/" + place + "/" + year, {
+			method: "DELETE"
+		}).then(function (res) {
+			getindice_de_masa_corporal();
+			getyears();
+		});
+		alert("Éxito");
+	}
+
+
+	//FUNCIÓN PARA BORRAR TODO
+
+
+	async function deleteindice_de_masa_corporalAll() {
+		console.log("Deleting all...");
+		const res = await fetch("/api/v1/indice_de_masa_corporal/", {
+			method: "DELETE"
+		}).then(function (res) {
+			getindice_de_masa_corporal();
+			getyears();
+		});
+		alert("Éxito");
+	}
+
+
+	//FUNCIÓN PARA REALIZAR LAS BÚSQUEDAS
+
+
+	async function search(place, year) {
+		console.log("Buscando país: " + place + " en año: " + year);
+		var url = "/api/v1/indice_de_masa_corporal";
+		if (place != "-" && year != "-") {
+			url = url + "?place=" + place + "&year=" + year; 
+		} else if (place != "-" && year == "-") {
+			url = url + "?place=" + place;
+		} else if (place == "-" && year != "-") {
+			url = url + "?year=" + year;
+		}
+		const res = await fetch(url);
+		if (res.ok) {
+			console.log("Ok:");
+			const json = await res.json();
+			indice_de_masa_corporal = json;			
+			console.log("Existen " + indice_de_masa_corporal.length + " recursos.");
+		} else {
+			console.log("ERROR!");
+		}
+		
+	}
+
+	function addOffset (increment) {
+		offset += increment;
+		currentPage += increment;
+		getindice_de_masa_corporal();
+	}
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<main>
+	{#await indice_de_masa_corporal}
+		Loading indice_de_masa_corporal resources...
+	{:then indice_de_masa_corporal}
+		
+<!--Busquedas  -->
+		<FormGroup> 
+			<Label for="selectCountry"> Búsqueda por pais </Label>
+			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
+				{#each places as place}
+				<option>{place}</option>
+				{/each}
+				<option>-</option>
+			</Input>
+		</FormGroup>
+				
+		<FormGroup>
+			<Label for="selectYear"> Búsqueda por año </Label>
+			<Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+				{#each years as year}
+				<option>{year}</option>
+				{/each}
+				<option>-</option>
+			</Input>
+		</FormGroup>
+
+		<Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" > <i class="fas fa-search"></i> Buscar </Button>
+		
+
+		<Table bordered>
+			<thead>
+				<tr>
+					<th> LUGAR </th>
+					<th> IMC</th>
+					<th> AÑO </th>
+					<th> Acciones </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td> <Input type="text" placeholder="pais" bind:value="{newindice_de_masa_corporal.place}" /> </td>
+					<td> <Input type="number" placeholder="indice de masa corporal" bind:value="{newindice_de_masa_corporal.indice_de_masa_corporal}" /> </td>
+					<td> <Input type="number" placeholder="año" bind:value="{newindice_de_masa_corporal.year}" /> </td>
+					<td> <Button outline color="primary" on:click={insertindice_de_masa_corporal}> <i class="far fa-edit"></i> AÑADIR </Button> </td>
+				</tr>
+				{#each indice_de_masa_corporal as indices_de_masa_corporal}
+				<tr>
+					<td>			
+						<a href="#/indice_de_masa_corporal/{indices_de_masa_corporal.place}/{indices_de_masa_corporal.year}">		
+							{indices_de_masa_corporal.place}
+						</a>
+					</td> 
+					<td>{indices_de_masa_corporal.indice_de_masa_corporal} </td>
+					<td> {indices_de_masa_corporal.year} </td>
+					<td> <Button outline color="danger" on:click="{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> ELIMINAR </Button> </td>
+				</tr>
+				{/each}
+			</tbody>
+		</Table>
+	{/await}
+
+
+	<!-- PAGINACIÓN -->
+	<Pagination style="float:right;" ariaLabel="Cambiar de página">
+
+
+		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+		  <PaginationLink previous href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" />
+		</PaginationItem>
+		
+		{#if currentPage != 1}
+		<PaginationItem>
+			<PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+		<PaginationItem active>
+			<PaginationLink href="#/indice_de_masa_corporal" >{currentPage}</PaginationLink>
+		</PaginationItem>
+
+		{#if moreData}
+		<PaginationItem >
+			<PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+
+		<PaginationItem class="{moreData ? '' : 'disabled'}">
+		  <PaginationLink next href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}"/>
+		</PaginationItem>
+
+	</Pagination>
+
+	<!-- BOTÓN ATRÁS -->
+	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> ATRAS </Button>
+	<!-- BOTÓN PARA BORRAR TODO EL CONTENIDO  -->
+	<Button outline on:click={deleteindice_de_masa_corporalAll} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> BORRAR TODO </Button>
+	<!-- BOTÓN PARA RESETEAR TODO -->
+	<Button outline on:click={loading} color="primary"> <i class="fa fa-trash" aria-hidden="true"></i> PRIMEROS DATOS</Button>
+</main>

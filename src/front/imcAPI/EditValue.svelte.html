@@ -1,0 +1,93 @@
+<script>
+    import {
+		onMount
+	} from "svelte";
+    import {pop} from "svelte-spa-router";
+    import Table from "sveltestrap/src/Table.svelte";
+    import Button from "sveltestrap/src/Button.svelte";
+    import Input from "sveltestrap/src/Input.svelte";
+
+
+    export let params = {};
+    let indice_de_masa_corporal = {};
+    let updatedPlace = "";
+    let updatedindice_de_masa_corporal = 0;
+    let updatedYear = 0;
+    let errorMsg = "";
+
+    onMount(getindices_de_masa_corporal);
+
+	async function getindices_de_masa_corporal() {
+        
+		console.log("Fetching indice_de_masa_corporal resource...");
+		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year);
+
+		if (res.ok) {
+			console.log("Ok:");
+            const json = await res.json();
+            indice_de_masa_corporal = json;
+            updatedPlace = indice_de_masa_corporal[0].place;
+            updatedindice_de_masa_corporal = indice_de_masa_corporal[0].indice_de_masa_corporal;
+            updatedYear = indice_de_masa_corporal[0].year;
+			console.log("Received indice_de_masa_corporal resource.");
+		} else {
+            errorMsg = res.status + ": " + res.statusText;
+            console.log("ERROR!" + errorMsg);
+            
+        }
+	}
+
+    
+    async function updateindice_de_masa_corporal(){
+
+        console.log("Updating indice_de_masa_corporal resources..." + JSON.stringify(params.placename));
+        console.log(params.placename);
+        console.log(updatedindice_de_masa_corporal);
+        console.log(parseInt(params.year));
+		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
+            method: "PUT",
+			body: JSON.stringify({
+                place : params.placename,
+                indice_de_masa_corporal : updatedindice_de_masa_corporal,
+                year : parseInt(params.year)
+            }  
+            ),
+			headers: {
+				"Content-Type": "application/json"
+            }
+		}).then(function (res) {
+			getindices_de_masa_corporal();
+		});
+        alert("Recurso actualizado con éxito");
+
+    }
+</script>
+<main>
+    <h3>Edit indice_de_masa_corporal <strong>{params.placename} </strong></h3>
+{#await indice_de_masa_corporal}
+    Loading indice_de_masa_corporal...
+{:then indice_de_masa_corporal}
+    <Table bordered>
+        <thead>
+            <tr>
+                <th>PLACE</th>
+                <th>IMC </th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{updatedPlace}</td>
+                <td><input bind:value="{updatedindice_de_masa_corporal}"></td>
+                <td>{updatedYear}</td>
+                <td> <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>Update</Button> </td>
+            </tr>
+        </tbody>
+    </Table>
+{/await}
+{#if errorMsg}
+    <p style="color:red"> ERROR: {errorMsg}</p>
+{/if}
+<Button outline color="secondary" on:click="{pop}">ATRAS</Button>
+</main>

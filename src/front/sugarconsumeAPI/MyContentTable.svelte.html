@@ -54,7 +54,7 @@
 			});
 
 			years = Array.from(new Set(years)); 
-			console.log("Existen " + places.length + "paises y " + years.length + "años diferentes.");
+			console.log("Éxito. Existen " + places.length + "paises diferentes y " + years.length + "años diferentes.");
 		} else {
 			console.log("ERROR!");
 		}
@@ -86,7 +86,7 @@
 			} else {
 				moreData = true;
 			}
-			console.log("Existen " + sugarconsume.length + " recursos.");
+			console.log("Éxito. Existen " + sugarconsume.length + " recursos.");
 		} else {
 			console.log("ERROR!");
 		}
@@ -170,7 +170,7 @@
 			console.log("Ok:");
 			const json = await res.json();
 			sugarconsume = json;			
-			console.log("Existen " + sugarconsume.length + " recursos.");
+			console.log("Éxito. Existen " + sugarconsume.length + " recursos.");
 		} else {
 			console.log("ERROR!");
 		}
@@ -186,6 +186,7 @@
 
 
 <main>
+	<h7><strong>Sugarconsume API</strong></h7>
 	{#await sugarconsume}
 		Loading sugarconsume resources...
 	{:then sugarconsume}
@@ -253,26 +254,26 @@
 
 
 		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
-		  <PaginationLink previous href="#/" on:click="{() => addOffset(-1)}" />
+		  <PaginationLink previous href="#/sugarconsumeAPI" on:click="{() => addOffset(-1)}" />
 		</PaginationItem>
 		
 		{#if currentPage != 1}
 		<PaginationItem>
-			<PaginationLink href="#/" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
+			<PaginationLink href="#/sugarconsumeAPI" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
 		</PaginationItem>
 		{/if}
 		<PaginationItem active>
-			<PaginationLink href="#/" >{currentPage}</PaginationLink>
+			<PaginationLink href="#/sugarconsumeAPI" >{currentPage}</PaginationLink>
 		</PaginationItem>
 
 		{#if moreData}
 		<PaginationItem >
-			<PaginationLink href="#/" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+			<PaginationLink href="#/sugarconsumeAPI" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
 		</PaginationItem>
 		{/if}
 
 		<PaginationItem class="{moreData ? '' : 'disabled'}">
-		  <PaginationLink next href="#/" on:click="{() => addOffset(1)}"/>
+		  <PaginationLink next href="#/sugarconsumeAPI" on:click="{() => addOffset(1)}"/>
 		</PaginationItem>
 
 	</Pagination>
