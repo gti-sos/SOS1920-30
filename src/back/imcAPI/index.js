@@ -376,7 +376,7 @@ db.find({"place":place, "year": year},(error, indice_de_masa_corporal)=>{
 		}else{
 			res.send(indice_de_masa_corporal.map((i)=>{
 				delete i._id;
-				return(i);
+				return("indice de masa corporal: " + i.indice_de_masa_corporal);
 			}));
 			console.log("Recurso mostrado");
 		}
