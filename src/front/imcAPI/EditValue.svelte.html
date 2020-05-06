@@ -44,6 +44,9 @@
         console.log(params.placename);
         console.log(updatedindice_de_masa_corporal);
         console.log(parseInt(params.year));
+        if (updatedindice_de_masa_corporal == "") {
+			alert("el imc se ha dejado en blanco");
+		} else{
 		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
             method: "PUT",
 			body: JSON.stringify({
@@ -59,7 +62,7 @@
 			getindices_de_masa_corporal();
 		});
         alert("Recurso actualizado con éxito");
-
+        }
     }
 </script>
 <main>

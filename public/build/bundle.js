@@ -11947,7 +11947,7 @@ var app = (function () {
     	return block;
     }
 
-    // (69:0) {:then indice_de_masa_corporal}
+    // (72:0) {:then indice_de_masa_corporal}
     function create_then_block$2(ctx) {
     	let current;
 
@@ -11995,14 +11995,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(69:0) {:then indice_de_masa_corporal}",
+    		source: "(72:0) {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (84:21) <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>
+    // (87:21) <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>
     function create_default_slot_2$2(ctx) {
     	let t;
 
@@ -12022,14 +12022,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(84:21) <Button outline  color=\\\"primary\\\" on:click={updateindice_de_masa_corporal}>",
+    		source: "(87:21) <Button outline  color=\\\"primary\\\" on:click={updateindice_de_masa_corporal}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:4) <Table bordered>
+    // (73:4) <Table bordered>
     function create_default_slot_1$2(ctx) {
     	let thead;
     	let tr0;
@@ -12097,19 +12097,19 @@ var app = (function () {
     			t12 = space();
     			td3 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$b, 72, 16, 2437);
-    			add_location(th1, file$b, 73, 16, 2469);
-    			add_location(th2, file$b, 74, 16, 2500);
-    			add_location(th3, file$b, 75, 16, 2531);
-    			add_location(tr0, file$b, 71, 12, 2415);
-    			add_location(thead, file$b, 70, 8, 2394);
-    			add_location(td0, file$b, 80, 16, 2637);
-    			add_location(input, file$b, 81, 20, 2682);
-    			add_location(td1, file$b, 81, 16, 2678);
-    			add_location(td2, file$b, 82, 16, 2758);
-    			add_location(td3, file$b, 83, 16, 2798);
-    			add_location(tr1, file$b, 79, 12, 2615);
-    			add_location(tbody, file$b, 78, 8, 2594);
+    			add_location(th0, file$b, 75, 16, 2554);
+    			add_location(th1, file$b, 76, 16, 2586);
+    			add_location(th2, file$b, 77, 16, 2617);
+    			add_location(th3, file$b, 78, 16, 2648);
+    			add_location(tr0, file$b, 74, 12, 2532);
+    			add_location(thead, file$b, 73, 8, 2511);
+    			add_location(td0, file$b, 83, 16, 2754);
+    			add_location(input, file$b, 84, 20, 2799);
+    			add_location(td1, file$b, 84, 16, 2795);
+    			add_location(td2, file$b, 85, 16, 2875);
+    			add_location(td3, file$b, 86, 16, 2915);
+    			add_location(tr1, file$b, 82, 12, 2732);
+    			add_location(tbody, file$b, 81, 8, 2711);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -12178,14 +12178,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(70:4) <Table bordered>",
+    		source: "(73:4) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}
+    // (70:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -12208,14 +12208,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(67:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}",
+    		source: "(70:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:0) {#if errorMsg}
+    // (92:0) {#if errorMsg}
     function create_if_block$8(ctx) {
     	let p;
     	let t0;
@@ -12227,7 +12227,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[4]);
     			set_style(p, "color", "red");
-    			add_location(p, file$b, 89, 4, 2981);
+    			add_location(p, file$b, 92, 4, 3098);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -12246,14 +12246,14 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(89:0) {#if errorMsg}",
+    		source: "(92:0) {#if errorMsg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:0) <Button outline color="secondary" on:click="{pop}">
+    // (95:0) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$2(ctx) {
     	let t;
 
@@ -12273,7 +12273,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(92:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(95:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -12332,9 +12332,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$b, 65, 37, 2214);
-    			add_location(h3, file$b, 65, 4, 2181);
-    			add_location(main, file$b, 64, 0, 2169);
+    			add_location(strong, file$b, 68, 37, 2331);
+    			add_location(h3, file$b, 68, 4, 2298);
+    			add_location(main, file$b, 67, 0, 2286);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12456,19 +12456,23 @@ var app = (function () {
     		console.log(updatedindice_de_masa_corporal);
     		console.log(parseInt(params.year));
 
-    		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
-    			method: "PUT",
-    			body: JSON.stringify({
-    				place: params.placename,
-    				indice_de_masa_corporal: updatedindice_de_masa_corporal,
-    				year: parseInt(params.year)
-    			}),
-    			headers: { "Content-Type": "application/json" }
-    		}).then(function (res) {
-    			getindices_de_masa_corporal();
-    		});
+    		if (updatedindice_de_masa_corporal == "") {
+    			alert("el imc se ha dejado en blanco");
+    		} else {
+    			const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
+    				method: "PUT",
+    				body: JSON.stringify({
+    					place: params.placename,
+    					indice_de_masa_corporal: updatedindice_de_masa_corporal,
+    					year: parseInt(params.year)
+    				}),
+    				headers: { "Content-Type": "application/json" }
+    			}).then(function (res) {
+    				getindices_de_masa_corporal();
+    			});
 
-    		alert("Recurso actualizado con éxito");
+    			alert("Recurso actualizado con éxito");
+    		}
     	}
 
     	const writable_props = ["params"];
