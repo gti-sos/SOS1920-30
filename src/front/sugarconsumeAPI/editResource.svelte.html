@@ -25,14 +25,12 @@
         
 		console.log("Fetching sugarconsume resource...");
 		const res = await fetch("/api/v2/sugarconsume/" + params.placename + "/" + params.year);
-
 		if (res.ok) {
-			console.log("Ok:");
             const json = await res.json();
             sugarconsume = json;
-            updatedPlace = sugarconsume[0].place;
-            updatedSugarconsume = sugarconsume[0].sugarconsume;
-            updatedYear = sugarconsume[0].year;
+            updatedPlace = sugarconsume.place;
+            updatedSugarconsume = sugarconsume.sugarconsume;
+            updatedYear = sugarconsume.year;
             console.log("Received sugarconsume resource.");
             alert("Usted se encuentra sobre un recurso concreto");
 		} else {
@@ -48,7 +46,7 @@
     
     async function updatesugarconsume(){
 
-        console.log("Updating sugarconsume resources..." + JSON.stringify(params.placename));
+        console.log("Actualizando recurso: " + JSON.stringify(params.placename));
         console.log(params.placename);
         console.log(updatedSugarconsume);
         console.log(parseInt(params.year));

@@ -12654,7 +12654,7 @@ var app = (function () {
     	return block;
     }
 
-    // (78:0) {:then sugarconsume}
+    // (76:0) {:then sugarconsume}
     function create_then_block$3(ctx) {
     	let current;
 
@@ -12702,14 +12702,14 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(78:0) {:then sugarconsume}",
+    		source: "(76:0) {:then sugarconsume}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:21) <Button outline  color="primary" on:click={updatesugarconsume}>
+    // (91:21) <Button outline  color="primary" on:click={updatesugarconsume}>
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -12729,14 +12729,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(93:21) <Button outline  color=\\\"primary\\\" on:click={updatesugarconsume}>",
+    		source: "(91:21) <Button outline  color=\\\"primary\\\" on:click={updatesugarconsume}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:4) <Table bordered>
+    // (77:4) <Table bordered>
     function create_default_slot_1$3(ctx) {
     	let thead;
     	let tr0;
@@ -12804,19 +12804,19 @@ var app = (function () {
     			t12 = space();
     			td3 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$d, 81, 16, 2443);
-    			add_location(th1, file$d, 82, 16, 2475);
-    			add_location(th2, file$d, 83, 16, 2523);
-    			add_location(th3, file$d, 84, 16, 2553);
-    			add_location(tr0, file$d, 80, 12, 2421);
-    			add_location(thead, file$d, 79, 8, 2400);
-    			add_location(td0, file$d, 89, 16, 2660);
-    			add_location(input, file$d, 90, 20, 2705);
-    			add_location(td1, file$d, 90, 16, 2701);
-    			add_location(td2, file$d, 91, 16, 2770);
-    			add_location(td3, file$d, 92, 16, 2810);
-    			add_location(tr1, file$d, 88, 12, 2638);
-    			add_location(tbody, file$d, 87, 8, 2617);
+    			add_location(th0, file$d, 79, 16, 2396);
+    			add_location(th1, file$d, 80, 16, 2428);
+    			add_location(th2, file$d, 81, 16, 2476);
+    			add_location(th3, file$d, 82, 16, 2506);
+    			add_location(tr0, file$d, 78, 12, 2374);
+    			add_location(thead, file$d, 77, 8, 2353);
+    			add_location(td0, file$d, 87, 16, 2613);
+    			add_location(input, file$d, 88, 20, 2658);
+    			add_location(td1, file$d, 88, 16, 2654);
+    			add_location(td2, file$d, 89, 16, 2723);
+    			add_location(td3, file$d, 90, 16, 2763);
+    			add_location(tr1, file$d, 86, 12, 2591);
+    			add_location(tbody, file$d, 85, 8, 2570);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -12885,14 +12885,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(79:4) <Table bordered>",
+    		source: "(77:4) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:21)       Loading sugarconsume...  {:then sugarconsume}
+    // (74:21)       Loading sugarconsume...  {:then sugarconsume}
     function create_pending_block$3(ctx) {
     	let t;
 
@@ -12915,14 +12915,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(76:21)       Loading sugarconsume...  {:then sugarconsume}",
+    		source: "(74:21)       Loading sugarconsume...  {:then sugarconsume}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:0) {#if errorMsg}
+    // (96:0) {#if errorMsg}
     function create_if_block$9(ctx) {
     	let p;
     	let t0;
@@ -12934,7 +12934,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[4]);
     			set_style(p, "color", "red");
-    			add_location(p, file$d, 98, 4, 2982);
+    			add_location(p, file$d, 96, 4, 2935);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -12953,14 +12953,14 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(98:0) {#if errorMsg}",
+    		source: "(96:0) {#if errorMsg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:0) <Button outline color="secondary" on:click="{pop}">
+    // (99:0) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -12980,7 +12980,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(101:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(99:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -13039,9 +13039,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$d, 74, 26, 2253);
-    			add_location(h3, file$d, 74, 4, 2231);
-    			add_location(main, file$d, 73, 0, 2219);
+    			add_location(strong, file$d, 72, 26, 2206);
+    			add_location(h3, file$d, 72, 4, 2184);
+    			add_location(main, file$d, 71, 0, 2172);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13145,12 +13145,11 @@ var app = (function () {
     		const res = await fetch("/api/v2/sugarconsume/" + params.placename + "/" + params.year);
 
     		if (res.ok) {
-    			console.log("Ok:");
     			const json = await res.json();
     			$$invalidate(5, sugarconsume = json);
-    			$$invalidate(1, updatedPlace = sugarconsume[0].place);
-    			$$invalidate(2, updatedSugarconsume = sugarconsume[0].sugarconsume);
-    			$$invalidate(3, updatedYear = sugarconsume[0].year);
+    			$$invalidate(1, updatedPlace = sugarconsume.place);
+    			$$invalidate(2, updatedSugarconsume = sugarconsume.sugarconsume);
+    			$$invalidate(3, updatedYear = sugarconsume.year);
     			console.log("Received sugarconsume resource.");
     			alert("Usted se encuentra sobre un recurso concreto");
     		} else {
@@ -13162,7 +13161,7 @@ var app = (function () {
 
     	//FUNCIÓN PARA ACTUALIZAR UN RECURSO
     	async function updatesugarconsume() {
-    		console.log("Updating sugarconsume resources..." + JSON.stringify(params.placename));
+    		console.log("Actualizando recurso: " + JSON.stringify(params.placename));
     		console.log(params.placename);
     		console.log(updatedSugarconsume);
     		console.log(parseInt(params.year));
