@@ -38,10 +38,10 @@
 	onMount(getsugarconsume);
 	onMount(getyears);
 
-	//FUNCIÓN PARA OBTENER LOS AÑOS QUE EXISTEN EN SUGARCONSUME
+	//FUNCIÓN PARA OBTENER LOS AÑOS Y LUGARES QUE EXISTEN EN SUGARCONSUME
 	
 	async function getyears() {
-		const res = await fetch("/api/v1/sugarconsume");
+		const res = await fetch("/api/v2/sugarconsume");
 		if (res.ok) {
 			const json = await res.json();
 			places = json.map((d) => {
@@ -65,7 +65,7 @@
 	
 	async function loading(){
 		deletesugarconsumeAll();
-		const res = await fetch("/api/v1/sugarconsume/loadInitialData");
+		const res = await fetch("/api/v2/sugarconsume/loadInitialData");
 		getsugarconsume()
 	}
 
@@ -73,8 +73,8 @@
 
 	async function getsugarconsume() {
 		console.log("Fetching sugarconsume resources...");	
-		const res = await fetch("/api/v1/sugarconsume?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
-		const next = await fetch("/api/v1/sugarconsume?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		const res = await fetch("/api/v2/sugarconsume?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const next = await fetch("/api/v2/sugarconsume?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
 		if (res.ok && next.ok) {
 			console.log("Ok:");
 			const json = await res.json();
@@ -106,7 +106,7 @@
 			alert("No se ha rellenado algún hueco");
 		} else {
 			const json = JSON.stringify(newsugarconsume);
-			const res = await fetch("/api/v1/sugarconsume", {
+			const res = await fetch("/api/v2/sugarconsume", {
 				method: "POST",
 				body: json,
 				headers: {
@@ -127,13 +127,13 @@
 
 	async function deletesugarconsume(place, year) {
 		console.log("Deleting sugarconsume resource...");
-		const res = await fetch("/api/v1/sugarconsume/" + place + "/" + year, {
+		const res = await fetch("/api/v2/sugarconsume/" + place + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			getsugarconsume();
 			getyears();
 		});
-		alert("Éxito");
+		alert("Acción realizada con éxito");
 	}
 
 
@@ -142,13 +142,13 @@
 
 	async function deletesugarconsumeAll() {
 		console.log("Deleting sugarconsume...");
-		const res = await fetch("/api/v1/sugarconsume/", {
+		const res = await fetch("/api/v2/sugarconsume/", {
 			method: "DELETE"
 		}).then(function (res) {
 			getsugarconsume();
 			getyears();
 		});
-		alert("Éxito");
+		alert("Acción realizada con éxito");
 	}
 
 
@@ -157,7 +157,7 @@
 
 	async function search(place, year) {
 		console.log("Buscando país: " + place + " en año: " + year);
-		var url = "/api/v1/sugarconsume";
+		var url = "/api/v2/sugarconsume";
 		if (place != "-" && year != "-") {
 			url = url + "?place=" + place + "&year=" + year; 
 		} else if (place != "-" && year == "-") {
@@ -171,11 +171,15 @@
 			const json = await res.json();
 			sugarconsume = json;			
 			console.log("Éxito. Existen " + sugarconsume.length + " recursos.");
+			alert("Búsqueda realizada con éxito");
 		} else {
 			console.log("ERROR!");
+			alert("Erron al buscar");
 		}
 		
 	}
+
+
 	function addOffset (increment) {
 		offset += increment;
 		currentPage += increment;
@@ -186,7 +190,7 @@
 
 
 <main>
-	<h7><strong>Sugarconsume API</strong></h7>
+	<h7><strong>API sobre el consumo de azúcar:</strong></h7>
 	{#await sugarconsume}
 		Loading sugarconsume resources...
 	{:then sugarconsume}

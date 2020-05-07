@@ -5,13 +5,15 @@ module.exports = function (app) {
 	const path = require("path");
 	 
 	const dbFileName = path.join(__dirname, "sugarconsume.db");
-	const BASE_API_URL = "/api/v2";
+	const BASE_API_URL = "/api/v1";
 	 
 	const db = new dataStore({
 					filename: dbFileName,
 					autoload: true
 });
-	 	
+	 
+	
+	
 	var sugarconsume = [
 	{
 		place: "Europa",
@@ -125,17 +127,16 @@ app.get(BASE_API_URL+"/sugarconsume/loadInitialData",(req,res) => {
 app.get(BASE_API_URL+"/sugarconsume/:place",(req,res) => {
 	var place = req.params.place;
 	db.find({"place" :place},(error, sugarconsume)=>{
-		if(sugarconsume.length==0){
-			console.log("ERROR 404. Recurso no encontrado");
-			res.sendStatus(404);
-		}else{
-			res.send(sugarconsume.map((i)=>{
-				delete i._id;
-				return(i);
-			}));
-			console.log("Recurso mostrado");
-		}
-		
+			if(sugarconsume.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(sugarconsume.map((i)=>{
+					delete i._id;
+					return(i);
+				}));
+				console.log("Recurso mostrado");
+			}
 		})
 		
 });	
@@ -148,14 +149,16 @@ app.get(BASE_API_URL+"/sugarconsume/:place/:year",(req,res) => {
 	var place = req.params.place;
 	var year = parseInt(req.params.year);
 	db.find({"place":place, "year": year},(error, sugarconsume)=>{
-		if (sugarconsume.length == 1) {
-			delete sugarconsume[0]._id;
-
-			res.send(JSON.stringify(sugarconsume[0], null, 2)); 
-			
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
+			if(sugarconsume.length==0){
+				console.log("ERROR 404. Recurso no encontrado");
+				res.sendStatus(404);
+			}else{
+				res.send(sugarconsume.map((i)=>{
+					delete i._id;
+					return(i);
+				}));
+				console.log("Recurso mostrado");
+			}
 		})
 		
 });	

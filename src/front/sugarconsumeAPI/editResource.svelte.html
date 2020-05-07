@@ -7,6 +7,7 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import Input from "sveltestrap/src/Input.svelte";
+    
 
 
     export let params = {};
@@ -23,7 +24,7 @@
 	async function getsugarconsumes() {
         
 		console.log("Fetching sugarconsume resource...");
-		const res = await fetch("/api/v1/sugarconsume/" + params.placename + "/" + params.year);
+		const res = await fetch("/api/v2/sugarconsume/" + params.placename + "/" + params.year);
 
 		if (res.ok) {
 			console.log("Ok:");
@@ -32,10 +33,12 @@
             updatedPlace = sugarconsume[0].place;
             updatedSugarconsume = sugarconsume[0].sugarconsume;
             updatedYear = sugarconsume[0].year;
-			console.log("Received sugarconsume resource.");
+            console.log("Received sugarconsume resource.");
+            alert("Usted se encuentra sobre un recurso concreto");
 		} else {
             errorMsg = res.status + ": " + res.statusText;
             console.log("ERROR!" + errorMsg);
+            alert("No existe dicho usuario");
             
         }
 	}
@@ -49,7 +52,7 @@
         console.log(params.placename);
         console.log(updatedSugarconsume);
         console.log(parseInt(params.year));
-		const res = await fetch("/api/v1/sugarconsume/" + params.placename + "/" + params.year, {
+		const res = await fetch("/api/v2/sugarconsume/" + params.placename + "/" + params.year, {
             method: "PUT",
 			body: JSON.stringify({
                 place : params.placename,
@@ -61,7 +64,7 @@
 				"Content-Type": "application/json"
             }
 		}).then(function (res) {
-			getsugarconsumes();
+                getsugarconsumes();
 		});
         alert("Recurso actualizado con éxito");
         
@@ -76,10 +79,10 @@
     <Table bordered>
         <thead>
             <tr>
-                <th>Place</th>
-                <th>Sugar consume</th>
-                <th>Year</th>
-                <th>Actions</th>
+                <th>Lugar</th>
+                <th>Consumición de azúcar</th>
+                <th>Año</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
