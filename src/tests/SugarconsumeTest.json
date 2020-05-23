@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "f3057aed-6ae7-4a74-b549-e6bcef64f4b5",
+		"name": "SOS1920-30-sugarconsume-Herokuapp Versión 2",
+		"description": "This is an API for the consumption of sugar.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get sugarconsume",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e49b52fc-9b7c-4e70-8dbc-e1488f8be603",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b68e83e-7adc-41f5-97a5-e3230a51cfef",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There is more than 1 json elements\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"});",
+							"",
+							"pm.test(\"It has all the properties\", function(){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0]).to.have.property('place');",
+							"    pm.expect(jsonData[0]).to.have.property('sugarconsume');",
+							"    pm.expect(jsonData[0]).to.have.property('year');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sugarconsume/China/2017",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a42fac50-5263-41a4-9984-d0c477b0b4e9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"It has all the properties\", function(){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('place');",
+							"    pm.expect(jsonData).to.have.property('sugarconsume');",
+							"    pm.expect(jsonData).to.have.property('year');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/China/2017",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"China",
+						"2017"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sugarconsume/Europe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "39eddacb-6eca-4c69-ab1b-7d9042b4c9ba",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There is more than 1 json elements\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/Europa",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"Europa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "búsqueda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70472992-5efa-4e0f-9ebd-d6cd72b8330c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There is more than 1 json elements\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"});",
+							"",
+							"pm.test(\"It has all the properties\", function(){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0]).to.have.property('place');",
+							"    pm.expect(jsonData[0]).to.have.property('sugarconsume');",
+							"    pm.expect(jsonData[0]).to.have.property('year');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume?place=China&year=2015&sugarconsume=17558",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume"
+					],
+					"query": [
+						{
+							"key": "place",
+							"value": "China"
+						},
+						{
+							"key": "year",
+							"value": "2015"
+						},
+						{
+							"key": "sugarconsume",
+							"value": "17558"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paginación",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1b019165-0745-4276-927e-c94a543405b0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There is 5 json elements\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(5);",
+							"});",
+							"",
+							"pm.test(\"It has all the properties\", function(){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0]).to.have.property('place');",
+							"    pm.expect(jsonData[0]).to.have.property('sugarconsume');",
+							"    pm.expect(jsonData[0]).to.have.property('year');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume?limit=5&offset=5",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post sugarconsume",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e139d71a-9b03-4cb0-9a9b-04fd436e3d58",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"place\": \"España\",\r\n\"sugarconsume\": 15000,\r\n\"year\": 2017\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post sugarconsume/Spain",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a3929062-0042-4359-a7c1-f6093d08fed2",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							"",
+							"pm.test(\"There is a body\", function () {",
+							"    pm.response.to.be.withBody;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/España",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"España"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put sugarconsume/China",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1c03cc6a-0bdf-442d-8a84-6307fd0fa496",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/China",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"China"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put sugarconsume/China/2017",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ff2fdf3-f8ef-423c-bf26-f49ec52e4797",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"place\": \"China\",\r\n\"sugarconsume\": 8888,\r\n\"year\":2017\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/China/2017",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"China",
+						"2017"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put sugarconsume",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7faffe1-23f8-452f-830f-2ce4a42d1d4e",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete sugarconsume/Spain",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "094434e6-93dd-4f25-9a9f-48d51b9f141e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/España/2017",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"España",
+						"2017"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete sugarconsume/Europe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "376d912b-31c8-43f4-a6de-4d710613a2bc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/Europa",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"Europa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete sugarconsume",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bed37d47-ee8c-400b-8c17-73c4293cd168",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET GENERAL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "76636fc5-bef4-4a59-bc8c-678076fbd7f8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/loadInitialData",
+					"host": [
+						"https://sos1920-30.herokuapp.com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"sugarconsume",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b564b055-2079-4158-ba01-c2ab894c9a4d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7d4aa634-763f-4b73-81b3-73c6a0a14ac5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

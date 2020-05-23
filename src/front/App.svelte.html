@@ -7,12 +7,14 @@
 	import NotFound from './NotFound.svelte.html';
 	import editResource from './sugarconsumeAPI/editResource.svelte.html'
 	import Router from 'svelte-spa-router';
+	import MyGraph from './sugarconsumeAPI/MyGraph.svelte.html';
 	const routes = {
 		"/" : Inicio,
 		"/sugarconsumeAPI" : MyContentTable,
 		"/indice_de_masa_corporal/:placename/:year" : EditValue,
 		"/indice_de_masa_corporal" : imcTable,
 		"/sugarconsume/:placename/:year" : editResource,
+		"/sugarconsumeAPI/MyGraph" : MyGraph,
 		"*" : NotFound
 	}
 

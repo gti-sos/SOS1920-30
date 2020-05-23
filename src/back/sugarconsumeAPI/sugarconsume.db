@@ -3,7 +3,7 @@
 {"place":"Europa","sugarconsume":18800,"year":2017,"_id":"G2c34nP3nxw4TuZ8"}
 {"place":"China","sugarconsume":17558,"year":2015,"_id":"MndoLxLtQbhm090L"}
 {"place":"Turquia","sugarconsume":2300,"year":2017,"_id":"Nw5nAwLDcL0crmnL"}
-{"place":"China","sugarconsume":17500,"year":2017,"_id":"T5S5RZvBpkfNvOXp"}
+{"place":"China","sugarconsume":"1750033333333","year":2017,"_id":"T5S5RZvBpkfNvOXp"}
 {"place":"India","sugarconsume":28000,"year":2016,"_id":"bX2Pcocnb0Bb6vvU"}
 {"place":"India","sugarconsume":28000,"year":2017,"_id":"h3tFBhkWEURnPfTk"}
 {"place":"India","sugarconsume":27195,"year":2015,"_id":"l1QvPyDWoklW5LK7"}
@@ -13,4 +13,3 @@
 {"place":"Ucrania","sugarconsume":1580,"year":2017,"_id":"uCauXEDCpKOTpfBJ"}
 {"place":"Turquia","sugarconsume":2300,"year":2015,"_id":"vmMggKhlTDFmLK9K"}
 {"place":"Europa","sugarconsume":18800,"year":2016,"_id":"zKe0Hy0IeiKGZFJB"}
-{"place":"China","sugarconsume":"1750033333333","year":2017,"_id":"T5S5RZvBpkfNvOXp"}
