@@ -655,17 +655,17 @@ var app = (function () {
     			i1 = element("i");
     			t2 = text(" API sobre la obesidad");
     			attr_dev(i0, "class", "fas fa-leaf");
-    			add_location(i0, file, 1, 95, 103);
+    			add_location(i0, file, 1, 102, 110);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "color", "primary");
-    			attr_dev(button0, "onclick", "window.location.href='#/sugarconsumeAPI'");
+    			attr_dev(button0, "onclick", "window.location.href='#/sugarconsumeAPI/inicio'");
     			add_location(button0, file, 1, 4, 12);
     			attr_dev(i1, "class", "fas fa-leaf");
-    			add_location(i1, file, 2, 103, 276);
+    			add_location(i1, file, 2, 103, 283);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "color", "primary");
     			attr_dev(button1, "onclick", "window.location.href='#/indice_de_masa_corporal'");
-    			add_location(button1, file, 2, 4, 177);
+    			add_location(button1, file, 2, 4, 184);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -13268,6 +13268,39 @@ var app = (function () {
     const { console: console_1$6 } = globals;
     const file$e = "src\\front\\sugarconsumeAPI\\MyGraph.svelte.html";
 
+    // (119:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$4(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$e, 118, 56, 3082);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$4.name,
+    		type: "slot",
+    		source: "(119:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     function create_fragment$f(ctx) {
     	let script0;
     	let script0_src_value;
@@ -13285,7 +13318,21 @@ var app = (function () {
     	let div;
     	let t1;
     	let p;
+    	let t3;
+    	let current;
     	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
 
     	const block = {
     		c: function create() {
@@ -13301,24 +13348,26 @@ var app = (function () {
     			t1 = space();
     			p = element("p");
     			p.textContent = "Gráfica que muestra el consumo de azúcar en diferentes lugares y años.";
+    			t3 = space();
+    			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$e, 101, 4, 2245);
+    			add_location(script0, file$e, 103, 4, 2350);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$e, 102, 4, 2316);
+    			add_location(script1, file$e, 104, 4, 2421);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$e, 103, 4, 2397);
+    			add_location(script2, file$e, 105, 4, 2502);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$e, 104, 4, 2475);
+    			add_location(script3, file$e, 106, 4, 2580);
     			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$e, 105, 4, 2555);
+    			add_location(script4, file$e, 107, 4, 2660);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1qnbox8");
-    			add_location(div, file$e, 110, 8, 2729);
+    			add_location(div, file$e, 112, 8, 2834);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$e, 111, 8, 2765);
+    			add_location(p, file$e, 113, 8, 2870);
     			attr_dev(figure, "class", "highcharts-figure svelte-1qnbox8");
-    			add_location(figure, file$e, 109, 4, 2685);
-    			add_location(main, file$e, 108, 0, 2673);
+    			add_location(figure, file$e, 111, 4, 2790);
+    			add_location(main, file$e, 110, 0, 2778);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13335,12 +13384,30 @@ var app = (function () {
     			append_dev(figure, div);
     			append_dev(figure, t1);
     			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
     			if (remount) dispose();
     			dispose = listen_dev(script4, "load", loadGraph, false, false, false);
     		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
@@ -13349,6 +13416,7 @@ var app = (function () {
     			detach_dev(script4);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			destroy_component(button);
     			dispose();
     		}
     	};
@@ -13452,7 +13520,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("MyGraph_svelte", $$slots, []);
-    	$$self.$capture_state = () => ({ loadGraph });
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph });
     	return [];
     }
 
@@ -13470,10 +13538,106 @@ var app = (function () {
     	}
     }
 
-    /* src\front\App.svelte.html generated by Svelte v3.21.0 */
-    const file$f = "src\\front\\App.svelte.html";
+    /* src\front\sugarconsumeAPI\inicio.html generated by Svelte v3.21.0 */
+
+    const file$f = "src\\front\\sugarconsumeAPI\\inicio.html";
 
     function create_fragment$g(ctx) {
+    	let main;
+    	let button0;
+    	let i0;
+    	let t0;
+    	let t1;
+    	let button1;
+    	let i1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			button0 = element("button");
+    			i0 = element("i");
+    			t0 = text(" Gestiona los datos de la API sugarconsume");
+    			t1 = space();
+    			button1 = element("button");
+    			i1 = element("i");
+    			t2 = text(" Gráfica highchats sobre la API sugarconsume");
+    			attr_dev(i0, "class", "fas fa-leaf");
+    			add_location(i0, file$f, 1, 95, 103);
+    			attr_dev(button0, "type", "button");
+    			attr_dev(button0, "color", "primary");
+    			attr_dev(button0, "onclick", "window.location.href='#/sugarconsumeAPI'");
+    			add_location(button0, file$f, 1, 4, 12);
+    			attr_dev(i1, "class", "fas fa-leaf");
+    			add_location(i1, file$f, 2, 103, 287);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "color", "primary");
+    			attr_dev(button1, "onclick", "window.location.href='#/sugarconsumeAPI/MyGraph'");
+    			add_location(button1, file$f, 2, 4, 188);
+    			add_location(main, file$f, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, button0);
+    			append_dev(button0, i0);
+    			append_dev(button0, t0);
+    			append_dev(main, t1);
+    			append_dev(main, button1);
+    			append_dev(button1, i1);
+    			append_dev(button1, t2);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$g.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$g($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Inicio> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Inicio", $$slots, []);
+    	return [];
+    }
+
+    class Inicio extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Inicio",
+    			options,
+    			id: create_fragment$g.name
+    		});
+    	}
+    }
+
+    /* src\front\App.svelte.html generated by Svelte v3.21.0 */
+    const file$g = "src\\front\\App.svelte.html";
+
+    function create_fragment$h(ctx) {
     	let main;
     	let h1;
     	let t1;
@@ -13491,8 +13655,8 @@ var app = (function () {
     			h1.textContent = "Gestión de API";
     			t1 = space();
     			create_component(router.$$.fragment);
-    			add_location(h1, file$f, 24, 1, 794);
-    			add_location(main, file$f, 23, 0, 785);
+    			add_location(h1, file$g, 26, 1, 896);
+    			add_location(main, file$g, 25, 0, 887);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13522,7 +13686,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$g.name,
+    		id: create_fragment$h.name,
     		type: "component",
     		source: "",
     		ctx
@@ -13531,9 +13695,10 @@ var app = (function () {
     	return block;
     }
 
-    function instance$g($$self, $$props, $$invalidate) {
+    function instance$h($$self, $$props, $$invalidate) {
     	const routes = {
     		"/": Inicio_svelte,
+    		"/sugarconsumeAPI/inicio": Inicio,
     		"/sugarconsumeAPI": MyContentTable_svelte,
     		"/indice_de_masa_corporal/:placename/:year": EditValue_svelte,
     		"/indice_de_masa_corporal": ImcTable_svelte,
@@ -13560,6 +13725,7 @@ var app = (function () {
     		editResource: EditResource_svelte,
     		Router,
     		MyGraph: MyGraph_svelte,
+    		InicioSugar: Inicio,
     		routes
     	});
 
@@ -13569,13 +13735,13 @@ var app = (function () {
     class App_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$g, create_fragment$g, safe_not_equal, {});
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App_svelte",
     			options,
-    			id: create_fragment$g.name
+    			id: create_fragment$h.name
     		});
     	}
     }
