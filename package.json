@@ -1,5 +1,5 @@
 {
-  "name": "sos1920-l09",
+  "name": "sos1920-30",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,6 +23,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cool-ascii-faces": "^1.3.4",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "nedb-models": "^3.0.3",
     "node-modules": "^1.0.1",

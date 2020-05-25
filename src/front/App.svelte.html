@@ -8,6 +8,7 @@
 	import editResource from './sugarconsumeAPI/editResource.svelte.html'
 	import Router from 'svelte-spa-router';
 	import MyGraph from './sugarconsumeAPI/MyGraph.svelte.html';
+	import MyGraph2 from './sugarconsumeAPI/MyGraph2.svelte.html';
 	import InicioSugar from './sugarconsumeAPI/inicio.html'
 	const routes = {
 		"/" : Inicio,
@@ -17,6 +18,7 @@
 		"/indice_de_masa_corporal" : imcTable,
 		"/sugarconsume/:placename/:year" : editResource,
 		"/sugarconsumeAPI/MyGraph" : MyGraph,
+		"/sugarconsumeAPI/MyGraph2" : MyGraph2,
 		"*" : NotFound
 	}
 
