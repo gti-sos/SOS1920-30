@@ -9,7 +9,8 @@
 	import Router from 'svelte-spa-router';
 	import MyGraph from './sugarconsumeAPI/MyGraph.svelte.html';
 	import MyGraph2 from './sugarconsumeAPI/MyGraph2.svelte.html';
-	import InicioSugar from './sugarconsumeAPI/inicio.html'
+	import InicioSugar from './sugarconsumeAPI/inicio.html';
+	import crime from './sugarconsumeAPI/crime_rate_stats.svelte.html'
 	const routes = {
 		"/" : Inicio,
 		"/sugarconsumeAPI/inicio" : InicioSugar,
@@ -19,6 +20,7 @@
 		"/sugarconsume/:placename/:year" : editResource,
 		"/sugarconsumeAPI/MyGraph" : MyGraph,
 		"/sugarconsumeAPI/MyGraph2" : MyGraph2,
+		"/sugarconsumeAPI/crime" : crime,
 		"*" : NotFound
 	}
 
