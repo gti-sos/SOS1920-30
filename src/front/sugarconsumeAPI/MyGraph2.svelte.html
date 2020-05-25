@@ -1,67 +1,65 @@
+
+<div id="chart"></div>
 <script>
-    import {
-            pop
-    } from "svelte-spa-router";
-    
+   // import {onMount} from "svelte";
+    import {pop} from "svelte-spa-router";
     import Button from "sveltestrap/src/Button.svelte";
-    async function loadGraph () {
-       
+    import ApexCharts from 'apexcharts'
+   // onMount(loadGraph());
+    async function loadGraph() {
+  
         let MyData = [];
+    let MyDataGraph = [];
+
+    let datos = [];
         const resData = await fetch("/api/v2/sugarconsume");
         MyData = await resData.json();
-       
-        let places = [];
-        let years = [];
-        let sugarconsume = [];
-        MyData.forEach((x) => {
-            let place = x.place;
-            let year = x.year;
-            let sugarconsume = x["sugarconsume"];
-            
-            
-            if (x.year == 2018) {
-                places.push(place);
-                sugarconsume.push(sugarconsume);
-            }
+        MyData.forEach( (x) => {
+            MyDataGraph.push(x.place + " año " + x.year);
+            datos.push(x.sugarconsume);
         });
-        new RGraph.SVG.Line({
-            id: 'chart-container',
-            data: sugarconsume,
-            options: {
-                backgroundColor: '#eee',
-                backgroundGridColor: 'blue',
-                backgroundGridVlinesCount: 20,
-                backgroundGridLinewidth: 1,
-                colors: ['black'],
-                tickmarksStyle: 'filledcircle',
-                xaxis: true,
-                yaxis: true,
-                yaxisScaleUnitsPost: '%',
-                textSize: 9,
-                xaxisLabels: places
+      console.log(datos);
+        var options = {
+          series: datos,
+          chart: {
+          width: 600,
+          type: 'pie',
+        },
+        labels: MyDataGraph,
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
             }
-        
-        // Use the trace() animation to show the chart and add some responsive capability
-        }).trace().responsive([
-            {maxWidth: 900, width:450,height:200,options:{linewidth: 2,tickmarksSize: 5}},
-            {maxWidth: null,width:600,height:250,options:{linewidth: 3,tickmarksSize: 6}}
-        ]);
-    
-    }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+
+  }
+  
 </script>
+
+
+
 
 <svelte:head>
 
-    <script src="libraries/RGraph.svg.common.core.js" on:load={loadGraph}></script>
-    <script src="libraries/RGraph.svg.line.js" on:load={loadGraph}></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts" on:load={loadGraph}></script>
+   
 
-</svelte:head>
+</svelte:head> 
 
 <main>
-
-    <div style="width: 750px; height: 250px" id="chart-container"></div>
-    <p></p>
-    <p>Representación gráfica con RGraph que muestra el consumo de azúcar en diferentes lugares y años.</p>
+    <h4>Medido en miles de kilogramos de azúcar</h4>
+    <p>Representación gráfica con ApexCharts que muestra el consumo de azúcar en diferentes lugares y años.</p>
     <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
 
 </main>
