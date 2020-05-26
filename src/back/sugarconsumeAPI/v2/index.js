@@ -5,7 +5,7 @@ module.exports = function (app) {
 	const path = require("path");
 	 
 	const dbFileName = path.join(__dirname, "sugarconsume.db");
-	const BASE_API_URL = "/api/v3";
+	const BASE_API_URL = "/api/v2";
 	 
 	const db = new dataStore({
 					filename: dbFileName,
@@ -16,121 +16,90 @@ module.exports = function (app) {
 	{
 		place: "Europa",
 		sugarconsume: 18800,
-		year:  2017,
-		pg_diabetes: 4.5,
-		poblacion: 741
-
+		year:  2017
 		
 	},
 	{
 		place: "China",
 		sugarconsume: 17500,
-		year:  2017,
-		pg_diabetes: 4.5,
-		poblacion: 1395
+		year:  2017
 		
 	},
 	{
 		place: "India",
 		sugarconsume: 28000,
-		year:  2017,
-		pg_diabetes: 4.5,
-		poblacion: 1353
+		year:  2017
 		
 	},
 	{
 		place: "Turquia",
 		sugarconsume: 2300,
-		year:  2017,
-		pg_diabetes: 4.5,
-		poblacion: 82
+		year:  2017
 		
 	},
 	{
 		place: "Ucrania",
 		sugarconsume: 1580,
-		year: 2017,
-		pg_diabetes: 4.5,
-		poblacion: 41
+		year: 2017
 		
 	},
 		{
 		place: "Europa",
 		sugarconsume: 18800,
-		year:  2016,
-		pg_diabetes: 4.5,
-		poblacion: 740
+		year:  2016
 		
 	},
 	{
 		place: "China",
 		sugarconsume: 17700,
-		year:  2016,
-		pg_diabetes: 4.5,
-		poblacion: 1393
+		year:  2016
 		
 	},
 	{
 		place: "India",
 		sugarconsume: 28000,
-		year:  2016,
-		pg_diabetes: 4.5,
-		poblacion: 1353
+		year:  2016
 		
 	},
 	{
 		place: "Turquia",
 		sugarconsume: 2300,
-		year:  2016,
-		pg_diabetes: 4.5,
-		poblacion: 81
+		year:  2016
 		
 	},
 	{
 		place: "Ucrania",
 		sugarconsume: 1580,
-		year: 2016,
-		pg_diabetes: 4.5,
-		poblacion: 41
+		year: 2016
 		
 	},{
 		place: "Europa",
 		sugarconsume: 18700,
-		year:  2015,
-		pg_diabetes: 4.5,
-		poblacion: 738
+		year:  2015
 		
 	},
 	{
 		place: "China",
 		sugarconsume: 17558,
-		year:  2015,
-		pg_diabetes: 4.5,
-		poblacion: 1380
+		year:  2015
 		
 	},
 	{
 		place: "India",
 		sugarconsume: 27195,
-		year:  2015,
-		pg_diabetes: 4.5,
-		poblacion: 1350
+		year:  2015
 		
 	},
 	{
 		place: "Turquia",
 		sugarconsume: 2300,
-		year:  2015,
-		pg_diabetes: 4.5,
-		poblacion: 80
+		year:  2015
 		
 	},
 	{
 		place: "Ucrania",
 		sugarconsume: 1587,
-		year: 2015,
-		pg_diabetes: 4.5,
-		poblacion: 40
+		year: 2015
 		
 	}
 		

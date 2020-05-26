@@ -9,7 +9,7 @@ async function loadGraph(){
     let MyDataGraph = [];
     let Lugares = [];
     let años = [];
-        const resData = await fetch("/api/v2/sugarconsume");
+        const resData = await fetch("/api/v3/sugarconsume");
         MyData = await resData.json();
         MyData.forEach( (y) => {
             if(!Lugares.includes(y.place)){

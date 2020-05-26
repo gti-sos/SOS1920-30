@@ -12,7 +12,7 @@
     let MyDataGraph = [];
 
     let datos = [];
-        const resData = await fetch("/api/v2/sugarconsume");
+        const resData = await fetch("/api/v3/sugarconsume");
         MyData = await resData.json();
         MyData.forEach( (x) => {
             MyDataGraph.push(x.place + " año " + x.year);
