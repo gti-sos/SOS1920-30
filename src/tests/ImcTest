@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "a8b4171e-20bb-4075-8f96-4962b36e3b43",
+		"name": "SOS1920-30-V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aed2c781-0b83-451b-834b-0104ab87c098",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{BASE_URL}}"
+			},
+			"response": []
+		},
+		{
+			"name": "loadinitialdata",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1f7edcf7-fcac-479b-8bdb-782eff3276fa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BASE_URL}}/loadInitialData"
+			},
+			"response": []
+		},
+		{
+			"name": "get contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ba036135-74d1-4b38-ae5b-e90b3847f302",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There are more than 2 contacts\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf.above(2);",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BASE_URL}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Busquedas (alemania 2019)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d653f34e-5b06-442b-b303-a630b69bafa0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There is 1 contacts\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?place=Alemania&year=2019",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "place",
+							"value": "Alemania"
+						},
+						{
+							"key": "year",
+							"value": "2019"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post contacts italia 2019",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fa98d3fe-d4ad-4998-8057-8a99eb964eb8",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Created\");",
+							"",
+							"});",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"place\": \"Italia\",\r\n\"indice_de_masa_corporal\": 25.33,\r\n\"year\": 2019\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}"
+			},
+			"response": []
+		},
+		{
+			"name": "post contacts italia 2020",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b6c6f2e-475f-411d-a744-40df69a666d3",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Created\");",
+							"",
+							"});",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"place\": \"Italia\",\r\n\"indice_de_masa_corporal\": 25.33,\r\n\"year\": 2020\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar valores en Italia",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84993434-08dc-424e-a7d7-71ff8932a310",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There are more than 1 contacts\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BASE_URL}}/Italia"
+			},
+			"response": []
+		},
+		{
+			"name": "paginacion de los 4 primeros",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "207267f7-2b93-41e8-91e5-e92b73806c39",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There are 4 contacts\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(4);",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?limit=4&offset=0",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put contacts(Italia)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "082d42b7-75a4-4bbf-8f50-88e3eeafdafa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"place\": \"Italia\",\r\n    \"indice_de_masa_corporal\": 25.32,\r\n    \"year\": 2019\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}/Italia/2019"
+			},
+			"response": []
+		},
+		{
+			"name": "paginacion de los 4 ultimos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d6f60a65-26be-4ddb-b6b5-040b3e869e93",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There are 4 contacts\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(4);",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}?limit=4&offset=4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "offset",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar valores de Italia en 2019",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df637d8e-1814-4f62-905b-05d276f96a4a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There is 1 contact\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BASE_URL}}/Italia/2019"
+			},
+			"response": []
+		},
+		{
+			"name": "delete contacts(italia 2019)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b74018c9-5f39-4bb3-a7db-e9ba52553900",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{BASE_URL}}/Italia/2019"
+			},
+			"response": []
+		},
+		{
+			"name": "delete contacts(italia entera)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b15e3d33-0c6c-4da4-966c-3f82609e7d76",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{BASE_URL}}/Italia"
+			},
+			"response": []
+		},
+		{
+			"name": "post contacts(Italia)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3f3073e7-40ba-43e0-bd52-0a72fba907f2",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Method Not Allowed\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"place\": \"Italia\",\r\n\"indice_de_masa_corporal\": 25.33\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}/Italia"
+			},
+			"response": []
+		},
+		{
+			"name": "put contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42a132dc-413b-46aa-8299-76daa3017e94",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Method Not Allowed\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "33e047b6-0bdb-4eb7-9ffd-302f21077700",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"",
+							"}); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{BASE_URL}}"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
