@@ -6,7 +6,11 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+<<<<<<< HEAD
     "test": "npx newman run src/tests/SugarconsumeTest.json && npx newman run src/tests/ImcTest-V2.postman_collection.json",
+=======
+    "test": "npx newman run src/tests/SugarconsumeTest.json &&  npx newman run src/tests/ImcTest-V2.postman_collection",
+>>>>>>> 832505646edb031ee9f67bfd0bdb71ed83361142
     "start": "node index"
   },
   "devDependencies": {
