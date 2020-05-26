@@ -25,4 +25,6 @@ Our sources of information are based on an analysis of the body mass index and s
 
 
   [![Build Status](https://travis-ci.org/gti-sos/SOS1920-30.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-30.svg?branch=master)
+
+  ---------------------------------------------
 	
