@@ -69,8 +69,9 @@
             }
 		}).then(function (res) {
                 getsugarconsumes();
-		});
-        alert("Recurso actualizado con éxito");
+        });
+            alert("Recurso actualizado con éxito");
+        
         
 
     }
@@ -96,8 +97,8 @@
                 <td>{updatedPlace}</td>
                 <td><input bind:value="{updatedSugarconsume}"></td>
                 <td>{updatedYear}</td>
-                <td>{updatedPg_diabetes}</td>
-                <td>{updatedPoblacion}</td>
+                <td><input bind:value="{updatedPg_diabetes}"></td>
+                <td><input bind:value="{updatedPoblacion}"></td>
                 <td> <Button outline  color="primary" on:click={updatesugarconsume}>Update</Button> </td>
             </tr>
         </tbody>

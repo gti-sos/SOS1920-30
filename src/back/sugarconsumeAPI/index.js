@@ -17,7 +17,7 @@ module.exports = function (app) {
 		place: "Europa",
 		sugarconsume: 18800,
 		year:  2017,
-		pg_diabetes: 4.5,
+		pg_diabetes: 4,
 		poblacion: 741
 
 		
@@ -26,7 +26,7 @@ module.exports = function (app) {
 		place: "China",
 		sugarconsume: 17500,
 		year:  2017,
-		pg_diabetes: 4.5,
+		pg_diabetes: 4.1,
 		poblacion: 1395
 		
 	},
@@ -34,7 +34,7 @@ module.exports = function (app) {
 		place: "India",
 		sugarconsume: 28000,
 		year:  2017,
-		pg_diabetes: 4.5,
+		pg_diabetes: 4.2,
 		poblacion: 1353
 		
 	},
@@ -42,7 +42,7 @@ module.exports = function (app) {
 		place: "Turquia",
 		sugarconsume: 2300,
 		year:  2017,
-		pg_diabetes: 4.5,
+		pg_diabetes: 0.8,
 		poblacion: 82
 		
 	},
@@ -50,7 +50,7 @@ module.exports = function (app) {
 		place: "Ucrania",
 		sugarconsume: 1580,
 		year: 2017,
-		pg_diabetes: 4.5,
+		pg_diabetes: 0.9,
 		poblacion: 41
 		
 	},
@@ -58,7 +58,7 @@ module.exports = function (app) {
 		place: "Europa",
 		sugarconsume: 18800,
 		year:  2016,
-		pg_diabetes: 4.5,
+		pg_diabetes: 3.9,
 		poblacion: 740
 		
 	},
@@ -66,7 +66,7 @@ module.exports = function (app) {
 		place: "China",
 		sugarconsume: 17700,
 		year:  2016,
-		pg_diabetes: 4.5,
+		pg_diabetes: 3.8,
 		poblacion: 1393
 		
 	},
@@ -74,7 +74,7 @@ module.exports = function (app) {
 		place: "India",
 		sugarconsume: 28000,
 		year:  2016,
-		pg_diabetes: 4.5,
+		pg_diabetes: 4,
 		poblacion: 1353
 		
 	},
@@ -82,7 +82,7 @@ module.exports = function (app) {
 		place: "Turquia",
 		sugarconsume: 2300,
 		year:  2016,
-		pg_diabetes: 4.5,
+		pg_diabetes: 1.2,
 		poblacion: 81
 		
 	},
@@ -90,14 +90,14 @@ module.exports = function (app) {
 		place: "Ucrania",
 		sugarconsume: 1580,
 		year: 2016,
-		pg_diabetes: 4.5,
+		pg_diabetes: 0.8,
 		poblacion: 41
 		
 	},{
 		place: "Europa",
 		sugarconsume: 18700,
 		year:  2015,
-		pg_diabetes: 4.5,
+		pg_diabetes: 3.4,
 		poblacion: 738
 		
 	},
@@ -105,7 +105,7 @@ module.exports = function (app) {
 		place: "China",
 		sugarconsume: 17558,
 		year:  2015,
-		pg_diabetes: 4.5,
+		pg_diabetes: 3.1,
 		poblacion: 1380
 		
 	},
@@ -113,7 +113,7 @@ module.exports = function (app) {
 		place: "India",
 		sugarconsume: 27195,
 		year:  2015,
-		pg_diabetes: 4.5,
+		pg_diabetes: 4.3,
 		poblacion: 1350
 		
 	},
@@ -121,7 +121,7 @@ module.exports = function (app) {
 		place: "Turquia",
 		sugarconsume: 2300,
 		year:  2015,
-		pg_diabetes: 4.5,
+		pg_diabetes: 1,
 		poblacion: 80
 		
 	},
@@ -129,7 +129,7 @@ module.exports = function (app) {
 		place: "Ucrania",
 		sugarconsume: 1587,
 		year: 2015,
-		pg_diabetes: 4.5,
+		pg_diabetes: 0.7,
 		poblacion: 40
 		
 	}
@@ -252,7 +252,7 @@ app.get(BASE_API_URL+"/sugarconsume", (req,res) =>{
 
 app.post(BASE_API_URL+"/sugarconsume",(req,res) => {
 	var newSugarconsume = req.body;
-	if((newSugarconsume == "") || (newSugarconsume.place == null || newSugarconsume.year == null)){
+	if((newSugarconsume == "") || (newSugarconsume.place == null || newSugarconsume.year == null || newSugarconsume.pg_diabetes == null || newSugarconsume.poblacion == null)){
 			res.sendStatus(400, "BAD REQUEST(no name provided or no year provided)");
 	}
 	else{
@@ -277,12 +277,12 @@ app.put(BASE_API_URL+"/sugarconsume/:place/:year",(req,res) => {
 	var place = req.params.place;
 	var year = parseInt(req.params.year);
 	var updated = req.body;
-	db.find({"place":place, "year": year},(error,sugarconsume)=>{
+	db.find({"place":place, "year": year},(error,sugarconsume, pg_diabetes, poblacion)=>{
 		console.log(sugarconsume);
 		if(sugarconsume.length == 0){
 			console.log("Error 404, no se ha encontrado el recurso");
 			res.sendStatus(404);
-			}else if(!updated.place || !updated.sugarconsume ||!updated.year || updated.place != place || updated.year != year){				
+			}else if(!updated.place || !updated.year  || updated.place != place || updated.year != year){				
 				console.log("mal uso de put");
 				res.sendStatus(400);
 				}else{

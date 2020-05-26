@@ -9727,7 +9727,7 @@ var app = (function () {
     	return block;
     }
 
-    // (82:0) {:then sugarconsume}
+    // (83:0) {:then sugarconsume}
     function create_then_block$1(ctx) {
     	let current;
 
@@ -9751,7 +9751,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, updatedPoblacion, updatedPg_diabetes, updatedYear, updatedSugarconsume, updatedPlace*/ 2110) {
+    			if (dirty & /*$$scope, updatedPoblacion, updatedPg_diabetes, updatedYear, updatedSugarconsume, updatedPlace*/ 8254) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9775,14 +9775,14 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(82:0) {:then sugarconsume}",
+    		source: "(83:0) {:then sugarconsume}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:21) <Button outline  color="primary" on:click={updatesugarconsume}>
+    // (102:21) <Button outline  color="primary" on:click={updatesugarconsume}>
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -9802,14 +9802,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(101:21) <Button outline  color=\\\"primary\\\" on:click={updatesugarconsume}>",
+    		source: "(102:21) <Button outline  color=\\\"primary\\\" on:click={updatesugarconsume}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:4) <Table bordered>
+    // (84:4) <Table bordered>
     function create_default_slot_1$1(ctx) {
     	let thead;
     	let tr0;
@@ -9831,17 +9831,17 @@ var app = (function () {
     	let t12;
     	let t13;
     	let td1;
-    	let input;
+    	let input0;
     	let t14;
     	let td2;
     	let t15;
     	let t16;
     	let td3;
+    	let input1;
     	let t17;
-    	let t18;
     	let td4;
-    	let t19;
-    	let t20;
+    	let input2;
+    	let t18;
     	let td5;
     	let current;
     	let dispose;
@@ -9886,36 +9886,38 @@ var app = (function () {
     			t12 = text(/*updatedPlace*/ ctx[1]);
     			t13 = space();
     			td1 = element("td");
-    			input = element("input");
+    			input0 = element("input");
     			t14 = space();
     			td2 = element("td");
     			t15 = text(/*updatedYear*/ ctx[5]);
     			t16 = space();
     			td3 = element("td");
-    			t17 = text(/*updatedPg_diabetes*/ ctx[3]);
-    			t18 = space();
+    			input1 = element("input");
+    			t17 = space();
     			td4 = element("td");
-    			t19 = text(/*updatedPoblacion*/ ctx[4]);
-    			t20 = space();
+    			input2 = element("input");
+    			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$b, 85, 16, 2694);
-    			add_location(th1, file$b, 86, 16, 2726);
-    			add_location(th2, file$b, 87, 16, 2774);
-    			add_location(th3, file$b, 88, 16, 2804);
-    			add_location(th4, file$b, 89, 16, 2853);
-    			add_location(th5, file$b, 90, 16, 2889);
-    			add_location(tr0, file$b, 84, 12, 2672);
-    			add_location(thead, file$b, 83, 8, 2651);
-    			add_location(td0, file$b, 95, 16, 2996);
-    			add_location(input, file$b, 96, 20, 3041);
-    			add_location(td1, file$b, 96, 16, 3037);
-    			add_location(td2, file$b, 97, 16, 3106);
-    			add_location(td3, file$b, 98, 16, 3146);
-    			add_location(td4, file$b, 99, 16, 3193);
-    			add_location(td5, file$b, 100, 16, 3238);
-    			add_location(tr1, file$b, 94, 12, 2974);
-    			add_location(tbody, file$b, 93, 8, 2953);
+    			add_location(th0, file$b, 86, 16, 2714);
+    			add_location(th1, file$b, 87, 16, 2746);
+    			add_location(th2, file$b, 88, 16, 2794);
+    			add_location(th3, file$b, 89, 16, 2824);
+    			add_location(th4, file$b, 90, 16, 2873);
+    			add_location(th5, file$b, 91, 16, 2909);
+    			add_location(tr0, file$b, 85, 12, 2692);
+    			add_location(thead, file$b, 84, 8, 2671);
+    			add_location(td0, file$b, 96, 16, 3016);
+    			add_location(input0, file$b, 97, 20, 3061);
+    			add_location(td1, file$b, 97, 16, 3057);
+    			add_location(td2, file$b, 98, 16, 3126);
+    			add_location(input1, file$b, 99, 20, 3170);
+    			add_location(td3, file$b, 99, 16, 3166);
+    			add_location(input2, file$b, 100, 20, 3238);
+    			add_location(td4, file$b, 100, 16, 3234);
+    			add_location(td5, file$b, 101, 16, 3300);
+    			add_location(tr1, file$b, 95, 12, 2994);
+    			add_location(tbody, file$b, 94, 8, 2973);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -9938,37 +9940,51 @@ var app = (function () {
     			append_dev(td0, t12);
     			append_dev(tr1, t13);
     			append_dev(tr1, td1);
-    			append_dev(td1, input);
-    			set_input_value(input, /*updatedSugarconsume*/ ctx[2]);
+    			append_dev(td1, input0);
+    			set_input_value(input0, /*updatedSugarconsume*/ ctx[2]);
     			append_dev(tr1, t14);
     			append_dev(tr1, td2);
     			append_dev(td2, t15);
     			append_dev(tr1, t16);
     			append_dev(tr1, td3);
-    			append_dev(td3, t17);
-    			append_dev(tr1, t18);
+    			append_dev(td3, input1);
+    			set_input_value(input1, /*updatedPg_diabetes*/ ctx[3]);
+    			append_dev(tr1, t17);
     			append_dev(tr1, td4);
-    			append_dev(td4, t19);
-    			append_dev(tr1, t20);
+    			append_dev(td4, input2);
+    			set_input_value(input2, /*updatedPoblacion*/ ctx[4]);
+    			append_dev(tr1, t18);
     			append_dev(tr1, td5);
     			mount_component(button, td5, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[10]);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[11]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[12])
+    			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedPlace*/ 2) set_data_dev(t12, /*updatedPlace*/ ctx[1]);
 
-    			if (dirty & /*updatedSugarconsume*/ 4 && input.value !== /*updatedSugarconsume*/ ctx[2]) {
-    				set_input_value(input, /*updatedSugarconsume*/ ctx[2]);
+    			if (dirty & /*updatedSugarconsume*/ 4 && input0.value !== /*updatedSugarconsume*/ ctx[2]) {
+    				set_input_value(input0, /*updatedSugarconsume*/ ctx[2]);
     			}
 
     			if (!current || dirty & /*updatedYear*/ 32) set_data_dev(t15, /*updatedYear*/ ctx[5]);
-    			if (!current || dirty & /*updatedPg_diabetes*/ 8) set_data_dev(t17, /*updatedPg_diabetes*/ ctx[3]);
-    			if (!current || dirty & /*updatedPoblacion*/ 16) set_data_dev(t19, /*updatedPoblacion*/ ctx[4]);
+
+    			if (dirty & /*updatedPg_diabetes*/ 8 && input1.value !== /*updatedPg_diabetes*/ ctx[3]) {
+    				set_input_value(input1, /*updatedPg_diabetes*/ ctx[3]);
+    			}
+
+    			if (dirty & /*updatedPoblacion*/ 16 && input2.value !== /*updatedPoblacion*/ ctx[4]) {
+    				set_input_value(input2, /*updatedPoblacion*/ ctx[4]);
+    			}
+
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9988,7 +10004,7 @@ var app = (function () {
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -9996,14 +10012,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(83:4) <Table bordered>",
+    		source: "(84:4) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (80:21)       Loading sugarconsume...  {:then sugarconsume}
+    // (81:21)       Loading sugarconsume...  {:then sugarconsume}
     function create_pending_block$1(ctx) {
     	let t;
 
@@ -10026,14 +10042,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(80:21)       Loading sugarconsume...  {:then sugarconsume}",
+    		source: "(81:21)       Loading sugarconsume...  {:then sugarconsume}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:0) {#if errorMsg}
+    // (107:0) {#if errorMsg}
     function create_if_block$7(ctx) {
     	let p;
     	let t0;
@@ -10045,7 +10061,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[6]);
     			set_style(p, "color", "red");
-    			add_location(p, file$b, 106, 4, 3410);
+    			add_location(p, file$b, 107, 4, 3472);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -10064,14 +10080,14 @@ var app = (function () {
     		block,
     		id: create_if_block$7.name,
     		type: "if",
-    		source: "(106:0) {#if errorMsg}",
+    		source: "(107:0) {#if errorMsg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:0) <Button outline color="secondary" on:click="{pop}">
+    // (110:0) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -10091,7 +10107,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(109:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(110:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -10150,9 +10166,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$b, 78, 26, 2504);
-    			add_location(h3, file$b, 78, 4, 2482);
-    			add_location(main, file$b, 77, 0, 2470);
+    			add_location(strong, file$b, 79, 26, 2524);
+    			add_location(h3, file$b, 79, 4, 2502);
+    			add_location(main, file$b, 78, 0, 2490);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10199,7 +10215,7 @@ var app = (function () {
 
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -10307,9 +10323,19 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("EditResource_svelte", $$slots, []);
 
-    	function input_input_handler() {
+    	function input0_input_handler() {
     		updatedSugarconsume = this.value;
     		$$invalidate(2, updatedSugarconsume);
+    	}
+
+    	function input1_input_handler() {
+    		updatedPg_diabetes = this.value;
+    		$$invalidate(3, updatedPg_diabetes);
+    	}
+
+    	function input2_input_handler() {
+    		updatedPoblacion = this.value;
+    		$$invalidate(4, updatedPoblacion);
     	}
 
     	$$self.$set = $$props => {
@@ -10360,7 +10386,9 @@ var app = (function () {
     		sugarconsume,
     		updatesugarconsume,
     		getsugarconsumes,
-    		input_input_handler
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler
     	];
     }
 
@@ -10387,11 +10415,9 @@ var app = (function () {
     }
 
     /* src\front\sugarconsumeAPI\MyGraph.svelte.html generated by Svelte v3.21.0 */
-
-    const { console: console_1$4 } = globals;
     const file$c = "src\\front\\sugarconsumeAPI\\MyGraph.svelte.html";
 
-    // (119:4) <Button outline color="secondary" on:click="{pop}">
+    // (113:8) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$2(ctx) {
     	let i;
     	let t;
@@ -10401,7 +10427,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$c, 118, 56, 3082);
+    			add_location(i, file$c, 112, 60, 3384);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -10417,7 +10443,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(119:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(113:8) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -10433,8 +10459,6 @@ var app = (function () {
     	let script2_src_value;
     	let script3;
     	let script3_src_value;
-    	let script4;
-    	let script4_src_value;
     	let t0;
     	let main;
     	let figure;
@@ -10463,7 +10487,6 @@ var app = (function () {
     			script1 = element("script");
     			script2 = element("script");
     			script3 = element("script");
-    			script4 = element("script");
     			t0 = space();
     			main = element("main");
     			figure = element("figure");
@@ -10474,23 +10497,21 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$c, 103, 4, 2350);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$c, 104, 4, 2421);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$c, 105, 4, 2502);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$c, 106, 4, 2580);
-    			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$c, 107, 4, 2660);
+    			add_location(script0, file$c, 98, 8, 2693);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$c, 99, 0, 2760);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$c, 100, 0, 2834);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$c, 101, 8, 2918);
     			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-1qnbox8");
-    			add_location(div, file$c, 112, 8, 2834);
+    			attr_dev(div, "class", "svelte-6dw7pn");
+    			add_location(div, file$c, 106, 12, 3112);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$c, 113, 8, 2870);
-    			attr_dev(figure, "class", "highcharts-figure svelte-1qnbox8");
-    			add_location(figure, file$c, 111, 4, 2790);
-    			add_location(main, file$c, 110, 0, 2778);
+    			add_location(p, file$c, 107, 12, 3152);
+    			attr_dev(figure, "class", "highcharts-figure svelte-6dw7pn");
+    			add_location(figure, file$c, 105, 8, 3064);
+    			add_location(main, file$c, 104, 4, 3048);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10500,7 +10521,6 @@ var app = (function () {
     			append_dev(document.head, script1);
     			append_dev(document.head, script2);
     			append_dev(document.head, script3);
-    			append_dev(document.head, script4);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
@@ -10511,7 +10531,7 @@ var app = (function () {
     			mount_component(button, main, null);
     			current = true;
     			if (remount) dispose();
-    			dispose = listen_dev(script4, "load", loadGraph, false, false, false);
+    			dispose = listen_dev(script3, "load", loadGraph, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -10536,7 +10556,6 @@ var app = (function () {
     			detach_dev(script1);
     			detach_dev(script2);
     			detach_dev(script3);
-    			detach_dev(script4);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
@@ -10558,78 +10577,79 @@ var app = (function () {
     async function loadGraph() {
     	let MyData = [];
     	let MyDataGraph = [];
-    	let Lugares = [];
-    	let años = [];
+    	let datos1 = [];
+    	let datos2 = [];
+    	let datos3 = [];
+    	let marca = [];
     	const resData = await fetch("/api/v3/sugarconsume");
     	MyData = await resData.json();
 
     	MyData.forEach(y => {
-    		if (!Lugares.includes(y.place)) {
-    			Lugares.push(y.place);
-    		}
+    		marca.push(y.place + " año " + y.year);
     	});
 
-    	MyData.forEach(y => {
-    		if (!años.includes(y.year)) {
-    			años.push(y.year);
-    		}
+    	MyData.forEach(x => {
+    		datos1.push(x.sugarconsume);
     	});
 
-    	let years = MyData.map(d => {
-    		return d.year;
+    	MyData.forEach(x => {
+    		datos2.push(x.pg_diabetes);
     	});
 
-    	let places = MyData.map(d => {
-    		return d.place;
+    	MyData.forEach(x => {
+    		datos3.push(x.poblacion);
     	});
 
-    	let sugarconsume = MyData.map(d => {
-    		return d["sugarconsume"];
+    	MyDataGraph.push({ name: "Consumo de azúcar", data: datos1 });
+
+    	MyDataGraph.push({
+    		name: "Porcentaje de diabetes",
+    		data: datos2
     	});
 
-    	años.forEach(x => {
-    		var aux = [];
-
-    		MyData.forEach(y => {
-    			if (y.year === x) {
-    				aux.push(y.sugarconsume);
-    			}
-    		});
-
-    		MyDataGraph.push({ name: "Año " + x, data: aux });
-    	});
-
-    	console.log(MyDataGraph);
+    	MyDataGraph.push({ name: "Población", data: datos3 });
 
     	Highcharts.chart("container", {
-    		chart: { type: "bar" },
-    		title: { text: "Consumo de azúcar" },
-    		subtitle: {
-    			text: "Source: <a href=\"https://es.wikipedia.org/wiki/Az%C3%BAcar\">Wikipedia.org</a>"
+    		chart: { type: "column" },
+    		title: {
+    			text: "Gráfico que muestra: \n - el consumo de azucar (medido en miles de kg) \n - el porcentaje de diabetes (medido en %) \n - la población del lugar (medido en millones de habitantes)"
     		},
-    		xAxis: {
-    			categories: Lugares,
-    			title: { text: null }
-    		},
+    		xAxis: { categories: marca },
     		yAxis: {
     			min: 0,
-    			title: { text: "Consumo (mil)", align: "high" },
-    			labels: { overflow: "justify" }
+    			title: {
+    				text: "Datos sobre el consumo de azúcar, la diabetes y la población"
+    			},
+    			stackLabels: {
+    				enabled: false,
+    				style: {
+    					fontWeight: "bold",
+    					color: // theme
+    					Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color || "gray"
+    				}
+    			}
     		},
-    		tooltip: { valueSuffix: " mil" },
-    		plotOptions: { bar: { dataLabels: { enabled: true } } },
     		legend: {
-    			layout: "vertical",
     			align: "right",
+    			x: -30,
     			verticalAlign: "top",
-    			x: -40,
-    			y: 80,
+    			y: 60,
     			floating: true,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || "white",
+    			borderColor: "#CCC",
     			borderWidth: 1,
-    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || "#FFFFFF",
-    			shadow: true
+    			shadow: false
     		},
-    		credits: { enabled: false },
+    		tooltip: {
+    			headerFormat: "<b>{point.x}</b><br/>",
+    			pointFormat: "{series.name}: {point.y}<br/>"
+    		},
+    		plotOptions: {
+    			column: {
+    				stacking: "normal",
+    				dataLabels: { enabled: true }
+    			}
+    		},
     		series: MyDataGraph
     	});
     }
@@ -10638,7 +10658,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$4.warn(`<MyGraph_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<MyGraph_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -10678,7 +10698,7 @@ var app = (function () {
 
     /* src\front\sugarconsumeAPI\MyGraph2.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$5, document: document_1 } = globals;
+    const { console: console_1$4, document: document_1 } = globals;
     const file$d = "src\\front\\sugarconsumeAPI\\MyGraph2.svelte.html";
 
     // (63:4) <Button outline color="secondary" on:click="{pop}">
@@ -10857,7 +10877,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$5.warn(`<MyGraph2_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$4.warn(`<MyGraph2_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -11064,7 +11084,7 @@ var app = (function () {
 
     /* src\front\sugarconsumeAPI\integraciones\global-divorces.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$6 } = globals;
+    const { console: console_1$5 } = globals;
     const file$f = "src\\front\\sugarconsumeAPI\\integraciones\\global-divorces.svelte.html";
 
     // (118:8) <Button outline color="secondary" on:click="{pop}">
@@ -11302,7 +11322,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$6.warn(`<Global_divorces_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$5.warn(`<Global_divorces_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -11575,7 +11595,7 @@ var app = (function () {
 
     /* src\front\sugarconsumeAPI\integraciones\renewable-sources-stats.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$7 } = globals;
+    const { console: console_1$6 } = globals;
     const file$h = "src\\front\\sugarconsumeAPI\\integraciones\\renewable-sources-stats.svelte.html";
 
     // (143:8) <Button outline color="secondary" on:click="{pop}">
@@ -11842,7 +11862,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$7.warn(`<Renewable_sources_stats_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$6.warn(`<Renewable_sources_stats_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -11867,7 +11887,7 @@ var app = (function () {
 
     /* src\front\imcAPI\imcTable.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$8 } = globals;
+    const { console: console_1$7 } = globals;
     const file$i = "src\\front\\imcAPI\\imcTable.svelte.html";
 
     function get_each_context$1(ctx, list, i) {
@@ -14151,7 +14171,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$8.warn(`<ImcTable_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$7.warn(`<ImcTable_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -14282,7 +14302,7 @@ var app = (function () {
 
     /* src\front\imcAPI\EditValue.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$9 } = globals;
+    const { console: console_1$8 } = globals;
     const file$j = "src\\front\\imcAPI\\EditValue.svelte.html";
 
     // (1:0) <script>      import {    onMount   }
@@ -14838,7 +14858,7 @@ var app = (function () {
     	const writable_props = ["params"];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$9.warn(`<EditValue_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$8.warn(`<EditValue_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
