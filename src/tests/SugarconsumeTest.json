@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f3057aed-6ae7-4a74-b549-e6bcef64f4b5",
-		"name": "SOS1920-30-sugarconsume-Herokuapp Versión 2",
+		"_postman_id": "2cb3ad86-b12e-4d7a-bee5-718cad4bcc5b",
+		"name": "SOS1920-30-sugarconsume-Herokuapp Versión 3",
 		"description": "This is an API for the consumption of sugar.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,7 +12,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e49b52fc-9b7c-4e70-8dbc-e1488f8be603",
+						"id": "f978ebf4-64a7-4488-b859-8570ea2729a8",
 						"exec": [
 							""
 						],
@@ -22,7 +22,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3b68e83e-7adc-41f5-97a5-e3230a51cfef",
+						"id": "dfc2c22c-3c22-49f8-8aab-90d08e444277",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -48,13 +48,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume"
 					]
 				}
@@ -67,7 +70,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a42fac50-5263-41a4-9984-d0c477b0b4e9",
+						"id": "ec226d25-f5bd-4b38-9933-fa349fd7ccdd",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -89,13 +92,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/China/2017",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/China/2017",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"China",
 						"2017"
@@ -110,7 +116,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "39eddacb-6eca-4c69-ab1b-7d9042b4c9ba",
+						"id": "71cff4d2-4d19-4fc3-b9d9-128b600e9c8d",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -129,13 +135,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/Europa",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/Europa",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"Europa"
 					]
@@ -149,7 +158,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "70472992-5efa-4e0f-9ebd-d6cd72b8330c",
+						"id": "eb758cf4-fbf0-4b56-a37f-befc34d631b5",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -175,13 +184,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume?place=China&year=2015&sugarconsume=17558",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume?place=China&year=2015&sugarconsume=17558",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume"
 					],
 					"query": [
@@ -208,7 +220,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1b019165-0745-4276-927e-c94a543405b0",
+						"id": "671b10f8-975f-41fa-9999-a3d768d2f82d",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -234,13 +246,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume?limit=5&offset=5",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume?limit=5&offset=5",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume"
 					],
 					"query": [
@@ -263,7 +278,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e139d71a-9b03-4cb0-9a9b-04fd436e3d58",
+						"id": "90342b8b-bb82-457b-aa05-83f7cd038f71",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -280,7 +295,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"place\": \"España\",\r\n\"sugarconsume\": 15000,\r\n\"year\": 2017\r\n}",
+					"raw": "{\r\n\"place\": \"España\",\r\n\"sugarconsume\": 15000,\r\n\"year\": 2017,\r\n\"pg_diabetes\" : 2,\r\n\"poblacion\" : 200\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -288,13 +303,16 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume"
 					]
 				}
@@ -307,7 +325,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a3929062-0042-4359-a7c1-f6093d08fed2",
+						"id": "569a0dd4-4a38-4189-8959-3d51bf28cbe7",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -334,13 +352,16 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/España",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/España",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"España"
 					]
@@ -354,7 +375,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1c03cc6a-0bdf-442d-8a84-6307fd0fa496",
+						"id": "b51a64c3-5fea-4416-97cb-9e80d6702039",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -369,13 +390,16 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/China",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/China",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"China"
 					]
@@ -389,7 +413,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8ff2fdf3-f8ef-423c-bf26-f49ec52e4797",
+						"id": "8b157c15-55e5-45b7-b5b8-54509774dcb2",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -404,7 +428,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"place\": \"China\",\r\n\"sugarconsume\": 8888,\r\n\"year\":2017\r\n}",
+					"raw": "{\r\n\"place\": \"China\",\r\n\"sugarconsume\": 8888,\r\n\"year\":2017,\r\n\"pg_diabetes\": 5,\r\n\"poblacion\" : 100\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -412,13 +436,16 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/China/2017",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/China/2017",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"China",
 						"2017"
@@ -433,7 +460,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e7faffe1-23f8-452f-830f-2ce4a42d1d4e",
+						"id": "76643543-f469-41de-95a4-1412cb6c1f0b",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -447,13 +474,16 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume"
 					]
 				}
@@ -466,7 +496,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "094434e6-93dd-4f25-9a9f-48d51b9f141e",
+						"id": "ba07f510-b2cb-4009-8bd4-d5d8b8c5223d",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -480,13 +510,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/España/2017",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/España/2017",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"España",
 						"2017"
@@ -501,7 +534,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "376d912b-31c8-43f4-a6de-4d710613a2bc",
+						"id": "72cb2f75-1ebf-4203-98ba-5f88f2a85384",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -517,13 +550,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/Europa",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/Europa",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"Europa"
 					]
@@ -537,7 +573,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "bed37d47-ee8c-400b-8c17-73c4293cd168",
+						"id": "d2a43618-a0c3-476e-b681-3113c795bf8a",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -552,13 +588,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume"
 					]
 				}
@@ -571,7 +610,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "76636fc5-bef4-4a59-bc8c-678076fbd7f8",
+						"id": "45d64c1d-ca28-41ed-9fef-cc2d20da8b9c",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -585,13 +624,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos1920-30.herokuapp.com/api/v2/sugarconsume/loadInitialData",
+					"raw": "https://sos1920-30.herokuapp.com/api/v3/sugarconsume/loadInitialData",
+					"protocol": "https",
 					"host": [
-						"https://sos1920-30.herokuapp.com"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"sugarconsume",
 						"loadInitialData"
 					]
@@ -604,7 +646,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b564b055-2079-4158-ba01-c2ab894c9a4d",
+				"id": "bc4a875b-6e1c-43b2-b4b1-6fe7dcef58ce",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -614,7 +656,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7d4aa634-763f-4b73-81b3-73c6a0a14ac5",
+				"id": "e5acd252-6d09-4707-bf32-e3dab9948129",
 				"type": "text/javascript",
 				"exec": [
 					""

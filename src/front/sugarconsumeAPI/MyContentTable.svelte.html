@@ -41,7 +41,7 @@
 	//FUNCIÓN PARA OBTENER LOS AÑOS Y LUGARES QUE EXISTEN EN SUGARCONSUME
 	
 	async function getyears() {
-		const res = await fetch("/api/v2/sugarconsume");
+		const res = await fetch("/api/v3/sugarconsume");
 		if (res.ok) {
 			const json = await res.json();
 			places = json.map((d) => {
@@ -65,7 +65,7 @@
 	
 	async function loading(){
 		deletesugarconsumeAll();
-		const res = await fetch("/api/v2/sugarconsume/loadInitialData");
+		const res = await fetch("/api/v3/sugarconsume/loadInitialData");
 		getsugarconsume()
 	}
 
@@ -73,8 +73,8 @@
 
 	async function getsugarconsume() {
 		console.log("Fetching sugarconsume resources...");	
-		const res = await fetch("/api/v2/sugarconsume?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
-		const next = await fetch("/api/v2/sugarconsume?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		const res = await fetch("/api/v3/sugarconsume?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const next = await fetch("/api/v3/sugarconsume?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
 		if (res.ok && next.ok) {
 			console.log("Ok:");
 			const json = await res.json();
@@ -106,7 +106,7 @@
 			alert("No se ha rellenado algún hueco");
 		} else {
 			const json = JSON.stringify(newsugarconsume);
-			const res = await fetch("/api/v2/sugarconsume", {
+			const res = await fetch("/api/v3/sugarconsume", {
 				method: "POST",
 				body: json,
 				headers: {
@@ -127,7 +127,7 @@
 
 	async function deletesugarconsume(place, year) {
 		console.log("Deleting sugarconsume resource...");
-		const res = await fetch("/api/v2/sugarconsume/" + place + "/" + year, {
+		const res = await fetch("/api/v3/sugarconsume/" + place + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			getsugarconsume();
@@ -142,7 +142,7 @@
 
 	async function deletesugarconsumeAll() {
 		console.log("Deleting sugarconsume...");
-		const res = await fetch("/api/v2/sugarconsume/", {
+		const res = await fetch("/api/v3/sugarconsume/", {
 			method: "DELETE"
 		}).then(function (res) {
 			getsugarconsume();
@@ -157,7 +157,7 @@
 
 	async function search(place, year) {
 		console.log("Buscando país: " + place + " en año: " + year);
-		var url = "/api/v2/sugarconsume";
+		var url = "/api/v3/sugarconsume";
 		if (place != "-" && year != "-") {
 			url = url + "?place=" + place + "&year=" + year; 
 		} else if (place != "-" && year == "-") {
@@ -227,6 +227,8 @@
 					<th> Lugar </th>
 					<th> Consumición de azúcar </th>
 					<th> Año </th>
+					<th> Porcentaje de diabetes </th>
+					<th> Población </th>
 					<th> Acciones </th>
 				</tr>
 			</thead>
@@ -235,6 +237,8 @@
 					<td> <Input type="text" placeholder="lugar" bind:value="{newsugarconsume.place}" /> </td>
 					<td> <Input type="number" placeholder="consumo de azúcar" bind:value="{newsugarconsume.sugarconsume}" /> </td>
 					<td> <Input type="number" placeholder="año" bind:value="{newsugarconsume.year}" /> </td>
+					<td> <Input type="number" placeholder="Porcentaje de diabetes" bind:value="{newsugarconsume.pg_diabetes}" /> </td>
+					<td> <Input type="number" placeholder="Población" bind:value="{newsugarconsume.poblacion}" /> </td>
 					<td> <Button outline color="primary" on:click={insertsugarconsume}> <i class="far fa-edit"></i> Insertar </Button> </td>
 				</tr>
 				{#each sugarconsume as sugarconsumeresource}
@@ -246,6 +250,8 @@
 					</td> 
 					<td>{sugarconsumeresource.sugarconsume} </td>
 					<td> {sugarconsumeresource.year} </td>
+					<td> {sugarconsumeresource.pg_diabetes} </td>
+					<td> {sugarconsumeresource.poblacion} </td>
 					<td> <Button outline color="danger" on:click="{deletesugarconsume(sugarconsumeresource.place, sugarconsumeresource.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
 				</tr>
 				{/each}

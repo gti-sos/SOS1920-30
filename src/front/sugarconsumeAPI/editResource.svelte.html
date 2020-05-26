@@ -14,6 +14,8 @@
     let sugarconsume = {};
     let updatedPlace = "";
     let updatedSugarconsume = 0;
+    let updatedPg_diabetes = 0;
+    let updatedPoblacion = 0;
     let updatedYear = 0;
     let errorMsg = "";
 
@@ -24,13 +26,15 @@
 	async function getsugarconsumes() {
         
 		console.log("Fetching sugarconsume resource...");
-		const res = await fetch("/api/v2/sugarconsume/" + params.placename + "/" + params.year);
+		const res = await fetch("/api/v3/sugarconsume/" + params.placename + "/" + params.year);
 		if (res.ok) {
             const json = await res.json();
             sugarconsume = json;
             updatedPlace = sugarconsume.place;
             updatedSugarconsume = sugarconsume.sugarconsume;
             updatedYear = sugarconsume.year;
+            updatedPg_diabetes = sugarconsume.pg_diabetes;
+            updatedPoblacion = sugarconsume.poblacion;
             console.log("Received sugarconsume resource.");
             alert("Usted se encuentra sobre un recurso concreto");
 		} else {
@@ -50,12 +54,14 @@
         console.log(params.placename);
         console.log(updatedSugarconsume);
         console.log(parseInt(params.year));
-		const res = await fetch("/api/v2/sugarconsume/" + params.placename + "/" + params.year, {
+		const res = await fetch("/api/v3/sugarconsume/" + params.placename + "/" + params.year, {
             method: "PUT",
 			body: JSON.stringify({
                 place : params.placename,
                 sugarconsume : updatedSugarconsume,
-                year : parseInt(params.year)
+                year : parseInt(params.year),
+                pg_diabetes : parseInt(updatedPg_diabetes),
+                poblacion : parseInt(updatedPoblacion)
             }  
             ),
 			headers: {
@@ -63,8 +69,9 @@
             }
 		}).then(function (res) {
                 getsugarconsumes();
-		});
-        alert("Recurso actualizado con éxito");
+        });
+            alert("Recurso actualizado con éxito");
+        
         
 
     }
@@ -80,6 +87,8 @@
                 <th>Lugar</th>
                 <th>Consumición de azúcar</th>
                 <th>Año</th>
+                <th>Porcentaje de diabetes</th>
+                <th>Población</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -88,6 +97,8 @@
                 <td>{updatedPlace}</td>
                 <td><input bind:value="{updatedSugarconsume}"></td>
                 <td>{updatedYear}</td>
+                <td><input bind:value="{updatedPg_diabetes}"></td>
+                <td><input bind:value="{updatedPoblacion}"></td>
                 <td> <Button outline  color="primary" on:click={updatesugarconsume}>Update</Button> </td>
             </tr>
         </tbody>

@@ -5,7 +5,7 @@ module.exports = function (app) {
 	const path = require("path");
 	 
 	const dbFileName = path.join(__dirname, "sugarconsume.db");
-	const BASE_API_URL = "/api/v3";
+	const BASE_API_URL = "/api/v2";
 	 
 	const db = new dataStore({
 					filename: dbFileName,
@@ -16,121 +16,90 @@ module.exports = function (app) {
 	{
 		place: "Europa",
 		sugarconsume: 18800,
-		year:  2017,
-		pg_diabetes: 4,
-		poblacion: 741
-
+		year:  2017
 		
 	},
 	{
 		place: "China",
 		sugarconsume: 17500,
-		year:  2017,
-		pg_diabetes: 4.1,
-		poblacion: 1395
+		year:  2017
 		
 	},
 	{
 		place: "India",
 		sugarconsume: 28000,
-		year:  2017,
-		pg_diabetes: 4.2,
-		poblacion: 1353
+		year:  2017
 		
 	},
 	{
 		place: "Turquia",
 		sugarconsume: 2300,
-		year:  2017,
-		pg_diabetes: 0.8,
-		poblacion: 82
+		year:  2017
 		
 	},
 	{
 		place: "Ucrania",
 		sugarconsume: 1580,
-		year: 2017,
-		pg_diabetes: 0.9,
-		poblacion: 41
+		year: 2017
 		
 	},
 		{
 		place: "Europa",
 		sugarconsume: 18800,
-		year:  2016,
-		pg_diabetes: 3.9,
-		poblacion: 740
+		year:  2016
 		
 	},
 	{
 		place: "China",
 		sugarconsume: 17700,
-		year:  2016,
-		pg_diabetes: 3.8,
-		poblacion: 1393
+		year:  2016
 		
 	},
 	{
 		place: "India",
 		sugarconsume: 28000,
-		year:  2016,
-		pg_diabetes: 4,
-		poblacion: 1353
+		year:  2016
 		
 	},
 	{
 		place: "Turquia",
 		sugarconsume: 2300,
-		year:  2016,
-		pg_diabetes: 1.2,
-		poblacion: 81
+		year:  2016
 		
 	},
 	{
 		place: "Ucrania",
 		sugarconsume: 1580,
-		year: 2016,
-		pg_diabetes: 0.8,
-		poblacion: 41
+		year: 2016
 		
 	},{
 		place: "Europa",
 		sugarconsume: 18700,
-		year:  2015,
-		pg_diabetes: 3.4,
-		poblacion: 738
+		year:  2015
 		
 	},
 	{
 		place: "China",
 		sugarconsume: 17558,
-		year:  2015,
-		pg_diabetes: 3.1,
-		poblacion: 1380
+		year:  2015
 		
 	},
 	{
 		place: "India",
 		sugarconsume: 27195,
-		year:  2015,
-		pg_diabetes: 4.3,
-		poblacion: 1350
+		year:  2015
 		
 	},
 	{
 		place: "Turquia",
 		sugarconsume: 2300,
-		year:  2015,
-		pg_diabetes: 1,
-		poblacion: 80
+		year:  2015
 		
 	},
 	{
 		place: "Ucrania",
 		sugarconsume: 1587,
-		year: 2015,
-		pg_diabetes: 0.7,
-		poblacion: 40
+		year: 2015
 		
 	}
 		
@@ -252,7 +221,7 @@ app.get(BASE_API_URL+"/sugarconsume", (req,res) =>{
 
 app.post(BASE_API_URL+"/sugarconsume",(req,res) => {
 	var newSugarconsume = req.body;
-	if((newSugarconsume == "") || (newSugarconsume.place == null || newSugarconsume.year == null || newSugarconsume.pg_diabetes == null || newSugarconsume.poblacion == null)){
+	if((newSugarconsume == "") || (newSugarconsume.place == null || newSugarconsume.year == null)){
 			res.sendStatus(400, "BAD REQUEST(no name provided or no year provided)");
 	}
 	else{
@@ -277,12 +246,12 @@ app.put(BASE_API_URL+"/sugarconsume/:place/:year",(req,res) => {
 	var place = req.params.place;
 	var year = parseInt(req.params.year);
 	var updated = req.body;
-	db.find({"place":place, "year": year},(error,sugarconsume, pg_diabetes, poblacion)=>{
+	db.find({"place":place, "year": year},(error,sugarconsume)=>{
 		console.log(sugarconsume);
 		if(sugarconsume.length == 0){
 			console.log("Error 404, no se ha encontrado el recurso");
 			res.sendStatus(404);
-			}else if(!updated.place || !updated.year  || updated.place != place || updated.year != year){				
+			}else if(!updated.place || !updated.sugarconsume ||!updated.year || updated.place != place || updated.year != year){				
 				console.log("mal uso de put");
 				res.sendStatus(400);
 				}else{

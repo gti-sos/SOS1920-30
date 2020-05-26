@@ -2,6 +2,7 @@
 const express = require("express");
 //API
 const back = require("./src/back/sugarconsumeAPI");
+const backv2 = require("./src/back/sugarconsumeAPI/v2");
 const backv1 = require("./src/back/sugarconsumeAPI/v1");
 //API RAUL
 const back2 = require("./src/back/imcAPI");
@@ -19,9 +20,10 @@ app.use(cors());
 var port = process.env.PORT || 12345;
 
 app.use("/",express.static("./public"));
-back(app);
+backv2(app);
 back2(app);
 backv1(app);
+back(app);
 
 app.listen(port, () => {
 	console.log("Server ready");
