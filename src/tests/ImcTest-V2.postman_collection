@@ -28,7 +28,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -55,7 +55,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/loadInitialData"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/loadInitialData"
 			},
 			"response": []
 		},
@@ -83,7 +83,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -112,11 +112,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}api/v2/indice_de_masa_corporal?place=Alemania&year=2019",
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal?place=Alemania&year=2019",
+					"protocol": "https",
 					"host": [
-						"{{BASE_URL}}api"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"v2",
 						"indice_de_masa_corporal"
 					],
@@ -169,7 +173,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -208,7 +212,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -235,7 +239,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/Italia"
 			},
 			"response": []
 		},
@@ -264,11 +268,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}api/v2/indice_de_masa_corporal?limit=4&offset=0",
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal?limit=4&offset=0",
+					"protocol": "https",
 					"host": [
-						"{{BASE_URL}}api"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"v2",
 						"indice_de_masa_corporal"
 					],
@@ -318,7 +326,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia/2019"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/Italia/2019"
 			},
 			"response": []
 		},
@@ -347,11 +355,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}api/v2/indice_de_masa_corporal?limit=4&offset=4",
+					"raw": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal?limit=4&offset=4",
+					"protocol": "https",
 					"host": [
-						"{{BASE_URL}}api"
+						"sos1920-30",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"api",
 						"v2",
 						"indice_de_masa_corporal"
 					],
@@ -392,7 +404,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia/2019"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/Italia/2019"
 			},
 			"response": []
 		},
@@ -419,7 +431,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia/2019"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/Italia/2019"
 			},
 			"response": []
 		},
@@ -446,7 +458,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/Italia"
 			},
 			"response": []
 		},
@@ -482,7 +494,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal/Italia"
 			},
 			"response": []
 		},
@@ -518,7 +530,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -545,7 +557,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
+				"url": "https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		}
