@@ -5,39 +5,40 @@
     import Button from "sveltestrap/src/Button.svelte";
     async function loadGraph(){
     
-        let MyData = [];
-        let MyDataGraph = [];
-        let Lugares = [];
-        let años = [];
-            const resData = await fetch("http://sos1920-11.herokuapp.com/api/v2/crime-rate-stats");
-            MyData = await resData.json();
-            MyData.forEach( (y) => {
-                Lugares.push(y.country + " año " + y.year);
-            });
-        
-            /*MyData.forEach( (y) => {
-                if(!años.includes(y.year)){
-                años.push(y.year);
-                }
-            });*/
-        
-            let years = MyData.map((d) => { return d.year ; });
-            let places = MyData.map((d) => { return d.place; });
-            let sugarconsume = MyData.map((d) => { return d["sugarconsume"]; });
+       
+    let MyData = [];
+    let MyDataGraph = [];
+    let Lugares = [];
+    let años = [];
+        const resData = await fetch("https://sos1920-10.herokuapp.com/api/v2/global-divorces");
+        MyData = await resData.json();
+        MyData.forEach( (y) => {
+            if(!Lugares.includes(y.country)){
+            Lugares.push(y.country);
+            }
+        });
     
-            
-           
-           años.forEach( (x) => {
-            var aux = [];          
+        MyData.forEach( (y) => {
+            if(!años.includes(y.year)){
+            años.push(y.year);
+            }
+        });
     
-               MyData.forEach((y) => {
-                   if(y.year === x){
-                       aux.push(y.sugarconsume);
-                   }
-               })
-               MyDataGraph.push({name: "Año " + x, data: aux});
-            });
-            console.log(MyDataGraph);
+        
+
+        
+       
+       años.forEach( (x) => {
+        var aux = [];          
+
+           MyData.forEach((y) => {
+               if(y.year === x){
+                   aux.push(y.divorce);
+               }
+           })
+           MyDataGraph.push({name: "Año " + x, data: aux});
+        });
+        console.log(MyDataGraph);
     
     Highcharts.chart('container', {
         chart: {

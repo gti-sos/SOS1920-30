@@ -1,26 +1,55 @@
 <script>
 	
 	import Inicio from './Inicio.svelte.html';
-	import MyContentTable from './sugarconsumeAPI/MyContentTable.svelte.html';
-	import imcTable from './imcAPI/imcTable.svelte.html';
-	import EditValue from './imcAPI/EditValue.svelte.html';
-	import NotFound from './NotFound.svelte.html';
-	import editResource from './sugarconsumeAPI/editResource.svelte.html'
 	import Router from 'svelte-spa-router';
+	import NotFound from './NotFound.svelte.html';
+
+
+	//IMPORTACIONES  PARA SUGARCONSUME
+	import MyContentTable from './sugarconsumeAPI/MyContentTable.svelte.html';
+	import editResource from './sugarconsumeAPI/editResource.svelte.html';
 	import MyGraph from './sugarconsumeAPI/MyGraph.svelte.html';
 	import MyGraph2 from './sugarconsumeAPI/MyGraph2.svelte.html';
 	import InicioSugar from './sugarconsumeAPI/inicio.html';
-	import crime from './sugarconsumeAPI/crime_rate_stats.svelte.html'
+	import crime from './sugarconsumeAPI/integraciones/global-divorces.svelte.html';
+	import peace from './sugarconsumeAPI/integraciones/countries_for_equality_stats.svelte.html';
+	import renewable from './sugarconsumeAPI/integraciones/renewable-sources-stats.svelte.html';
+
+
+	//IMPORTACIONES PARA IMC
+	import imcTable from './imcAPI/imcTable.svelte.html';
+	import EditValue from './imcAPI/EditValue.svelte.html';
+	
+	
+	
+	
+	
+	
+	
+	
 	const routes = {
 		"/" : Inicio,
+
+
+		//RUTAS PARA LA API SUGARCONSUME
 		"/sugarconsumeAPI/inicio" : InicioSugar,
 		"/sugarconsumeAPI" : MyContentTable,
-		"/indice_de_masa_corporal/:placename/:year" : EditValue,
-		"/indice_de_masa_corporal" : imcTable,
 		"/sugarconsume/:placename/:year" : editResource,
 		"/sugarconsumeAPI/MyGraph" : MyGraph,
 		"/sugarconsumeAPI/MyGraph2" : MyGraph2,
-		"/sugarconsumeAPI/crime" : crime,
+		"/sugarconsumeAPI/global-divorces" : crime,
+		"/sugarconsumeAPI/peace" : peace,
+		"/sugarconsumeAPI/renewable" : renewable,
+
+
+		//RUTAS PARA LA API IMC
+		"/indice_de_masa_corporal/:placename/:year" : EditValue,
+		"/indice_de_masa_corporal" : imcTable,
+		
+
+
+
+		
 		"*" : NotFound
 	}
 

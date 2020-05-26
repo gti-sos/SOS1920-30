@@ -1,0 +1,185 @@
+<script>
+    import {
+            pop
+        } from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+    async function loadGraph(){
+    
+        let MyData = [];
+        let MyData2 = [];
+        let MyDataGraph = [];
+        let Lugares = [];
+        let años = [];
+        let años2 = [];
+        let añosComp = [];
+            const resData = await fetch("/api/v2/sugarconsume");
+            const resData2 = await fetch("https://sos1920-09.herokuapp.com/api/v2/renewable-sources-stats");
+            MyData = await resData.json();
+            MyData2 = await resData2.json();
+           
+           
+            MyData.forEach( (y) => {
+                if(!Lugares.includes(y.place)){
+                Lugares.push(y.place);
+                }
+            });
+        
+            MyData2.forEach( (x) => {
+                if(!años2.includes(x.year)){
+                años2.push(x.year);
+                }
+            });
+            MyData.forEach( (y) => {
+                if(!años.includes(y.year)){
+                años.push(y.year);
+                }
+            });
+
+            años2.forEach( (x) => {
+                if(años.includes(x)){
+                    añosComp.push(x);
+                }
+            });
+
+
+            let data = [];
+            let data2 = [];
+            var res = 0;
+            var i = 0;
+            añosComp.forEach( (y) =>{
+                MyData.forEach((x) => {
+                    if(x.year == y){
+                        i++;
+                        res = res + x.sugarconsume;
+                    }
+                });
+                res = res/i;
+                data.push(res);
+                i = 0;
+                res = 0;
+            });
+
+            res = 0;
+            i = 0;
+
+            añosComp.forEach( (y) =>{
+                MyData2.forEach((x) => {
+                    console.log(x)
+                    if(x.year == y){
+                        i++;
+                        res = res + x["percentage-re-total"];
+                    }
+                });
+                res = (res/i);
+                data2.push(res*100);
+                i = 0;
+                res = 0;
+            });
+        
+            MyDataGraph.push({name : "Consumo de azúcar" , data : data});
+            MyDataGraph.push({name : "Recursos renovables" , data : data2});
+            
+           
+           
+            //console.log(MyDataGraph);
+    
+            Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Consumo de azucar vs uso de energía renovables'
+    },
+    subtitle: {
+        text: 'El consumo de azúcar medido en miles de kilogramos y el uso de energías renovables en unidades por año'
+    },
+    xAxis: {
+        categories: añosComp,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'unidades '
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} ud</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: MyDataGraph
+});
+    
+    }
+    
+    
+    </script>
+    
+    <svelte:head>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js" on:load = "{loadGraph}"></script>
+    </svelte:head>
+    
+    <main>
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+                Gráfica que muestra la comparación de la media del consumo de azucar y el uso de energía renovables.     
+    
+            </p>
+        </figure>
+        <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+    </main>
+    
+    <style>
+      .highcharts-figure, .highcharts-data-table table {
+    min-width: 310px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+    </style>
