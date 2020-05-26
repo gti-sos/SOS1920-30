@@ -28,7 +28,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -55,7 +55,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}/loadInitialData"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/loadInitialData"
 			},
 			"response": []
 		},
@@ -83,7 +83,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -112,9 +112,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}?place=Alemania&year=2019",
+					"raw": "{{BASE_URL}}api/v2/indice_de_masa_corporal?place=Alemania&year=2019",
 					"host": [
-						"{{BASE_URL}}"
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"v2",
+						"indice_de_masa_corporal"
 					],
 					"query": [
 						{
@@ -165,7 +169,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -204,7 +208,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -231,7 +235,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}/Italia"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia"
 			},
 			"response": []
 		},
@@ -260,9 +264,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}?limit=4&offset=0",
+					"raw": "{{BASE_URL}}api/v2/indice_de_masa_corporal?limit=4&offset=0",
 					"host": [
-						"{{BASE_URL}}"
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"v2",
+						"indice_de_masa_corporal"
 					],
 					"query": [
 						{
@@ -310,7 +318,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}/Italia/2019"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia/2019"
 			},
 			"response": []
 		},
@@ -339,9 +347,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}?limit=4&offset=4",
+					"raw": "{{BASE_URL}}api/v2/indice_de_masa_corporal?limit=4&offset=4",
 					"host": [
-						"{{BASE_URL}}"
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"v2",
+						"indice_de_masa_corporal"
 					],
 					"query": [
 						{
@@ -380,7 +392,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BASE_URL}}/Italia/2019"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia/2019"
 			},
 			"response": []
 		},
@@ -407,7 +419,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}/Italia/2019"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia/2019"
 			},
 			"response": []
 		},
@@ -434,7 +446,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}/Italia"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia"
 			},
 			"response": []
 		},
@@ -470,7 +482,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}/Italia"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal/Italia"
 			},
 			"response": []
 		},
@@ -506,7 +518,7 @@
 						}
 					}
 				},
-				"url": "{{BASE_URL}}"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		},
@@ -533,7 +545,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{BASE_URL}}"
+				"url": "{{BASE_URL}}api/v2/indice_de_masa_corporal"
 			},
 			"response": []
 		}
