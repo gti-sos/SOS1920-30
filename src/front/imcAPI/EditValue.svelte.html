@@ -13,6 +13,8 @@
     let updatedPlace = "";
     let updatedindice_de_masa_corporal = 0;
     let updatedYear = 0;
+    let updatedaltura = "no modificable";
+    let updatedtasa = "no modificable";
     let errorMsg = "";
 
     onMount(getindices_de_masa_corporal);
@@ -76,6 +78,8 @@
                 <th>LUGAR</th>
                 <th>IMC </th>
                 <th>Año</th>
+                <th>ALTURA</th>
+                <th>TASA DE OBESIDAD</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -84,6 +88,8 @@
                 <td>{updatedPlace}</td>
                 <td><input bind:value="{updatedindice_de_masa_corporal}"></td>
                 <td>{updatedYear}</td>
+                <td>{updatedaltura}</td>
+                <td>{updatedtasa}</td>
                 <td> <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>Update</Button> </td>
             </tr>
         </tbody>

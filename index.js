@@ -1,15 +1,14 @@
 
 const express = require("express");
-//API FRAN
+//API
 const back = require("./src/back/sugarconsumeAPI");
 const backv2 = require("./src/back/sugarconsumeAPI/v2");
 const backv1 = require("./src/back/sugarconsumeAPI/v1");
 //API RAUL
-const back2 = require("./src/back/imcAPI");
+const back2 = require("./src/back/imcAPI"); //v3,v2,v1
 const bodyParser = require("body-parser");
 
 const cors = require("cors");
-
 var app = express();
 app.use(bodyParser.json());
 
@@ -25,7 +24,6 @@ backv2(app);
 back2(app);
 backv1(app);
 back(app);
-
 
 app.listen(port, () => {
 	console.log("Server ready");

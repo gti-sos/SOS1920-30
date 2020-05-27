@@ -23,7 +23,9 @@
 	let newindice_de_masa_corporal = {
 		"place": "",
 		"indice_de_masa_corporal": 0,
-		"year": ""	
+		"year": "",
+		"altura": "",
+		"tasa_obesidad":""	
 	};
 	let places = [];
 	let years = [];
@@ -41,7 +43,7 @@
 
 	
 	async function getyears() {
-		const res = await fetch("/api/v1/indice_de_masa_corporal");
+		const res = await fetch("/api/v3/indice_de_masa_corporal");
 		if (res.ok) {
 			const json = await res.json();
 			places = json.map((d) => {
@@ -65,7 +67,7 @@
 	
 	async function loading(){
 		deleteindice_de_masa_corporalAll();
-		const res = await fetch("/api/v1/indice_de_masa_corporal/loadInitialData");
+		const res = await fetch("/api/v3/indice_de_masa_corporal/loadInitialData");
 		getindice_de_masa_corporal()
 	}
 
@@ -73,8 +75,8 @@
 
 	async function getindice_de_masa_corporal() {
 		console.log("Fetching indice_de_masa_corporal resources...");	
-		const res = await fetch("/api/v1/indice_de_masa_corporal?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
-		const next = await fetch("/api/v1/indice_de_masa_corporal?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		const res = await fetch("/api/v3/indice_de_masa_corporal?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const next = await fetch("/api/v3/indice_de_masa_corporal?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
 		if (res.ok && next.ok) {
 			console.log("Ok:");
 			const json = await res.json();
@@ -106,7 +108,7 @@
 			alert("No se ha rellenado algún hueco");
 		} else {
 			const json = JSON.stringify(newindice_de_masa_corporal);
-			const res = await fetch("/api/v1/indice_de_masa_corporal", {
+			const res = await fetch("/api/v3/indice_de_masa_corporal", {
 				method: "POST",
 				body: json,
 				headers: {
@@ -127,7 +129,7 @@
 
 	async function deleteindice_de_masa_corporal(place, year) {
 		console.log("Deleting indice_de_masa_corporal resource...");
-		const res = await fetch("/api/v1/indice_de_masa_corporal/" + place + "/" + year, {
+		const res = await fetch("/api/v3/indice_de_masa_corporal/" + place + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			getindice_de_masa_corporal();
@@ -142,7 +144,7 @@
 
 	async function deleteindice_de_masa_corporalAll() {
 		console.log("Deleting all...");
-		const res = await fetch("/api/v1/indice_de_masa_corporal/", {
+		const res = await fetch("/api/v3/indice_de_masa_corporal/", {
 			method: "DELETE"
 		}).then(function (res) {
 			getindice_de_masa_corporal();
@@ -157,7 +159,7 @@
 
 	async function search(place, year) {
 		console.log("Buscando país: " + place + " en año: " + year);
-		var url = "/api/v1/indice_de_masa_corporal";
+		var url = "/api/v3/indice_de_masa_corporal";
 		if (place != "-" && year != "-") {
 			url = url + "?place=" + place + "&year=" + year; 
 		} else if (place != "-" && year == "-") {
@@ -230,6 +232,8 @@
 					<th> LUGAR </th>
 					<th> IMC</th>
 					<th> AÑO </th>
+					<th> ALTURA </th>
+					<th> TASA DE OBESIDAD </th>
 					<th> Acciones </th>
 				</tr>
 			</thead>
@@ -238,6 +242,8 @@
 					<td> <Input type="text" placeholder="pais" bind:value="{newindice_de_masa_corporal.place}" /> </td>
 					<td> <Input type="number" placeholder="indice de masa corporal" bind:value="{newindice_de_masa_corporal.indice_de_masa_corporal}" /> </td>
 					<td> <Input type="number" placeholder="año" bind:value="{newindice_de_masa_corporal.year}" /> </td>
+					<td> <Input type="number" placeholder="altura" bind:value="{newindice_de_masa_corporal.altura}" /> </td>
+					<td> <Input type="number" placeholder="tasa_obesidad" bind:value="{newindice_de_masa_corporal.tasa_obesidad}" /> </td>
 					<td> <Button outline color="primary" on:click={insertindice_de_masa_corporal}> <i class="far fa-edit"></i> AÑADIR </Button> </td>
 				</tr>
 				{#each indice_de_masa_corporal as indices_de_masa_corporal}
@@ -249,6 +255,8 @@
 					</td> 
 					<td>{indices_de_masa_corporal.indice_de_masa_corporal} </td>
 					<td> {indices_de_masa_corporal.year} </td>
+					<td> {indices_de_masa_corporal.altura} </td>
+					<td> {indices_de_masa_corporal.tasa_obesidad} </td>
 					<td> <Button outline color="danger" on:click="{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> ELIMINAR </Button> </td>
 				</tr>
 				{/each}
