@@ -1,4 +1,6 @@
 <script>
+    import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
     async function loadGraph(){
         let paises2019 = [];
         let paises2020 = [];
@@ -84,4 +86,5 @@
  
     </p>
 </figure>
+<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>
