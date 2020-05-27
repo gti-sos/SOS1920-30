@@ -13,7 +13,7 @@ Our sources of information are based on an analysis of the body mass index and s
     
     
     - Para acceder a nuestras APIs (back-end):
-    - [https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal](https://sos1920-30.herokuapp.com/api/v2/indice_de_masa_corporal) (developed by [Raul Ojeda Robles](https://github.com/rawojeda))
+    - [https://sos1920-30.herokuapp.com/api/v3/indice_de_masa_corporal](https://sos1920-30.herokuapp.com/api/v3/indice_de_masa_corporal) (developed by [Raul Ojeda Robles](https://github.com/rawojeda))
     - [https://sos1920-30.herokuapp.com/api/v2/sugarconsume](https://sos1920-30.herokuapp.com/api/v2/sugarconsume) (developed by [Fran Zajara Gomez](https://github.com/FranZajara))
 	
 -  **Colecciones Postman**:
