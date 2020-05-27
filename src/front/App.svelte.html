@@ -11,9 +11,17 @@
 	import MyGraph from './sugarconsumeAPI/MyGraph.svelte.html';
 	import MyGraph2 from './sugarconsumeAPI/MyGraph2.svelte.html';
 	import InicioSugar from './sugarconsumeAPI/inicio.html';
-	import crime from './sugarconsumeAPI/integraciones/global-divorces.svelte.html';
+	import divorcios from './sugarconsumeAPI/integraciones/global-divorces.svelte.html';
 	import peace from './sugarconsumeAPI/integraciones/countries_for_equality_stats.svelte.html';
 	import renewable from './sugarconsumeAPI/integraciones/renewable-sources-stats.svelte.html';
+	import swim from './sugarconsumeAPI/integraciones/swim-stats.svelte.html';
+	import emigrant from './sugarconsumeAPI/integraciones/emigrants-stats.svelte.html';
+	import food from './sugarconsumeAPI/integraciones/foodsImports.svelte.html';
+	import fire from './sugarconsumeAPI/integraciones/fires-stats.svelte.html';
+	import roads from './sugarconsumeAPI/integraciones/roads.svelte.html';
+	import intcont from './sugarconsumeAPI/integraciones/intcont-stats.svelte.html';
+	import integraciones from './sugarconsumeAPI/integracion.svelte.html';
+	import crime from './sugarconsumeAPI/integraciones/crime-rate-stats.svelte.html';
 
 
 	//IMPORTACIONES PARA IMC
@@ -36,11 +44,20 @@
 		"/sugarconsumeAPI/inicio" : InicioSugar,
 		"/sugarconsumeAPI" : MyContentTable,
 		"/sugarconsume/:placename/:year" : editResource,
+		"/sugarconsumeAPI/integrations" : integraciones,
 		"/sugarconsumeAPI/MyGraph" : MyGraph,
 		"/sugarconsumeAPI/MyGraph2" : MyGraph2,
-		"/sugarconsumeAPI/global-divorces" : crime,
-		"/sugarconsumeAPI/peace" : peace,
-		"/sugarconsumeAPI/renewable" : renewable,
+		"/sugarconsumeAPI/integrations/global-divorces" : divorcios,
+		"/sugarconsumeAPI/integrations/peace" : peace,
+		"/sugarconsumeAPI/integrations/renewable" : renewable,
+		"/sugarconsumeAPI/integrations/swim" : swim,
+		"/sugarconsumeAPI/integrations/emigrant" : emigrant,
+		"/sugarconsumeAPI/integrations/food" : food,
+		"/sugarconsumeAPI/integrations/fire" : fire,
+		"/sugarconsumeAPI/integrations/roads" : roads,
+		"/sugarconsumeAPI/integrations/intcont" : intcont,
+		"/sugarconsumeAPI/integrations/crime" : crime,
+		
 
 
 		//RUTAS PARA LA API IMC

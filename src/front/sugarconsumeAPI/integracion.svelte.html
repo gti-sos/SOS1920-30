@@ -1,0 +1,18 @@
+<script>
+    import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+</script>
+
+<main>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/global-divorces'"><i class='fas fa-leaf' ></i> Divorcios </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/peace'"><i class='fas fa-leaf' ></i> Paz </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/renewable'"><i class='fas fa-leaf' ></i> Energías renovables</button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/swim'"><i class='fas fa-leaf' ></i> Tiempo en natación </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/emigrant'"><i class='fas fa-leaf' ></i>  Inmigrantes hombres </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/food'"><i class='fas fa-leaf' ></i> Importaciones de dulces</button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/fire'"><i class='fas fa-leaf' ></i> Incendios </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/roads'"><i class='fas fa-leaf' ></i> Carreteras de una dirección </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/intcont'"><i class='fas fa-leaf' ></i> Contratos Sepe </button>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations/crime'"><i class='fas fa-leaf' ></i> Porcentaje de crímenes </button>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+</main>
