@@ -12,12 +12,12 @@
         let datos2 = [];
 
             const resData = await fetch("/api/v3/sugarconsume");
-            const resData2 = await fetch("https://sos1920-10.herokuapp.com/api/v2/global-divorces")
+            const resData2 = await fetch("http://sos1920-23.herokuapp.com/api/v2/fires-stats")
             MyData = await resData.json();
             MyData2 = await resData2.json();
 
             MyData2.forEach( (x) =>{
-                datos2.push({name: x.country + " año " + x.year , value : x.divorce});
+                datos2.push({name: x.community + " año " + x.year , value : x.total_fire});
             });
 
             MyData.forEach((y) => {
@@ -25,7 +25,7 @@
             });
            
             MyDataGraph.push({name: "Consumo de azúcar" , data : datos});
-            MyDataGraph.push({name : "Tiempo en natación", data : datos2});
+            MyDataGraph.push({name : "Número de incendios", data : datos2});
         
 
     
@@ -35,7 +35,7 @@
         height: '60%'
     },
     title: {
-        text: 'Comparación entre el número de divorcios y el consumo de azúcar en diferentes lugares'
+        text: 'Comparación entre el número de incendios en España y el consumo de azúcar en diferentes lugares'
     },
     tooltip: {
         useHTML: true,
@@ -85,7 +85,7 @@
         <figure class="highcharts-figure">
             <div id="container"></div>
             <p class="highcharts-description">
-                Gráfica que muestra el consumo de azúcar medido en miles de kilogramos y el número de divorcios en diferentes lugares.     
+                Gráfica que muestra el consumo de azúcar medido en miles de kilogramos y lod números de incendios en España.     
     
             </p>
         </figure>

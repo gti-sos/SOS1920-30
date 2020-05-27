@@ -6,72 +6,86 @@
     async function loadGraph(){
     
         let MyData = [];
+        let MyData2 = [];
         let MyDataGraph = [];
-        let datosugar = [];
-        let datospeace = [];
-            const resData = await fetch("/api/v2/sugarconsume");
-            const resData2 = await fetch("http://sos1920-25.herokuapp.com/api/v2/countries_for_equality_stats");
+        let datos = [];
+        let datos2 = [];
+
+            const resData = await fetch("/api/v3/sugarconsume");
+            const resData2 = await fetch("http://sos1920-25.herokuapp.com/api/v2/countries_for_equality_stats")
             MyData = await resData.json();
             MyData2 = await resData2.json();
-            MyData.forEach( (y) => {
-                if(y.year === 2017){
-                datosugar.push(y.sugarconsume);
-                }
+
+            MyData2.forEach( (x) =>{
+                datos2.push({name: x.country + " año " + x.year , value : x.global_peace_ranking});
             });
 
-            MyData2.forEach( (x) => {
-                datospeace.push(x.global_peace_index);
+            MyData.forEach((y) => {
+                datos.push({name: y.place + " año " + y.year, value: y.sugarconsume });
             });
+           
+            MyDataGraph.push({name: "Consumo de azúcar" , data : datos});
+            MyDataGraph.push({name : "Tasa de paz", data : datos2});
+        
 
-            MyDataGraph.push({name: "Consumo de azúcar", data : datosugar});
-            MyDataGraph.push({name: "Paz", data : datospeace});
     
- Highcharts.chart('container', {
+            Highcharts.chart('container', {
     chart: {
-        type: 'line'
+        type: 'packedbubble',
+        height: '60%'
     },
     title: {
-        text: 'Comparación paz vs consumo de azúcar'
+        text: 'Comparación entre la tasa de paz y el consumo de azúcar en diferentes lugares'
     },
-    subtitle: {
-        text: 'Comparación entre el porcentaje de paz y el consumo de azúcar'
-    },
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
-    yAxis: {
-        title: {
-            text: 'Mil'
-        }
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}'
     },
     plotOptions: {
-        line: {
-            dataLabels: {
-                enabled: true
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
             },
-            enableMouseTracking: false
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
         }
     },
     series: MyDataGraph
 });
+    }
     
-}
+    
     </script>
     
     <svelte:head>
         <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
-
-        
+        <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
     </svelte:head>
     
     <main>
         <figure class="highcharts-figure">
             <div id="container"></div>
             <p class="highcharts-description">
-                Gráfica que muestra el consumo de azúcar en diferentes lugares y años.     
+                Gráfica que muestra el consumo de azúcar medido en miles de kilogramos y la tasa de paz en diferentes lugares.     
     
             </p>
         </figure>
@@ -79,8 +93,8 @@
     </main>
     
     <style>
-        .highcharts-figure, .highcharts-data-table table {
-    min-width: 360px; 
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 320px; 
     max-width: 800px;
     margin: 1em auto;
 }
@@ -112,5 +126,5 @@
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
-    
-</style>
+
+    </style>
