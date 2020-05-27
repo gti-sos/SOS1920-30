@@ -1,4 +1,4 @@
-# SOS1920-30
+# SOS1920-30 ---->   [![Build Status](https://travis-ci.org/gti-sos/SOS1920-30.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-30.svg?branch=master)
 - **Team**
   - [Raul Ojeda Robles](https://github.com/rawojeda)
   - [Fran Zajara Gomez](https://github.com/FranZajara)
@@ -25,7 +25,7 @@ Our sources of information are based on an analysis of the body mass index and s
   - [sos1920-30-sugarconsume(Version 2)](https://documenter.getpostman.com/view/10694026/Szme3xRe) (developed by [Fran Zajara Gomez](https://github.com/FranZajara))
 
 
-  [![Build Status](https://travis-ci.org/gti-sos/SOS1920-30.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-30.svg?branch=master)
+
 
 
 	
