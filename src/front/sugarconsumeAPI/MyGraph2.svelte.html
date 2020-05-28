@@ -15,8 +15,10 @@
         const resData = await fetch("/api/v3/sugarconsume");
         MyData = await resData.json();
         MyData.forEach( (x) => {
-            MyDataGraph.push(x.place + " año " + x.year);
+          if(x.year == 2017){
+            MyDataGraph.push(x.place);
             datos.push(x.sugarconsume);
+          }
         });
       console.log(datos);
         var options = {
@@ -59,7 +61,7 @@
 
 <main>
     <h4>Medido en miles de kilogramos de azúcar</h4>
-    <p>Representación gráfica con ApexCharts que muestra el consumo de azúcar en diferentes lugares y años.</p>
+    <p>Representación gráfica con ApexCharts que muestra el consumo de azúcar en diferentes lugares en el año 2017.</p>
     <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
 
 </main>
