@@ -2937,9 +2937,9 @@ var app = (function () {
 
     	let select_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ multiple: true },
     		{ class: /*classes*/ ctx[10] },
+    		{ id: /*id*/ ctx[6] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -2970,8 +2970,8 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[141], false, false, false),
-    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[142], false, false, false),
+    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[142], false, false, false),
+    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[141], false, false, false),
     				listen_dev(select, "change", /*change_handler_16*/ ctx[143], false, false, false),
     				listen_dev(select, "input", /*input_handler_16*/ ctx[144], false, false, false),
     				listen_dev(select, "change", /*select_change_handler_1*/ ctx[161])
@@ -2986,9 +2986,9 @@ var app = (function () {
 
     			set_attributes(select, get_spread_update(select_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ multiple: true },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3126,8 +3126,8 @@ var app = (function () {
 
     	let textarea_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ class: /*classes*/ ctx[10] },
+    		{ id: /*id*/ ctx[6] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3150,10 +3150,10 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[130], false, false, false),
-    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[131], false, false, false),
-    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[132], false, false, false),
-    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[133], false, false, false),
+    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[131], false, false, false),
+    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[132], false, false, false),
+    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[133], false, false, false),
+    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[130], false, false, false),
     				listen_dev(textarea, "keyup", /*keyup_handler_15*/ ctx[134], false, false, false),
     				listen_dev(textarea, "change", /*change_handler_14*/ ctx[135], false, false, false),
     				listen_dev(textarea, "input", /*input_handler_14*/ ctx[136], false, false, false),
@@ -3163,8 +3163,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(textarea, get_spread_update(textarea_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3265,8 +3265,8 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: /*type*/ ctx[3] },
+    		{ id: /*id*/ ctx[6] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -3304,8 +3304,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -3338,12 +3338,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "search" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3365,12 +3365,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[118], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[119], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[120], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[121], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[122], false, false, false),
-    				listen_dev(input, "change", /*change_handler_13*/ ctx[123], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[119], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[120], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[121], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[122], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[123], false, false, false),
+    				listen_dev(input, "change", /*change_handler_13*/ ctx[118], false, false, false),
     				listen_dev(input, "input", /*input_handler_13*/ ctx[124], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_9*/ ctx[158])
     			];
@@ -3378,12 +3378,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "search" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3415,12 +3415,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "range" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3442,12 +3442,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[111], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[112], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[113], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[114], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[115], false, false, false),
-    				listen_dev(input, "change", /*change_handler_12*/ ctx[116], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[112], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[113], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[114], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[115], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[116], false, false, false),
+    				listen_dev(input, "change", /*change_handler_12*/ ctx[111], false, false, false),
     				listen_dev(input, "input", /*input_handler_12*/ ctx[117], false, false, false),
     				listen_dev(input, "change", /*input_change_input_handler*/ ctx[157]),
     				listen_dev(input, "input", /*input_change_input_handler*/ ctx[157])
@@ -3456,12 +3456,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "range" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3493,12 +3493,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "color" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3520,12 +3520,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[104], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[105], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[106], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[107], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[108], false, false, false),
-    				listen_dev(input, "change", /*change_handler_11*/ ctx[109], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[105], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[106], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[107], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[108], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[109], false, false, false),
+    				listen_dev(input, "change", /*change_handler_11*/ ctx[104], false, false, false),
     				listen_dev(input, "input", /*input_handler_11*/ ctx[110], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_8*/ ctx[156])
     			];
@@ -3533,12 +3533,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "color" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3570,12 +3570,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "datetime" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3597,12 +3597,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[97], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[98], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[99], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[100], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[101], false, false, false),
-    				listen_dev(input, "change", /*change_handler_10*/ ctx[102], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[98], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[99], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[100], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[101], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[102], false, false, false),
+    				listen_dev(input, "change", /*change_handler_10*/ ctx[97], false, false, false),
     				listen_dev(input, "input", /*input_handler_10*/ ctx[103], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_7*/ ctx[155])
     			];
@@ -3610,12 +3610,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "datetime" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3647,12 +3647,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "time" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3674,12 +3674,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[90], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[91], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[92], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[93], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[94], false, false, false),
-    				listen_dev(input, "change", /*change_handler_9*/ ctx[95], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[91], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[92], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[93], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[94], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[95], false, false, false),
+    				listen_dev(input, "change", /*change_handler_9*/ ctx[90], false, false, false),
     				listen_dev(input, "input", /*input_handler_9*/ ctx[96], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_6*/ ctx[154])
     			];
@@ -3687,12 +3687,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "time" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3724,12 +3724,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "date" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3751,12 +3751,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[83], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[84], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[85], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[86], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[87], false, false, false),
-    				listen_dev(input, "change", /*change_handler_8*/ ctx[88], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[84], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[85], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[86], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[87], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[88], false, false, false),
+    				listen_dev(input, "change", /*change_handler_8*/ ctx[83], false, false, false),
     				listen_dev(input, "input", /*input_handler_8*/ ctx[89], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_5*/ ctx[153])
     			];
@@ -3764,12 +3764,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "date" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3801,12 +3801,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "number" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3828,12 +3828,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[76], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[77], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[78], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[79], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[80], false, false, false),
-    				listen_dev(input, "change", /*change_handler_7*/ ctx[81], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[77], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[78], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[79], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[80], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[81], false, false, false),
+    				listen_dev(input, "change", /*change_handler_7*/ ctx[76], false, false, false),
     				listen_dev(input, "input", /*input_handler_7*/ ctx[82], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_4*/ ctx[152])
     			];
@@ -3841,12 +3841,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "number" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3878,12 +3878,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "url" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3905,12 +3905,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[69], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[70], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[71], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[72], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[73], false, false, false),
-    				listen_dev(input, "change", /*change_handler_6*/ ctx[74], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[70], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[71], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[72], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[73], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[74], false, false, false),
+    				listen_dev(input, "change", /*change_handler_6*/ ctx[69], false, false, false),
     				listen_dev(input, "input", /*input_handler_6*/ ctx[75], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_3*/ ctx[151])
     			];
@@ -3918,12 +3918,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "url" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3955,12 +3955,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "radio" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3982,12 +3982,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[62], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[63], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[64], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[65], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[66], false, false, false),
-    				listen_dev(input, "change", /*change_handler_5*/ ctx[67], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[63], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[64], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[65], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[66], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[67], false, false, false),
+    				listen_dev(input, "change", /*change_handler_5*/ ctx[62], false, false, false),
     				listen_dev(input, "input", /*input_handler_5*/ ctx[68], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_2*/ ctx[150])
     			];
@@ -3995,12 +3995,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "radio" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4032,12 +4032,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "checkbox" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
+    		{ name: /*name*/ ctx[7] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4055,17 +4055,17 @@ var app = (function () {
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, input, anchor);
-    			input.checked = /*checked*/ ctx[0];
     			set_input_value(input, /*value*/ ctx[1]);
+    			input.checked = /*checked*/ ctx[0];
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[55], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[56], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[57], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[58], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[59], false, false, false),
-    				listen_dev(input, "change", /*change_handler_4*/ ctx[60], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[56], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[57], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[58], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[59], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[60], false, false, false),
+    				listen_dev(input, "change", /*change_handler_4*/ ctx[55], false, false, false),
     				listen_dev(input, "input", /*input_handler_4*/ ctx[61], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_1*/ ctx[149])
     			];
@@ -4073,21 +4073,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "checkbox" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
-    			if (dirty[0] & /*checked*/ 1) {
-    				input.checked = /*checked*/ ctx[0];
-    			}
-
     			if (dirty[0] & /*value*/ 2) {
     				set_input_value(input, /*value*/ ctx[1]);
+    			}
+
+    			if (dirty[0] & /*checked*/ 1) {
+    				input.checked = /*checked*/ ctx[0];
     			}
     		},
     		d: function destroy(detaching) {
@@ -4114,12 +4114,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "file" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4140,12 +4140,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[48], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[49], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[50], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[51], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[52], false, false, false),
-    				listen_dev(input, "change", /*change_handler_3*/ ctx[53], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[49], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[50], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[51], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[52], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[53], false, false, false),
+    				listen_dev(input, "change", /*change_handler_3*/ ctx[48], false, false, false),
     				listen_dev(input, "input", /*input_handler_3*/ ctx[54], false, false, false),
     				listen_dev(input, "change", /*input_change_handler*/ ctx[148])
     			];
@@ -4153,12 +4153,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "file" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
     		},
@@ -4186,12 +4186,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "email" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4213,12 +4213,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[41], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[42], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[43], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[44], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[45], false, false, false),
-    				listen_dev(input, "change", /*change_handler_2*/ ctx[46], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[42], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[43], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[44], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[45], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[46], false, false, false),
+    				listen_dev(input, "change", /*change_handler_2*/ ctx[41], false, false, false),
     				listen_dev(input, "input", /*input_handler_2*/ ctx[47], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_2*/ ctx[147])
     			];
@@ -4226,12 +4226,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "email" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4263,12 +4263,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "password" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4290,12 +4290,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[34], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[35], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[36], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[37], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[38], false, false, false),
-    				listen_dev(input, "change", /*change_handler_1*/ ctx[39], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[35], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[36], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[37], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[38], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[39], false, false, false),
+    				listen_dev(input, "change", /*change_handler_1*/ ctx[34], false, false, false),
     				listen_dev(input, "input", /*input_handler_1*/ ctx[40], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_1*/ ctx[146])
     			];
@@ -4303,12 +4303,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "password" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4340,12 +4340,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "text" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4367,12 +4367,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler*/ ctx[27], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler*/ ctx[28], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[29], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[30], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[31], false, false, false),
-    				listen_dev(input, "change", /*change_handler*/ ctx[32], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler*/ ctx[28], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler*/ ctx[29], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[30], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[31], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[32], false, false, false),
+    				listen_dev(input, "change", /*change_handler*/ ctx[27], false, false, false),
     				listen_dev(input, "input", /*input_handler*/ ctx[33], false, false, false),
     				listen_dev(input, "input", /*input_input_handler*/ ctx[145])
     			];
@@ -4380,12 +4380,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "text" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4542,6 +4542,10 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Input", $$slots, ['default']);
 
+    	function change_handler(event) {
+    		bubble($$self, event);
+    	}
+
     	function blur_handler(event) {
     		bubble($$self, event);
     	}
@@ -4562,11 +4566,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler(event) {
+    	function input_handler(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler(event) {
+    	function change_handler_1(event) {
     		bubble($$self, event);
     	}
 
@@ -4590,11 +4594,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_1(event) {
+    	function input_handler_1(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_1(event) {
+    	function change_handler_2(event) {
     		bubble($$self, event);
     	}
 
@@ -4618,11 +4622,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_2(event) {
+    	function input_handler_2(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_2(event) {
+    	function change_handler_3(event) {
     		bubble($$self, event);
     	}
 
@@ -4646,11 +4650,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_3(event) {
+    	function input_handler_3(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_3(event) {
+    	function change_handler_4(event) {
     		bubble($$self, event);
     	}
 
@@ -4674,11 +4678,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_4(event) {
+    	function input_handler_4(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_4(event) {
+    	function change_handler_5(event) {
     		bubble($$self, event);
     	}
 
@@ -4702,11 +4706,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_5(event) {
+    	function input_handler_5(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_5(event) {
+    	function change_handler_6(event) {
     		bubble($$self, event);
     	}
 
@@ -4730,11 +4734,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_6(event) {
+    	function input_handler_6(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_6(event) {
+    	function change_handler_7(event) {
     		bubble($$self, event);
     	}
 
@@ -4758,11 +4762,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_7(event) {
+    	function input_handler_7(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_7(event) {
+    	function change_handler_8(event) {
     		bubble($$self, event);
     	}
 
@@ -4786,11 +4790,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_8(event) {
+    	function input_handler_8(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_8(event) {
+    	function change_handler_9(event) {
     		bubble($$self, event);
     	}
 
@@ -4814,11 +4818,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_9(event) {
+    	function input_handler_9(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_9(event) {
+    	function change_handler_10(event) {
     		bubble($$self, event);
     	}
 
@@ -4842,11 +4846,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_10(event) {
+    	function input_handler_10(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_10(event) {
+    	function change_handler_11(event) {
     		bubble($$self, event);
     	}
 
@@ -4870,11 +4874,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_11(event) {
+    	function input_handler_11(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_11(event) {
+    	function change_handler_12(event) {
     		bubble($$self, event);
     	}
 
@@ -4898,11 +4902,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_12(event) {
+    	function input_handler_12(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_12(event) {
+    	function change_handler_13(event) {
     		bubble($$self, event);
     	}
 
@@ -4923,10 +4927,6 @@ var app = (function () {
     	}
 
     	function keyup_handler_13(event) {
-    		bubble($$self, event);
-    	}
-
-    	function change_handler_13(event) {
     		bubble($$self, event);
     	}
 
@@ -4954,6 +4954,10 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+    	function keypress_handler_15(event) {
+    		bubble($$self, event);
+    	}
+
     	function blur_handler_15(event) {
     		bubble($$self, event);
     	}
@@ -4963,10 +4967,6 @@ var app = (function () {
     	}
 
     	function keydown_handler_15(event) {
-    		bubble($$self, event);
-    	}
-
-    	function keypress_handler_15(event) {
     		bubble($$self, event);
     	}
 
@@ -4998,11 +4998,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function blur_handler_17(event) {
+    	function focus_handler_17(event) {
     		bubble($$self, event);
     	}
 
-    	function focus_handler_17(event) {
+    	function blur_handler_17(event) {
     		bubble($$self, event);
     	}
 
@@ -5035,10 +5035,10 @@ var app = (function () {
     	}
 
     	function input_change_handler_1() {
-    		checked = this.checked;
     		value = this.value;
-    		$$invalidate(0, checked);
+    		checked = this.checked;
     		$$invalidate(1, value);
+    		$$invalidate(0, checked);
     	}
 
     	function input_change_handler_2() {
@@ -5255,113 +5255,113 @@ var app = (function () {
     		$$props,
     		$$scope,
     		$$slots,
+    		change_handler,
     		blur_handler,
     		focus_handler,
     		keydown_handler,
     		keypress_handler,
     		keyup_handler,
-    		change_handler,
     		input_handler,
+    		change_handler_1,
     		blur_handler_1,
     		focus_handler_1,
     		keydown_handler_1,
     		keypress_handler_1,
     		keyup_handler_1,
-    		change_handler_1,
     		input_handler_1,
+    		change_handler_2,
     		blur_handler_2,
     		focus_handler_2,
     		keydown_handler_2,
     		keypress_handler_2,
     		keyup_handler_2,
-    		change_handler_2,
     		input_handler_2,
+    		change_handler_3,
     		blur_handler_3,
     		focus_handler_3,
     		keydown_handler_3,
     		keypress_handler_3,
     		keyup_handler_3,
-    		change_handler_3,
     		input_handler_3,
+    		change_handler_4,
     		blur_handler_4,
     		focus_handler_4,
     		keydown_handler_4,
     		keypress_handler_4,
     		keyup_handler_4,
-    		change_handler_4,
     		input_handler_4,
+    		change_handler_5,
     		blur_handler_5,
     		focus_handler_5,
     		keydown_handler_5,
     		keypress_handler_5,
     		keyup_handler_5,
-    		change_handler_5,
     		input_handler_5,
+    		change_handler_6,
     		blur_handler_6,
     		focus_handler_6,
     		keydown_handler_6,
     		keypress_handler_6,
     		keyup_handler_6,
-    		change_handler_6,
     		input_handler_6,
+    		change_handler_7,
     		blur_handler_7,
     		focus_handler_7,
     		keydown_handler_7,
     		keypress_handler_7,
     		keyup_handler_7,
-    		change_handler_7,
     		input_handler_7,
+    		change_handler_8,
     		blur_handler_8,
     		focus_handler_8,
     		keydown_handler_8,
     		keypress_handler_8,
     		keyup_handler_8,
-    		change_handler_8,
     		input_handler_8,
+    		change_handler_9,
     		blur_handler_9,
     		focus_handler_9,
     		keydown_handler_9,
     		keypress_handler_9,
     		keyup_handler_9,
-    		change_handler_9,
     		input_handler_9,
+    		change_handler_10,
     		blur_handler_10,
     		focus_handler_10,
     		keydown_handler_10,
     		keypress_handler_10,
     		keyup_handler_10,
-    		change_handler_10,
     		input_handler_10,
+    		change_handler_11,
     		blur_handler_11,
     		focus_handler_11,
     		keydown_handler_11,
     		keypress_handler_11,
     		keyup_handler_11,
-    		change_handler_11,
     		input_handler_11,
+    		change_handler_12,
     		blur_handler_12,
     		focus_handler_12,
     		keydown_handler_12,
     		keypress_handler_12,
     		keyup_handler_12,
-    		change_handler_12,
     		input_handler_12,
+    		change_handler_13,
     		blur_handler_13,
     		focus_handler_13,
     		keydown_handler_13,
     		keypress_handler_13,
     		keyup_handler_13,
-    		change_handler_13,
     		input_handler_13,
     		blur_handler_14,
     		focus_handler_14,
     		keydown_handler_14,
     		keypress_handler_14,
     		keyup_handler_14,
+    		keypress_handler_15,
     		blur_handler_15,
     		focus_handler_15,
     		keydown_handler_15,
-    		keypress_handler_15,
     		keyup_handler_15,
     		change_handler_14,
     		input_handler_14,
@@ -5369,8 +5369,8 @@ var app = (function () {
     		focus_handler_16,
     		change_handler_15,
     		input_handler_15,
-    		blur_handler_17,
     		focus_handler_17,
+    		blur_handler_17,
     		change_handler_16,
     		input_handler_16,
     		input_input_handler,
@@ -11362,7 +11362,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$g, 91, 60, 2960);
+    			add_location(i, file$g, 91, 60, 2961);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11432,20 +11432,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$g, 77, 8, 2233);
+    			add_location(script0, file$g, 77, 8, 2234);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$g, 78, 0, 2300);
+    			add_location(script1, file$g, 78, 0, 2301);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$g, 79, 0, 2372);
+    			add_location(script2, file$g, 79, 0, 2373);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$g, 80, 8, 2454);
+    			add_location(script3, file$g, 80, 8, 2455);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$g, 85, 12, 2648);
+    			add_location(div, file$g, 85, 12, 2649);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$g, 86, 12, 2688);
+    			add_location(p, file$g, 86, 12, 2689);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$g, 84, 8, 2600);
-    			add_location(main, file$g, 83, 4, 2584);
+    			add_location(figure, file$g, 84, 8, 2601);
+    			add_location(main, file$g, 83, 4, 2585);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11515,7 +11515,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
-    	const resData2 = await fetch("http://sos1920-25.herokuapp.com/api/v2/countries_for_equality_stats");
+    	const resData2 = await fetch("https://sos1920-25.herokuapp.com/api/v2/countries_for_equality_stats");
     	MyData = await resData.json();
     	MyData2 = await resData2.json();
 
@@ -11903,7 +11903,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$i, 91, 60, 2951);
+    			add_location(i, file$i, 91, 60, 2952);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11973,20 +11973,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$i, 77, 8, 2219);
+    			add_location(script0, file$i, 77, 8, 2220);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$i, 78, 0, 2286);
+    			add_location(script1, file$i, 78, 0, 2287);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$i, 79, 0, 2358);
+    			add_location(script2, file$i, 79, 0, 2359);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$i, 80, 8, 2440);
+    			add_location(script3, file$i, 80, 8, 2441);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$i, 85, 12, 2634);
+    			add_location(div, file$i, 85, 12, 2635);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$i, 86, 12, 2674);
+    			add_location(p, file$i, 86, 12, 2675);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$i, 84, 8, 2586);
-    			add_location(main, file$i, 83, 4, 2570);
+    			add_location(figure, file$i, 84, 8, 2587);
+    			add_location(main, file$i, 83, 4, 2571);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12056,7 +12056,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
-    	const resData2 = await fetch("http://sos1920-22.herokuapp.com/api/v1/swim-stats");
+    	const resData2 = await fetch("https://sos1920-22.herokuapp.com/api/v1/swim-stats");
     	MyData = await resData.json();
     	MyData2 = await resData2.json();
 
@@ -12656,7 +12656,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$l, 91, 60, 2959);
+    			add_location(i, file$l, 91, 60, 2960);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12726,20 +12726,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$l, 77, 8, 2234);
+    			add_location(script0, file$l, 77, 8, 2235);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$l, 78, 0, 2301);
+    			add_location(script1, file$l, 78, 0, 2302);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$l, 79, 0, 2373);
+    			add_location(script2, file$l, 79, 0, 2374);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$l, 80, 8, 2455);
+    			add_location(script3, file$l, 80, 8, 2456);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$l, 85, 12, 2649);
+    			add_location(div, file$l, 85, 12, 2650);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$l, 86, 12, 2689);
+    			add_location(p, file$l, 86, 12, 2690);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$l, 84, 8, 2601);
-    			add_location(main, file$l, 83, 4, 2585);
+    			add_location(figure, file$l, 84, 8, 2602);
+    			add_location(main, file$l, 83, 4, 2586);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12809,7 +12809,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
-    	const resData2 = await fetch("http://sos1920-23.herokuapp.com/api/v2/fires-stats");
+    	const resData2 = await fetch("https://sos1920-23.herokuapp.com/api/v2/fires-stats");
     	MyData = await resData.json();
     	MyData2 = await resData2.json();
 
@@ -12909,7 +12909,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$m, 93, 60, 3083);
+    			add_location(i, file$m, 93, 60, 3084);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12979,20 +12979,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$m, 79, 8, 2342);
+    			add_location(script0, file$m, 79, 8, 2343);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$m, 80, 0, 2409);
+    			add_location(script1, file$m, 80, 0, 2410);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$m, 81, 0, 2481);
+    			add_location(script2, file$m, 81, 0, 2482);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$m, 82, 8, 2563);
+    			add_location(script3, file$m, 82, 8, 2564);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$m, 87, 12, 2757);
+    			add_location(div, file$m, 87, 12, 2758);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$m, 88, 12, 2797);
+    			add_location(p, file$m, 88, 12, 2798);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$m, 86, 8, 2709);
-    			add_location(main, file$m, 85, 4, 2693);
+    			add_location(figure, file$m, 86, 8, 2710);
+    			add_location(main, file$m, 85, 4, 2694);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13062,7 +13062,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
-    	const resData2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+    	const resData2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/roads/");
     	MyData = await resData.json();
     	MyData2 = await resData2.json();
 
@@ -13713,7 +13713,7 @@ var app = (function () {
     /* src\front\sugarconsumeAPI\integraciones\crime-rate-stats.svelte.html generated by Svelte v3.21.0 */
     const file$p = "src\\front\\sugarconsumeAPI\\integraciones\\crime-rate-stats.svelte.html";
 
-    // (92:8) <Button outline color="secondary" on:click="{pop}">
+    // (91:8) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$f(ctx) {
     	let i;
     	let t;
@@ -13723,7 +13723,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$p, 91, 60, 2942);
+    			add_location(i, file$p, 90, 60, 2937);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13739,7 +13739,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$f.name,
     		type: "slot",
-    		source: "(92:8) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(91:8) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -13793,20 +13793,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$p, 77, 8, 2226);
+    			add_location(script0, file$p, 77, 8, 2227);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$p, 78, 0, 2293);
+    			add_location(script1, file$p, 78, 0, 2294);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$p, 79, 0, 2365);
+    			add_location(script2, file$p, 79, 0, 2366);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$p, 80, 8, 2447);
+    			add_location(script3, file$p, 80, 8, 2448);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$p, 85, 12, 2641);
+    			add_location(div, file$p, 84, 12, 2636);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$p, 86, 12, 2681);
+    			add_location(p, file$p, 85, 12, 2676);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$p, 84, 8, 2593);
-    			add_location(main, file$p, 83, 4, 2577);
+    			add_location(figure, file$p, 83, 8, 2588);
+    			add_location(main, file$p, 82, 4, 2572);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13876,7 +13876,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
-    	const resData2 = await fetch("http://sos1920-11.herokuapp.com/api/v2/crime-rate-stats");
+    	const resData2 = await fetch("https://sos1920-11.herokuapp.com/api/v2/crime-rate-stats");
     	MyData = await resData.json();
     	MyData2 = await resData2.json();
 
@@ -13959,10 +13959,259 @@ var app = (function () {
     	}
     }
 
+    /* src\front\sugarconsumeAPI\integraciones\APIExt1.svelte.html generated by Svelte v3.21.0 */
+    const file$q = "src\\front\\sugarconsumeAPI\\integraciones\\APIExt1.svelte.html";
+
+    // (92:8) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$g(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$q, 91, 60, 2950);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$g.name,
+    		type: "slot",
+    		source: "(92:8) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$r(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let t3;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$g] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Gráfica que muestra el consumo de azúcar medido en miles de kilogramos y el tiempo de natación medidos en segundos.";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$q, 77, 8, 2218);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$q, 78, 0, 2285);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$q, 79, 0, 2357);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$q, 80, 8, 2439);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$q, 85, 12, 2633);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$q, 86, 12, 2673);
+    			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
+    			add_location(figure, file$q, 84, 8, 2585);
+    			add_location(main, file$q, 83, 4, 2569);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$c, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$r.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$c() {
+    	let MyData = [];
+    	let MyData2 = [];
+    	let MyDataGraph = [];
+    	let datos = [];
+    	let datos2 = [];
+    	const resData = await fetch("/api/v3/sugarconsume");
+    	const resData2 = await fetch("https://www.de-vis-software.ro/nutrientizer.aspx");
+    	MyData = await resData.json();
+    	MyData2 = await resData2.json();
+
+    	MyData2.forEach(x => {
+    		datos2.push({
+    			name: x.country + " año " + x.year,
+    			value: x.time
+    		});
+    	});
+
+    	MyData.forEach(y => {
+    		datos.push({
+    			name: y.place + " año " + y.year,
+    			value: y.sugarconsume
+    		});
+    	});
+
+    	MyDataGraph.push({ name: "Consumo de azúcar", data: datos });
+    	MyDataGraph.push({ name: "Tiempo en natación", data: datos2 });
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "60%" },
+    		title: {
+    			text: "Comparación entre el mejor tiempo en natación y el consumo de azúcar en diferentes lugares"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: MyDataGraph
+    	});
+    }
+
+    function instance$r($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<APIExt1_svelte> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("APIExt1_svelte", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$c });
+    	return [];
+    }
+
+    class APIExt1_svelte extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$r, create_fragment$r, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "APIExt1_svelte",
+    			options,
+    			id: create_fragment$r.name
+    		});
+    	}
+    }
+
     /* src\front\imcAPI\imcTable.svelte.html generated by Svelte v3.21.0 */
 
     const { console: console_1$6 } = globals;
-    const file$q = "src\\front\\imcAPI\\imcTable.svelte.html";
+    const file$r = "src\\front\\imcAPI\\imcTable.svelte.html";
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
@@ -14179,7 +14428,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*place*/ ctx[35];
     			option.value = option.__value;
-    			add_location(option, file$q, 209, 4, 5255);
+    			add_location(option, file$r, 209, 4, 5255);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -14233,7 +14482,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$q, 211, 4, 5298);
+    			add_location(option, file$r, 211, 4, 5298);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -14423,7 +14672,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[32];
     			option.value = option.__value;
-    			add_location(option, file$q, 219, 4, 5542);
+    			add_location(option, file$r, 219, 4, 5542);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -14477,7 +14726,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$q, 221, 4, 5584);
+    			add_location(option, file$r, 221, 4, 5584);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -14637,7 +14886,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$q, 225, 107, 5742);
+    			add_location(i, file$r, 225, 107, 5742);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14670,7 +14919,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" AÑADIR");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$q, 246, 84, 6709);
+    			add_location(i, file$r, 246, 84, 6709);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14704,7 +14953,7 @@ var app = (function () {
     			t = text(" ELIMINAR");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$q, 259, 148, 7411);
+    			add_location(i, file$r, 259, 148, 7411);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14793,14 +15042,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/indice_de_masa_corporal/" + /*indices_de_masa_corporal*/ ctx[29].place + "/" + /*indices_de_masa_corporal*/ ctx[29].year);
-    			add_location(a, file$q, 251, 6, 6867);
-    			add_location(td0, file$q, 250, 5, 6852);
-    			add_location(td1, file$q, 255, 5, 7043);
-    			add_location(td2, file$q, 256, 5, 7110);
-    			add_location(td3, file$q, 257, 5, 7159);
-    			add_location(td4, file$q, 258, 5, 7210);
-    			add_location(td5, file$q, 259, 5, 7268);
-    			add_location(tr, file$q, 249, 4, 6841);
+    			add_location(a, file$r, 251, 6, 6867);
+    			add_location(td0, file$r, 250, 5, 6852);
+    			add_location(td1, file$r, 255, 5, 7043);
+    			add_location(td2, file$r, 256, 5, 7110);
+    			add_location(td3, file$r, 257, 5, 7159);
+    			add_location(td4, file$r, 258, 5, 7210);
+    			add_location(td5, file$r, 259, 5, 7268);
+    			add_location(tr, file$r, 249, 4, 6841);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -15049,22 +15298,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$q, 231, 5, 5843);
-    			add_location(th1, file$q, 232, 5, 5866);
-    			add_location(th2, file$q, 233, 5, 5886);
-    			add_location(th3, file$q, 234, 5, 5907);
-    			add_location(th4, file$q, 235, 5, 5931);
-    			add_location(th5, file$q, 236, 5, 5965);
-    			add_location(tr0, file$q, 230, 4, 5832);
-    			add_location(thead, file$q, 229, 3, 5819);
-    			add_location(td0, file$q, 241, 5, 6037);
-    			add_location(td1, file$q, 242, 5, 6143);
-    			add_location(td2, file$q, 243, 5, 6288);
-    			add_location(td3, file$q, 244, 5, 6394);
-    			add_location(td4, file$q, 245, 5, 6505);
-    			add_location(td5, file$q, 246, 5, 6630);
-    			add_location(tr1, file$q, 240, 4, 6026);
-    			add_location(tbody, file$q, 239, 3, 6013);
+    			add_location(th0, file$r, 231, 5, 5843);
+    			add_location(th1, file$r, 232, 5, 5866);
+    			add_location(th2, file$r, 233, 5, 5886);
+    			add_location(th3, file$r, 234, 5, 5907);
+    			add_location(th4, file$r, 235, 5, 5931);
+    			add_location(th5, file$r, 236, 5, 5965);
+    			add_location(tr0, file$r, 230, 4, 5832);
+    			add_location(thead, file$r, 229, 3, 5819);
+    			add_location(td0, file$r, 241, 5, 6037);
+    			add_location(td1, file$r, 242, 5, 6143);
+    			add_location(td2, file$r, 243, 5, 6288);
+    			add_location(td3, file$r, 244, 5, 6394);
+    			add_location(td4, file$r, 245, 5, 6505);
+    			add_location(td5, file$r, 246, 5, 6630);
+    			add_location(tr1, file$r, 240, 4, 6026);
+    			add_location(tbody, file$r, 239, 3, 6013);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -15927,7 +16176,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" ATRAS");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$q, 297, 53, 8621);
+    			add_location(i, file$r, 297, 53, 8621);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15961,7 +16210,7 @@ var app = (function () {
     			t = text(" BORRAR TODO");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$q, 299, 77, 8804);
+    			add_location(i, file$r, 299, 77, 8804);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15985,7 +16234,7 @@ var app = (function () {
     }
 
     // (302:1) <Button outline on:click={loading} color="primary">
-    function create_default_slot$g(ctx) {
+    function create_default_slot$h(ctx) {
     	let i;
     	let t;
 
@@ -15995,7 +16244,7 @@ var app = (function () {
     			t = text(" PRIMEROS DATOS");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$q, 301, 53, 8963);
+    			add_location(i, file$r, 301, 53, 8963);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -16009,7 +16258,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$g.name,
+    		id: create_default_slot$h.name,
     		type: "slot",
     		source: "(302:1) <Button outline on:click={loading} color=\\\"primary\\\">",
     		ctx
@@ -16018,7 +16267,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$r(ctx) {
+    function create_fragment$s(ctx) {
     	let main;
     	let promise;
     	let t0;
@@ -16078,7 +16327,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "primary",
-    				$$slots: { default: [create_default_slot$g] },
+    				$$slots: { default: [create_default_slot$h] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16098,7 +16347,7 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t3 = space();
     			create_component(button2.$$.fragment);
-    			add_location(main, file$q, 199, 0, 4904);
+    			add_location(main, file$r, 199, 0, 4904);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16192,7 +16441,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$r.name,
+    		id: create_fragment$s.name,
     		type: "component",
     		source: "",
     		ctx
@@ -16201,7 +16450,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$r($$self, $$props, $$invalidate) {
+    function instance$s($$self, $$props, $$invalidate) {
     	let indice_de_masa_corporal = [];
 
     	let newindice_de_masa_corporal = {
@@ -16490,13 +16739,13 @@ var app = (function () {
     class ImcTable_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$r, create_fragment$r, safe_not_equal, {}, [-1, -1]);
+    		init(this, options, instance$s, create_fragment$s, safe_not_equal, {}, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "ImcTable_svelte",
     			options,
-    			id: create_fragment$r.name
+    			id: create_fragment$s.name
     		});
     	}
     }
@@ -16504,7 +16753,7 @@ var app = (function () {
     /* src\front\imcAPI\EditValue.svelte.html generated by Svelte v3.21.0 */
 
     const { console: console_1$7 } = globals;
-    const file$r = "src\\front\\imcAPI\\EditValue.svelte.html";
+    const file$s = "src\\front\\imcAPI\\EditValue.svelte.html";
 
     // (1:0) <script>      import {    onMount   }
     function create_catch_block$3(ctx) {
@@ -16698,23 +16947,23 @@ var app = (function () {
     			t20 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$r, 77, 16, 2638);
-    			add_location(th1, file$r, 78, 16, 2670);
-    			add_location(th2, file$r, 79, 16, 2701);
-    			add_location(th3, file$r, 80, 16, 2731);
-    			add_location(th4, file$r, 81, 16, 2764);
-    			add_location(th5, file$r, 82, 16, 2807);
-    			add_location(tr0, file$r, 76, 12, 2616);
-    			add_location(thead, file$r, 75, 8, 2595);
-    			add_location(td0, file$r, 87, 16, 2914);
-    			add_location(input, file$r, 88, 20, 2959);
-    			add_location(td1, file$r, 88, 16, 2955);
-    			add_location(td2, file$r, 89, 16, 3035);
-    			add_location(td3, file$r, 90, 16, 3075);
-    			add_location(td4, file$r, 91, 16, 3117);
-    			add_location(td5, file$r, 92, 16, 3157);
-    			add_location(tr1, file$r, 86, 12, 2892);
-    			add_location(tbody, file$r, 85, 8, 2871);
+    			add_location(th0, file$s, 77, 16, 2638);
+    			add_location(th1, file$s, 78, 16, 2670);
+    			add_location(th2, file$s, 79, 16, 2701);
+    			add_location(th3, file$s, 80, 16, 2731);
+    			add_location(th4, file$s, 81, 16, 2764);
+    			add_location(th5, file$s, 82, 16, 2807);
+    			add_location(tr0, file$s, 76, 12, 2616);
+    			add_location(thead, file$s, 75, 8, 2595);
+    			add_location(td0, file$s, 87, 16, 2914);
+    			add_location(input, file$s, 88, 20, 2959);
+    			add_location(td1, file$s, 88, 16, 2955);
+    			add_location(td2, file$s, 89, 16, 3035);
+    			add_location(td3, file$s, 90, 16, 3075);
+    			add_location(td4, file$s, 91, 16, 3117);
+    			add_location(td5, file$s, 92, 16, 3157);
+    			add_location(tr1, file$s, 86, 12, 2892);
+    			add_location(tbody, file$s, 85, 8, 2871);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -16840,7 +17089,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[4]);
     			set_style(p, "color", "red");
-    			add_location(p, file$r, 98, 4, 3340);
+    			add_location(p, file$s, 98, 4, 3340);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -16867,7 +17116,7 @@ var app = (function () {
     }
 
     // (101:0) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$h(ctx) {
+    function create_default_slot$i(ctx) {
     	let t;
 
     	const block = {
@@ -16884,7 +17133,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$h.name,
+    		id: create_default_slot$i.name,
     		type: "slot",
     		source: "(101:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -16893,7 +17142,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$s(ctx) {
+    function create_fragment$t(ctx) {
     	let main;
     	let h3;
     	let t0;
@@ -16924,7 +17173,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$h] },
+    				$$slots: { default: [create_default_slot$i] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16945,9 +17194,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$r, 70, 37, 2415);
-    			add_location(h3, file$r, 70, 4, 2382);
-    			add_location(main, file$r, 69, 0, 2370);
+    			add_location(strong, file$s, 70, 37, 2415);
+    			add_location(h3, file$s, 70, 4, 2382);
+    			add_location(main, file$s, 69, 0, 2370);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17027,7 +17276,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$s.name,
+    		id: create_fragment$t.name,
     		type: "component",
     		source: "",
     		ctx
@@ -17036,7 +17285,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$s($$self, $$props, $$invalidate) {
+    function instance$t($$self, $$props, $$invalidate) {
     	let { params = {} } = $$props;
     	let indice_de_masa_corporal = {};
     	let updatedPlace = "";
@@ -17159,13 +17408,13 @@ var app = (function () {
     class EditValue_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$s, create_fragment$s, safe_not_equal, { params: 0 });
+    		init(this, options, instance$t, create_fragment$t, safe_not_equal, { params: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "EditValue_svelte",
     			options,
-    			id: create_fragment$s.name
+    			id: create_fragment$t.name
     		});
     	}
 
@@ -17179,10 +17428,10 @@ var app = (function () {
     }
 
     /* src\front\imcAPI\Home.html generated by Svelte v3.21.0 */
-    const file$s = "src\\front\\imcAPI\\Home.html";
+    const file$t = "src\\front\\imcAPI\\Home.html";
 
     // (18:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$i(ctx) {
+    function create_default_slot$j(ctx) {
     	let i;
     	let t;
 
@@ -17191,7 +17440,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$s, 17, 56, 795);
+    			add_location(i, file$t, 17, 56, 795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17205,7 +17454,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$i.name,
+    		id: create_default_slot$j.name,
     		type: "slot",
     		source: "(18:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -17214,7 +17463,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$t(ctx) {
+    function create_fragment$u(ctx) {
     	let main;
     	let h1;
     	let t1;
@@ -17240,7 +17489,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$i] },
+    				$$slots: { default: [create_default_slot$j] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -17271,30 +17520,30 @@ var app = (function () {
     			t7 = space();
     			p3 = element("p");
     			create_component(button3.$$.fragment);
-    			add_location(h1, file$s, 6, 4, 136);
+    			add_location(h1, file$t, 6, 4, 136);
     			attr_dev(i0, "class", "fas fa-leaf");
-    			add_location(i0, file$s, 8, 103, 284);
+    			add_location(i0, file$t, 8, 103, 284);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "color", "primary");
     			attr_dev(button0, "onclick", "window.location.href='#/imc/graficas/Portal'");
-    			add_location(button0, file$s, 8, 8, 189);
-    			add_location(p0, file$s, 7, 4, 176);
+    			add_location(button0, file$t, 8, 8, 189);
+    			add_location(p0, file$t, 7, 4, 176);
     			attr_dev(i1, "class", "fas fa-leaf");
-    			add_location(i1, file$s, 11, 107, 469);
+    			add_location(i1, file$t, 11, 107, 469);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "color", "primary");
     			attr_dev(button1, "onclick", "window.location.href='#/sugarconsumeAPI/MyGraph'");
-    			add_location(button1, file$s, 11, 8, 370);
-    			add_location(p1, file$s, 10, 4, 357);
+    			add_location(button1, file$t, 11, 8, 370);
+    			add_location(p1, file$t, 10, 4, 357);
     			attr_dev(i2, "class", "fas fa-leaf");
-    			add_location(i2, file$s, 14, 107, 654);
+    			add_location(i2, file$t, 14, 107, 654);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "color", "primary");
     			attr_dev(button2, "onclick", "window.location.href='#/indice_de_masa_corporal'");
-    			add_location(button2, file$s, 14, 8, 555);
-    			add_location(p2, file$s, 13, 4, 542);
-    			add_location(p3, file$s, 16, 4, 734);
-    			add_location(main, file$s, 5, 0, 124);
+    			add_location(button2, file$t, 14, 8, 555);
+    			add_location(p2, file$t, 13, 4, 542);
+    			add_location(p3, file$t, 16, 4, 734);
+    			add_location(main, file$t, 5, 0, 124);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17348,7 +17597,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$t.name,
+    		id: create_fragment$u.name,
     		type: "component",
     		source: "",
     		ctx
@@ -17357,7 +17606,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$t($$self, $$props, $$invalidate) {
+    function instance$u($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -17373,22 +17622,22 @@ var app = (function () {
     class Home extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$t, create_fragment$t, safe_not_equal, {});
+    		init(this, options, instance$u, create_fragment$u, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Home",
     			options,
-    			id: create_fragment$t.name
+    			id: create_fragment$u.name
     		});
     	}
     }
 
     /* src\front\imcAPI\graficas\Portal.svelte.html generated by Svelte v3.21.0 */
-    const file$t = "src\\front\\imcAPI\\graficas\\Portal.svelte.html";
+    const file$u = "src\\front\\imcAPI\\graficas\\Portal.svelte.html";
 
     // (15:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$j(ctx) {
+    function create_default_slot$k(ctx) {
     	let i;
     	let t;
 
@@ -17397,7 +17646,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$t, 14, 56, 626);
+=======
+    			add_location(i, file$u, 14, 56, 613);
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17411,7 +17664,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$j.name,
+    		id: create_default_slot$k.name,
     		type: "slot",
     		source: "(15:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -17420,7 +17673,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$u(ctx) {
+    function create_fragment$v(ctx) {
     	let main;
     	let h1;
     	let t1;
@@ -17441,7 +17694,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$j] },
+    				$$slots: { default: [create_default_slot$k] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -17467,23 +17720,30 @@ var app = (function () {
     			t5 = space();
     			p2 = element("p");
     			create_component(button2.$$.fragment);
-    			add_location(h1, file$t, 6, 4, 136);
+    			add_location(h1, file$u, 6, 4, 136);
     			attr_dev(i0, "class", "fas fa-leaf");
-    			add_location(i0, file$t, 8, 105, 286);
+    			add_location(i0, file$u, 8, 105, 286);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "color", "primary");
     			attr_dev(button0, "onclick", "window.location.href='#/imc/graficas/Grafica1'");
-    			add_location(button0, file$t, 8, 8, 189);
-    			add_location(p0, file$t, 7, 4, 176);
+    			add_location(button0, file$u, 8, 8, 189);
+    			add_location(p0, file$u, 7, 4, 176);
     			attr_dev(i1, "class", "fas fa-leaf");
-    			add_location(i1, file$t, 11, 105, 474);
+    			add_location(i1, file$u, 11, 105, 474);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "color", "primary");
     			attr_dev(button1, "onclick", "window.location.href='#/imc/graficas/Grafica2'");
+<<<<<<< HEAD
     			add_location(button1, file$t, 11, 8, 377);
     			add_location(p1, file$t, 10, 4, 364);
     			add_location(p2, file$t, 13, 4, 565);
     			add_location(main, file$t, 5, 0, 124);
+=======
+    			add_location(button1, file$u, 11, 8, 377);
+    			add_location(p1, file$u, 10, 4, 364);
+    			add_location(p2, file$u, 13, 4, 552);
+    			add_location(main, file$u, 5, 0, 124);
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17532,7 +17792,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$u.name,
+    		id: create_fragment$v.name,
     		type: "component",
     		source: "",
     		ctx
@@ -17541,7 +17801,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$u($$self, $$props, $$invalidate) {
+    function instance$v($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -17557,24 +17817,31 @@ var app = (function () {
     class Portal_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$u, create_fragment$u, safe_not_equal, {});
+    		init(this, options, instance$v, create_fragment$v, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Portal_svelte",
     			options,
-    			id: create_fragment$u.name
+    			id: create_fragment$v.name
     		});
     	}
     }
 
     /* src\front\imcAPI\graficas\Myimcgraph.svelte.html generated by Svelte v3.21.0 */
+<<<<<<< HEAD
 
     const { console: console_1$8 } = globals;
     const file$u = "src\\front\\imcAPI\\graficas\\Myimcgraph.svelte.html";
 
     // (91:0) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$k(ctx) {
+=======
+    const file$v = "src\\front\\imcAPI\\graficas\\Myimcgraph.svelte.html";
+
+    // (89:0) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$l(ctx) {
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     	let i;
     	let t;
 
@@ -17583,7 +17850,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$u, 90, 52, 2874);
+=======
+    			add_location(i, file$v, 88, 52, 2835);
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17597,7 +17868,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$k.name,
+    		id: create_default_slot$l.name,
     		type: "slot",
     		source: "(91:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
@@ -17606,7 +17877,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$v(ctx) {
+    function create_fragment$w(ctx) {
     	let script0;
     	let script0_src_value;
     	let script1;
@@ -17629,7 +17900,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$k] },
+    				$$slots: { default: [create_default_slot$l] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -17653,6 +17924,7 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+<<<<<<< HEAD
     			add_location(script0, file$u, 75, 4, 2155);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
     			add_location(script1, file$u, 76, 4, 2226);
@@ -17666,6 +17938,22 @@ var app = (function () {
     			attr_dev(figure, "class", "highcharts-figure");
     			add_location(figure, file$u, 82, 0, 2505);
     			add_location(main, file$u, 81, 0, 2497);
+=======
+    			add_location(script0, file$v, 74, 4, 2087);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$v, 75, 4, 2158);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$v, 76, 4, 2234);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$v, 77, 4, 2312);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$v, 81, 4, 2476);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$v, 82, 4, 2508);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$v, 80, 0, 2436);
+    			add_location(main, file$v, 79, 0, 2428);
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17685,7 +17973,7 @@ var app = (function () {
     			mount_component(button, main, null);
     			current = true;
     			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$c, false, false, false);
+    			dispose = listen_dev(script3, "load", loadGraph$d, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -17719,7 +18007,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$v.name,
+    		id: create_fragment$w.name,
     		type: "component",
     		source: "",
     		ctx
@@ -17728,7 +18016,7 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraph$c() {
+    async function loadGraph$d() {
     	let paises2019 = [];
     	let paises2020 = [];
     	let guardado_de_datos = [];
@@ -17787,7 +18075,7 @@ var app = (function () {
     	});
     }
 
-    function instance$v($$self, $$props, $$invalidate) {
+    function instance$w($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -17796,26 +18084,27 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Myimcgraph_svelte", $$slots, []);
-    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$c });
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$d });
     	return [];
     }
 
     class Myimcgraph_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$v, create_fragment$v, safe_not_equal, {});
+    		init(this, options, instance$w, create_fragment$w, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Myimcgraph_svelte",
     			options,
-    			id: create_fragment$v.name
+    			id: create_fragment$w.name
     		});
     	}
     }
 
     var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
+<<<<<<< HEAD
     function unwrapExports (x) {
     	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
     }
@@ -17823,6 +18112,28 @@ var app = (function () {
     function createCommonjsModule(fn, module) {
     	return module = { exports: {} }, fn(module, module.exports), module.exports;
     }
+=======
+    function create_fragment$x(ctx) {
+    	const block = {
+    		c: noop,
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: noop,
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: noop
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$x.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
 
     var t0 = new Date,
         t1 = new Date;
@@ -43060,7 +43371,11 @@ var app = (function () {
     	});
     }
 
+<<<<<<< HEAD
     function instance$w($$self, $$props, $$invalidate) {
+=======
+    function instance$x($$self, $$props) {
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -43076,13 +43391,13 @@ var app = (function () {
     class Myimcgraph2_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$w, create_fragment$w, safe_not_equal, {});
+    		init(this, options, instance$x, create_fragment$x, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Myimcgraph2_svelte",
     			options,
-    			id: create_fragment$w.name
+    			id: create_fragment$x.name
     		});
     	}
     }
@@ -43090,7 +43405,7 @@ var app = (function () {
     /* src\front\App.svelte.html generated by Svelte v3.21.0 */
     const file$w = "src\\front\\App.svelte.html";
 
-    function create_fragment$x(ctx) {
+    function create_fragment$y(ctx) {
     	let main;
     	let h1;
     	let t1;
@@ -43108,8 +43423,13 @@ var app = (function () {
     			h1.textContent = "Gestión de APIs";
     			t1 = space();
     			create_component(router.$$.fragment);
+<<<<<<< HEAD
     			add_location(h1, file$w, 83, 1, 3070);
     			add_location(main, file$w, 82, 0, 3061);
+=======
+    			add_location(h1, file$w, 85, 1, 3200);
+    			add_location(main, file$w, 84, 0, 3191);
+>>>>>>> 2ffbbd79cd5c006b59097d854dd261f55cd56838
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -43139,7 +43459,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$x.name,
+    		id: create_fragment$y.name,
     		type: "component",
     		source: "",
     		ctx
@@ -43148,7 +43468,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$x($$self, $$props, $$invalidate) {
+    function instance$y($$self, $$props, $$invalidate) {
     	const routes = {
     		"/": Inicio_svelte,
     		//RUTAS PARA LA API SUGARCONSUME
@@ -43168,6 +43488,7 @@ var app = (function () {
     		"/sugarconsumeAPI/integrations/roads": Roads_svelte,
     		"/sugarconsumeAPI/integrations/intcont": Intcont_stats_svelte,
     		"/sugarconsumeAPI/integrations/crime": Crime_rate_stats_svelte,
+    		"/sugarconsumeAPI/integrations/APIExt1": APIExt1_svelte,
     		//RUTAS PARA LA API IMC
     		"/indice_de_masa_corporal/:placename/:year": EditValue_svelte,
     		"/indice_de_masa_corporal": ImcTable_svelte,
@@ -43207,6 +43528,7 @@ var app = (function () {
     		intcont: Intcont_stats_svelte,
     		integraciones: Integracion_svelte,
     		crime: Crime_rate_stats_svelte,
+    		APIExt1: APIExt1_svelte,
     		imcTable: ImcTable_svelte,
     		EditValue: EditValue_svelte,
     		Home,
@@ -43222,13 +43544,13 @@ var app = (function () {
     class App_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$x, create_fragment$x, safe_not_equal, {});
+    		init(this, options, instance$y, create_fragment$y, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App_svelte",
     			options,
-    			id: create_fragment$x.name
+    			id: create_fragment$y.name
     		});
     	}
     }
