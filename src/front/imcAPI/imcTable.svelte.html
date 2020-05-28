@@ -96,32 +96,55 @@
 
 	
 	//FUNCIÓN PARA INSERTAR UN RECURSO
-
-
+	//TEST de fran para que solo se introduzcan positivos, string, ints y floats
+	const pattern = new RegExp('^[A-Z]+$', 'i');
+	const pattern2 = new RegExp('^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$');
+	const pattern3 = new RegExp('^[0-9]+$');
 	async function insertindice_de_masa_corporal() {
+		var listaLugares = [];
+		var listaaños = [];
 		console.log("Inserting indice_de_masa_corporal resource...");
-		if (newindice_de_masa_corporal.place == ""
-			|| newindice_de_masa_corporal.place == null
-			|| newindice_de_masa_corporal.year == "" 
-			|| newindice_de_masa_corporal.year == null) {
+		indice_de_masa_corporal.forEach((x) => {
+			listaLugares.push(x.place);
+			listaaños.push(x.year);
+		});
+		if (newindice_de_masa_corporal.place == ""|| newindice_de_masa_corporal.place == null
+			|| newindice_de_masa_corporal.year == "" || newindice_de_masa_corporal.year == null) {
 			
 			alert("No se ha rellenado algún hueco");
-		} else {
-			const json = JSON.stringify(newindice_de_masa_corporal);
-			const res = await fetch("/api/v3/indice_de_masa_corporal", {
-				method: "POST",
-				body: json,
-				headers: {
-					Accept: 'application/json',
-					"Content-Type": "application/json",
+		}else if(!pattern.test(newindice_de_masa_corporal.place)){
+
+			alert("El Lugar no puede contener números.")
+
+
+			}else if(!pattern2.test(newindice_de_masa_corporal.indice_de_masa_corporal) ||!pattern2.test(newindice_de_masa_corporal.altura) ||!pattern2.test(newindice_de_masa_corporal.tasa_obesidad) || !pattern3.test(newindice_de_masa_corporal.year) ){
+				alert("No has introducido un número correcto");
+
+			}else if(listaLugares.includes(newindice_de_masa_corporal.place) && listaaños.includes(newindice_de_masa_corporal.year)){
+				alert("El recurso que intentas insertar ya existe")
+
+
+			}
+
+
+			else if(newindice_de_masa_corporal.year < 0 || newindice_de_masa_corporal.indice_de_masa_corporal < 0 || newindice_de_masa_corporal.altura < 0 || newindice_de_masa_corporal.tasa_obesidad < 0){
+				alert("Has intentado introducir un número negativo.")
+			} else {
+						const json = JSON.stringify(newindice_de_masa_corporal);
+						const res = await fetch("/api/v3/indice_de_masa_corporal", {
+							method: "POST",
+							body: json,
+							headers: {
+								Accept: 'application/json',
+								"Content-Type": "application/json",
+							}
+						}).then(function(res) {
+							getindice_de_masa_corporal();
+							getyears();
+						}); 
+						alert("Insertado con éxito.")
+					}
 				}
-			}).then(function(res) {
-				getindice_de_masa_corporal();
-				getyears();
-			}); 
-			alert("Insertado con éxito.")
-		}
-	}
 
 
 	//FUNCIÓN PARA BORRAR UN RECURSO CONCRETO

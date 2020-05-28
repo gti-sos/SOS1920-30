@@ -293,6 +293,11 @@ app.put(BASE_API_URL+"/indice_de_masa_corporal",(req,res) => {
 });
 
 
+//PUT CONTACT
+app.put(BASE_API_URL+"/indice_de_masa_corporal/:",(req,res) => {
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
 
 
 
@@ -506,6 +511,10 @@ app.post(BASE_API_URLv2+"/indice_de_masa_corporal/:place",(req,res) => {
 app.put(BASE_API_URLv2+"/indice_de_masa_corporal",(req,res) => {
 res.sendStatus(405, "METHOD NOT ALLOWED");
 });
+//PUT CONTACT
+app.put(BASE_API_URLv2+"/indice_de_masa_corporal/:place",(req,res) => {
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+	});
 
 
 
@@ -725,6 +734,12 @@ app.post(BASE_API_URLv3+"/indice_de_masa_corporal/:place",(req,res) => {
 
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
+
+//PUT CONTACT
+app.put(BASE_API_URLv3+"/indice_de_masa_corporal/place:",(req,res) => {
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+	});
+	
 
 //PUT CONTACT
 app.put(BASE_API_URLv3+"/indice_de_masa_corporal",(req,res) => {
