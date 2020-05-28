@@ -23,7 +23,9 @@
 	let newsugarconsume = {
 		"place": "",
 		"sugarconsume": 0,
-		"year": ""	
+		"year": "",
+		"pg_diabetes": 0,
+		"poblacion": 0	
 	};
 	let places = [];
 	let years = [];
@@ -98,13 +100,44 @@
 
 	async function insertsugarconsume() {
 		console.log("Inserting sugarconsume resource...");
+		const pattern = new RegExp('^[A-Z]+$', 'i');
+		const pattern2 = new RegExp('^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$');
+		const pattern3 = new RegExp('^[0-9]+$'); 
+		var listaLugares = [];
+		var listaaños = [];
+		sugarconsume.forEach((x) => {
+			listaLugares.push(x.place);
+			listaaños.push(x.year);
+		});
+
 		if (newsugarconsume.place == ""
 			|| newsugarconsume.place == null
 			|| newsugarconsume.year == "" 
-			|| newsugarconsume.year == null) {
+			|| newsugarconsume.year == null
+			|| newsugarconsume.pg_diabetes == ""
+			|| newsugarconsume.pg_diabetes == null
+			|| newsugarconsume.poblacion == ""
+			|| newsugarconsume.poblacion == null) {
 			
-			alert("No se ha rellenado algún hueco");
-		} else {
+			alert("Algún campo es incorrecto o no has introducido algún valor");
+		}else if(!pattern.test(newsugarconsume.place)){
+
+		alert("El Lugar no puede contener números.")
+		
+		
+		}else if(!pattern2.test(newsugarconsume.sugarconsume) ||!pattern2.test(newsugarconsume.pg_diabetes) ||!pattern2.test(newsugarconsume.poblacion) || !pattern3.test(newsugarconsume.year) ){
+			alert("No has introducido un número correcto");
+
+		}else if(listaLugares.includes(newsugarconsume.place) && listaaños.includes(newsugarconsume.year)){
+			alert("El recurso que intentas insertar ya existe")
+		
+		
+		}
+		
+		
+		else if(newsugarconsume.year < 0 || newsugarconsume.sugarconsume < 0 || newsugarconsume.pg_diabetes < 0 || newsugarconsume.poblacion < 0){
+			alert("Has intentado introducir un número negativo.")
+		}else {
 			const json = JSON.stringify(newsugarconsume);
 			const res = await fetch("/api/v3/sugarconsume", {
 				method: "POST",

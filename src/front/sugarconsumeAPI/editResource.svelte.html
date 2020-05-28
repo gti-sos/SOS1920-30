@@ -13,9 +13,9 @@
     export let params = {};
     let sugarconsume = {};
     let updatedPlace = "";
-    let updatedSugarconsume = 0;
-    let updatedPg_diabetes = 0;
-    let updatedPoblacion = 0;
+    let updatedSugarconsume = 0.0;
+    let updatedPg_diabetes = 0.0;
+    let updatedPoblacion = 0.0;
     let updatedYear = 0;
     let errorMsg = "";
 
@@ -49,19 +49,30 @@
     //FUNCIÓN PARA ACTUALIZAR UN RECURSO
     
     async function updatesugarconsume(){
-
+        const pattern2 = new RegExp('^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$');
         console.log("Actualizando recurso: " + JSON.stringify(params.placename));
-        console.log(params.placename);
-        console.log(updatedSugarconsume);
-        console.log(parseInt(params.year));
-		const res = await fetch("/api/v3/sugarconsume/" + params.placename + "/" + params.year, {
+		if(
+            updatedSugarconsume == "" 
+			|| updatedSugarconsume == null
+			|| updatedPg_diabetes == ""
+			|| updatedPg_diabetes == null
+			|| updatedPoblacion == ""
+			|| updatedPoblacion == null){
+                alert("Ha dejado algún hueco en blanco o a 0");
+            }else if(updatedSugarconsume < 0 || updatedPg_diabetes < 0 || updatedPoblacion < 0){
+                alert("Ha intentado introducir algún dato negativo");
+            }else if(!pattern2.test(updatedSugarconsume)  || !pattern2.test(updatedPg_diabetes)  || !pattern2.test(updatedPoblacion)  ){
+                alert("Ha intentado introducir algún número incorrecto.")
+            }
+        
+        else{const res = await fetch("/api/v3/sugarconsume/" + params.placename + "/" + params.year, {
             method: "PUT",
 			body: JSON.stringify({
                 place : params.placename,
-                sugarconsume : updatedSugarconsume,
+                sugarconsume : parseFloat(updatedSugarconsume),
                 year : parseInt(params.year),
-                pg_diabetes : parseInt(updatedPg_diabetes),
-                poblacion : parseInt(updatedPoblacion)
+                pg_diabetes : parseFloat(updatedPg_diabetes),
+                poblacion : parseFloat(updatedPoblacion)
             }  
             ),
 			headers: {
@@ -72,7 +83,7 @@
         });
             alert("Recurso actualizado con éxito");
         
-        
+        }
 
     }
 </script>
