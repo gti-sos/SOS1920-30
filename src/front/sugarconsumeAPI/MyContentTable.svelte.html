@@ -106,8 +106,12 @@
 		var listaLugares = [];
 		var listaaños = [];
 		sugarconsume.forEach((x) => {
+			if(x.place == newsugarconsume.place){
+
+			
 			listaLugares.push(x.place);
 			listaaños.push(x.year);
+			}
 		});
 
 		if (newsugarconsume.place == ""
