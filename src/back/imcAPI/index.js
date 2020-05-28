@@ -230,18 +230,19 @@ app.put(BASE_API_URL+"/indice_de_masa_corporal/:place/:year",(req,res) => {
 	var updated = req.body;
 	db.find({"place":place, "year": year},(error,indice_de_masa_corporal)=>{
 		console.log(indice_de_masa_corporal);
-		if(indice_de_masa_corporal.length == 0){
-			console.log("Error 404, no se ha encontrado el recurso");
-			res.sendStatus(404);
-			}else if(!updated.place || !updated.indice_de_masa_corporal ||!updated.year || updated.place != place || updated.year != year){				
-				console.log("mal uso de put");
-				res.sendStatus(400);
-				}else{
-					db.update({"place":place,"year":year},{$set: updated});
-					console.log("recurso actualizado")
-					res.sendStatus(200);
-				}
-	});
+		 if(indice_de_masa_corporal.length == 0 ){
+				console.log("Error 404, no se ha encontrado el recurso");
+				res.sendStatus(404);
+				}else if(!updated.place || !updated.indice_de_masa_corporal ||!updated.year || updated.place != place || updated.year != year){				
+					console.log("mal uso de put");
+					res.sendStatus(400);
+					}else{
+						db.update({"place":place,"year":year},{$set: updated});
+						console.log("recurso actualizado")
+						res.sendStatus(200);
+					}
+						
+		});
 	
 	
 });

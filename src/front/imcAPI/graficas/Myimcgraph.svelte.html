@@ -10,16 +10,17 @@
         guardado_de_datos.filter(data =>  data.year == 2019).forEach((data) => {
             let paises = { 
 		        'name': data.place,
-		        'value': data.indice_de_masa_corporal
+                'value': parseFloat(data.indice_de_masa_corporal)
     	};
             paises2019.push(paises);
         });     
         guardado_de_datos.filter(data => data.year == 2020).forEach((data) => {
             let paises = { 
 		        'name': data.place,
-		        'value': data.indice_de_masa_corporal
+		        'value': parseFloat(data.indice_de_masa_corporal)
     	};
             paises2020.push(paises);
+            console.log(paises2020);
         });
         Highcharts.chart('container', {
 
@@ -75,12 +76,13 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"on:load="{loadGraph}"></script>
+
 </svelte:head>
 <main>
 <figure class="highcharts-figure">
     <div id="container"></div>
-    <p class="highcharts-description">
+    <p >
         Aqui mostramos una grafica en la que podemos observar el imc(indice de masa corporal) que tienen ciertos paises del continente europeo
         En negro veríamos los paises en el año 2020 y en azul el 2019
  

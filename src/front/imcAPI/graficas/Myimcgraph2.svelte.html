@@ -1,0 +1,69 @@
+<script>
+    import Button from "sveltestrap/src/Button.svelte";
+   import {
+       pop
+   } from "svelte-spa-router";
+
+
+   import bb from "./billboard.js";
+   async function loadGraph(){
+    let imc2019 = ["2019"];
+    let imc2020 = ["2020"];
+    let paises = [];
+    let guardado_de_datos = [];
+    const Datos = await fetch("/api/v3/indice_de_masa_corporal");
+    guardado_de_datos = await Datos.json();
+    guardado_de_datos.filter(data =>  data.year == 2019).forEach((data) => {
+        imc2019.push( data.indice_de_masa_corporal);
+        paises.push(data.place);
+        console.log(paises);
+    });    
+    guardado_de_datos.filter(data => data.year == 2020).forEach((data) => {
+        imc2020.push( data.indice_de_masa_corporal);
+    });
+   var chart = bb.generate({
+  data: {
+    columns: [
+	imc2019,
+	imc2020
+  ]},
+  grid: {
+				x: {
+				lines: [
+					{
+					value: 0,
+					text: paises[0],
+					},
+					{
+					value: 1,
+					text: paises[1],
+					},
+					{
+					value: 2,
+					text:   paises[2],
+					},
+					{
+					value: 3,
+					text: paises[3],
+					}
+				]
+				}
+ 			},
+  
+  bindto: "#lineChart"
+});
+}
+</script>
+<svelte:head>
+    <script src="https://d3js.org/d3.v5.min.js" on:load="{loadGraph}"></script>
+</svelte:head>
+<main>
+   <div id="lineChart"></div>
+   <p></p>
+   <p>grafica comparativa entre Alemania,Belgica,China,Hungria y Polonia 
+       del imc respecto a los años 2019/2020
+   </p>
+   <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/billboard.css"> 
+  <!-- esto es porque por defecto sale sombreado, se lo quitamos ya que no lo usamos. -->
+   <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button> 
+</main>
