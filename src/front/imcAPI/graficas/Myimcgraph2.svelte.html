@@ -10,17 +10,35 @@
     let imc2019 = ["2019"];
     let imc2020 = ["2020"];
     let paises = [];
+    let lineas = [];
+
     let guardado_de_datos = [];
     const Datos = await fetch("/api/v3/indice_de_masa_corporal");
     guardado_de_datos = await Datos.json();
     guardado_de_datos.filter(data =>  data.year == 2019).forEach((data) => {
-        imc2019.push( data.indice_de_masa_corporal);
-        paises.push(data.place);
-        console.log(paises);
-    });    
+        imc2019.push( parseFloat(data.indice_de_masa_corporal));
+   
+    });  
+ 
     guardado_de_datos.filter(data => data.year == 2020).forEach((data) => {
         imc2020.push( data.indice_de_masa_corporal);
     });
+    guardado_de_datos.filter(data =>  data.year == 2019 || data.year == 2020
+    ).forEach((data) => {
+        if (paises.includes(data.place)){
+            console.log("quitando repetido");
+        }else{
+            paises.push(data.place);
+        }
+    });  
+    for (var i=0; i<paises.length; i++){
+        let line = { 
+		        'value': i,
+		        'text': paises[i]
+    	};
+        lineas.push(line);
+    }
+ 
    var chart = bb.generate({
   data: {
     columns: [
@@ -29,24 +47,7 @@
   ]},
   grid: {
 				x: {
-				lines: [
-					{
-					value: 0,
-					text: paises[0],
-					},
-					{
-					value: 1,
-					text: paises[1],
-					},
-					{
-					value: 2,
-					text:   paises[2],
-					},
-					{
-					value: 3,
-					text: paises[3],
-					}
-				]
+				lines: lineas
 				}
  			},
   
