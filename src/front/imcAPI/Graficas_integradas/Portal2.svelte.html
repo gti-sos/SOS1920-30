@@ -1,0 +1,22 @@
+<script>
+    import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+</script>
+
+<main>
+    <h1>GRAFICAS INTEGRADAS </h1>
+   <p>
+        <button type="button"  color='primary'  onclick="window.location.href='#/imc/graficas_integradas/Grafica1'"><i class='fas fa-leaf' ></i> Grafica "offworks" </button>
+    </p>
+    <p>
+        <button type="button"  color='primary'  onclick="window.location.href='#/imc/graficas_integradas/Grafica2'"><i class='fas fa-leaf' ></i> Grafica "rentspercapita" </button>
+    </p>
+    <!-- 
+    <p>
+        <button type="button"  color='primary'  onclick="window.location.href='#/imc/graficas/Grafica2'"><i class='fas fa-leaf' ></i> Grafica libreria externa "billboard" </button>
+    </p>
+    -->
+    <p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+    </p>
+</main>

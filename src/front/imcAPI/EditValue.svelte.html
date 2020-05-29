@@ -41,14 +41,18 @@
 
     
     async function updateindice_de_masa_corporal(){
-
+        const pattern2 = new RegExp('^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$');
         console.log("Updating indice_de_masa_corporal resources..." + JSON.stringify(params.placename));
         console.log(params.placename);
         console.log(updatedindice_de_masa_corporal);
         console.log(parseInt(params.year));
         if (updatedindice_de_masa_corporal == "") {
 			alert("el imc se ha dejado en blanco");
-		} else{
+        }else if(!pattern2.test(updatedindice_de_masa_corporal)){
+            alert("Formato no válido");
+        }else if(updatedindice_de_masa_corporal < 0){
+            alert("no es válido un numero negativo");
+        }else{
 		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
             method: "PUT",
 			body: JSON.stringify({
