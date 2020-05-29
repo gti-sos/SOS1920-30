@@ -11545,7 +11545,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$h, 91, 60, 2958);
+    			add_location(i, file$h, 91, 60, 3024);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11617,18 +11617,18 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$h, 77, 8, 2223);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$h, 78, 0, 2290);
+    			add_location(script1, file$h, 78, 0, 2312);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$h, 79, 0, 2362);
+    			add_location(script2, file$h, 79, 0, 2406);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$h, 80, 8, 2444);
+    			add_location(script3, file$h, 80, 8, 2510);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$h, 85, 12, 2638);
+    			add_location(div, file$h, 85, 12, 2704);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$h, 86, 12, 2678);
+    			add_location(p, file$h, 86, 12, 2744);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$h, 84, 8, 2590);
-    			add_location(main, file$h, 83, 4, 2574);
+    			add_location(figure, file$h, 84, 8, 2656);
+    			add_location(main, file$h, 83, 4, 2640);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11647,8 +11647,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$3, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$3, false, false, false),
+    				listen_dev(script1, "load", loadGraph$3, false, false, false),
+    				listen_dev(script2, "load", loadGraph$3, false, false, false),
+    				listen_dev(script3, "load", loadGraph$3, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -11676,7 +11682,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -11794,7 +11800,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$i, 91, 60, 2961);
+    			add_location(i, file$i, 91, 60, 3027);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11866,18 +11872,18 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$i, 77, 8, 2234);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$i, 78, 0, 2301);
+    			add_location(script1, file$i, 78, 0, 2323);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$i, 79, 0, 2373);
+    			add_location(script2, file$i, 79, 0, 2417);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$i, 80, 8, 2455);
+    			add_location(script3, file$i, 80, 8, 2521);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$i, 85, 12, 2649);
+    			add_location(div, file$i, 85, 12, 2715);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$i, 86, 12, 2689);
+    			add_location(p, file$i, 86, 12, 2755);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$i, 84, 8, 2601);
-    			add_location(main, file$i, 83, 4, 2585);
+    			add_location(figure, file$i, 84, 8, 2667);
+    			add_location(main, file$i, 83, 4, 2651);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11896,8 +11902,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$4, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$4, false, false, false),
+    				listen_dev(script1, "load", loadGraph$4, false, false, false),
+    				listen_dev(script2, "load", loadGraph$4, false, false, false),
+    				listen_dev(script3, "load", loadGraph$4, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -11925,7 +11937,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -12045,7 +12057,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$j, 142, 60, 4288);
+    			add_location(i, file$j, 142, 60, 4354);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12117,19 +12129,19 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$j, 128, 8, 3573);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$j, 129, 0, 3640);
+    			add_location(script1, file$j, 129, 0, 3662);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$j, 130, 0, 3714);
+    			add_location(script2, file$j, 130, 0, 3758);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$j, 131, 0, 3790);
+    			add_location(script3, file$j, 131, 0, 3856);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-i4scx8");
-    			add_location(div, file$j, 136, 12, 3986);
+    			add_location(div, file$j, 136, 12, 4052);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$j, 137, 12, 4026);
+    			add_location(p, file$j, 137, 12, 4092);
     			attr_dev(figure, "class", "highcharts-figure svelte-i4scx8");
-    			add_location(figure, file$j, 135, 8, 3938);
-    			add_location(main, file$j, 134, 4, 3922);
+    			add_location(figure, file$j, 135, 8, 4004);
+    			add_location(main, file$j, 134, 4, 3988);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12148,8 +12160,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$5, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$5, false, false, false),
+    				listen_dev(script1, "load", loadGraph$5, false, false, false),
+    				listen_dev(script2, "load", loadGraph$5, false, false, false),
+    				listen_dev(script3, "load", loadGraph$5, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -12177,7 +12195,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -12583,7 +12601,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$l, 91, 60, 2959);
+    			add_location(i, file$l, 91, 60, 3025);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12655,18 +12673,18 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$l, 77, 8, 2227);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$l, 78, 0, 2294);
+    			add_location(script1, file$l, 78, 0, 2316);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$l, 79, 0, 2366);
+    			add_location(script2, file$l, 79, 0, 2410);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$l, 80, 8, 2448);
+    			add_location(script3, file$l, 80, 8, 2514);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$l, 85, 12, 2642);
+    			add_location(div, file$l, 85, 12, 2708);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$l, 86, 12, 2682);
+    			add_location(p, file$l, 86, 12, 2748);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$l, 84, 8, 2594);
-    			add_location(main, file$l, 83, 4, 2578);
+    			add_location(figure, file$l, 84, 8, 2660);
+    			add_location(main, file$l, 83, 4, 2644);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12685,8 +12703,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$7, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$7, false, false, false),
+    				listen_dev(script1, "load", loadGraph$7, false, false, false),
+    				listen_dev(script2, "load", loadGraph$7, false, false, false),
+    				listen_dev(script3, "load", loadGraph$7, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -12714,7 +12738,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -12832,7 +12856,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$m, 93, 60, 3075);
+    			add_location(i, file$m, 93, 60, 3150);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12902,20 +12926,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$m, 79, 8, 2344);
+    			add_location(script0, file$m, 79, 8, 2353);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$m, 80, 0, 2411);
+    			add_location(script1, file$m, 80, 0, 2442);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$m, 81, 0, 2483);
+    			add_location(script2, file$m, 81, 0, 2536);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$m, 82, 8, 2565);
+    			add_location(script3, file$m, 82, 8, 2640);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$m, 87, 12, 2759);
+    			add_location(div, file$m, 87, 12, 2834);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$m, 88, 12, 2799);
+    			add_location(p, file$m, 88, 12, 2874);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$m, 86, 8, 2711);
-    			add_location(main, file$m, 85, 4, 2695);
+    			add_location(figure, file$m, 86, 8, 2786);
+    			add_location(main, file$m, 85, 4, 2770);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12934,8 +12958,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$8, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$8, false, false, false),
+    				listen_dev(script1, "load", loadGraph$8, false, false, false),
+    				listen_dev(script2, "load", loadGraph$8, false, false, false),
+    				listen_dev(script3, "load", loadGraph$8, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -12963,7 +12993,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -12985,7 +13015,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
-    	const resData2 = await fetch("https://covid-193.p.rapidapi.com/statistics");
+    	const resData2 = await fetch("https://sos1920-07.herokuapp.com/api/v2/foodsImports");
     	MyData = await resData.json();
     	MyData2 = await resData2.json();
 
@@ -13087,7 +13117,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$n, 91, 60, 2961);
+    			add_location(i, file$n, 91, 60, 3027);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13159,18 +13189,18 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$n, 77, 8, 2236);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$n, 78, 0, 2303);
+    			add_location(script1, file$n, 78, 0, 2325);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$n, 79, 0, 2375);
+    			add_location(script2, file$n, 79, 0, 2419);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$n, 80, 8, 2457);
+    			add_location(script3, file$n, 80, 8, 2523);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$n, 85, 12, 2651);
+    			add_location(div, file$n, 85, 12, 2717);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$n, 86, 12, 2691);
+    			add_location(p, file$n, 86, 12, 2757);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$n, 84, 8, 2603);
-    			add_location(main, file$n, 83, 4, 2587);
+    			add_location(figure, file$n, 84, 8, 2669);
+    			add_location(main, file$n, 83, 4, 2653);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13189,8 +13219,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$9, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$9, false, false, false),
+    				listen_dev(script1, "load", loadGraph$9, false, false, false),
+    				listen_dev(script2, "load", loadGraph$9, false, false, false),
+    				listen_dev(script3, "load", loadGraph$9, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -13218,7 +13254,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -14157,7 +14193,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$r, 90, 60, 2937);
+    			add_location(i, file$r, 90, 60, 3003);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14229,18 +14265,18 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$r, 77, 8, 2227);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$r, 78, 0, 2294);
+    			add_location(script1, file$r, 78, 0, 2316);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$r, 79, 0, 2366);
+    			add_location(script2, file$r, 79, 0, 2410);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$r, 80, 8, 2448);
+    			add_location(script3, file$r, 80, 8, 2514);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$r, 84, 12, 2636);
+    			add_location(div, file$r, 84, 12, 2702);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$r, 85, 12, 2676);
+    			add_location(p, file$r, 85, 12, 2742);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$r, 83, 8, 2588);
-    			add_location(main, file$r, 82, 4, 2572);
+    			add_location(figure, file$r, 83, 8, 2654);
+    			add_location(main, file$r, 82, 4, 2638);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14259,8 +14295,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$c, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$c, false, false, false),
+    				listen_dev(script1, "load", loadGraph$c, false, false, false),
+    				listen_dev(script2, "load", loadGraph$c, false, false, false),
+    				listen_dev(script3, "load", loadGraph$c, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -14288,7 +14330,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -14682,7 +14724,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$t, 101, 60, 3492);
+    			add_location(i, file$t, 101, 60, 3558);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14754,18 +14796,18 @@ var app = (function () {
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$t, 87, 8, 2751);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$t, 88, 0, 2818);
+    			add_location(script1, file$t, 88, 0, 2840);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$t, 89, 0, 2890);
+    			add_location(script2, file$t, 89, 0, 2934);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$t, 90, 8, 2972);
+    			add_location(script3, file$t, 90, 8, 3038);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$t, 95, 12, 3166);
+    			add_location(div, file$t, 95, 12, 3232);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$t, 96, 12, 3206);
+    			add_location(p, file$t, 96, 12, 3272);
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
-    			add_location(figure, file$t, 94, 8, 3118);
-    			add_location(main, file$t, 93, 4, 3102);
+    			add_location(figure, file$t, 94, 8, 3184);
+    			add_location(main, file$t, 93, 4, 3168);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14784,8 +14826,14 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$e, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$e, false, false, false),
+    				listen_dev(script1, "load", loadGraph$e, false, false, false),
+    				listen_dev(script2, "load", loadGraph$e, false, false, false),
+    				listen_dev(script3, "load", loadGraph$e, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -14813,7 +14861,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -44628,8 +44676,8 @@ var app = (function () {
     			h1.textContent = "Gestión de APIs";
     			t1 = space();
     			create_component(router.$$.fragment);
-    			add_location(h1, file$C, 96, 1, 3880);
-    			add_location(main, file$C, 95, 0, 3871);
+    			add_location(h1, file$C, 97, 1, 3883);
+    			add_location(main, file$C, 96, 0, 3874);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

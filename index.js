@@ -14,7 +14,15 @@ app.use(bodyParser.json());
 
 
 app.use(cors());
+/*
+var proxyBelen = "/api/v2/crime-rate-stats";
+var urlProxyBelen = " http://sos1920-11.herokuapp.com";
 
+
+app.use(proxyBelen, function(req, res){
+    console.log("piped: " + urlProxyBelen);
+    req.pipe(request(urlProxyBelen).pipe(res))
+})*/
 /*var paths = '/api';
 var apiServerHost = 'https://platform.fatsecret.com/';
 
