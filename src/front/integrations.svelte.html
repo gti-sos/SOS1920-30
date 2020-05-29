@@ -1,0 +1,9 @@
+<script>
+    import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+</script>
+
+<main>
+    <button type="button"  color='primary'  onclick="window.location.href='#/sugarconsumeAPI/integrations'"><i class='fas fa-leaf' ></i> Integraciones de Fran Zájara Gómez(API Sugarconsume) </button>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+</main>

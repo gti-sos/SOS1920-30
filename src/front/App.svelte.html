@@ -3,6 +3,8 @@
 	import Inicio from './Inicio.svelte.html';
 	import Router from 'svelte-spa-router';
 	import NotFound from './NotFound.svelte.html';
+	import Grafo from './Grafo.svelte.html';
+	import Integration from './integrations.svelte.html';
 
 
 	//IMPORTACIONES  PARA SUGARCONSUME
@@ -43,6 +45,8 @@
 	
 	const routes = {
 		"/" : Inicio,
+		"/analytics" : Grafo,
+		"/integrations" : Integration,
 
 
 		//RUTAS PARA LA API SUGARCONSUME
