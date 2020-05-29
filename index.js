@@ -15,7 +15,14 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+var paths = '/api';
+var apiServerHost = 'https://platform.fatsecret.com/';
 
+app.use(paths, function(req,res){
+   var url = apiServerHost + req.baseUrl + req.url;
+   req.pipe(request(url)).pipe(res);
+});
+app.use(express.static('.'));
 
 var port = process.env.PORT || 12345;
 
