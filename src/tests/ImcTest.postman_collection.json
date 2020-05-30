@@ -387,15 +387,16 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "10274de5-40d7-49e3-a8dc-745abd5e6b3e",
+						"id": "99a6efed-abf7-440f-ace7-c008375192df",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"There is 1 contact\", function () {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData).to.have.lengthOf(1);",
-							"}); "
+							"",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							""
 						],
 						"type": "text/javascript"
 					}
