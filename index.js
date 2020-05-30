@@ -7,6 +7,7 @@ const backv1 = require("./src/back/sugarconsumeAPI/v1");
 //API RAUL
 const back2 = require("./src/back/imcAPI"); //v3,v2,v1
 const bodyParser = require("body-parser");
+const request = require("request");
 
 const cors = require("cors");
 var app = express();
@@ -14,23 +15,25 @@ app.use(bodyParser.json());
 
 
 app.use(cors());
+
+var pathImc='/api/search';
+var apiServerHostImc = 'https://food-calorie-data-search.p.rapidapi.com';
+
+app.use(pathImc, function(req, res) {
+	var url = apiServerHostImc + req.baseUrl + req.url;
+	console.log('piped: '+req.baseUrl + req.url);
+	req.pipe(request(url)).pipe(res);
+});
+
 /*
-var proxyBelen = "/api/v2/crime-rate-stats";
-var urlProxyBelen = " http://sos1920-11.herokuapp.com";
+var proxyBelen = "/api/v1/ppas";
+var urlProxyBelen = "https://sos1920-28.herokuapp.com";
 
 
 app.use(proxyBelen, function(req, res){
     console.log("piped: " + urlProxyBelen);
     req.pipe(request(urlProxyBelen).pipe(res))
-})*/
-/*var paths = '/api';
-var apiServerHost = 'https://platform.fatsecret.com/';
-
-app.use(paths, function(req,res){
-   var url = apiServerHost + req.baseUrl + req.url;
-   req.pipe(request(url)).pipe(res);
-});
-app.use(express.static('.'));
+})
 */
 var port = process.env.PORT || 12345;
 
