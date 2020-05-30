@@ -3339,9 +3339,15 @@ var app = (function () {
 
     	let select_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ multiple: true },
     		{ class: /*classes*/ ctx[10] },
     		{ id: /*id*/ ctx[6] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ multiple: true },
+    		{ class: /*classes*/ ctx[10] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3372,8 +3378,13 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(select, "blur", /*blur_handler_17*/ ctx[142], false, false, false),
     				listen_dev(select, "focus", /*focus_handler_17*/ ctx[141], false, false, false),
+=======
+    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[141], false, false, false),
+    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[142], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(select, "change", /*change_handler_16*/ ctx[143], false, false, false),
     				listen_dev(select, "input", /*input_handler_16*/ ctx[144], false, false, false),
     				listen_dev(select, "change", /*select_change_handler_1*/ ctx[161])
@@ -3388,9 +3399,15 @@ var app = (function () {
 
     			set_attributes(select, get_spread_update(select_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ multiple: true },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ multiple: true },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3528,8 +3545,13 @@ var app = (function () {
 
     	let textarea_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ class: /*classes*/ ctx[10] },
     		{ id: /*id*/ ctx[6] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ class: /*classes*/ ctx[10] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3552,10 +3574,17 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[131], false, false, false),
     				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[132], false, false, false),
     				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[133], false, false, false),
     				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[130], false, false, false),
+=======
+    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[130], false, false, false),
+    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[131], false, false, false),
+    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[132], false, false, false),
+    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[133], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(textarea, "keyup", /*keyup_handler_15*/ ctx[134], false, false, false),
     				listen_dev(textarea, "change", /*change_handler_14*/ ctx[135], false, false, false),
     				listen_dev(textarea, "input", /*input_handler_14*/ ctx[136], false, false, false),
@@ -3565,8 +3594,13 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(textarea, get_spread_update(textarea_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3667,8 +3701,13 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: /*type*/ ctx[3] },
     		{ id: /*id*/ ctx[6] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: /*type*/ ctx[3] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -3706,8 +3745,13 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -3740,12 +3784,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "search" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "search" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3767,12 +3820,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_13*/ ctx[119], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_13*/ ctx[120], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[121], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[122], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[123], false, false, false),
     				listen_dev(input, "change", /*change_handler_13*/ ctx[118], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[118], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[119], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[120], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[121], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[122], false, false, false),
+    				listen_dev(input, "change", /*change_handler_13*/ ctx[123], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_13*/ ctx[124], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_9*/ ctx[158])
     			];
@@ -3780,12 +3842,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "search" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "search" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3817,12 +3888,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "range" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "range" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3844,12 +3924,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_12*/ ctx[112], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_12*/ ctx[113], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[114], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[115], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[116], false, false, false),
     				listen_dev(input, "change", /*change_handler_12*/ ctx[111], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[111], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[112], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[113], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[114], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[115], false, false, false),
+    				listen_dev(input, "change", /*change_handler_12*/ ctx[116], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_12*/ ctx[117], false, false, false),
     				listen_dev(input, "change", /*input_change_input_handler*/ ctx[157]),
     				listen_dev(input, "input", /*input_change_input_handler*/ ctx[157])
@@ -3858,12 +3947,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "range" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "range" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3895,12 +3993,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "color" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "color" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3922,12 +4029,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_11*/ ctx[105], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_11*/ ctx[106], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[107], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[108], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[109], false, false, false),
     				listen_dev(input, "change", /*change_handler_11*/ ctx[104], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[104], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[105], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[106], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[107], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[108], false, false, false),
+    				listen_dev(input, "change", /*change_handler_11*/ ctx[109], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_11*/ ctx[110], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_8*/ ctx[156])
     			];
@@ -3935,12 +4051,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "color" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "color" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3972,12 +4097,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "datetime" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "datetime" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3999,12 +4133,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_10*/ ctx[98], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_10*/ ctx[99], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[100], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[101], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[102], false, false, false),
     				listen_dev(input, "change", /*change_handler_10*/ ctx[97], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[97], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[98], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[99], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[100], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[101], false, false, false),
+    				listen_dev(input, "change", /*change_handler_10*/ ctx[102], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_10*/ ctx[103], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_7*/ ctx[155])
     			];
@@ -4012,12 +4155,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "datetime" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "datetime" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4049,12 +4201,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "time" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "time" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4076,12 +4237,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_9*/ ctx[91], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_9*/ ctx[92], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[93], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[94], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[95], false, false, false),
     				listen_dev(input, "change", /*change_handler_9*/ ctx[90], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[90], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[91], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[92], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[93], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[94], false, false, false),
+    				listen_dev(input, "change", /*change_handler_9*/ ctx[95], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_9*/ ctx[96], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_6*/ ctx[154])
     			];
@@ -4089,12 +4259,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "time" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "time" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4126,12 +4305,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "date" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "date" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4153,12 +4341,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_8*/ ctx[84], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_8*/ ctx[85], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[86], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[87], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[88], false, false, false),
     				listen_dev(input, "change", /*change_handler_8*/ ctx[83], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[83], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[84], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[85], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[86], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[87], false, false, false),
+    				listen_dev(input, "change", /*change_handler_8*/ ctx[88], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_8*/ ctx[89], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_5*/ ctx[153])
     			];
@@ -4166,12 +4363,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "date" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "date" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4203,12 +4409,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "number" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "number" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4230,12 +4445,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_7*/ ctx[77], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_7*/ ctx[78], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[79], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[80], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[81], false, false, false),
     				listen_dev(input, "change", /*change_handler_7*/ ctx[76], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[76], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[77], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[78], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[79], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[80], false, false, false),
+    				listen_dev(input, "change", /*change_handler_7*/ ctx[81], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_7*/ ctx[82], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_4*/ ctx[152])
     			];
@@ -4243,12 +4467,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "number" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "number" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4280,12 +4513,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "url" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "url" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4307,12 +4549,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_6*/ ctx[70], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_6*/ ctx[71], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[72], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[73], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[74], false, false, false),
     				listen_dev(input, "change", /*change_handler_6*/ ctx[69], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[69], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[70], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[71], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[72], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[73], false, false, false),
+    				listen_dev(input, "change", /*change_handler_6*/ ctx[74], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_6*/ ctx[75], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_3*/ ctx[151])
     			];
@@ -4320,12 +4571,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "url" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "url" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4357,12 +4617,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "radio" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "radio" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4384,12 +4653,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_5*/ ctx[63], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_5*/ ctx[64], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[65], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[66], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[67], false, false, false),
     				listen_dev(input, "change", /*change_handler_5*/ ctx[62], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[62], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[63], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[64], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[65], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[66], false, false, false),
+    				listen_dev(input, "change", /*change_handler_5*/ ctx[67], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_5*/ ctx[68], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_2*/ ctx[150])
     			];
@@ -4397,12 +4675,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "radio" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "radio" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4434,12 +4721,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "checkbox" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ name: /*name*/ ctx[7] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "checkbox" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4457,6 +4753,7 @@ var app = (function () {
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, input, anchor);
+<<<<<<< HEAD
     			set_input_value(input, /*value*/ ctx[1]);
     			input.checked = /*checked*/ ctx[0];
     			if (remount) run_all(dispose);
@@ -4468,6 +4765,19 @@ var app = (function () {
     				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[59], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[60], false, false, false),
     				listen_dev(input, "change", /*change_handler_4*/ ctx[55], false, false, false),
+=======
+    			input.checked = /*checked*/ ctx[0];
+    			set_input_value(input, /*value*/ ctx[1]);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[55], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[56], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[57], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[58], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[59], false, false, false),
+    				listen_dev(input, "change", /*change_handler_4*/ ctx[60], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_4*/ ctx[61], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_1*/ ctx[149])
     			];
@@ -4475,6 +4785,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "checkbox" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
@@ -4491,6 +4802,24 @@ var app = (function () {
     			if (dirty[0] & /*checked*/ 1) {
     				input.checked = /*checked*/ ctx[0];
     			}
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "checkbox" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
+    			]));
+
+    			if (dirty[0] & /*checked*/ 1) {
+    				input.checked = /*checked*/ ctx[0];
+    			}
+
+    			if (dirty[0] & /*value*/ 2) {
+    				set_input_value(input, /*value*/ ctx[1]);
+    			}
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(input);
@@ -4516,12 +4845,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "file" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "file" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4542,12 +4880,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_3*/ ctx[49], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_3*/ ctx[50], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[51], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[52], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[53], false, false, false),
     				listen_dev(input, "change", /*change_handler_3*/ ctx[48], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[48], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[49], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[50], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[51], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[52], false, false, false),
+    				listen_dev(input, "change", /*change_handler_3*/ ctx[53], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_3*/ ctx[54], false, false, false),
     				listen_dev(input, "change", /*input_change_handler*/ ctx[148])
     			];
@@ -4555,12 +4902,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "file" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "file" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
     		},
@@ -4588,12 +4944,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "email" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "email" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4615,12 +4980,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_2*/ ctx[42], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_2*/ ctx[43], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[44], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[45], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[46], false, false, false),
     				listen_dev(input, "change", /*change_handler_2*/ ctx[41], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[41], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[42], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[43], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[44], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[45], false, false, false),
+    				listen_dev(input, "change", /*change_handler_2*/ ctx[46], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_2*/ ctx[47], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_2*/ ctx[147])
     			];
@@ -4628,12 +5002,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "email" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "email" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4665,12 +5048,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "password" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "password" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4692,12 +5084,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler_1*/ ctx[35], false, false, false),
     				listen_dev(input, "focus", /*focus_handler_1*/ ctx[36], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[37], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[38], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[39], false, false, false),
     				listen_dev(input, "change", /*change_handler_1*/ ctx[34], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[34], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[35], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[36], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[37], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[38], false, false, false),
+    				listen_dev(input, "change", /*change_handler_1*/ ctx[39], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler_1*/ ctx[40], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_1*/ ctx[146])
     			];
@@ -4705,12 +5106,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "password" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "password" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4742,12 +5152,21 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
+<<<<<<< HEAD
     		{ type: "text" },
     		{ id: /*id*/ ctx[6] },
     		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+=======
+    		{ id: /*id*/ ctx[6] },
+    		{ type: "text" },
+    		{ readOnly: /*readonly*/ ctx[4] },
+    		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4769,12 +5188,21 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
     				listen_dev(input, "blur", /*blur_handler*/ ctx[28], false, false, false),
     				listen_dev(input, "focus", /*focus_handler*/ ctx[29], false, false, false),
     				listen_dev(input, "keydown", /*keydown_handler*/ ctx[30], false, false, false),
     				listen_dev(input, "keypress", /*keypress_handler*/ ctx[31], false, false, false),
     				listen_dev(input, "keyup", /*keyup_handler*/ ctx[32], false, false, false),
     				listen_dev(input, "change", /*change_handler*/ ctx[27], false, false, false),
+=======
+    				listen_dev(input, "blur", /*blur_handler*/ ctx[27], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler*/ ctx[28], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[29], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[30], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[31], false, false, false),
+    				listen_dev(input, "change", /*change_handler*/ ctx[32], false, false, false),
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				listen_dev(input, "input", /*input_handler*/ ctx[33], false, false, false),
     				listen_dev(input, "input", /*input_input_handler*/ ctx[145])
     			];
@@ -4782,12 +5210,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+<<<<<<< HEAD
     				{ type: "text" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+=======
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				{ type: "text" },
+    				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4944,10 +5381,13 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Input", $$slots, ['default']);
 
+<<<<<<< HEAD
     	function change_handler(event) {
     		bubble($$self, event);
     	}
 
+=======
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	function blur_handler(event) {
     		bubble($$self, event);
     	}
@@ -4968,11 +5408,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_1(event) {
+=======
+    	function change_handler(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -4996,11 +5444,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_1(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_2(event) {
+=======
+    	function change_handler_1(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_1(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5024,11 +5480,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_2(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_3(event) {
+=======
+    	function change_handler_2(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_2(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5052,11 +5516,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_3(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_4(event) {
+=======
+    	function change_handler_3(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_3(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5080,11 +5552,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_4(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_5(event) {
+=======
+    	function change_handler_4(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_4(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5108,11 +5588,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_5(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_6(event) {
+=======
+    	function change_handler_5(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_5(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5136,11 +5624,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_6(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_7(event) {
+=======
+    	function change_handler_6(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_6(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5164,11 +5660,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_7(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_8(event) {
+=======
+    	function change_handler_7(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_7(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5192,11 +5696,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_8(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_9(event) {
+=======
+    	function change_handler_8(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_8(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5220,11 +5732,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_9(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_10(event) {
+=======
+    	function change_handler_9(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_9(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5248,11 +5768,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_10(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_11(event) {
+=======
+    	function change_handler_10(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_10(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5276,11 +5804,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_11(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_12(event) {
+=======
+    	function change_handler_11(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_11(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5304,11 +5840,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function input_handler_12(event) {
     		bubble($$self, event);
     	}
 
     	function change_handler_13(event) {
+=======
+    	function change_handler_12(event) {
+    		bubble($$self, event);
+    	}
+
+    	function input_handler_12(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5332,6 +5876,13 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
+=======
+    	function change_handler_13(event) {
+    		bubble($$self, event);
+    	}
+
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	function input_handler_13(event) {
     		bubble($$self, event);
     	}
@@ -5356,10 +5907,13 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function keypress_handler_15(event) {
     		bubble($$self, event);
     	}
 
+=======
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	function blur_handler_15(event) {
     		bubble($$self, event);
     	}
@@ -5372,6 +5926,13 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
+=======
+    	function keypress_handler_15(event) {
+    		bubble($$self, event);
+    	}
+
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	function keyup_handler_15(event) {
     		bubble($$self, event);
     	}
@@ -5400,11 +5961,19 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+<<<<<<< HEAD
     	function focus_handler_17(event) {
     		bubble($$self, event);
     	}
 
     	function blur_handler_17(event) {
+=======
+    	function blur_handler_17(event) {
+    		bubble($$self, event);
+    	}
+
+    	function focus_handler_17(event) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		bubble($$self, event);
     	}
 
@@ -5437,10 +6006,17 @@ var app = (function () {
     	}
 
     	function input_change_handler_1() {
+<<<<<<< HEAD
     		value = this.value;
     		checked = this.checked;
     		$$invalidate(1, value);
     		$$invalidate(0, checked);
+=======
+    		checked = this.checked;
+    		value = this.value;
+    		$$invalidate(0, checked);
+    		$$invalidate(1, value);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	}
 
     	function input_change_handler_2() {
@@ -5657,113 +6233,192 @@ var app = (function () {
     		$$props,
     		$$scope,
     		$$slots,
+<<<<<<< HEAD
     		change_handler,
+=======
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler,
     		focus_handler,
     		keydown_handler,
     		keypress_handler,
     		keyup_handler,
+<<<<<<< HEAD
     		input_handler,
     		change_handler_1,
+=======
+    		change_handler,
+    		input_handler,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_1,
     		focus_handler_1,
     		keydown_handler_1,
     		keypress_handler_1,
     		keyup_handler_1,
+<<<<<<< HEAD
     		input_handler_1,
     		change_handler_2,
+=======
+    		change_handler_1,
+    		input_handler_1,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_2,
     		focus_handler_2,
     		keydown_handler_2,
     		keypress_handler_2,
     		keyup_handler_2,
+<<<<<<< HEAD
     		input_handler_2,
     		change_handler_3,
+=======
+    		change_handler_2,
+    		input_handler_2,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_3,
     		focus_handler_3,
     		keydown_handler_3,
     		keypress_handler_3,
     		keyup_handler_3,
+<<<<<<< HEAD
     		input_handler_3,
     		change_handler_4,
+=======
+    		change_handler_3,
+    		input_handler_3,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_4,
     		focus_handler_4,
     		keydown_handler_4,
     		keypress_handler_4,
     		keyup_handler_4,
+<<<<<<< HEAD
     		input_handler_4,
     		change_handler_5,
+=======
+    		change_handler_4,
+    		input_handler_4,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_5,
     		focus_handler_5,
     		keydown_handler_5,
     		keypress_handler_5,
     		keyup_handler_5,
+<<<<<<< HEAD
     		input_handler_5,
     		change_handler_6,
+=======
+    		change_handler_5,
+    		input_handler_5,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_6,
     		focus_handler_6,
     		keydown_handler_6,
     		keypress_handler_6,
     		keyup_handler_6,
+<<<<<<< HEAD
     		input_handler_6,
     		change_handler_7,
+=======
+    		change_handler_6,
+    		input_handler_6,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_7,
     		focus_handler_7,
     		keydown_handler_7,
     		keypress_handler_7,
     		keyup_handler_7,
+<<<<<<< HEAD
     		input_handler_7,
     		change_handler_8,
+=======
+    		change_handler_7,
+    		input_handler_7,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_8,
     		focus_handler_8,
     		keydown_handler_8,
     		keypress_handler_8,
     		keyup_handler_8,
+<<<<<<< HEAD
     		input_handler_8,
     		change_handler_9,
+=======
+    		change_handler_8,
+    		input_handler_8,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_9,
     		focus_handler_9,
     		keydown_handler_9,
     		keypress_handler_9,
     		keyup_handler_9,
+<<<<<<< HEAD
     		input_handler_9,
     		change_handler_10,
+=======
+    		change_handler_9,
+    		input_handler_9,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_10,
     		focus_handler_10,
     		keydown_handler_10,
     		keypress_handler_10,
     		keyup_handler_10,
+<<<<<<< HEAD
     		input_handler_10,
     		change_handler_11,
+=======
+    		change_handler_10,
+    		input_handler_10,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_11,
     		focus_handler_11,
     		keydown_handler_11,
     		keypress_handler_11,
     		keyup_handler_11,
+<<<<<<< HEAD
     		input_handler_11,
     		change_handler_12,
+=======
+    		change_handler_11,
+    		input_handler_11,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_12,
     		focus_handler_12,
     		keydown_handler_12,
     		keypress_handler_12,
     		keyup_handler_12,
+<<<<<<< HEAD
     		input_handler_12,
     		change_handler_13,
+=======
+    		change_handler_12,
+    		input_handler_12,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		blur_handler_13,
     		focus_handler_13,
     		keydown_handler_13,
     		keypress_handler_13,
     		keyup_handler_13,
+<<<<<<< HEAD
+=======
+    		change_handler_13,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		input_handler_13,
     		blur_handler_14,
     		focus_handler_14,
     		keydown_handler_14,
     		keypress_handler_14,
     		keyup_handler_14,
+<<<<<<< HEAD
     		keypress_handler_15,
     		blur_handler_15,
     		focus_handler_15,
     		keydown_handler_15,
+=======
+    		blur_handler_15,
+    		focus_handler_15,
+    		keydown_handler_15,
+    		keypress_handler_15,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		keyup_handler_15,
     		change_handler_14,
     		input_handler_14,
@@ -5771,8 +6426,13 @@ var app = (function () {
     		focus_handler_16,
     		change_handler_15,
     		input_handler_15,
+<<<<<<< HEAD
     		focus_handler_17,
     		blur_handler_17,
+=======
+    		blur_handler_17,
+    		focus_handler_17,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		change_handler_16,
     		input_handler_16,
     		input_input_handler,
@@ -13839,7 +14499,11 @@ var app = (function () {
     /* src\front\sugarconsumeAPI\integracion.svelte.html generated by Svelte v3.21.0 */
     const file$q = "src\\front\\sugarconsumeAPI\\integracion.svelte.html";
 
+<<<<<<< HEAD
     // (19:4) <Button outline color="secondary" on:click="{pop}">
+=======
+    // (17:4) <Button outline color="secondary" on:click="{pop}">
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot$g(ctx) {
     	let i;
     	let t;
@@ -13849,7 +14513,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$q, 18, 56, 2256);
+=======
+    			add_location(i, file$q, 16, 56, 1916);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13865,7 +14533,11 @@ var app = (function () {
     		block,
     		id: create_default_slot$g.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(19:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+=======
+    		source: "(17:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
@@ -13914,6 +14586,7 @@ var app = (function () {
     	let i9;
     	let t18;
     	let t19;
+<<<<<<< HEAD
     	let button10;
     	let i10;
     	let t20;
@@ -13925,6 +14598,11 @@ var app = (function () {
     	let current;
 
     	const button12 = new Button({
+=======
+    	let current;
+
+    	const button10 = new Button({
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			props: {
     				outline: true,
     				color: "secondary",
@@ -13934,7 +14612,11 @@ var app = (function () {
     			$$inline: true
     		});
 
+<<<<<<< HEAD
     	button12.$on("click", pop);
+=======
+    	button10.$on("click", pop);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     	const block = {
     		c: function create() {
@@ -13979,6 +14661,7 @@ var app = (function () {
     			i9 = element("i");
     			t18 = text(" Porcentaje de crímenes");
     			t19 = space();
+<<<<<<< HEAD
     			button10 = element("button");
     			i10 = element("i");
     			t20 = text(" API Externa 1");
@@ -13988,6 +14671,9 @@ var app = (function () {
     			t22 = text(" API EXterna 2");
     			t23 = space();
     			create_component(button12.$$.fragment);
+=======
+    			create_component(button10.$$.fragment);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			attr_dev(i0, "class", "fas fa-leaf");
     			add_location(i0, file$q, 6, 124, 256);
     			attr_dev(button0, "type", "button");
@@ -14048,6 +14734,7 @@ var app = (function () {
     			attr_dev(button9, "color", "primary");
     			attr_dev(button9, "onclick", "window.location.href='#/sugarconsumeAPI/integrations/crime'");
     			add_location(button9, file$q, 15, 4, 1687);
+<<<<<<< HEAD
     			attr_dev(i10, "class", "fas fa-leaf");
     			add_location(i10, file$q, 16, 116, 1976);
     			attr_dev(button10, "type", "button");
@@ -14060,6 +14747,8 @@ var app = (function () {
     			attr_dev(button11, "color", "primary");
     			attr_dev(button11, "onclick", "window.location.href='#/sugarconsumeAPI/integrations/APIExt2'");
     			add_location(button11, file$q, 17, 4, 2034);
+=======
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			add_location(main, file$q, 5, 0, 124);
     		},
     		l: function claim(nodes) {
@@ -14107,6 +14796,7 @@ var app = (function () {
     			append_dev(button9, i9);
     			append_dev(button9, t18);
     			append_dev(main, t19);
+<<<<<<< HEAD
     			append_dev(main, button10);
     			append_dev(button10, i10);
     			append_dev(button10, t20);
@@ -14134,11 +14824,36 @@ var app = (function () {
     		},
     		o: function outro(local) {
     			transition_out(button12.$$.fragment, local);
+=======
+    			mount_component(button10, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button10_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button10_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button10.$set(button10_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button10.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button10.$$.fragment, local);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+<<<<<<< HEAD
     			destroy_component(button12);
+=======
+    			destroy_component(button10);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		}
     	};
 
@@ -14193,7 +14908,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$r, 90, 60, 2941);
+=======
+    			add_location(i, file$r, 90, 60, 2937);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14263,6 +14982,7 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+<<<<<<< HEAD
     			add_location(script0, file$r, 77, 8, 2231);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
     			add_location(script1, file$r, 78, 0, 2298);
@@ -14277,6 +14997,22 @@ var app = (function () {
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
     			add_location(figure, file$r, 83, 8, 2592);
     			add_location(main, file$r, 82, 4, 2576);
+=======
+    			add_location(script0, file$r, 77, 8, 2227);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$r, 78, 0, 2294);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$r, 79, 0, 2366);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$r, 80, 8, 2448);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$r, 84, 12, 2636);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$r, 85, 12, 2676);
+    			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
+    			add_location(figure, file$r, 83, 8, 2588);
+    			add_location(main, file$r, 82, 4, 2572);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14365,11 +15101,15 @@ var app = (function () {
     	});
 
     	MyDataGraph.push({ name: "Consumo de azúcar", data: datos });
+<<<<<<< HEAD
 
     	MyDataGraph.push({
     		name: "porcentaje de crímenes",
     		data: datos2
     	});
+=======
+    	MyDataGraph.push({ name: "Tiempo en natación", data: datos2 });
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     	Highcharts.chart("container", {
     		chart: { type: "packedbubble", height: "60%" },
@@ -14712,7 +15452,11 @@ var app = (function () {
     const { console: console_1$9 } = globals;
     const file$t = "src\\front\\sugarconsumeAPI\\integraciones\\APIExt2.svelte.html";
 
+<<<<<<< HEAD
     // (110:8) <Button outline color="secondary" on:click="{pop}">
+=======
+    // (102:8) <Button outline color="secondary" on:click="{pop}">
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot$j(ctx) {
     	let i;
     	let t;
@@ -14722,7 +15466,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$t, 109, 60, 3396);
+=======
+    			add_location(i, file$t, 101, 60, 3492);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14738,7 +15486,11 @@ var app = (function () {
     		block,
     		id: create_default_slot$j.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(110:8) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+=======
+    		source: "(102:8) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
@@ -14788,6 +15540,7 @@ var app = (function () {
     			div = element("div");
     			t1 = space();
     			p = element("p");
+<<<<<<< HEAD
     			p.textContent = "Gráfica que muestra el consumo de azúcar medido en miles de kilogramos y las calorías de algunos derivados de la leche.";
     			t3 = space();
     			create_component(button.$$.fragment);
@@ -14806,6 +15559,26 @@ var app = (function () {
     			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
     			add_location(figure, file$t, 102, 8, 3027);
     			add_location(main, file$t, 101, 4, 3011);
+=======
+    			p.textContent = "Gráfica que muestra el consumo de azúcar medido en miles de kilogramos y los nutrientes de la salsa barbacoa por 100 gramos.";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$t, 87, 8, 2751);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$t, 88, 0, 2818);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$t, 89, 0, 2890);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$t, 90, 8, 2972);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$t, 95, 12, 3166);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$t, 96, 12, 3206);
+    			attr_dev(figure, "class", "highcharts-figure svelte-1ee82k1");
+    			add_location(figure, file$t, 94, 8, 3118);
+    			add_location(main, file$t, 93, 4, 3102);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14875,6 +15648,7 @@ var app = (function () {
     	let datos = [];
     	let datos2 = [];
     	const resData = await fetch("/api/v3/sugarconsume");
+<<<<<<< HEAD
 
     	const resData2 = await fetch("/api/search", {
     		"method": "GET",
@@ -14892,6 +15666,38 @@ var app = (function () {
 
     	MyData2.forEach(x => {
     		datos2.push({ name: x.shrt_desc, value: x.energ_kcal });
+=======
+    	const resData2 = await fetch("https://api.fda.gov");
+    	MyData = await resData.json();
+    	MyData2 = await resData2.json();
+
+    	/* MyData2.forEach( (x) =>{
+         datos2.push({name: x.country + " año " + x.year , value : x.time});
+     });*/
+    	datos2.push({
+    		name: "Carbohidratos totales",
+    		value: MyData2.product.nutriments.carbohydrates
+    	});
+
+    	datos2.push({
+    		name: "Grasas totales",
+    		value: MyData2.product.nutriments.fat
+    	});
+
+    	datos2.push({
+    		name: "Proteinas totales",
+    		value: MyData2.product.nutriments.proteins_100g
+    	});
+
+    	datos2.push({
+    		name: "Azúcar total",
+    		value: MyData2.product.nutriments.sugars_100g
+    	});
+
+    	datos2.push({
+    		name: "Calorías totales",
+    		value: MyData2.product.nutriments.energy
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	});
 
     	console.log(datos2);
@@ -14904,16 +15710,24 @@ var app = (function () {
     	});
 
     	MyDataGraph.push({ name: "Consumo de azúcar", data: datos });
+<<<<<<< HEAD
 
     	MyDataGraph.push({
     		name: "Derivados de la leche",
     		data: datos2
     	});
+=======
+    	MyDataGraph.push({ name: "Salsa", data: datos2 });
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     	Highcharts.chart("container", {
     		chart: { type: "packedbubble", height: "60%" },
     		title: {
+<<<<<<< HEAD
     			text: "Comparación entre las calorías de algunos derivados de la leche y el consumo de azúcar en diferentes lugares"
+=======
+    			text: "Comparación entre los nutrientes de la salsa barbacoa y el consumo de azúcar en diferentes lugares"
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		tooltip: {
     			useHTML: true,
@@ -17568,7 +18382,11 @@ var app = (function () {
     	return block;
     }
 
+<<<<<<< HEAD
     // (78:0) {:then indice_de_masa_corporal}
+=======
+    // (80:0) {:then indice_de_masa_corporal}
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_then_block$3(ctx) {
     	let current;
 
@@ -17592,7 +18410,11 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
+<<<<<<< HEAD
     			if (dirty & /*$$scope, updatedYear, updatedindice_de_masa_corporal, updatedPlace*/ 2062) {
+=======
+    			if (dirty & /*$$scope, updatedtasa, updatedaltura, updatedYear, updatedindice_de_masa_corporal, updatedPlace*/ 8254) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17616,14 +18438,22 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
+<<<<<<< HEAD
     		source: "(78:0) {:then indice_de_masa_corporal}",
+=======
+    		source: "(80:0) {:then indice_de_masa_corporal}",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     // (97:21) <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>
+=======
+    // (99:21) <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -17643,14 +18473,22 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(97:21) <Button outline  color=\\\"primary\\\" on:click={updateindice_de_masa_corporal}>",
+=======
+    		source: "(99:21) <Button outline  color=\\\"primary\\\" on:click={updateindice_de_masa_corporal}>",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     // (79:4) <Table bordered>
+=======
+    // (81:4) <Table bordered>
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot_1$3(ctx) {
     	let thead;
     	let tr0;
@@ -17672,15 +18510,27 @@ var app = (function () {
     	let t12;
     	let t13;
     	let td1;
+<<<<<<< HEAD
     	let input;
+=======
+    	let input0;
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	let t14;
     	let td2;
     	let t15;
     	let t16;
     	let td3;
+<<<<<<< HEAD
     	let t18;
     	let td4;
     	let t20;
+=======
+    	let input1;
+    	let t17;
+    	let td4;
+    	let input2;
+    	let t18;
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	let td5;
     	let current;
     	let dispose;
@@ -17725,12 +18575,17 @@ var app = (function () {
     			t12 = text(/*updatedPlace*/ ctx[1]);
     			t13 = space();
     			td1 = element("td");
+<<<<<<< HEAD
     			input = element("input");
+=======
+    			input0 = element("input");
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			t14 = space();
     			td2 = element("td");
     			t15 = text(/*updatedYear*/ ctx[3]);
     			t16 = space();
     			td3 = element("td");
+<<<<<<< HEAD
     			td3.textContent = `${/*updatedaltura*/ ctx[6]}`;
     			t18 = space();
     			td4 = element("td");
@@ -17755,6 +18610,34 @@ var app = (function () {
     			add_location(td5, file$v, 96, 16, 3470);
     			add_location(tr1, file$v, 90, 12, 3205);
     			add_location(tbody, file$v, 89, 8, 3184);
+=======
+    			input1 = element("input");
+    			t17 = space();
+    			td4 = element("td");
+    			input2 = element("input");
+    			t18 = space();
+    			td5 = element("td");
+    			create_component(button.$$.fragment);
+    			add_location(th0, file$v, 83, 16, 3204);
+    			add_location(th1, file$v, 84, 16, 3236);
+    			add_location(th2, file$v, 85, 16, 3267);
+    			add_location(th3, file$v, 86, 16, 3297);
+    			add_location(th4, file$v, 87, 16, 3330);
+    			add_location(th5, file$v, 88, 16, 3373);
+    			add_location(tr0, file$v, 82, 12, 3182);
+    			add_location(thead, file$v, 81, 8, 3161);
+    			add_location(td0, file$v, 93, 16, 3480);
+    			add_location(input0, file$v, 94, 20, 3525);
+    			add_location(td1, file$v, 94, 16, 3521);
+    			add_location(td2, file$v, 95, 16, 3601);
+    			add_location(input1, file$v, 96, 20, 3645);
+    			add_location(td3, file$v, 96, 16, 3641);
+    			add_location(input2, file$v, 97, 20, 3708);
+    			add_location(td4, file$v, 97, 16, 3704);
+    			add_location(td5, file$v, 98, 16, 3765);
+    			add_location(tr1, file$v, 92, 12, 3458);
+    			add_location(tbody, file$v, 91, 8, 3437);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -17777,13 +18660,19 @@ var app = (function () {
     			append_dev(td0, t12);
     			append_dev(tr1, t13);
     			append_dev(tr1, td1);
+<<<<<<< HEAD
     			append_dev(td1, input);
     			set_input_value(input, /*updatedindice_de_masa_corporal*/ ctx[2]);
+=======
+    			append_dev(td1, input0);
+    			set_input_value(input0, /*updatedindice_de_masa_corporal*/ ctx[2]);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			append_dev(tr1, t14);
     			append_dev(tr1, td2);
     			append_dev(td2, t15);
     			append_dev(tr1, t16);
     			append_dev(tr1, td3);
+<<<<<<< HEAD
     			append_dev(tr1, t18);
     			append_dev(tr1, td4);
     			append_dev(tr1, t20);
@@ -17792,10 +18681,30 @@ var app = (function () {
     			current = true;
     			if (remount) dispose();
     			dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[10]);
+=======
+    			append_dev(td3, input1);
+    			set_input_value(input1, /*updatedaltura*/ ctx[4]);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td4);
+    			append_dev(td4, input2);
+    			set_input_value(input2, /*updatedtasa*/ ctx[5]);
+    			append_dev(tr1, t18);
+    			append_dev(tr1, td5);
+    			mount_component(button, td5, null);
+    			current = true;
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[11]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[12])
+    			];
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedPlace*/ 2) set_data_dev(t12, /*updatedPlace*/ ctx[1]);
 
+<<<<<<< HEAD
     			if (dirty & /*updatedindice_de_masa_corporal*/ 4 && input.value !== /*updatedindice_de_masa_corporal*/ ctx[2]) {
     				set_input_value(input, /*updatedindice_de_masa_corporal*/ ctx[2]);
     			}
@@ -17804,6 +18713,25 @@ var app = (function () {
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 2048) {
+=======
+    			if (dirty & /*updatedindice_de_masa_corporal*/ 4 && input0.value !== /*updatedindice_de_masa_corporal*/ ctx[2]) {
+    				set_input_value(input0, /*updatedindice_de_masa_corporal*/ ctx[2]);
+    			}
+
+    			if (!current || dirty & /*updatedYear*/ 8) set_data_dev(t15, /*updatedYear*/ ctx[3]);
+
+    			if (dirty & /*updatedaltura*/ 16 && input1.value !== /*updatedaltura*/ ctx[4]) {
+    				set_input_value(input1, /*updatedaltura*/ ctx[4]);
+    			}
+
+    			if (dirty & /*updatedtasa*/ 32 && input2.value !== /*updatedtasa*/ ctx[5]) {
+    				set_input_value(input2, /*updatedtasa*/ ctx[5]);
+    			}
+
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 8192) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17823,7 +18751,11 @@ var app = (function () {
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
     			destroy_component(button);
+<<<<<<< HEAD
     			dispose();
+=======
+    			run_all(dispose);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		}
     	};
 
@@ -17831,14 +18763,22 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(79:4) <Table bordered>",
+=======
+    		source: "(81:4) <Table bordered>",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     // (76:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}
+=======
+    // (78:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_pending_block$3(ctx) {
     	let t;
 
@@ -17861,14 +18801,22 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
+<<<<<<< HEAD
     		source: "(76:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}",
+=======
+    		source: "(78:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     // (102:0) {#if errorMsg}
+=======
+    // (104:0) {#if errorMsg}
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_if_block$9(ctx) {
     	let p;
     	let t0;
@@ -17878,9 +18826,15 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("ERROR: ");
+<<<<<<< HEAD
     			t1 = text(/*errorMsg*/ ctx[4]);
     			set_style(p, "color", "red");
     			add_location(p, file$v, 102, 4, 3653);
+=======
+    			t1 = text(/*errorMsg*/ ctx[6]);
+    			set_style(p, "color", "red");
+    			add_location(p, file$v, 104, 4, 3948);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -17888,7 +18842,11 @@ var app = (function () {
     			append_dev(p, t1);
     		},
     		p: function update(ctx, dirty) {
+<<<<<<< HEAD
     			if (dirty & /*errorMsg*/ 16) set_data_dev(t1, /*errorMsg*/ ctx[4]);
+=======
+    			if (dirty & /*errorMsg*/ 64) set_data_dev(t1, /*errorMsg*/ ctx[6]);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -17899,14 +18857,22 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
+<<<<<<< HEAD
     		source: "(102:0) {#if errorMsg}",
+=======
+    		source: "(104:0) {#if errorMsg}",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     // (105:0) <Button outline color="secondary" on:click="{pop}">
+=======
+    // (107:0) <Button outline color="secondary" on:click="{pop}">
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot$l(ctx) {
     	let t;
 
@@ -17926,7 +18892,11 @@ var app = (function () {
     		block,
     		id: create_default_slot$l.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(105:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+=======
+    		source: "(107:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
@@ -17953,12 +18923,21 @@ var app = (function () {
     		pending: create_pending_block$3,
     		then: create_then_block$3,
     		catch: create_catch_block$3,
+<<<<<<< HEAD
     		value: 5,
     		blocks: [,,,]
     	};
 
     	handle_promise(promise = /*indice_de_masa_corporal*/ ctx[5], info);
     	let if_block = /*errorMsg*/ ctx[4] && create_if_block$9(ctx);
+=======
+    		value: 7,
+    		blocks: [,,,]
+    	};
+
+    	handle_promise(promise = /*indice_de_masa_corporal*/ ctx[7], info);
+    	let if_block = /*errorMsg*/ ctx[6] && create_if_block$9(ctx);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     	const button = new Button({
     			props: {
@@ -17985,9 +18964,15 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
+<<<<<<< HEAD
     			add_location(strong, file$v, 74, 37, 2728);
     			add_location(h3, file$v, 74, 4, 2695);
     			add_location(main, file$v, 73, 0, 2683);
+=======
+    			add_location(strong, file$v, 76, 37, 2981);
+    			add_location(h3, file$v, 76, 4, 2948);
+    			add_location(main, file$v, 75, 0, 2936);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18013,6 +18998,7 @@ var app = (function () {
     			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].placename + "")) set_data_dev(t1, t1_value);
     			info.ctx = ctx;
 
+<<<<<<< HEAD
     			if (dirty & /*indice_de_masa_corporal*/ 32 && promise !== (promise = /*indice_de_masa_corporal*/ ctx[5]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
     				child_ctx[5] = info.resolved;
@@ -18020,6 +19006,15 @@ var app = (function () {
     			}
 
     			if (/*errorMsg*/ ctx[4]) {
+=======
+    			if (dirty & /*indice_de_masa_corporal*/ 128 && promise !== (promise = /*indice_de_masa_corporal*/ ctx[7]) && handle_promise(promise, info)) ; else {
+    				const child_ctx = ctx.slice();
+    				child_ctx[7] = info.resolved;
+    				info.block.p(child_ctx, dirty);
+    			}
+
+    			if (/*errorMsg*/ ctx[6]) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -18034,7 +19029,11 @@ var app = (function () {
 
     			const button_changes = {};
 
+<<<<<<< HEAD
     			if (dirty & /*$$scope*/ 2048) {
+=======
+    			if (dirty & /*$$scope*/ 8192) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18082,18 +19081,29 @@ var app = (function () {
     	let updatedPlace = "";
     	let updatedindice_de_masa_corporal = 0;
     	let updatedYear = 0;
+<<<<<<< HEAD
     	let updatedaltura = "no modificable";
     	let updatedtasa = "no modificable";
+=======
+    	let updatedaltura = "";
+    	let updatedtasa = "";
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	let errorMsg = "";
     	onMount(getindices_de_masa_corporal);
 
     	async function getindices_de_masa_corporal() {
     		console.log("Fetching indice_de_masa_corporal resource...");
+<<<<<<< HEAD
     		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year);
+=======
+    		const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year);
+    		console.log(res);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
+<<<<<<< HEAD
     			$$invalidate(5, indice_de_masa_corporal = json);
     			$$invalidate(1, updatedPlace = indice_de_masa_corporal[0].place);
     			$$invalidate(2, updatedindice_de_masa_corporal = indice_de_masa_corporal[0].indice_de_masa_corporal);
@@ -18101,6 +19111,17 @@ var app = (function () {
     			console.log("Received indice_de_masa_corporal resource.");
     		} else {
     			$$invalidate(4, errorMsg = res.status + ": " + res.statusText);
+=======
+    			$$invalidate(7, indice_de_masa_corporal = json);
+    			$$invalidate(1, updatedPlace = indice_de_masa_corporal.place);
+    			$$invalidate(2, updatedindice_de_masa_corporal = indice_de_masa_corporal.indice_de_masa_corporal);
+    			$$invalidate(3, updatedYear = indice_de_masa_corporal.year);
+    			$$invalidate(4, updatedaltura = indice_de_masa_corporal.altura);
+    			$$invalidate(5, updatedtasa = indice_de_masa_corporal.tasa_obesidad);
+    			console.log("Received indice_de_masa_corporal resource.");
+    		} else {
+    			$$invalidate(6, errorMsg = res.status + ": " + res.statusText);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			console.log("ERROR!" + errorMsg);
     		}
     	}
@@ -18112,6 +19133,7 @@ var app = (function () {
     		console.log(updatedindice_de_masa_corporal);
     		console.log(parseInt(params.year));
 
+<<<<<<< HEAD
     		if (updatedindice_de_masa_corporal == "") {
     			alert("el imc se ha dejado en blanco");
     		} else if (!pattern2.test(updatedindice_de_masa_corporal)) {
@@ -18125,6 +19147,21 @@ var app = (function () {
     					place: params.placename,
     					indice_de_masa_corporal: updatedindice_de_masa_corporal,
     					year: parseInt(params.year)
+=======
+    		if (updatedindice_de_masa_corporal == "" || updatedaltura == "" || updatedtasa == "") {
+    			alert("no pueden haber valores en blanco");
+    		} else if (!pattern2.test(updatedindice_de_masa_corporal) || !pattern2.test(updatedaltura) || !pattern2.test(updatedtasa)) {
+    			alert("deben ser numeros (positivos)");
+    		} else {
+    			const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
+    				method: "PUT",
+    				body: JSON.stringify({
+    					place: params.placename,
+    					indice_de_masa_corporal: parseFloat(updatedindice_de_masa_corporal),
+    					year: parseInt(params.year),
+    					altura: parseFloat(updatedaltura),
+    					tasa_obesidad: parseFloat(updatedtasa)
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     				}),
     				headers: { "Content-Type": "application/json" }
     			}).then(function (res) {
@@ -18144,11 +19181,28 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("EditValue_svelte", $$slots, []);
 
+<<<<<<< HEAD
     	function input_input_handler() {
+=======
+    	function input0_input_handler() {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		updatedindice_de_masa_corporal = this.value;
     		$$invalidate(2, updatedindice_de_masa_corporal);
     	}
 
+<<<<<<< HEAD
+=======
+    	function input1_input_handler() {
+    		updatedaltura = this.value;
+    		$$invalidate(4, updatedaltura);
+    	}
+
+    	function input2_input_handler() {
+    		updatedtasa = this.value;
+    		$$invalidate(5, updatedtasa);
+    	}
+
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	$$self.$set = $$props => {
     		if ("params" in $$props) $$invalidate(0, params = $$props.params);
     	};
@@ -18173,6 +19227,7 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("params" in $$props) $$invalidate(0, params = $$props.params);
+<<<<<<< HEAD
     		if ("indice_de_masa_corporal" in $$props) $$invalidate(5, indice_de_masa_corporal = $$props.indice_de_masa_corporal);
     		if ("updatedPlace" in $$props) $$invalidate(1, updatedPlace = $$props.updatedPlace);
     		if ("updatedindice_de_masa_corporal" in $$props) $$invalidate(2, updatedindice_de_masa_corporal = $$props.updatedindice_de_masa_corporal);
@@ -18180,6 +19235,15 @@ var app = (function () {
     		if ("updatedaltura" in $$props) $$invalidate(6, updatedaltura = $$props.updatedaltura);
     		if ("updatedtasa" in $$props) $$invalidate(7, updatedtasa = $$props.updatedtasa);
     		if ("errorMsg" in $$props) $$invalidate(4, errorMsg = $$props.errorMsg);
+=======
+    		if ("indice_de_masa_corporal" in $$props) $$invalidate(7, indice_de_masa_corporal = $$props.indice_de_masa_corporal);
+    		if ("updatedPlace" in $$props) $$invalidate(1, updatedPlace = $$props.updatedPlace);
+    		if ("updatedindice_de_masa_corporal" in $$props) $$invalidate(2, updatedindice_de_masa_corporal = $$props.updatedindice_de_masa_corporal);
+    		if ("updatedYear" in $$props) $$invalidate(3, updatedYear = $$props.updatedYear);
+    		if ("updatedaltura" in $$props) $$invalidate(4, updatedaltura = $$props.updatedaltura);
+    		if ("updatedtasa" in $$props) $$invalidate(5, updatedtasa = $$props.updatedtasa);
+    		if ("errorMsg" in $$props) $$invalidate(6, errorMsg = $$props.errorMsg);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -18191,6 +19255,7 @@ var app = (function () {
     		updatedPlace,
     		updatedindice_de_masa_corporal,
     		updatedYear,
+<<<<<<< HEAD
     		errorMsg,
     		indice_de_masa_corporal,
     		updatedaltura,
@@ -18198,6 +19263,17 @@ var app = (function () {
     		updateindice_de_masa_corporal,
     		getindices_de_masa_corporal,
     		input_input_handler
+=======
+    		updatedaltura,
+    		updatedtasa,
+    		errorMsg,
+    		indice_de_masa_corporal,
+    		updateindice_de_masa_corporal,
+    		getindices_de_masa_corporal,
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	];
     }
 
@@ -18616,7 +19692,11 @@ var app = (function () {
     /* src\front\imcAPI\Graficas_integradas\Portal2.svelte.html generated by Svelte v3.21.0 */
     const file$y = "src\\front\\imcAPI\\Graficas_integradas\\Portal2.svelte.html";
 
+<<<<<<< HEAD
     // (20:4) <Button outline color="secondary" on:click="{pop}">
+=======
+    // (31:4) <Button outline color="secondary" on:click="{pop}">
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot$o(ctx) {
     	let i;
     	let t;
@@ -18626,7 +19706,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$y, 19, 56, 846);
+=======
+    			add_location(i, file$y, 30, 56, 1624);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -18642,7 +19726,11 @@ var app = (function () {
     		block,
     		id: create_default_slot$o.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(20:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+=======
+    		source: "(31:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
@@ -18664,9 +19752,40 @@ var app = (function () {
     	let t4;
     	let t5;
     	let p2;
+<<<<<<< HEAD
     	let current;
 
     	const button2 = new Button({
+=======
+    	let button2;
+    	let i2;
+    	let t6;
+    	let t7;
+    	let p3;
+    	let button3;
+    	let i3;
+    	let t8;
+    	let t9;
+    	let p4;
+    	let button4;
+    	let i4;
+    	let t10;
+    	let t11;
+    	let p5;
+    	let button5;
+    	let i5;
+    	let t12;
+    	let t13;
+    	let p6;
+    	let button6;
+    	let i6;
+    	let t14;
+    	let t15;
+    	let p7;
+    	let current;
+
+    	const button7 = new Button({
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			props: {
     				outline: true,
     				color: "secondary",
@@ -18676,7 +19795,11 @@ var app = (function () {
     			$$inline: true
     		});
 
+<<<<<<< HEAD
     	button2.$on("click", pop);
+=======
+    	button7.$on("click", pop);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     	const block = {
     		c: function create() {
@@ -18695,7 +19818,36 @@ var app = (function () {
     			t4 = text(" Grafica \"rentspercapita\"");
     			t5 = space();
     			p2 = element("p");
+<<<<<<< HEAD
     			create_component(button2.$$.fragment);
+=======
+    			button2 = element("button");
+    			i2 = element("i");
+    			t6 = text(" Grafica  \"traffic-injuries\"");
+    			t7 = space();
+    			p3 = element("p");
+    			button3 = element("button");
+    			i3 = element("i");
+    			t8 = text(" Grafica  \"global-coef\"");
+    			t9 = space();
+    			p4 = element("p");
+    			button4 = element("button");
+    			i4 = element("i");
+    			t10 = text(" Grafica  \"books_exports\"");
+    			t11 = space();
+    			p5 = element("p");
+    			button5 = element("button");
+    			i5 = element("i");
+    			t12 = text(" Grafica  \"ppas\"");
+    			t13 = space();
+    			p6 = element("p");
+    			button6 = element("button");
+    			i6 = element("i");
+    			t14 = text(" Grafica  \"rural-tourism\"");
+    			t15 = space();
+    			p7 = element("p");
+    			create_component(button7.$$.fragment);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			add_location(h1, file$y, 6, 4, 136);
     			attr_dev(i0, "class", "fas fa-leaf");
     			add_location(i0, file$y, 8, 116, 291);
@@ -18711,7 +19863,46 @@ var app = (function () {
     			attr_dev(button1, "onclick", "window.location.href='#/imc/graficas_integradas/Grafica2'");
     			add_location(button1, file$y, 11, 8, 377);
     			add_location(p1, file$y, 10, 4, 364);
+<<<<<<< HEAD
     			add_location(p2, file$y, 18, 4, 785);
+=======
+    			attr_dev(i2, "class", "fas fa-leaf");
+    			add_location(i2, file$y, 15, 116, 692);
+    			attr_dev(button2, "type", "button");
+    			attr_dev(button2, "color", "primary");
+    			attr_dev(button2, "onclick", "window.location.href='#/imc/graficas_integradas/Grafica3'");
+    			add_location(button2, file$y, 15, 8, 584);
+    			add_location(p2, file$y, 14, 4, 571);
+    			attr_dev(i3, "class", "fas fa-leaf");
+    			add_location(i3, file$y, 18, 116, 895);
+    			attr_dev(button3, "type", "button");
+    			attr_dev(button3, "color", "primary");
+    			attr_dev(button3, "onclick", "window.location.href='#/imc/graficas_integradas/Grafica4'");
+    			add_location(button3, file$y, 18, 8, 787);
+    			add_location(p3, file$y, 17, 4, 774);
+    			attr_dev(i4, "class", "fas fa-leaf");
+    			add_location(i4, file$y, 21, 116, 1093);
+    			attr_dev(button4, "type", "button");
+    			attr_dev(button4, "color", "primary");
+    			attr_dev(button4, "onclick", "window.location.href='#/imc/graficas_integradas/Grafica5'");
+    			add_location(button4, file$y, 21, 8, 985);
+    			add_location(p4, file$y, 20, 4, 972);
+    			attr_dev(i5, "class", "fas fa-leaf");
+    			add_location(i5, file$y, 24, 116, 1293);
+    			attr_dev(button5, "type", "button");
+    			attr_dev(button5, "color", "primary");
+    			attr_dev(button5, "onclick", "window.location.href='#/imc/graficas_integradas/Grafica6'");
+    			add_location(button5, file$y, 24, 8, 1185);
+    			add_location(p5, file$y, 23, 4, 1172);
+    			attr_dev(i6, "class", "fas fa-leaf");
+    			add_location(i6, file$y, 27, 116, 1484);
+    			attr_dev(button6, "type", "button");
+    			attr_dev(button6, "color", "primary");
+    			attr_dev(button6, "onclick", "window.location.href='#/imc/graficas_integradas/Grafica7'");
+    			add_location(button6, file$y, 27, 8, 1376);
+    			add_location(p6, file$y, 26, 4, 1363);
+    			add_location(p7, file$y, 29, 4, 1563);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			add_location(main, file$y, 5, 0, 124);
     		},
     		l: function claim(nodes) {
@@ -18732,6 +19923,7 @@ var app = (function () {
     			append_dev(button1, t4);
     			append_dev(main, t5);
     			append_dev(main, p2);
+<<<<<<< HEAD
     			mount_component(button2, p2, null);
     			current = true;
     		},
@@ -18751,11 +19943,61 @@ var app = (function () {
     		},
     		o: function outro(local) {
     			transition_out(button2.$$.fragment, local);
+=======
+    			append_dev(p2, button2);
+    			append_dev(button2, i2);
+    			append_dev(button2, t6);
+    			append_dev(main, t7);
+    			append_dev(main, p3);
+    			append_dev(p3, button3);
+    			append_dev(button3, i3);
+    			append_dev(button3, t8);
+    			append_dev(main, t9);
+    			append_dev(main, p4);
+    			append_dev(p4, button4);
+    			append_dev(button4, i4);
+    			append_dev(button4, t10);
+    			append_dev(main, t11);
+    			append_dev(main, p5);
+    			append_dev(p5, button5);
+    			append_dev(button5, i5);
+    			append_dev(button5, t12);
+    			append_dev(main, t13);
+    			append_dev(main, p6);
+    			append_dev(p6, button6);
+    			append_dev(button6, i6);
+    			append_dev(button6, t14);
+    			append_dev(main, t15);
+    			append_dev(main, p7);
+    			mount_component(button7, p7, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button7_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button7_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button7.$set(button7_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button7.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button7.$$.fragment, local);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+<<<<<<< HEAD
     			destroy_component(button2);
+=======
+    			destroy_component(button7);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		}
     	};
 
@@ -44324,7 +45566,11 @@ var app = (function () {
     const { console: console_1$e } = globals;
     const file$B = "src\\front\\imcAPI\\Graficas_integradas\\offworks.svelte.html";
 
+<<<<<<< HEAD
     // (101:4) <Button outline color="secondary" on:click="{pop}">
+=======
+    // (99:4) <Button outline color="secondary" on:click="{pop}">
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     function create_default_slot$r(ctx) {
     	let i;
     	let t;
@@ -44334,7 +45580,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
     			add_location(i, file$B, 100, 56, 3101);
+=======
+    			add_location(i, file$B, 98, 56, 2963);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -44350,7 +45600,11 @@ var app = (function () {
     		block,
     		id: create_default_slot$r.name,
     		type: "slot",
+<<<<<<< HEAD
     		source: "(101:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+=======
+    		source: "(99:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		ctx
     	});
 
@@ -44400,7 +45654,11 @@ var app = (function () {
     			div = element("div");
     			t1 = space();
     			p = element("p");
+<<<<<<< HEAD
     			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.\r\n            Esta gráfica es solo del 2019 para imc y 2008 para accidentes por lo que no hay\r\n            tamaños de circulos distintos.";
+=======
+    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.";
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
@@ -44580,11 +45838,21 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\rentspercapita.svelte.html generated by Svelte v3.21.0 */
 
+<<<<<<< HEAD
     function create_fragment$D(ctx) {
+=======
+    const { console: console_1$f } = globals;
+    const file$C = "src\\front\\imcAPI\\Graficas_integradas\\rentspercapita.svelte.html";
+
+    // (96:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$s(ctx) {
+    	let i;
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	let t;
 
     	const block = {
     		c: function create() {
+<<<<<<< HEAD
     			t = text("adsgadsgs");
     		},
     		l: function claim(nodes) {
@@ -44597,12 +45865,151 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+=======
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$C, 95, 56, 2924);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     			if (detaching) detach_dev(t);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+<<<<<<< HEAD
+=======
+    		id: create_default_slot$s.name,
+    		type: "slot",
+    		source: "(96:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$D(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let t3;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$s] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Grafica comparativa de rents per capita e indice_de_masa_corporal";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$C, 82, 8, 2268);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$C, 83, 8, 2343);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$C, 84, 8, 2423);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$C, 85, 8, 2505);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$C, 90, 8, 2689);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$C, 91, 8, 2725);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$C, 89, 4, 2645);
+    			add_location(main, file$C, 88, 0, 2627);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$i, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		id: create_fragment$D.name,
     		type: "component",
     		source: "",
@@ -44612,15 +46019,93 @@ var app = (function () {
     	return block;
     }
 
+<<<<<<< HEAD
     function instance$D($$self, $$props) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Rentspercapita_svelte> was created with unknown prop '${key}'`);
+=======
+    async function loadGraph$i() {
+    	let paises2019 = [];
+    	let rentpercapita = [];
+    	let Misdatos = [];
+    	let Susdatos = [];
+    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    	const datos2 = await fetch("http://sos1920-11.herokuapp.com/api/v3/rents-per-capita");
+    	Misdatos = await datos1.json();
+    	Susdatos = await datos2.json();
+
+    	Misdatos.filter(data => data.year == 2019).forEach(data => {
+    		let paises = {
+    			"name": data.place,
+    			"value": parseFloat(data.indice_de_masa_corporal)
+    		};
+
+    		paises2019.push(paises);
+    	});
+
+    	Susdatos.filter(data => data.year == 2019).forEach(data => {
+    		let lugares = { "name": data.country, "value": data.rpc };
+    		rentpercapita.push(lugares);
+    	});
+
+    	console.log(paises2019);
+    	console.log(rentpercapita);
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "IMC y rents-per-capita en 2019" },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: [
+    			{ name: "imc", data: paises2019 },
+    			{
+    				name: "rents per capita",
+    				data: rentpercapita
+    			}
+    		]
+    	});
+    }
+
+    function instance$D($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$f.warn(`<Rentspercapita_svelte> was created with unknown prop '${key}'`);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Rentspercapita_svelte", $$slots, []);
+<<<<<<< HEAD
+=======
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$i });
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	return [];
     }
 
@@ -44638,10 +46123,1260 @@ var app = (function () {
     	}
     }
 
+<<<<<<< HEAD
     /* src\front\App.svelte.html generated by Svelte v3.21.0 */
     const file$C = "src\\front\\App.svelte.html";
 
     function create_fragment$E(ctx) {
+=======
+    /* src\front\imcAPI\Graficas_integradas\traffic_injuries.svelte.html generated by Svelte v3.21.0 */
+
+    const { console: console_1$g } = globals;
+    const file$D = "src\\front\\imcAPI\\Graficas_integradas\\traffic_injuries.svelte.html";
+
+    // (98:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$t(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$D, 97, 56, 2982);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$t.name,
+    		type: "slot",
+    		source: "(98:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$E(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let t3;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$t] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de muertes en 2018(por accidentes de trafico).";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$D, 83, 8, 2274);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$D, 84, 8, 2349);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$D, 85, 8, 2429);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$D, 86, 8, 2511);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$D, 91, 8, 2695);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$D, 92, 8, 2731);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$D, 90, 4, 2651);
+    			add_location(main, file$D, 89, 0, 2633);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$j, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$E.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$j() {
+    	let paises2019 = [];
+    	let dead = [];
+    	let Misdatos = [];
+    	let Susdatos = [];
+    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    	const datos2 = await fetch("https://sos1920-21.herokuapp.com/api/v2/traffic-injuries");
+    	Misdatos = await datos1.json();
+    	Susdatos = await datos2.json();
+
+    	Misdatos.filter(data => data.year == 2019).forEach(data => {
+    		let paises = {
+    			"name": data.place,
+    			"value": parseFloat(data.indice_de_masa_corporal)
+    		};
+
+    		paises2019.push(paises);
+    	});
+
+    	Susdatos.filter(data => data.year == 2018).forEach(data => {
+    		let lugares = {
+    			"name": data.auto_com,
+    			"value": data.dead
+    		};
+
+    		dead.push(lugares);
+    		console.log(paises2019);
+    		console.log(dead);
+    	});
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "IMC en 2019 y muertes del 2018(accidentes de trafico)"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: [{ name: "imc 2019", data: paises2019 }, { name: "muertes 2018", data: dead }]
+    	});
+    }
+
+    function instance$E($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$g.warn(`<Traffic_injuries_svelte> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Traffic_injuries_svelte", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$j });
+    	return [];
+    }
+
+    class Traffic_injuries_svelte extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$E, create_fragment$E, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Traffic_injuries_svelte",
+    			options,
+    			id: create_fragment$E.name
+    		});
+    	}
+    }
+
+    /* src\front\imcAPI\Graficas_integradas\global_coef.svelte.html generated by Svelte v3.21.0 */
+
+    const { console: console_1$h } = globals;
+    const file$E = "src\\front\\imcAPI\\Graficas_integradas\\global_coef.svelte.html";
+
+    // (97:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$u(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$E, 96, 56, 2984);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$u.name,
+    		type: "slot",
+    		source: "(97:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$F(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let t3;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$u] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de coeficientes de la uefa en 2018";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$E, 83, 8, 2301);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$E, 84, 8, 2376);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$E, 85, 8, 2456);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$E, 86, 8, 2538);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$E, 91, 8, 2722);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$E, 92, 8, 2758);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$E, 90, 4, 2678);
+    			add_location(main, file$E, 89, 0, 2660);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$k, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$F.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$k() {
+    	let paises2019 = [];
+    	let coefficient = [];
+    	let Misdatos = [];
+    	let Susdatos = [];
+    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    	const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v2/global-coef");
+    	Misdatos = await datos1.json();
+    	Susdatos = await datos2.json();
+
+    	Misdatos.filter(data => data.year == 2019).forEach(data => {
+    		let paises = {
+    			"name": data.place,
+    			"value": parseFloat(data.indice_de_masa_corporal)
+    		};
+
+    		paises2019.push(paises);
+    	});
+
+    	Susdatos.filter(data => data.year == 2018).forEach(data => {
+    		let lugares = {
+    			"name": data.country,
+    			"value": data.coefficient
+    		};
+
+    		coefficient.push(lugares);
+    		console.log(paises2019);
+    		console.log(coefficient);
+    	});
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "IMC en 2019 y coeficientes de la uefa del 2018"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: [
+    			{ name: "imc 2019", data: paises2019 },
+    			{
+    				name: "coeficientes 2018",
+    				data: coefficient
+    			}
+    		]
+    	});
+    }
+
+    function instance$F($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$h.warn(`<Global_coef_svelte> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Global_coef_svelte", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$k });
+    	return [];
+    }
+
+    class Global_coef_svelte extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$F, create_fragment$F, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Global_coef_svelte",
+    			options,
+    			id: create_fragment$F.name
+    		});
+    	}
+    }
+
+    /* src\front\imcAPI\Graficas_integradas\books_exports.svelte.html generated by Svelte v3.21.0 */
+
+    const { console: console_1$i } = globals;
+    const file$F = "src\\front\\imcAPI\\Graficas_integradas\\books_exports.svelte.html";
+
+    // (90:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$v(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$F, 89, 56, 2606);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$v.name,
+    		type: "slot",
+    		source: "(90:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$G(ctx) {
+    	let main;
+    	let figure;
+    	let div;
+    	let t0;
+    	let p;
+    	let t2;
+    	let current;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$v] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t0 = space();
+    			p = element("p");
+    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de la exportacion de libros en el 2015";
+    			t2 = space();
+    			create_component(button.$$.fragment);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$F, 84, 8, 2340);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$F, 85, 8, 2376);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$F, 83, 4, 2296);
+    			add_location(main, file$F, 82, 0, 2278);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t0);
+    			append_dev(figure, p);
+    			append_dev(main, t2);
+    			mount_component(button, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$G.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$l() {
+    	let paises2019 = [];
+    	let exp_book = [];
+    	let Misdatos = [];
+    	let Susdatos = [];
+    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    	const datos2 = await fetch("https://sos1920-05.herokuapp.com/api/v1/books-exports");
+    	Misdatos = await datos1.json();
+    	Susdatos = await datos2.json();
+
+    	Misdatos.filter(data => data.year == 2019).forEach(data => {
+    		let paises = {
+    			"name": data.place,
+    			"value": parseFloat(data.indice_de_masa_corporal)
+    		};
+
+    		paises2019.push(paises);
+    	});
+
+    	Susdatos.filter(data => data.year == 2015).forEach(data => {
+    		let lugares = {
+    			"name": data.country,
+    			"value": data.exp_book
+    		};
+
+    		exp_book.push(lugares);
+    		console.log(paises2019);
+    		console.log(exp_book);
+    	});
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "IMC en 2019 y  exportacion de libros del 2015"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: [
+    			{ name: "imc 2019", data: paises2019 },
+    			{
+    				name: "exportacion libros 2015",
+    				data: exp_book
+    			}
+    		]
+    	});
+    }
+
+    function instance$G($$self, $$props, $$invalidate) {
+    	loadGraph$l();
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$i.warn(`<Books_exports_svelte> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Books_exports_svelte", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$l });
+    	return [];
+    }
+
+    class Books_exports_svelte extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$G, create_fragment$G, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Books_exports_svelte",
+    			options,
+    			id: create_fragment$G.name
+    		});
+    	}
+    }
+
+    /* src\front\imcAPI\Graficas_integradas\ppas.svelte.html generated by Svelte v3.21.0 */
+
+    const { console: console_1$j } = globals;
+    const file$G = "src\\front\\imcAPI\\Graficas_integradas\\ppas.svelte.html";
+
+    // (97:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$w(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$G, 96, 56, 2953);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$w.name,
+    		type: "slot",
+    		source: "(97:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$H(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let t3;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$w] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de ppa_per_capita en 2017";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$G, 83, 8, 2279);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$G, 84, 8, 2354);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$G, 85, 8, 2434);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$G, 86, 8, 2516);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$G, 91, 8, 2700);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$G, 92, 8, 2736);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$G, 90, 4, 2656);
+    			add_location(main, file$G, 89, 0, 2638);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$m, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$H.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$m() {
+    	let paises2019 = [];
+    	let ppa_per_capita = [];
+    	let Misdatos = [];
+    	let Susdatos = [];
+    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    	const datos2 = await fetch("https://sos1920-28.herokuapp.com/api/v1/ppas");
+    	Misdatos = await datos1.json();
+    	Susdatos = await datos2.json();
+
+    	Misdatos.filter(data => data.year == 2019).forEach(data => {
+    		let paises = {
+    			"name": data.place,
+    			"value": parseFloat(data.indice_de_masa_corporal)
+    		};
+
+    		paises2019.push(paises);
+    	});
+
+    	Susdatos.filter(data => data.year == 2017).forEach(data => {
+    		let lugares = {
+    			"name": data.country,
+    			"value": data.ppa_per_capita
+    		};
+
+    		ppa_per_capita.push(lugares);
+    		console.log(paises2019);
+    		console.log(ppa_per_capita);
+    	});
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "IMC en 2019 y " },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: [
+    			{ name: "imc 2019", data: paises2019 },
+    			{
+    				name: "ppa_per_capita 2017",
+    				data: ppa_per_capita
+    			}
+    		]
+    	});
+    }
+
+    function instance$H($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$j.warn(`<Ppas_svelte> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Ppas_svelte", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$m });
+    	return [];
+    }
+
+    class Ppas_svelte extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$H, create_fragment$H, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Ppas_svelte",
+    			options,
+    			id: create_fragment$H.name
+    		});
+    	}
+    }
+
+    /* src\front\imcAPI\Graficas_integradas\ruraltourism.svelte.html generated by Svelte v3.21.0 */
+    const file$H = "src\\front\\imcAPI\\Graficas_integradas\\ruraltourism.svelte.html";
+
+    // (98:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$x(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$H, 97, 56, 2896);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$x.name,
+    		type: "slot",
+    		source: "(98:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$I(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let t3;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$x] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de viajeros en 2016.";
+    			t3 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$H, 83, 8, 2214);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$H, 84, 8, 2289);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$H, 85, 8, 2369);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$H, 86, 8, 2451);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$H, 91, 8, 2635);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$H, 92, 8, 2671);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$H, 90, 4, 2591);
+    			add_location(main, file$H, 89, 0, 2573);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			append_dev(main, t3);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", loadGraph$n, false, false, false);
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$I.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$n() {
+    	let paises2019 = [];
+    	let viajeros = [];
+    	let Misdatos = [];
+    	let Susdatos = [];
+    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    	const datos2 = await fetch("https://sos1920-02.herokuapp.com/api/v2/rural-tourism-stats");
+    	Misdatos = await datos1.json();
+    	Susdatos = await datos2.json();
+
+    	Misdatos.filter(data => data.year == 2019).forEach(data => {
+    		let paises = {
+    			"name": data.place,
+    			"value": parseFloat(data.indice_de_masa_corporal)
+    		};
+
+    		paises2019.push(paises);
+    	});
+
+    	Susdatos.filter(data => data.year == 2016).forEach(data => {
+    		let lugares = {
+    			"name": data.province,
+    			"value": data.traveller
+    		};
+
+    		viajeros.push(lugares);
+    	});
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "IMC en 2019 y viajeros en 2016" },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "30%",
+    				maxSize: "120%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					splitSeries: false,
+    					gravitationalConstant: 0.02
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: [
+    			{ name: "imc 2019", data: paises2019 },
+    			{ name: "viajeros 2016", data: viajeros }
+    		]
+    	});
+    }
+
+    function instance$I($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Ruraltourism_svelte> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Ruraltourism_svelte", $$slots, []);
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$n });
+    	return [];
+    }
+
+    class Ruraltourism_svelte extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$I, create_fragment$I, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Ruraltourism_svelte",
+    			options,
+    			id: create_fragment$I.name
+    		});
+    	}
+    }
+
+    /* src\front\App.svelte.html generated by Svelte v3.21.0 */
+    const file$I = "src\\front\\App.svelte.html";
+
+    function create_fragment$J(ctx) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	let main;
     	let h1;
     	let t1;
@@ -44659,8 +47394,13 @@ var app = (function () {
     			h1.textContent = "Gestión de APIs";
     			t1 = space();
     			create_component(router.$$.fragment);
+<<<<<<< HEAD
     			add_location(h1, file$C, 97, 1, 3883);
     			add_location(main, file$C, 96, 0, 3874);
+=======
+    			add_location(h1, file$I, 106, 1, 4547);
+    			add_location(main, file$I, 105, 0, 4538);
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -44690,7 +47430,11 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+<<<<<<< HEAD
     		id: create_fragment$E.name,
+=======
+    		id: create_fragment$J.name,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		type: "component",
     		source: "",
     		ctx
@@ -44699,7 +47443,11 @@ var app = (function () {
     	return block;
     }
 
+<<<<<<< HEAD
     function instance$E($$self, $$props, $$invalidate) {
+=======
+    function instance$J($$self, $$props, $$invalidate) {
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     	const routes = {
     		"/": Inicio_svelte,
     		"/analytics": Grafo_svelte,
@@ -44733,6 +47481,14 @@ var app = (function () {
     		"/imc/graficas/Grafica2": Myimcgraph2_svelte,
     		"/imc/graficas_integradas/Grafica1": Offworks_svelte,
     		"/imc/graficas_integradas/Grafica2": Rentspercapita_svelte,
+<<<<<<< HEAD
+=======
+    		"/imc/graficas_integradas/Grafica3": Traffic_injuries_svelte,
+    		"/imc/graficas_integradas/Grafica4": Global_coef_svelte,
+    		"/imc/graficas_integradas/Grafica5": Books_exports_svelte,
+    		"/imc/graficas_integradas/Grafica6": Ppas_svelte,
+    		"/imc/graficas_integradas/Grafica7": Ruraltourism_svelte,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		"*": NotFound_svelte
     	};
 
@@ -44778,6 +47534,14 @@ var app = (function () {
     		Grafico2: Myimcgraph2_svelte,
     		offworks: Offworks_svelte,
     		rentspercapita: Rentspercapita_svelte,
+<<<<<<< HEAD
+=======
+    		traffic_injuries: Traffic_injuries_svelte,
+    		global_coef: Global_coef_svelte,
+    		book_exports: Books_exports_svelte,
+    		ppas: Ppas_svelte,
+    		rural: Ruraltourism_svelte,
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		routes
     	});
 
@@ -44787,13 +47551,21 @@ var app = (function () {
     class App_svelte extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
+<<<<<<< HEAD
     		init(this, options, instance$E, create_fragment$E, safe_not_equal, {});
+=======
+    		init(this, options, instance$J, create_fragment$J, safe_not_equal, {});
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App_svelte",
     			options,
+<<<<<<< HEAD
     			id: create_fragment$E.name
+=======
+    			id: create_fragment$J.name
+>>>>>>> a694bb095ac248804bd8b8188c1bbb919fa8f803
     		});
     	}
     }
