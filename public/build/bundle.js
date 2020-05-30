@@ -44247,7 +44247,7 @@ var app = (function () {
     /***/ })
     /******/ ]);
     });
-
+    //# sourceMappingURL=billboard.js.map
     });
 
     var bb = unwrapExports(billboard);
@@ -44471,7 +44471,7 @@ var app = (function () {
     const { console: console_1$e } = globals;
     const file$B = "src\\front\\imcAPI\\Graficas_integradas\\offworks.svelte.html";
 
-    // (99:4) <Button outline color="secondary" on:click="{pop}">
+    // (93:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$r(ctx) {
     	let i;
     	let t;
@@ -44481,7 +44481,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$B, 98, 56, 2963);
+    			add_location(i, file$B, 92, 56, 2587);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -44497,7 +44497,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$r.name,
     		type: "slot",
-    		source: "(99:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(93:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -44505,23 +44505,13 @@ var app = (function () {
     }
 
     function create_fragment$C(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -44537,54 +44527,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$B, 85, 8, 2292);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$B, 86, 8, 2367);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$B, 87, 8, 2447);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$B, 88, 8, 2529);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$B, 93, 8, 2713);
+    			add_location(div, file$B, 87, 8, 2337);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$B, 94, 8, 2749);
+    			add_location(p, file$B, 88, 8, 2373);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$B, 92, 4, 2669);
-    			add_location(main, file$B, 91, 0, 2651);
+    			add_location(figure, file$B, 86, 4, 2293);
+    			add_location(main, file$B, 85, 0, 2275);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$h, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -44605,14 +44575,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -44699,6 +44663,7 @@ var app = (function () {
     }
 
     function instance$C($$self, $$props, $$invalidate) {
+    	loadGraph$h();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -44730,7 +44695,7 @@ var app = (function () {
     const { console: console_1$f } = globals;
     const file$C = "src\\front\\imcAPI\\Graficas_integradas\\rentspercapita.svelte.html";
 
-    // (96:4) <Button outline color="secondary" on:click="{pop}">
+    // (90:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$s(ctx) {
     	let i;
     	let t;
@@ -44740,7 +44705,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$C, 95, 56, 2924);
+    			add_location(i, file$C, 89, 56, 2548);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -44756,7 +44721,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$s.name,
     		type: "slot",
-    		source: "(96:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(90:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -44764,23 +44729,13 @@ var app = (function () {
     }
 
     function create_fragment$D(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -44796,54 +44751,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Grafica comparativa de rents per capita e indice_de_masa_corporal";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$C, 82, 8, 2268);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$C, 83, 8, 2343);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$C, 84, 8, 2423);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$C, 85, 8, 2505);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$C, 90, 8, 2689);
+    			add_location(div, file$C, 84, 8, 2313);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$C, 91, 8, 2725);
+    			add_location(p, file$C, 85, 8, 2349);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$C, 89, 4, 2645);
-    			add_location(main, file$C, 88, 0, 2627);
+    			add_location(figure, file$C, 83, 4, 2269);
+    			add_location(main, file$C, 82, 0, 2251);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$i, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -44864,14 +44799,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -44892,7 +44821,7 @@ var app = (function () {
     	let Misdatos = [];
     	let Susdatos = [];
     	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    	const datos2 = await fetch("http://sos1920-11.herokuapp.com/api/v3/rents-per-capita");
+    	const datos2 = await fetch("http://sos1920-11.herokuapp.com/api/v2/rents-per-capita");
     	Misdatos = await datos1.json();
     	Susdatos = await datos2.json();
 
@@ -44953,6 +44882,7 @@ var app = (function () {
     }
 
     function instance$D($$self, $$props, $$invalidate) {
+    	loadGraph$i();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -44984,7 +44914,7 @@ var app = (function () {
     const { console: console_1$g } = globals;
     const file$D = "src\\front\\imcAPI\\Graficas_integradas\\traffic_injuries.svelte.html";
 
-    // (98:4) <Button outline color="secondary" on:click="{pop}">
+    // (91:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$t(ctx) {
     	let i;
     	let t;
@@ -44994,7 +44924,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$D, 97, 56, 2982);
+    			add_location(i, file$D, 90, 56, 2600);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -45010,7 +44940,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$t.name,
     		type: "slot",
-    		source: "(98:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(91:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -45018,23 +44948,13 @@ var app = (function () {
     }
 
     function create_fragment$E(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -45050,54 +44970,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de muertes en 2018(por accidentes de trafico).";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$D, 83, 8, 2274);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$D, 84, 8, 2349);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$D, 85, 8, 2429);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$D, 86, 8, 2511);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$D, 91, 8, 2695);
+    			add_location(div, file$D, 84, 8, 2313);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$D, 92, 8, 2731);
+    			add_location(p, file$D, 85, 8, 2349);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$D, 90, 4, 2651);
-    			add_location(main, file$D, 89, 0, 2633);
+    			add_location(figure, file$D, 83, 4, 2269);
+    			add_location(main, file$D, 82, 0, 2251);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$j, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -45118,14 +45018,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -45206,6 +45100,7 @@ var app = (function () {
     }
 
     function instance$E($$self, $$props, $$invalidate) {
+    	loadGraph$j();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -45237,7 +45132,7 @@ var app = (function () {
     const { console: console_1$h } = globals;
     const file$E = "src\\front\\imcAPI\\Graficas_integradas\\global_coef.svelte.html";
 
-    // (97:4) <Button outline color="secondary" on:click="{pop}">
+    // (91:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$u(ctx) {
     	let i;
     	let t;
@@ -45247,7 +45142,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$E, 96, 56, 2984);
+    			add_location(i, file$E, 90, 56, 2610);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -45263,7 +45158,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$u.name,
     		type: "slot",
-    		source: "(97:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(91:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -45271,23 +45166,13 @@ var app = (function () {
     }
 
     function create_fragment$F(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -45303,54 +45188,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de coeficientes de la uefa en 2018";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$E, 83, 8, 2301);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$E, 84, 8, 2376);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$E, 85, 8, 2456);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$E, 86, 8, 2538);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$E, 91, 8, 2722);
+    			add_location(div, file$E, 85, 8, 2348);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$E, 92, 8, 2758);
+    			add_location(p, file$E, 86, 8, 2384);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$E, 90, 4, 2678);
-    			add_location(main, file$E, 89, 0, 2660);
+    			add_location(figure, file$E, 84, 4, 2304);
+    			add_location(main, file$E, 83, 0, 2286);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$k, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -45371,14 +45236,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -45399,7 +45258,7 @@ var app = (function () {
     	let Misdatos = [];
     	let Susdatos = [];
     	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    	const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v2/global-coef");
+    	const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v3/global-coef");
     	Misdatos = await datos1.json();
     	Susdatos = await datos2.json();
 
@@ -45465,6 +45324,7 @@ var app = (function () {
     }
 
     function instance$F($$self, $$props, $$invalidate) {
+    	loadGraph$k();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -45720,7 +45580,7 @@ var app = (function () {
     const { console: console_1$j } = globals;
     const file$G = "src\\front\\imcAPI\\Graficas_integradas\\ppas.svelte.html";
 
-    // (97:4) <Button outline color="secondary" on:click="{pop}">
+    // (91:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$w(ctx) {
     	let i;
     	let t;
@@ -45730,7 +45590,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$G, 96, 56, 2953);
+    			add_location(i, file$G, 90, 56, 2578);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -45746,7 +45606,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$w.name,
     		type: "slot",
-    		source: "(97:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(91:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -45754,23 +45614,13 @@ var app = (function () {
     }
 
     function create_fragment$H(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -45786,54 +45636,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de ppa_per_capita en 2017";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$G, 83, 8, 2279);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$G, 84, 8, 2354);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$G, 85, 8, 2434);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$G, 86, 8, 2516);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$G, 91, 8, 2700);
+    			add_location(div, file$G, 85, 8, 2325);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$G, 92, 8, 2736);
+    			add_location(p, file$G, 86, 8, 2361);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$G, 90, 4, 2656);
-    			add_location(main, file$G, 89, 0, 2638);
+    			add_location(figure, file$G, 84, 4, 2281);
+    			add_location(main, file$G, 83, 0, 2263);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$m, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -45854,14 +45684,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -45946,6 +45770,7 @@ var app = (function () {
     }
 
     function instance$H($$self, $$props, $$invalidate) {
+    	loadGraph$m();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -45975,7 +45800,7 @@ var app = (function () {
     /* src\front\imcAPI\Graficas_integradas\ruraltourism.svelte.html generated by Svelte v3.21.0 */
     const file$H = "src\\front\\imcAPI\\Graficas_integradas\\ruraltourism.svelte.html";
 
-    // (98:4) <Button outline color="secondary" on:click="{pop}">
+    // (92:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$x(ctx) {
     	let i;
     	let t;
@@ -45985,7 +45810,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$H, 97, 56, 2896);
+    			add_location(i, file$H, 91, 56, 2520);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -46001,7 +45826,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$x.name,
     		type: "slot",
-    		source: "(98:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(92:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -46009,23 +45834,13 @@ var app = (function () {
     }
 
     function create_fragment$I(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -46041,54 +45856,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de viajeros en 2016.";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$H, 83, 8, 2214);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$H, 84, 8, 2289);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$H, 85, 8, 2369);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$H, 86, 8, 2451);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$H, 91, 8, 2635);
+    			add_location(div, file$H, 85, 8, 2259);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$H, 92, 8, 2671);
+    			add_location(p, file$H, 86, 8, 2295);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$H, 90, 4, 2591);
-    			add_location(main, file$H, 89, 0, 2573);
+    			add_location(figure, file$H, 84, 4, 2215);
+    			add_location(main, file$H, 83, 0, 2197);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$n, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -46109,14 +45904,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -46196,6 +45985,7 @@ var app = (function () {
     }
 
     function instance$I($$self, $$props, $$invalidate) {
+    	loadGraph$n();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {

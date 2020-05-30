@@ -8,7 +8,7 @@
     let Misdatos = [];
     let Susdatos = [];
     const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v2/global-coef")
+    const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v3/global-coef")
     Misdatos = await datos1.json();
     Susdatos = await datos2.json();
     Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
@@ -77,16 +77,10 @@
     ]
 });
 }
-    
+loadGraph();
     </script>
     
-    <svelte:head>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/accessibility.js"on:load="{loadGraph}"></script>
- 
-    </svelte:head>
+  
 <main>      
     <figure class="highcharts-figure">
         <div id="container"></div>
