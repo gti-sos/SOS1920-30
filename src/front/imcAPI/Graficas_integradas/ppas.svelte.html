@@ -2,92 +2,41 @@
     import {pop} from "svelte-spa-router";
     import Button from "sveltestrap/src/Button.svelte";
     async function loadGraph(){
-
-    let paises2019 = [];
-    let ppa_per_capita = [];
-    let Misdatos = [];
-    let Susdatos = [];
-    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    const datos2 = await fetch("https://sos1920-28.herokuapp.com/api/v1/ppas")
-    Misdatos = await datos1.json();
-    Susdatos = await datos2.json();
-    Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
-            let paises = { 
-		        'name': data.place,
-                'value': parseFloat(data.indice_de_masa_corporal)
-    	};
-            paises2019.push(paises);
-        });     
-    Susdatos.filter(data =>  data.year == 2017).forEach((data) => {
-        let lugares = { 
-	        'name': data.country,
-            'value': data.ppa_per_capita
-    };
-        ppa_per_capita.push(lugares);
-        console.log(paises2019);
-        console.log(ppa_per_capita);
-    });
-    
-
-        Highcharts.chart('container', {
-    chart: {
-        type: 'packedbubble',
-        height: '100%'
-    },
-    title: {
-        text: 'IMC en 2019 y '
-    },
-    tooltip: {
-        useHTML: true,
-        pointFormat: '<b>{point.name}:</b> {point.value}</sub>'
-    },
-    plotOptions: {
-        packedbubble: {
-            minSize: '30%',
-            maxSize: '120%',
-            zMin: 0,
-            zMax: 1000,
-            layoutAlgorithm: {
-                splitSeries: false,
-                gravitationalConstant: 0.02
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}',
-                filter: {
-                    property: 'y',
-                    operator: '>',
-                    value: 250
-                },
-                style: {
-                    color: 'black',
-                    textOutline: 'none',
-                    fontWeight: 'normal'
-                }
-            }
-        }
-    },
-    series: [{
-        name: 'imc 2019',
-        data: paises2019
-    }, {
-        name: 'ppa_per_capita 2017',
-        data: ppa_per_capita
+        let lugares = [];
+        let ppas = [];
+        let recogidadeinfo= [];
+    const resData = await fetch("/api/v1/ppas");
+    recogidadeinfo = await resData.json();
+    recogidadeinfo.filter(i => i.year == 2017).forEach((i) => {
+            let lugar = i.country;
+                lugares.push(lugar);
+            let ppa = i.ppa_per_capita;
+                ppas.push(ppa);
+            });     
+  
+    var Datos = [
+      {
+        x: lugares,
+        y: ppas,
+        type: 'bar'
+      }
+    ];
+    Plotly.newPlot('myDiv', Datos);
+    console.log(Datos);  
     }
-    ]
-});
-}
-loadGraph();
     </script>
     
- 
-<main>      
-    <figure class="highcharts-figure">
-        <div id="container"></div>
-        <p class="highcharts-description">
-            Grafica que muestra el imc por sitios en 2019 y lo mismo de ppa_per_capita en 2017
-        </p>
-    </figure>
-    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
-</main>
+    <svelte:head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" on:load={loadGraph}></script>
+    </svelte:head>
     
+    <main>
+    
+  GRAFICA PPAS:
+  <div id='myDiv'> </div>
+<p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+
+</p>
+
+</main>

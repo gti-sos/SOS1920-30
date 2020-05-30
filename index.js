@@ -27,16 +27,17 @@ app.use(pathImc, function(req, res) {
 	req.pipe(request(url)).pipe(res);
 });
 
-/*
-var proxyBelen = "/api/v1/ppas";
-var urlProxyBelen = "https://sos1920-28.herokuapp.com";
+//PROXY PPAS
+var path = "/api/v1/ppas";
+var host = "https://sos1920-28.herokuapp.com";
+
+app.use(path, function(req, res){
+	var url2 = host + req.baseUrl + req.url; 
+    console.log("piped: " + req.baseUrl + req.url);
+    req.pipe(request(url2)).pipe(res);
+});
 
 
-app.use(proxyBelen, function(req, res){
-    console.log("piped: " + urlProxyBelen);
-    req.pipe(request(urlProxyBelen).pipe(res))
-})
-*/
 var port = process.env.PORT || 12345;
 
 app.use("/",express.static("./public"));

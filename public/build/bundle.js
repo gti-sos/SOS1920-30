@@ -45580,7 +45580,7 @@ var app = (function () {
     const { console: console_1$j } = globals;
     const file$G = "src\\front\\imcAPI\\Graficas_integradas\\ppas.svelte.html";
 
-    // (91:4) <Button outline color="secondary" on:click="{pop}">
+    // (38:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$w(ctx) {
     	let i;
     	let t;
@@ -45590,7 +45590,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$G, 90, 56, 2578);
+    			add_location(i, file$G, 37, 56, 1016);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -45606,7 +45606,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$w.name,
     		type: "slot",
-    		source: "(91:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(38:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -45614,13 +45614,16 @@ var app = (function () {
     }
 
     function create_fragment$H(ctx) {
-    	let main;
-    	let figure;
-    	let div;
+    	let script;
+    	let script_src_value;
     	let t0;
-    	let p;
+    	let main;
+    	let t1;
+    	let div;
     	let t2;
+    	let p;
     	let current;
+    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -45636,34 +45639,36 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			main = element("main");
-    			figure = element("figure");
-    			div = element("div");
+    			script = element("script");
     			t0 = space();
-    			p = element("p");
-    			p.textContent = "Grafica que muestra el imc por sitios en 2019 y lo mismo de ppa_per_capita en 2017";
+    			main = element("main");
+    			t1 = text("GRAFICA PPAS:\r\n  ");
+    			div = element("div");
     			t2 = space();
+    			p = element("p");
     			create_component(button.$$.fragment);
-    			attr_dev(div, "id", "container");
-    			add_location(div, file$G, 85, 8, 2325);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$G, 86, 8, 2361);
-    			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$G, 84, 4, 2281);
-    			add_location(main, file$G, 83, 0, 2263);
+    			if (script.src !== (script_src_value = "https://cdn.plot.ly/plotly-latest.min.js")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$G, 29, 4, 781);
+    			attr_dev(div, "id", "myDiv");
+    			add_location(div, file$G, 35, 2, 930);
+    			add_location(p, file$G, 36, 0, 955);
+    			add_location(main, file$G, 32, 4, 897);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor) {
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, figure);
-    			append_dev(figure, div);
-    			append_dev(figure, t0);
-    			append_dev(figure, p);
+    			append_dev(main, t1);
+    			append_dev(main, div);
     			append_dev(main, t2);
-    			mount_component(button, main, null);
+    			append_dev(main, p);
+    			mount_component(button, p, null);
     			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script, "load", loadGraph$m, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -45684,8 +45689,11 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			detach_dev(script);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
+    			dispose();
     		}
     	};
 
@@ -45701,76 +45709,25 @@ var app = (function () {
     }
 
     async function loadGraph$m() {
-    	let paises2019 = [];
-    	let ppa_per_capita = [];
-    	let Misdatos = [];
-    	let Susdatos = [];
-    	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    	const datos2 = await fetch("https://sos1920-28.herokuapp.com/api/v1/ppas");
-    	Misdatos = await datos1.json();
-    	Susdatos = await datos2.json();
+    	let lugares = [];
+    	let ppas = [];
+    	let recogidadeinfo = [];
+    	const resData = await fetch("/api/v1/ppas");
+    	recogidadeinfo = await resData.json();
 
-    	Misdatos.filter(data => data.year == 2019).forEach(data => {
-    		let paises = {
-    			"name": data.place,
-    			"value": parseFloat(data.indice_de_masa_corporal)
-    		};
-
-    		paises2019.push(paises);
+    	recogidadeinfo.filter(i => i.year == 2017).forEach(i => {
+    		let lugar = i.country;
+    		lugares.push(lugar);
+    		let ppa = i.ppa_per_capita;
+    		ppas.push(ppa);
     	});
 
-    	Susdatos.filter(data => data.year == 2017).forEach(data => {
-    		let lugares = {
-    			"name": data.country,
-    			"value": data.ppa_per_capita
-    		};
-
-    		ppa_per_capita.push(lugares);
-    		console.log(paises2019);
-    		console.log(ppa_per_capita);
-    	});
-
-    	Highcharts.chart("container", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "IMC en 2019 y " },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}</sub>"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "30%",
-    				maxSize: "120%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					splitSeries: false,
-    					gravitationalConstant: 0.02
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: [
-    			{ name: "imc 2019", data: paises2019 },
-    			{
-    				name: "ppa_per_capita 2017",
-    				data: ppa_per_capita
-    			}
-    		]
-    	});
+    	var Datos = [{ x: lugares, y: ppas, type: "bar" }];
+    	Plotly.newPlot("myDiv", Datos);
+    	console.log(Datos);
     }
 
     function instance$H($$self, $$props, $$invalidate) {
-    	loadGraph$m();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
