@@ -4,11 +4,11 @@
     async function loadGraph(){
 
     let paises2019 = [];
-    let lugares2008 = [];
+    let rentpercapita = [];
     let Misdatos = [];
     let Susdatos = [];
     const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    const datos2 = await fetch("https://sos1920-23.herokuapp.com/api/v2/offworks-stats")
+    const datos2 = await fetch("http://sos1920-11.herokuapp.com/api/v3/rents-per-capita")
     Misdatos = await datos1.json();
     Susdatos = await datos2.json();
     Misdatos.filter(data =>  data.year == 2019).forEach((data) => {
@@ -18,16 +18,15 @@
     	};
             paises2019.push(paises);
         });     
-    Susdatos.filter(data =>  data.year == 2008).forEach((data) => {
+    Susdatos.filter(data =>  data.year == 2019).forEach((data) => {
         let lugares = { 
-	        'name': data.community,
-            'value': data.accident
+	        'name': data.country,
+            'value': data.rpc
     };
-        lugares2008.push(lugares);
-        console.log(paises2019);
-        console.log(lugares2008);
+        rentpercapita.push(lugares);
     });
-    
+    console.log(paises2019);
+    console.log(rentpercapita);
 
         Highcharts.chart('container', {
     chart: {
@@ -35,7 +34,7 @@
         height: '100%'
     },
     title: {
-        text: 'IMC en 2019 y accidentes del 2008'
+        text: 'IMC y rents-per-capita en 2019'
     },
     tooltip: {
         useHTML: true,
@@ -68,11 +67,11 @@
         }
     },
     series: [{
-        name: 'imc 2019',
+        name: 'imc',
         data: paises2019
     }, {
-        name: 'accidentes 2008',
-        data: lugares2008
+        name: 'rents per capita',
+        data: rentpercapita
     }
     ]
 });
@@ -91,9 +90,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.
-            Esta gráfica es solo del 2019 para imc y 2008 para accidentes por lo que no hay
-            tamaños de circulos distintos. 
+           Grafica comparativa de rents per capita e indice_de_masa_corporal
         </p>
     </figure>
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>

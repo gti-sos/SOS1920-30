@@ -6,11 +6,11 @@
     async function loadGraph(){
 
     let paises2019 = [];
-    let lugares2008 = [];
+    let viajeros = [];
     let Misdatos = [];
     let Susdatos = [];
     const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    const datos2 = await fetch("https://sos1920-23.herokuapp.com/api/v2/offworks-stats")
+    const datos2 = await fetch("https://sos1920-02.herokuapp.com/api/v2/rural-tourism-stats")
     Misdatos = await datos1.json();
     Susdatos = await datos2.json();
     Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
@@ -20,14 +20,12 @@
     	};
             paises2019.push(paises);
         });     
-    Susdatos.filter(data =>  data.year == 2008).forEach((data) => {
+    Susdatos.filter(data =>  data.year == 2016).forEach((data) => {
         let lugares = { 
-	        'name': data.community,
-            'value': data.accident
+	        'name': data.province,
+            'value': data.traveller
     };
-        lugares2008.push(lugares);
-        console.log(paises2019);
-        console.log(lugares2008);
+        viajeros.push(lugares);
     });
     
 
@@ -37,7 +35,7 @@
         height: '100%'
     },
     title: {
-        text: 'IMC en 2019 y accidentes del 2008'
+        text: 'IMC en 2019 y viajeros en 2016'
     },
     tooltip: {
         useHTML: true,
@@ -73,8 +71,8 @@
         name: 'imc 2019',
         data: paises2019
     }, {
-        name: 'accidentes 2008',
-        data: lugares2008
+        name: 'viajeros 2016',
+        data: viajeros
     }
     ]
 });
@@ -93,7 +91,8 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.
+            Grafica que muestra el imc por sitios en 2019 y lo mismo de viajeros en 2016.
+           
         </p>
     </figure>
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>

@@ -1,16 +1,14 @@
-
-
 <script>
     import {pop} from "svelte-spa-router";
     import Button from "sveltestrap/src/Button.svelte";
     async function loadGraph(){
 
     let paises2019 = [];
-    let lugares2008 = [];
+    let coefficient = [];
     let Misdatos = [];
     let Susdatos = [];
     const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    const datos2 = await fetch("https://sos1920-23.herokuapp.com/api/v2/offworks-stats")
+    const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v2/global-coef")
     Misdatos = await datos1.json();
     Susdatos = await datos2.json();
     Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
@@ -20,14 +18,14 @@
     	};
             paises2019.push(paises);
         });     
-    Susdatos.filter(data =>  data.year == 2008).forEach((data) => {
+    Susdatos.filter(data =>  data.year == 2018).forEach((data) => {
         let lugares = { 
-	        'name': data.community,
-            'value': data.accident
+	        'name': data.country,
+            'value': data.coefficient
     };
-        lugares2008.push(lugares);
+        coefficient.push(lugares);
         console.log(paises2019);
-        console.log(lugares2008);
+        console.log(coefficient);
     });
     
 
@@ -37,7 +35,7 @@
         height: '100%'
     },
     title: {
-        text: 'IMC en 2019 y accidentes del 2008'
+        text: 'IMC en 2019 y coeficientes de la uefa del 2018'
     },
     tooltip: {
         useHTML: true,
@@ -73,8 +71,8 @@
         name: 'imc 2019',
         data: paises2019
     }, {
-        name: 'accidentes 2008',
-        data: lugares2008
+        name: 'coeficientes 2018',
+        data: coefficient
     }
     ]
 });
@@ -93,7 +91,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.
+            Grafica que muestra el imc por sitios en 2019 y lo mismo de coeficientes de la uefa en 2018
         </p>
     </figure>
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
