@@ -1,1 +1,101 @@
-adsgadsgs
+<script>
+    import {pop} from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+    async function loadGraph(){
+
+    let paises2019 = [];
+    let lugares2008 = [];
+    let Misdatos = [];
+    let Susdatos = [];
+    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    const datos2 = await fetch("https://sos1920-23.herokuapp.com/api/v2/offworks-stats")
+    Misdatos = await datos1.json();
+    Susdatos = await datos2.json();
+    Misdatos.filter(data =>  data.year == 2019).forEach((data) => {
+            let paises = { 
+		        'name': data.place,
+                'value': parseFloat(data.indice_de_masa_corporal)
+    	};
+            paises2019.push(paises);
+        });     
+    Susdatos.filter(data =>  data.year == 2008).forEach((data) => {
+        let lugares = { 
+	        'name': data.community,
+            'value': data.accident
+    };
+        lugares2008.push(lugares);
+        console.log(paises2019);
+        console.log(lugares2008);
+    });
+    
+
+        Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'IMC en 2019 y accidentes del 2008'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}</sub>'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'imc 2019',
+        data: paises2019
+    }, {
+        name: 'accidentes 2008',
+        data: lugares2008
+    }
+    ]
+});
+}
+    
+    </script>
+    
+    <svelte:head>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"on:load="{loadGraph}"></script>
+ 
+    </svelte:head>
+<main>      
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Grafica que muestra el imc por sitios en 2019 y lo mismo de accidentes en 2008.
+            Esta gráfica es solo del 2019 para imc y 2008 para accidentes por lo que no hay
+            tamaños de circulos distintos. 
+        </p>
+    </figure>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+</main>
+    
