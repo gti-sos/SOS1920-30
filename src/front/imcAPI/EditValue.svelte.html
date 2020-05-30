@@ -13,8 +13,8 @@
     let updatedPlace = "";
     let updatedindice_de_masa_corporal = 0;
     let updatedYear = 0;
-    let updatedaltura = "no modificable";
-    let updatedtasa = "no modificable";
+    let updatedaltura = "";
+    let updatedtasa = "";
     let errorMsg = "";
 
     onMount(getindices_de_masa_corporal);
@@ -22,15 +22,17 @@
 	async function getindices_de_masa_corporal() {
         
 		console.log("Fetching indice_de_masa_corporal resource...");
-		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year);
-
+		const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year);
+        console.log(res);
 		if (res.ok) {
 			console.log("Ok:");
             const json = await res.json();
             indice_de_masa_corporal = json;
-            updatedPlace = indice_de_masa_corporal[0].place;
-            updatedindice_de_masa_corporal = indice_de_masa_corporal[0].indice_de_masa_corporal;
-            updatedYear = indice_de_masa_corporal[0].year;
+            updatedPlace = indice_de_masa_corporal.place;
+            updatedindice_de_masa_corporal = indice_de_masa_corporal.indice_de_masa_corporal;
+            updatedYear = indice_de_masa_corporal.year;
+            updatedaltura = indice_de_masa_corporal.altura;
+            updatedtasa = indice_de_masa_corporal.tasa_obesidad;
 			console.log("Received indice_de_masa_corporal resource.");
 		} else {
             errorMsg = res.status + ": " + res.statusText;
@@ -46,19 +48,19 @@
         console.log(params.placename);
         console.log(updatedindice_de_masa_corporal);
         console.log(parseInt(params.year));
-        if (updatedindice_de_masa_corporal == "") {
-			alert("el imc se ha dejado en blanco");
-        }else if(!pattern2.test(updatedindice_de_masa_corporal)){
-            alert("Formato no válido");
-        }else if(updatedindice_de_masa_corporal < 0){
-            alert("no es válido un numero negativo");
+        if (updatedindice_de_masa_corporal == "" || updatedaltura == "" || updatedtasa == "") {
+			alert("no pueden haber valores en blanco");
+        }else if(!pattern2.test(updatedindice_de_masa_corporal) || !pattern2.test(updatedaltura) || !pattern2.test(updatedtasa) ){
+            alert("deben ser numeros (positivos)" );
         }else{
-		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
+		const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
             method: "PUT",
 			body: JSON.stringify({
                 place : params.placename,
-                indice_de_masa_corporal : updatedindice_de_masa_corporal,
-                year : parseInt(params.year)
+                indice_de_masa_corporal : parseFloat(updatedindice_de_masa_corporal),
+                year : parseInt(params.year),
+                altura: parseFloat(updatedaltura),
+                tasa_obesidad : parseFloat(updatedtasa)
             }  
             ),
 			headers: {
@@ -92,8 +94,8 @@
                 <td>{updatedPlace}</td>
                 <td><input bind:value="{updatedindice_de_masa_corporal}"></td>
                 <td>{updatedYear}</td>
-                <td>{updatedaltura}</td>
-                <td>{updatedtasa}</td>
+                <td><input bind:value="{updatedaltura}"></td>
+                <td><input bind:value="{updatedtasa}"></td>
                 <td> <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>Update</Button> </td>
             </tr>
         </tbody>

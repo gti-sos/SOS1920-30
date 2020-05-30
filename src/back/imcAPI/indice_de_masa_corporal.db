@@ -3,8 +3,11 @@
 {"place":"Hungria","indice_de_masa_corporal":26.13,"year":2020,"altura":170.2,"tasa_obesidad":0.21,"_id":"2WEoUKQBUsVDvDrU"}
 {"place":"Alemania","indice_de_masa_corporal":27.03,"year":2020,"altura":173,"tasa_obesidad":0.19,"_id":"OstyELPf0xED2b6s"}
 {"place":"Hungria","indice_de_masa_corporal":24.45,"year":2019,"altura":170.9,"tasa_obesidad":0.22,"_id":"QDFKtoq4XNw7pXr8"}
-{"place":"Alemania","indice_de_masa_corporal":6312783681638,"year":2019,"altura":172.9,"tasa_obesidad":0.2,"_id":"i2lfAySZYcRwDW1a"}
+{"place":"Alemania","indice_de_masa_corporal":"23.43","year":2019,"altura":172.9,"tasa_obesidad":0.2,"_id":"i2lfAySZYcRwDW1a"}
 {"place":"Belgica","indice_de_masa_corporal":24.15,"year":2019,"altura":172.9,"tasa_obesidad":20.2,"_id":"tEmHNbw6sS6Mspak"}
 {"place":"China","indice_de_masa_corporal":22.86,"year":2020,"altura":172.9,"tasa_obesidad":0.19,"_id":"uIX9D5q0E9fVzGWz"}
 {"place":"Polonia","indice_de_masa_corporal":23.21,"year":2019,"altura":173.6,"tasa_obesidad":0.19,"_id":"woReXUCQIwZ5nLRv"}
 {"place":"China","indice_de_masa_corporal":23.78,"year":2019,"altura":173.2,"tasa_obesidad":0.18,"_id":"zSD1pRaYhUa2yJuE"}
+{"place":"Alemania","indice_de_masa_corporal":27.04,"year":2020,"altura":123,"tasa_obesidad":321,"_id":"OstyELPf0xED2b6s"}
+{"place":"Alemania","indice_de_masa_corporal":27.04,"year":2020,"altura":123,"tasa_obesidad":321,"_id":"OstyELPf0xED2b6s"}
+{"place":"Alemania","indice_de_masa_corporal":32,"year":2020,"altura":123,"tasa_obesidad":321,"_id":"OstyELPf0xED2b6s"}

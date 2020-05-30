@@ -17537,7 +17537,7 @@ var app = (function () {
     	return block;
     }
 
-    // (78:0) {:then indice_de_masa_corporal}
+    // (80:0) {:then indice_de_masa_corporal}
     function create_then_block$3(ctx) {
     	let current;
 
@@ -17561,7 +17561,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, updatedYear, updatedindice_de_masa_corporal, updatedPlace*/ 2062) {
+    			if (dirty & /*$$scope, updatedtasa, updatedaltura, updatedYear, updatedindice_de_masa_corporal, updatedPlace*/ 8254) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17585,14 +17585,14 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(78:0) {:then indice_de_masa_corporal}",
+    		source: "(80:0) {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:21) <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>
+    // (99:21) <Button outline  color="primary" on:click={updateindice_de_masa_corporal}>
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -17612,14 +17612,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(97:21) <Button outline  color=\\\"primary\\\" on:click={updateindice_de_masa_corporal}>",
+    		source: "(99:21) <Button outline  color=\\\"primary\\\" on:click={updateindice_de_masa_corporal}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:4) <Table bordered>
+    // (81:4) <Table bordered>
     function create_default_slot_1$3(ctx) {
     	let thead;
     	let tr0;
@@ -17641,15 +17641,17 @@ var app = (function () {
     	let t12;
     	let t13;
     	let td1;
-    	let input;
+    	let input0;
     	let t14;
     	let td2;
     	let t15;
     	let t16;
     	let td3;
-    	let t18;
+    	let input1;
+    	let t17;
     	let td4;
-    	let t20;
+    	let input2;
+    	let t18;
     	let td5;
     	let current;
     	let dispose;
@@ -17694,36 +17696,38 @@ var app = (function () {
     			t12 = text(/*updatedPlace*/ ctx[1]);
     			t13 = space();
     			td1 = element("td");
-    			input = element("input");
+    			input0 = element("input");
     			t14 = space();
     			td2 = element("td");
     			t15 = text(/*updatedYear*/ ctx[3]);
     			t16 = space();
     			td3 = element("td");
-    			td3.textContent = `${/*updatedaltura*/ ctx[6]}`;
-    			t18 = space();
+    			input1 = element("input");
+    			t17 = space();
     			td4 = element("td");
-    			td4.textContent = `${/*updatedtasa*/ ctx[7]}`;
-    			t20 = space();
+    			input2 = element("input");
+    			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$v, 81, 16, 2951);
-    			add_location(th1, file$v, 82, 16, 2983);
-    			add_location(th2, file$v, 83, 16, 3014);
-    			add_location(th3, file$v, 84, 16, 3044);
-    			add_location(th4, file$v, 85, 16, 3077);
-    			add_location(th5, file$v, 86, 16, 3120);
-    			add_location(tr0, file$v, 80, 12, 2929);
-    			add_location(thead, file$v, 79, 8, 2908);
-    			add_location(td0, file$v, 91, 16, 3227);
-    			add_location(input, file$v, 92, 20, 3272);
-    			add_location(td1, file$v, 92, 16, 3268);
-    			add_location(td2, file$v, 93, 16, 3348);
-    			add_location(td3, file$v, 94, 16, 3388);
-    			add_location(td4, file$v, 95, 16, 3430);
-    			add_location(td5, file$v, 96, 16, 3470);
-    			add_location(tr1, file$v, 90, 12, 3205);
-    			add_location(tbody, file$v, 89, 8, 3184);
+    			add_location(th0, file$v, 83, 16, 3204);
+    			add_location(th1, file$v, 84, 16, 3236);
+    			add_location(th2, file$v, 85, 16, 3267);
+    			add_location(th3, file$v, 86, 16, 3297);
+    			add_location(th4, file$v, 87, 16, 3330);
+    			add_location(th5, file$v, 88, 16, 3373);
+    			add_location(tr0, file$v, 82, 12, 3182);
+    			add_location(thead, file$v, 81, 8, 3161);
+    			add_location(td0, file$v, 93, 16, 3480);
+    			add_location(input0, file$v, 94, 20, 3525);
+    			add_location(td1, file$v, 94, 16, 3521);
+    			add_location(td2, file$v, 95, 16, 3601);
+    			add_location(input1, file$v, 96, 20, 3645);
+    			add_location(td3, file$v, 96, 16, 3641);
+    			add_location(input2, file$v, 97, 20, 3708);
+    			add_location(td4, file$v, 97, 16, 3704);
+    			add_location(td5, file$v, 98, 16, 3765);
+    			add_location(tr1, file$v, 92, 12, 3458);
+    			add_location(tbody, file$v, 91, 8, 3437);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -17746,33 +17750,51 @@ var app = (function () {
     			append_dev(td0, t12);
     			append_dev(tr1, t13);
     			append_dev(tr1, td1);
-    			append_dev(td1, input);
-    			set_input_value(input, /*updatedindice_de_masa_corporal*/ ctx[2]);
+    			append_dev(td1, input0);
+    			set_input_value(input0, /*updatedindice_de_masa_corporal*/ ctx[2]);
     			append_dev(tr1, t14);
     			append_dev(tr1, td2);
     			append_dev(td2, t15);
     			append_dev(tr1, t16);
     			append_dev(tr1, td3);
-    			append_dev(tr1, t18);
+    			append_dev(td3, input1);
+    			set_input_value(input1, /*updatedaltura*/ ctx[4]);
+    			append_dev(tr1, t17);
     			append_dev(tr1, td4);
-    			append_dev(tr1, t20);
+    			append_dev(td4, input2);
+    			set_input_value(input2, /*updatedtasa*/ ctx[5]);
+    			append_dev(tr1, t18);
     			append_dev(tr1, td5);
     			mount_component(button, td5, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[10]);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[11]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[12])
+    			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedPlace*/ 2) set_data_dev(t12, /*updatedPlace*/ ctx[1]);
 
-    			if (dirty & /*updatedindice_de_masa_corporal*/ 4 && input.value !== /*updatedindice_de_masa_corporal*/ ctx[2]) {
-    				set_input_value(input, /*updatedindice_de_masa_corporal*/ ctx[2]);
+    			if (dirty & /*updatedindice_de_masa_corporal*/ 4 && input0.value !== /*updatedindice_de_masa_corporal*/ ctx[2]) {
+    				set_input_value(input0, /*updatedindice_de_masa_corporal*/ ctx[2]);
     			}
 
     			if (!current || dirty & /*updatedYear*/ 8) set_data_dev(t15, /*updatedYear*/ ctx[3]);
+
+    			if (dirty & /*updatedaltura*/ 16 && input1.value !== /*updatedaltura*/ ctx[4]) {
+    				set_input_value(input1, /*updatedaltura*/ ctx[4]);
+    			}
+
+    			if (dirty & /*updatedtasa*/ 32 && input2.value !== /*updatedtasa*/ ctx[5]) {
+    				set_input_value(input2, /*updatedtasa*/ ctx[5]);
+    			}
+
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17792,7 +17814,7 @@ var app = (function () {
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
     			destroy_component(button);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -17800,14 +17822,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(79:4) <Table bordered>",
+    		source: "(81:4) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}
+    // (78:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}
     function create_pending_block$3(ctx) {
     	let t;
 
@@ -17830,14 +17852,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(76:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}",
+    		source: "(78:32)       Loading indice_de_masa_corporal...  {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (102:0) {#if errorMsg}
+    // (104:0) {#if errorMsg}
     function create_if_block$9(ctx) {
     	let p;
     	let t0;
@@ -17847,9 +17869,9 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("ERROR: ");
-    			t1 = text(/*errorMsg*/ ctx[4]);
+    			t1 = text(/*errorMsg*/ ctx[6]);
     			set_style(p, "color", "red");
-    			add_location(p, file$v, 102, 4, 3653);
+    			add_location(p, file$v, 104, 4, 3948);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -17857,7 +17879,7 @@ var app = (function () {
     			append_dev(p, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*errorMsg*/ 16) set_data_dev(t1, /*errorMsg*/ ctx[4]);
+    			if (dirty & /*errorMsg*/ 64) set_data_dev(t1, /*errorMsg*/ ctx[6]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -17868,14 +17890,14 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(102:0) {#if errorMsg}",
+    		source: "(104:0) {#if errorMsg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (105:0) <Button outline color="secondary" on:click="{pop}">
+    // (107:0) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$l(ctx) {
     	let t;
 
@@ -17895,7 +17917,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$l.name,
     		type: "slot",
-    		source: "(105:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(107:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -17922,12 +17944,12 @@ var app = (function () {
     		pending: create_pending_block$3,
     		then: create_then_block$3,
     		catch: create_catch_block$3,
-    		value: 5,
+    		value: 7,
     		blocks: [,,,]
     	};
 
-    	handle_promise(promise = /*indice_de_masa_corporal*/ ctx[5], info);
-    	let if_block = /*errorMsg*/ ctx[4] && create_if_block$9(ctx);
+    	handle_promise(promise = /*indice_de_masa_corporal*/ ctx[7], info);
+    	let if_block = /*errorMsg*/ ctx[6] && create_if_block$9(ctx);
 
     	const button = new Button({
     			props: {
@@ -17954,9 +17976,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$v, 74, 37, 2728);
-    			add_location(h3, file$v, 74, 4, 2695);
-    			add_location(main, file$v, 73, 0, 2683);
+    			add_location(strong, file$v, 76, 37, 2981);
+    			add_location(h3, file$v, 76, 4, 2948);
+    			add_location(main, file$v, 75, 0, 2936);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17982,13 +18004,13 @@ var app = (function () {
     			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].placename + "")) set_data_dev(t1, t1_value);
     			info.ctx = ctx;
 
-    			if (dirty & /*indice_de_masa_corporal*/ 32 && promise !== (promise = /*indice_de_masa_corporal*/ ctx[5]) && handle_promise(promise, info)) ; else {
+    			if (dirty & /*indice_de_masa_corporal*/ 128 && promise !== (promise = /*indice_de_masa_corporal*/ ctx[7]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[5] = info.resolved;
+    				child_ctx[7] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
 
-    			if (/*errorMsg*/ ctx[4]) {
+    			if (/*errorMsg*/ ctx[6]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -18003,7 +18025,7 @@ var app = (function () {
 
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18051,25 +18073,28 @@ var app = (function () {
     	let updatedPlace = "";
     	let updatedindice_de_masa_corporal = 0;
     	let updatedYear = 0;
-    	let updatedaltura = "no modificable";
-    	let updatedtasa = "no modificable";
+    	let updatedaltura = "";
+    	let updatedtasa = "";
     	let errorMsg = "";
     	onMount(getindices_de_masa_corporal);
 
     	async function getindices_de_masa_corporal() {
     		console.log("Fetching indice_de_masa_corporal resource...");
-    		const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year);
+    		const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year);
+    		console.log(res);
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
-    			$$invalidate(5, indice_de_masa_corporal = json);
-    			$$invalidate(1, updatedPlace = indice_de_masa_corporal[0].place);
-    			$$invalidate(2, updatedindice_de_masa_corporal = indice_de_masa_corporal[0].indice_de_masa_corporal);
-    			$$invalidate(3, updatedYear = indice_de_masa_corporal[0].year);
+    			$$invalidate(7, indice_de_masa_corporal = json);
+    			$$invalidate(1, updatedPlace = indice_de_masa_corporal.place);
+    			$$invalidate(2, updatedindice_de_masa_corporal = indice_de_masa_corporal.indice_de_masa_corporal);
+    			$$invalidate(3, updatedYear = indice_de_masa_corporal.year);
+    			$$invalidate(4, updatedaltura = indice_de_masa_corporal.altura);
+    			$$invalidate(5, updatedtasa = indice_de_masa_corporal.tasa_obesidad);
     			console.log("Received indice_de_masa_corporal resource.");
     		} else {
-    			$$invalidate(4, errorMsg = res.status + ": " + res.statusText);
+    			$$invalidate(6, errorMsg = res.status + ": " + res.statusText);
     			console.log("ERROR!" + errorMsg);
     		}
     	}
@@ -18081,19 +18106,19 @@ var app = (function () {
     		console.log(updatedindice_de_masa_corporal);
     		console.log(parseInt(params.year));
 
-    		if (updatedindice_de_masa_corporal == "") {
-    			alert("el imc se ha dejado en blanco");
-    		} else if (!pattern2.test(updatedindice_de_masa_corporal)) {
-    			alert("Formato no válido");
-    		} else if (updatedindice_de_masa_corporal < 0) {
-    			alert("no es válido un numero negativo");
+    		if (updatedindice_de_masa_corporal == "" || updatedaltura == "" || updatedtasa == "") {
+    			alert("no pueden haber valores en blanco");
+    		} else if (!pattern2.test(updatedindice_de_masa_corporal) || !pattern2.test(updatedaltura) || !pattern2.test(updatedtasa)) {
+    			alert("deben ser numeros (positivos)");
     		} else {
-    			const res = await fetch("/api/v1/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
+    			const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
     				method: "PUT",
     				body: JSON.stringify({
     					place: params.placename,
-    					indice_de_masa_corporal: updatedindice_de_masa_corporal,
-    					year: parseInt(params.year)
+    					indice_de_masa_corporal: parseFloat(updatedindice_de_masa_corporal),
+    					year: parseInt(params.year),
+    					altura: parseFloat(updatedaltura),
+    					tasa_obesidad: parseFloat(updatedtasa)
     				}),
     				headers: { "Content-Type": "application/json" }
     			}).then(function (res) {
@@ -18113,9 +18138,19 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("EditValue_svelte", $$slots, []);
 
-    	function input_input_handler() {
+    	function input0_input_handler() {
     		updatedindice_de_masa_corporal = this.value;
     		$$invalidate(2, updatedindice_de_masa_corporal);
+    	}
+
+    	function input1_input_handler() {
+    		updatedaltura = this.value;
+    		$$invalidate(4, updatedaltura);
+    	}
+
+    	function input2_input_handler() {
+    		updatedtasa = this.value;
+    		$$invalidate(5, updatedtasa);
     	}
 
     	$$self.$set = $$props => {
@@ -18142,13 +18177,13 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    		if ("indice_de_masa_corporal" in $$props) $$invalidate(5, indice_de_masa_corporal = $$props.indice_de_masa_corporal);
+    		if ("indice_de_masa_corporal" in $$props) $$invalidate(7, indice_de_masa_corporal = $$props.indice_de_masa_corporal);
     		if ("updatedPlace" in $$props) $$invalidate(1, updatedPlace = $$props.updatedPlace);
     		if ("updatedindice_de_masa_corporal" in $$props) $$invalidate(2, updatedindice_de_masa_corporal = $$props.updatedindice_de_masa_corporal);
     		if ("updatedYear" in $$props) $$invalidate(3, updatedYear = $$props.updatedYear);
-    		if ("updatedaltura" in $$props) $$invalidate(6, updatedaltura = $$props.updatedaltura);
-    		if ("updatedtasa" in $$props) $$invalidate(7, updatedtasa = $$props.updatedtasa);
-    		if ("errorMsg" in $$props) $$invalidate(4, errorMsg = $$props.errorMsg);
+    		if ("updatedaltura" in $$props) $$invalidate(4, updatedaltura = $$props.updatedaltura);
+    		if ("updatedtasa" in $$props) $$invalidate(5, updatedtasa = $$props.updatedtasa);
+    		if ("errorMsg" in $$props) $$invalidate(6, errorMsg = $$props.errorMsg);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -18160,13 +18195,15 @@ var app = (function () {
     		updatedPlace,
     		updatedindice_de_masa_corporal,
     		updatedYear,
-    		errorMsg,
-    		indice_de_masa_corporal,
     		updatedaltura,
     		updatedtasa,
+    		errorMsg,
+    		indice_de_masa_corporal,
     		updateindice_de_masa_corporal,
     		getindices_de_masa_corporal,
-    		input_input_handler
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler
     	];
     }
 
@@ -44179,7 +44216,7 @@ var app = (function () {
     /***/ })
     /******/ ]);
     });
-
+    //# sourceMappingURL=billboard.js.map
     });
 
     var bb = unwrapExports(billboard);
