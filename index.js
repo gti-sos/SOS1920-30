@@ -18,11 +18,11 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-var pathImc='/api/search';
-var apiServerHostImc = 'https://food-calorie-data-search.p.rapidapi.com';
+var pathEx='/api/search';
+var apiServerHostEx = 'https://food-calorie-data-search.p.rapidapi.com';
 
-app.use(pathImc, function(req, res) {
-	var url = apiServerHostImc + req.baseUrl + req.url;
+app.use(pathEx, function(req, res) {
+	var url = apiServerHostEx + req.baseUrl + req.url;
 	console.log('piped: '+req.baseUrl + req.url);
 	req.pipe(request(url)).pipe(res);
 });
