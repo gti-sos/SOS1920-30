@@ -111,8 +111,10 @@
 		indices = await res.json();
 		console.log("Inserting indice_de_masa_corporal resource...");
 		indices.forEach((data) => {
+			if(data.place == newindice_de_masa_corporal.place){
 			Lugares.push(data.place);
 			años.push(data.year);
+			}
 		});
 		if (newindice_de_masa_corporal.place == ""|| newindice_de_masa_corporal.place == null
 			|| newindice_de_masa_corporal.year == "" || newindice_de_masa_corporal.year == null) {

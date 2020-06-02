@@ -15039,7 +15039,7 @@ var app = (function () {
     	return block;
     }
 
-    // (232:1) {:then indice_de_masa_corporal}
+    // (234:1) {:then indice_de_masa_corporal}
     function create_then_block$2(ctx) {
     	let t0;
     	let t1;
@@ -15167,14 +15167,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(232:1) {:then indice_de_masa_corporal}",
+    		source: "(234:1) {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (236:3) <Label for="selectCountry">
+    // (238:3) <Label for="selectCountry">
     function create_default_slot_21$1(ctx) {
     	let t;
 
@@ -15194,14 +15194,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$1.name,
     		type: "slot",
-    		source: "(236:3) <Label for=\\\"selectCountry\\\">",
+    		source: "(238:3) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (238:4) {#each sitios as place}
+    // (240:4) {#each sitios as place}
     function create_each_block_2$1(ctx) {
     	let option;
     	let t_value = /*place*/ ctx[38] + "";
@@ -15214,7 +15214,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*place*/ ctx[38];
     			option.value = option.__value;
-    			add_location(option, file$u, 238, 4, 6649);
+    			add_location(option, file$u, 240, 4, 6711);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -15238,14 +15238,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(238:4) {#each sitios as place}",
+    		source: "(240:4) {#each sitios as place}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (237:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
+    // (239:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
     function create_default_slot_20$1(ctx) {
     	let t0;
     	let option;
@@ -15268,7 +15268,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$u, 240, 4, 6692);
+    			add_location(option, file$u, 242, 4, 6754);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -15314,14 +15314,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$1.name,
     		type: "slot",
-    		source: "(237:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentplace}\\\">",
+    		source: "(239:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentplace}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (235:2) <FormGroup>
+    // (237:2) <FormGroup>
     function create_default_slot_19$1(ctx) {
     	let t;
     	let updating_value;
@@ -15411,14 +15411,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$1.name,
     		type: "slot",
-    		source: "(235:2) <FormGroup>",
+    		source: "(237:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (246:3) <Label for="selectYear">
+    // (248:3) <Label for="selectYear">
     function create_default_slot_18$1(ctx) {
     	let t;
 
@@ -15438,14 +15438,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$1.name,
     		type: "slot",
-    		source: "(246:3) <Label for=\\\"selectYear\\\">",
+    		source: "(248:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (248:4) {#each años as year}
+    // (250:4) {#each años as year}
     function create_each_block_1$1(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[35] + "";
@@ -15458,7 +15458,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[35];
     			option.value = option.__value;
-    			add_location(option, file$u, 248, 4, 6935);
+    			add_location(option, file$u, 250, 4, 6997);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -15482,14 +15482,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(248:4) {#each años as year}",
+    		source: "(250:4) {#each años as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (247:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+    // (249:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
     function create_default_slot_17$1(ctx) {
     	let t0;
     	let option;
@@ -15512,7 +15512,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$u, 250, 4, 6977);
+    			add_location(option, file$u, 252, 4, 7039);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -15558,14 +15558,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$1.name,
     		type: "slot",
-    		source: "(247:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
+    		source: "(249:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (245:2) <FormGroup>
+    // (247:2) <FormGroup>
     function create_default_slot_16$1(ctx) {
     	let t;
     	let updating_value;
@@ -15655,14 +15655,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$1.name,
     		type: "slot",
-    		source: "(245:2) <FormGroup>",
+    		source: "(247:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (255:2) <Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" >
+    // (257:2) <Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" >
     function create_default_slot_15$1(ctx) {
     	let i;
     	let t;
@@ -15672,7 +15672,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$u, 254, 107, 7135);
+    			add_location(i, file$u, 256, 107, 7197);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15688,14 +15688,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$1.name,
     		type: "slot",
-    		source: "(255:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentplace, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(257:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentplace, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (276:10) <Button outline color="primary" on:click={insertindice_de_masa_corporal}>
+    // (278:10) <Button outline color="primary" on:click={insertindice_de_masa_corporal}>
     function create_default_slot_14$1(ctx) {
     	let i;
     	let t;
@@ -15705,7 +15705,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" AÑADIR");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$u, 275, 84, 8102);
+    			add_location(i, file$u, 277, 84, 8164);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15721,14 +15721,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(276:10) <Button outline color=\\\"primary\\\" on:click={insertindice_de_masa_corporal}>",
+    		source: "(278:10) <Button outline color=\\\"primary\\\" on:click={insertindice_de_masa_corporal}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (289:10) <Button outline color="danger" on:click="{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}">
+    // (291:10) <Button outline color="danger" on:click="{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}">
     function create_default_slot_13$1(ctx) {
     	let i;
     	let t;
@@ -15739,7 +15739,7 @@ var app = (function () {
     			t = text(" ELIMINAR");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$u, 288, 148, 8804);
+    			add_location(i, file$u, 290, 148, 8866);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15755,14 +15755,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$1.name,
     		type: "slot",
-    		source: "(289:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}\\\">",
+    		source: "(291:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (278:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}
+    // (280:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -15828,14 +15828,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/indice_de_masa_corporal/" + /*indices_de_masa_corporal*/ ctx[32].place + "/" + /*indices_de_masa_corporal*/ ctx[32].year);
-    			add_location(a, file$u, 280, 6, 8260);
-    			add_location(td0, file$u, 279, 5, 8245);
-    			add_location(td1, file$u, 284, 5, 8436);
-    			add_location(td2, file$u, 285, 5, 8503);
-    			add_location(td3, file$u, 286, 5, 8552);
-    			add_location(td4, file$u, 287, 5, 8603);
-    			add_location(td5, file$u, 288, 5, 8661);
-    			add_location(tr, file$u, 278, 4, 8234);
+    			add_location(a, file$u, 282, 6, 8322);
+    			add_location(td0, file$u, 281, 5, 8307);
+    			add_location(td1, file$u, 286, 5, 8498);
+    			add_location(td2, file$u, 287, 5, 8565);
+    			add_location(td3, file$u, 288, 5, 8614);
+    			add_location(td4, file$u, 289, 5, 8665);
+    			add_location(td5, file$u, 290, 5, 8723);
+    			add_location(tr, file$u, 280, 4, 8296);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -15899,14 +15899,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(278:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}",
+    		source: "(280:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (258:2) <Table bordered>
+    // (260:2) <Table bordered>
     function create_default_slot_12$1(ctx) {
     	let thead;
     	let tr0;
@@ -16084,22 +16084,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$u, 260, 5, 7236);
-    			add_location(th1, file$u, 261, 5, 7259);
-    			add_location(th2, file$u, 262, 5, 7279);
-    			add_location(th3, file$u, 263, 5, 7300);
-    			add_location(th4, file$u, 264, 5, 7324);
-    			add_location(th5, file$u, 265, 5, 7358);
-    			add_location(tr0, file$u, 259, 4, 7225);
-    			add_location(thead, file$u, 258, 3, 7212);
-    			add_location(td0, file$u, 270, 5, 7430);
-    			add_location(td1, file$u, 271, 5, 7536);
-    			add_location(td2, file$u, 272, 5, 7681);
-    			add_location(td3, file$u, 273, 5, 7787);
-    			add_location(td4, file$u, 274, 5, 7898);
-    			add_location(td5, file$u, 275, 5, 8023);
-    			add_location(tr1, file$u, 269, 4, 7419);
-    			add_location(tbody, file$u, 268, 3, 7406);
+    			add_location(th0, file$u, 262, 5, 7298);
+    			add_location(th1, file$u, 263, 5, 7321);
+    			add_location(th2, file$u, 264, 5, 7341);
+    			add_location(th3, file$u, 265, 5, 7362);
+    			add_location(th4, file$u, 266, 5, 7386);
+    			add_location(th5, file$u, 267, 5, 7420);
+    			add_location(tr0, file$u, 261, 4, 7287);
+    			add_location(thead, file$u, 260, 3, 7274);
+    			add_location(td0, file$u, 272, 5, 7492);
+    			add_location(td1, file$u, 273, 5, 7598);
+    			add_location(td2, file$u, 274, 5, 7743);
+    			add_location(td3, file$u, 275, 5, 7849);
+    			add_location(td4, file$u, 276, 5, 7960);
+    			add_location(td5, file$u, 277, 5, 8085);
+    			add_location(tr1, file$u, 271, 4, 7481);
+    			add_location(tbody, file$u, 270, 3, 7468);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -16273,14 +16273,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$1.name,
     		type: "slot",
-    		source: "(258:2) <Table bordered>",
+    		source: "(260:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (230:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}
+    // (232:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -16303,14 +16303,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(230:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}",
+    		source: "(232:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:2) <PaginationItem class="{pgactual === 1 ? 'disabled' : ''}">
+    // (303:2) <PaginationItem class="{pgactual === 1 ? 'disabled' : ''}">
     function create_default_slot_11$1(ctx) {
     	let current;
 
@@ -16351,14 +16351,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(301:2) <PaginationItem class=\\\"{pgactual === 1 ? 'disabled' : ''}\\\">",
+    		source: "(303:2) <PaginationItem class=\\\"{pgactual === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (305:2) {#if pgactual != 1}
+    // (307:2) {#if pgactual != 1}
     function create_if_block_1$3(ctx) {
     	let current;
 
@@ -16405,14 +16405,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(305:2) {#if pgactual != 1}",
+    		source: "(307:2) {#if pgactual != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (307:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >
+    // (309:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10$1(ctx) {
     	let t_value = /*pgactual*/ ctx[5] - 1 + "";
     	let t;
@@ -16436,14 +16436,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(307:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(309:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (306:2) <PaginationItem>
+    // (308:2) <PaginationItem>
     function create_default_slot_9$1(ctx) {
     	let current;
 
@@ -16493,14 +16493,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(306:2) <PaginationItem>",
+    		source: "(308:2) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (311:3) <PaginationLink href="#/indice_de_masa_corporal" >
+    // (313:3) <PaginationLink href="#/indice_de_masa_corporal" >
     function create_default_slot_8$1(ctx) {
     	let t;
 
@@ -16523,14 +16523,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(311:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" >",
+    		source: "(313:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:2) <PaginationItem active>
+    // (312:2) <PaginationItem active>
     function create_default_slot_7$1(ctx) {
     	let current;
 
@@ -16578,14 +16578,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(310:2) <PaginationItem active>",
+    		source: "(312:2) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:2) {#if pgsiguiente}
+    // (316:2) {#if pgsiguiente}
     function create_if_block$8(ctx) {
     	let current;
 
@@ -16632,14 +16632,14 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(314:2) {#if pgsiguiente}",
+    		source: "(316:2) {#if pgsiguiente}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">
+    // (318:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">
     function create_default_slot_6$1(ctx) {
     	let t_value = /*pgactual*/ ctx[5] + 1 + "";
     	let t;
@@ -16663,14 +16663,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(316:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(318:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (315:2) <PaginationItem >
+    // (317:2) <PaginationItem >
     function create_default_slot_5$1(ctx) {
     	let current;
 
@@ -16720,14 +16720,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(315:2) <PaginationItem >",
+    		source: "(317:2) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:2) <PaginationItem class="{pgsiguiente ? '' : 'disabled'}">
+    // (322:2) <PaginationItem class="{pgsiguiente ? '' : 'disabled'}">
     function create_default_slot_4$1(ctx) {
     	let current;
 
@@ -16768,14 +16768,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(320:2) <PaginationItem class=\\\"{pgsiguiente ? '' : 'disabled'}\\\">",
+    		source: "(322:2) <PaginationItem class=\\\"{pgsiguiente ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (300:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3$1(ctx) {
     	let t0;
     	let t1;
@@ -16945,14 +16945,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(298:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(300:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (327:1) <Button outline color="secondary" on:click="{pop}">
+    // (329:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2$2(ctx) {
     	let i;
     	let t;
@@ -16962,7 +16962,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" ATRAS");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$u, 326, 53, 10005);
+    			add_location(i, file$u, 328, 53, 10067);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -16978,14 +16978,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(327:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(329:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color="danger">
+    // (331:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color="danger">
     function create_default_slot_1$2(ctx) {
     	let i;
     	let t;
@@ -16996,7 +16996,7 @@ var app = (function () {
     			t = text(" BORRAR TODO");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$u, 328, 77, 10188);
+    			add_location(i, file$u, 330, 77, 10250);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17012,14 +17012,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(329:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color=\\\"danger\\\">",
+    		source: "(331:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:1) <Button outline on:click={loading} color="primary">
+    // (333:1) <Button outline on:click={loading} color="primary">
     function create_default_slot$k(ctx) {
     	let i;
     	let t;
@@ -17030,7 +17030,7 @@ var app = (function () {
     			t = text(" PRIMEROS DATOS");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$u, 330, 53, 10347);
+    			add_location(i, file$u, 332, 53, 10409);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17046,7 +17046,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$k.name,
     		type: "slot",
-    		source: "(331:1) <Button outline on:click={loading} color=\\\"primary\\\">",
+    		source: "(333:1) <Button outline on:click={loading} color=\\\"primary\\\">",
     		ctx
     	});
 
@@ -17133,7 +17133,7 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t3 = space();
     			create_component(button2.$$.fragment);
-    			add_location(main, file$u, 228, 0, 6298);
+    			add_location(main, file$u, 230, 0, 6360);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17328,8 +17328,10 @@ var app = (function () {
     		console.log("Inserting indice_de_masa_corporal resource...");
 
     		indices.forEach(data => {
-    			Lugares.push(data.place);
-    			años.push(data.year);
+    			if (data.place == newindice_de_masa_corporal.place) {
+    				Lugares.push(data.place);
+    				años.push(data.year);
+    			}
     		});
 
     		if (newindice_de_masa_corporal.place == "" || newindice_de_masa_corporal.place == null || newindice_de_masa_corporal.year == "" || newindice_de_masa_corporal.year == null) {
@@ -44278,7 +44280,7 @@ var app = (function () {
     /***/ })
     /******/ ]);
     });
-    //# sourceMappingURL=billboard.js.map
+
     });
 
     var bb = unwrapExports(billboard);
