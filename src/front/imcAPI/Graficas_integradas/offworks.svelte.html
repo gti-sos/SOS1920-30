@@ -9,10 +9,12 @@
     let lugares2008 = [];
     let Misdatos = [];
     let Susdatos = [];
+    console.log("recogiendo valores de la api externa");
     const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
     const datos2 = await fetch("https://sos1920-23.herokuapp.com/api/v2/offworks-stats")
     Misdatos = await datos1.json();
     Susdatos = await datos2.json();
+    console.log("valores recogidos");
     Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
             let paises = { 
 		        'name': data.place,
@@ -26,8 +28,6 @@
             'value': data.accident
     };
         lugares2008.push(lugares);
-        console.log(paises2019);
-        console.log(lugares2008);
     });
     
 
