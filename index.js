@@ -36,6 +36,15 @@ app.use(path, function(req, res){
     console.log("piped: " + req.baseUrl + req.url);
     req.pipe(request(url2)).pipe(res);
 });
+//PROXY EXT2 - RAW
+var path2 = "/api/fruit/all";
+var host2 = "http://fruityvice.com";
+
+app.use(path2, function(req, res){
+	var url3 = host2 + req.baseUrl + req.url; 
+    console.log("piped: " + req.baseUrl + req.url);
+    req.pipe(request(url3)).pipe(res);
+});
 
 
 var port = process.env.PORT || 12345;

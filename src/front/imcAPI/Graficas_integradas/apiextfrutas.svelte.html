@@ -1,0 +1,103 @@
+<script>
+    import {
+            pop
+        } from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+async function loadGraph(){
+    let Datos = [];
+    let Misdatos = [];
+    let imc2019 = [];
+    let caloriasfrutas = [];
+    const resData = await fetch("/api/fruit/all")//mediante un proxy
+    Datos = await resData.json();
+    console.log(Datos);
+    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");  
+    Misdatos = await datos1.json();
+
+
+
+    Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
+            let x = { 
+		        'name': data.place,
+                'value': parseFloat(data.indice_de_masa_corporal)
+    	};
+            imc2019.push(x);
+        });
+
+    
+    Datos.forEach((data) => {
+    let y = { 
+		 'name': data.name,
+         'value': parseInt(data.nutritions.calories)
+    };
+        caloriasfrutas.push(y);
+    });  
+    console.log(caloriasfrutas);
+
+
+        Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'IMC en 2019 y el valor calorico de diferentes frutas'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}</sub>'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'imc 2019',
+        data: imc2019
+    }, {
+        name: 'calorias frutas',
+        data: caloriasfrutas
+    }
+    ]
+});
+}
+
+loadGraph();
+
+</script>
+
+<main>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Grafica que muestra el imc por sitios en 2019 y lac kcal que tienen algunas frutas. 
+            Muy útil para comparar con la otra grafica de kcal en hamburguesas y hot dogs para ver la tremenda diferencia.
+        </p>
+    </figure>
+    <p>
+        <button type="button"  color='primary'  onclick="window.location.href='#/imc/graficas_integradas/ext1'"><i class='fas fa-leaf' ></i> Grafica externa  "calorias-burguer-hotdog" </button>
+    </p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+</main>
