@@ -99,13 +99,17 @@
 
 
 	async function insertsugarconsume() {
+		const res = await fetch("/api/v3/sugarconsume"); 
+		const json = await res.json();
+		let sugarconsumeAll = [];
+		sugarconsumeAll = json;
 		console.log("Inserting sugarconsume resource...");
 		const pattern = new RegExp('^[A-Z]+$', 'i');
 		const pattern2 = new RegExp('^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$');
 		const pattern3 = new RegExp('^[0-9]+$'); 
 		var listaLugares = [];
 		var listaaños = [];
-		sugarconsume.forEach((x) => {
+		sugarconsumeAll.forEach((x) => {
 			if(x.place == newsugarconsume.place){
 
 			
