@@ -27,36 +27,39 @@
 		"altura": "",
 		"tasa_obesidad":""	
 	};
-	let places = [];
-	let years = [];
+
+
+	
+	let sitios = [];
+	let años = [];
 	let currentplace = "-";
 	let currentYear = "-";
 	let numberElementsPages = 10;
 	let offset = 0;
-	let currentPage = 1; 
-	let moreData = true; 
+	let pgactual = 1; 
+	let pgsiguiente = true; 
 	
 	
 	onMount(getindice_de_masa_corporal);
-	onMount(getyears);
+	onMount(getaños);
 
 
 	
-	async function getyears() {
+	async function getaños() {
 		const res = await fetch("/api/v3/indice_de_masa_corporal");
 		if (res.ok) {
 			const json = await res.json();
-			places = json.map((d) => {
+			sitios = json.map((d) => {
 					return d.place;
 			});
-			places = Array.from(new Set(places)); 
+			sitios = Array.from(new Set(sitios)); 
 			
-			years = json.map((d) => {
+			años = json.map((d) => {
 					return d.year;
 			});
 
-			years = Array.from(new Set(years)); 
-			console.log("Paises: " + places.length + "Años " + years.length);
+			años = Array.from(new Set(años)); 
+			console.log("Paises: " + sitios.length + "Años " + años.length);
 		} else {
 			console.log("ERROR!");
 		}
@@ -84,9 +87,9 @@
 			indice_de_masa_corporal = json;
 			
 			if (jsonNext.length == 0) {
-				moreData = false;
+				pgsiguiente = false;
 			} else {
-				moreData = true;
+				pgsiguiente = true;
 			}
 			console.log("Existen " + indice_de_masa_corporal.length + " recursos.");
 		} else {
@@ -101,12 +104,15 @@
 	const pattern2 = new RegExp('^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$');
 	const pattern3 = new RegExp('^[0-9]+$');
 	async function insertindice_de_masa_corporal() {
-		var listaLugares = [];
-		var listaaños = [];
+		let indices = [];
+		var Lugares = [];
+		var años = [];
+		const res = await fetch("/api/v3/indice_de_masa_corporal");
+		indices = await res.json();
 		console.log("Inserting indice_de_masa_corporal resource...");
-		indice_de_masa_corporal.forEach((x) => {
-			listaLugares.push(x.place);
-			listaaños.push(x.year);
+		indices.forEach((data) => {
+			Lugares.push(data.place);
+			años.push(data.year);
 		});
 		if (newindice_de_masa_corporal.place == ""|| newindice_de_masa_corporal.place == null
 			|| newindice_de_masa_corporal.year == "" || newindice_de_masa_corporal.year == null) {
@@ -120,7 +126,7 @@
 			}else if(!pattern2.test(newindice_de_masa_corporal.indice_de_masa_corporal) ||!pattern2.test(newindice_de_masa_corporal.altura) ||!pattern2.test(newindice_de_masa_corporal.tasa_obesidad) || !pattern3.test(newindice_de_masa_corporal.year) ){
 				alert("No has introducido un número correcto");
 
-			}else if(listaLugares.includes(newindice_de_masa_corporal.place) && listaaños.includes(newindice_de_masa_corporal.year)){
+			}else if(Lugares.includes(newindice_de_masa_corporal.place) && años.includes(newindice_de_masa_corporal.year)){
 				alert("El recurso que intentas insertar ya existe")
 
 
@@ -140,7 +146,7 @@
 							}
 						}).then(function(res) {
 							getindice_de_masa_corporal();
-							getyears();
+							getaños();
 						}); 
 						alert("Insertado con éxito.")
 					}
@@ -156,7 +162,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getindice_de_masa_corporal();
-			getyears();
+			getaños();
 		});
 		alert("Éxito");
 	}
@@ -171,7 +177,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getindice_de_masa_corporal();
-			getyears();
+			getaños();
 		});
 		alert("Éxito");
 	}
@@ -204,7 +210,7 @@
 
 	function addOffset (increment) {
 		offset += increment;
-		currentPage += increment;
+		pgactual += increment;
 		getindice_de_masa_corporal();
 	}
 	
@@ -229,7 +235,7 @@
 		<FormGroup> 
 			<Label for="selectCountry"> Búsqueda por pais </Label>
 			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
-				{#each places as place}
+				{#each sitios as place}
 				<option>{place}</option>
 				{/each}
 				<option>-</option>
@@ -239,7 +245,7 @@
 		<FormGroup>
 			<Label for="selectYear"> Búsqueda por año </Label>
 			<Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
-				{#each years as year}
+				{#each años as year}
 				<option>{year}</option>
 				{/each}
 				<option>-</option>
@@ -292,26 +298,26 @@
 	<Pagination style="float:right;" ariaLabel="Cambiar de página">
 
 
-		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+		<PaginationItem class="{pgactual === 1 ? 'disabled' : ''}">
 		  <PaginationLink previous href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" />
 		</PaginationItem>
 		
-		{#if currentPage != 1}
+		{#if pgactual != 1}
 		<PaginationItem>
-			<PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
+			<PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >{pgactual - 1}</PaginationLink>
 		</PaginationItem>
 		{/if}
 		<PaginationItem active>
-			<PaginationLink href="#/indice_de_masa_corporal" >{currentPage}</PaginationLink>
+			<PaginationLink href="#/indice_de_masa_corporal" >{pgactual}</PaginationLink>
 		</PaginationItem>
 
-		{#if moreData}
+		{#if pgsiguiente}
 		<PaginationItem >
-			<PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+			<PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">{pgactual + 1}</PaginationLink>
 		</PaginationItem>
 		{/if}
 
-		<PaginationItem class="{moreData ? '' : 'disabled'}">
+		<PaginationItem class="{pgsiguiente ? '' : 'disabled'}">
 		  <PaginationLink next href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}"/>
 		</PaginationItem>
 

@@ -15,14 +15,14 @@ module.exports = function (app) {
 var initialimc = [
 	{
 		place: "Alemania",
-		indice_de_masa_corporal: 25.32,
+		indice_de_masa_corporal: 65.98,
 		year: 2019,
 		altura: 172.9,
 		tasa_obesidad:0.20
 	},
 	{
 		place: "Polonia",
-		indice_de_masa_corporal: 23.21,
+		indice_de_masa_corporal: 96.32,
 		year: 2019,
 		altura: 173.6,
 		tasa_obesidad:0.19
@@ -30,7 +30,7 @@ var initialimc = [
 	},
 	{
 		place: "Hungria",
-		indice_de_masa_corporal: 24.45,
+		indice_de_masa_corporal: 59.45,
 		year: 2019,
 		altura: 170.9,
 		tasa_obesidad:0.22
@@ -38,7 +38,7 @@ var initialimc = [
 	},
 	{
 		place: "Alemania",
-		indice_de_masa_corporal: 27.03,
+		indice_de_masa_corporal: 78.13,
 		year: 2020,
 		altura: 173,
 		tasa_obesidad:0.19
@@ -46,7 +46,7 @@ var initialimc = [
 	},
 	{
 		place: "Polonia",
-		indice_de_masa_corporal: 25.00,
+		indice_de_masa_corporal: 73.68,
 		year: 2020,
 		altura: 172.7,
 		tasa_obesidad:0.20
@@ -54,11 +54,32 @@ var initialimc = [
 	},
 	{
 		place: "Hungria",
-		indice_de_masa_corporal: 26.13,
+		indice_de_masa_corporal: 23.13,
 		year: 2020,
 		altura: 170.2,
 		tasa_obesidad:0.21
 		
+	},{
+		place: "Alemania",
+		indice_de_masa_corporal: 103.2,
+		year: 2021,
+		altura: 172.9,
+		tasa_obesidad:0.20
+	},
+	{
+		place: "Polonia",
+		indice_de_masa_corporal: 89.4,
+		year: 2021,
+		altura: 173.6,
+		tasa_obesidad:0.19
+		
+	},
+	{
+		place: "Hungria",
+		indice_de_masa_corporal: 32.13,
+		year: 2021,
+		altura: 170.9,
+		tasa_obesidad:0.22	
 	},
 	{
 		place: "China",
@@ -78,16 +99,31 @@ var initialimc = [
 	},
 	{
 		place: "China",
-		indice_de_masa_corporal: 22.86,
+		indice_de_masa_corporal: 65.86,
 		year: 2020,
 		altura: 172.9,
 		tasa_obesidad:0.19
 		
 	},
 	{
+		place: "China",
+		indice_de_masa_corporal: 40.52,
+		year: 2021,
+		altura: 172.9,
+		tasa_obesidad:0.19
+		
+	},
+	{
 		place: "Belgica",
-		indice_de_masa_corporal: 25.93,
+		indice_de_masa_corporal: 51.93,
 		year: 2020,
+		altura: 173.4,
+		tasa_obesidad:0.19
+		
+	},{
+		place: "Belgica",
+		indice_de_masa_corporal: 65.93,
+		year: 2021,
 		altura: 173.4,
 		tasa_obesidad:0.19
 		

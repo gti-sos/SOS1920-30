@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 (function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 var app = (function () {
@@ -7615,7 +7613,7 @@ var app = (function () {
     	return block;
     }
 
-    // (233:1) {:then sugarconsume}
+    // (237:1) {:then sugarconsume}
     function create_then_block(ctx) {
     	let t0;
     	let t1;
@@ -7743,14 +7741,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(233:1) {:then sugarconsume}",
+    		source: "(237:1) {:then sugarconsume}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (237:3) <Label for="selectCountry">
+    // (241:3) <Label for="selectCountry">
     function create_default_slot_21(ctx) {
     	let t;
 
@@ -7770,14 +7768,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(237:3) <Label for=\\\"selectCountry\\\">",
+    		source: "(241:3) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (239:4) {#each places as place}
+    // (243:4) {#each places as place}
     function create_each_block_2(ctx) {
     	let option;
     	let t_value = /*place*/ ctx[35] + "";
@@ -7790,7 +7788,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*place*/ ctx[35];
     			option.value = option.__value;
-    			add_location(option, file$c, 239, 4, 6595);
+    			add_location(option, file$c, 243, 4, 6741);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -7814,14 +7812,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(239:4) {#each places as place}",
+    		source: "(243:4) {#each places as place}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (238:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
+    // (242:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
     function create_default_slot_20(ctx) {
     	let t0;
     	let option;
@@ -7844,7 +7842,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$c, 241, 4, 6638);
+    			add_location(option, file$c, 245, 4, 6784);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -7890,14 +7888,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(238:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentplace}\\\">",
+    		source: "(242:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentplace}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (236:2) <FormGroup>
+    // (240:2) <FormGroup>
     function create_default_slot_19(ctx) {
     	let t;
     	let updating_value;
@@ -7987,14 +7985,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(236:2) <FormGroup>",
+    		source: "(240:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (248:3) <Label for="selectYear">
+    // (252:3) <Label for="selectYear">
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -8014,14 +8012,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(248:3) <Label for=\\\"selectYear\\\">",
+    		source: "(252:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (250:4) {#each years as year}
+    // (254:4) {#each years as year}
     function create_each_block_1(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[32] + "";
@@ -8034,7 +8032,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[32];
     			option.value = option.__value;
-    			add_location(option, file$c, 250, 4, 6928);
+    			add_location(option, file$c, 254, 4, 7074);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -8058,14 +8056,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(250:4) {#each years as year}",
+    		source: "(254:4) {#each years as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (249:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+    // (253:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
     function create_default_slot_17(ctx) {
     	let t0;
     	let option;
@@ -8088,7 +8086,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$c, 252, 4, 6970);
+    			add_location(option, file$c, 256, 4, 7116);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -8134,14 +8132,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(249:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
+    		source: "(253:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (247:2) <FormGroup>
+    // (251:2) <FormGroup>
     function create_default_slot_16(ctx) {
     	let t;
     	let updating_value;
@@ -8231,14 +8229,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(247:2) <FormGroup>",
+    		source: "(251:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (258:2) <Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" >
+    // (262:2) <Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" >
     function create_default_slot_15(ctx) {
     	let i;
     	let t;
@@ -8248,7 +8246,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$c, 257, 107, 7172);
+    			add_location(i, file$c, 261, 107, 7318);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8264,14 +8262,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(258:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentplace, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(262:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentplace, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (279:10) <Button outline color="primary" on:click={insertsugarconsume}>
+    // (283:10) <Button outline color="primary" on:click={insertsugarconsume}>
     function create_default_slot_14(ctx) {
     	let i;
     	let t;
@@ -8281,7 +8279,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$c, 278, 73, 8098);
+    			add_location(i, file$c, 282, 73, 8244);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8297,14 +8295,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(279:10) <Button outline color=\\\"primary\\\" on:click={insertsugarconsume}>",
+    		source: "(283:10) <Button outline color=\\\"primary\\\" on:click={insertsugarconsume}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (292:10) <Button outline color="danger" on:click="{deletesugarconsume(sugarconsumeresource.place, sugarconsumeresource.year)}">
+    // (296:10) <Button outline color="danger" on:click="{deletesugarconsume(sugarconsumeresource.place, sugarconsumeresource.year)}">
     function create_default_slot_13(ctx) {
     	let i;
     	let t;
@@ -8315,7 +8313,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 291, 129, 8719);
+    			add_location(i, file$c, 295, 129, 8865);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8331,14 +8329,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(292:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletesugarconsume(sugarconsumeresource.place, sugarconsumeresource.year)}\\\">",
+    		source: "(296:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletesugarconsume(sugarconsumeresource.place, sugarconsumeresource.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (281:4) {#each sugarconsume as sugarconsumeresource}
+    // (285:4) {#each sugarconsume as sugarconsumeresource}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -8404,14 +8402,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/sugarconsume/" + /*sugarconsumeresource*/ ctx[29].place + "/" + /*sugarconsumeresource*/ ctx[29].year);
-    			add_location(a, file$c, 283, 6, 8243);
-    			add_location(td0, file$c, 282, 5, 8228);
-    			add_location(td1, file$c, 287, 5, 8396);
-    			add_location(td2, file$c, 288, 5, 8448);
-    			add_location(td3, file$c, 289, 5, 8493);
-    			add_location(td4, file$c, 290, 5, 8545);
-    			add_location(td5, file$c, 291, 5, 8595);
-    			add_location(tr, file$c, 281, 4, 8217);
+    			add_location(a, file$c, 287, 6, 8389);
+    			add_location(td0, file$c, 286, 5, 8374);
+    			add_location(td1, file$c, 291, 5, 8542);
+    			add_location(td2, file$c, 292, 5, 8594);
+    			add_location(td3, file$c, 293, 5, 8639);
+    			add_location(td4, file$c, 294, 5, 8691);
+    			add_location(td5, file$c, 295, 5, 8741);
+    			add_location(tr, file$c, 285, 4, 8363);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8475,14 +8473,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(281:4) {#each sugarconsume as sugarconsumeresource}",
+    		source: "(285:4) {#each sugarconsume as sugarconsumeresource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (261:2) <Table bordered>
+    // (265:2) <Table bordered>
     function create_default_slot_12(ctx) {
     	let thead;
     	let tr0;
@@ -8660,22 +8658,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$c, 263, 5, 7273);
-    			add_location(th1, file$c, 264, 5, 7296);
-    			add_location(th2, file$c, 265, 5, 7335);
-    			add_location(th3, file$c, 266, 5, 7356);
-    			add_location(th4, file$c, 267, 5, 7396);
-    			add_location(th5, file$c, 268, 5, 7423);
-    			add_location(tr0, file$c, 262, 4, 7262);
-    			add_location(thead, file$c, 261, 3, 7249);
-    			add_location(td0, file$c, 273, 5, 7495);
-    			add_location(td1, file$c, 274, 5, 7591);
-    			add_location(td2, file$c, 275, 5, 7708);
-    			add_location(td3, file$c, 276, 5, 7803);
-    			add_location(td4, file$c, 277, 5, 7924);
-    			add_location(td5, file$c, 278, 5, 8030);
-    			add_location(tr1, file$c, 272, 4, 7484);
-    			add_location(tbody, file$c, 271, 3, 7471);
+    			add_location(th0, file$c, 267, 5, 7419);
+    			add_location(th1, file$c, 268, 5, 7442);
+    			add_location(th2, file$c, 269, 5, 7481);
+    			add_location(th3, file$c, 270, 5, 7502);
+    			add_location(th4, file$c, 271, 5, 7542);
+    			add_location(th5, file$c, 272, 5, 7569);
+    			add_location(tr0, file$c, 266, 4, 7408);
+    			add_location(thead, file$c, 265, 3, 7395);
+    			add_location(td0, file$c, 277, 5, 7641);
+    			add_location(td1, file$c, 278, 5, 7737);
+    			add_location(td2, file$c, 279, 5, 7854);
+    			add_location(td3, file$c, 280, 5, 7949);
+    			add_location(td4, file$c, 281, 5, 8070);
+    			add_location(td5, file$c, 282, 5, 8176);
+    			add_location(tr1, file$c, 276, 4, 7630);
+    			add_location(tbody, file$c, 275, 3, 7617);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -8849,14 +8847,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(261:2) <Table bordered>",
+    		source: "(265:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (231:22)     Loading sugarconsume resources...   {:then sugarconsume}
+    // (235:22)     Loading sugarconsume resources...   {:then sugarconsume}
     function create_pending_block(ctx) {
     	let t;
 
@@ -8879,14 +8877,14 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(231:22)     Loading sugarconsume resources...   {:then sugarconsume}",
+    		source: "(235:22)     Loading sugarconsume resources...   {:then sugarconsume}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+    // (307:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_11(ctx) {
     	let current;
 
@@ -8927,14 +8925,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(303:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(307:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (307:2) {#if currentPage != 1}
+    // (311:2) {#if currentPage != 1}
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -8981,14 +8979,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(307:2) {#if currentPage != 1}",
+    		source: "(311:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:3) <PaginationLink href="#/sugarconsumeAPI" on:click="{() => addOffset(-1)}" >
+    // (313:3) <PaginationLink href="#/sugarconsumeAPI" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -9012,14 +9010,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(309:3) <PaginationLink href=\\\"#/sugarconsumeAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(313:3) <PaginationLink href=\\\"#/sugarconsumeAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:2) <PaginationItem>
+    // (312:2) <PaginationItem>
     function create_default_slot_9(ctx) {
     	let current;
 
@@ -9069,14 +9067,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(308:2) <PaginationItem>",
+    		source: "(312:2) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (313:3) <PaginationLink href="#/sugarconsumeAPI" >
+    // (317:3) <PaginationLink href="#/sugarconsumeAPI" >
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -9099,14 +9097,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(313:3) <PaginationLink href=\\\"#/sugarconsumeAPI\\\" >",
+    		source: "(317:3) <PaginationLink href=\\\"#/sugarconsumeAPI\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (312:2) <PaginationItem active>
+    // (316:2) <PaginationItem active>
     function create_default_slot_7(ctx) {
     	let current;
 
@@ -9154,14 +9152,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(312:2) <PaginationItem active>",
+    		source: "(316:2) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:2) {#if moreData}
+    // (320:2) {#if moreData}
     function create_if_block$6(ctx) {
     	let current;
 
@@ -9208,14 +9206,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(316:2) {#if moreData}",
+    		source: "(320:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:3) <PaginationLink href="#/sugarconsumeAPI" on:click="{() => addOffset(1)}">
+    // (322:3) <PaginationLink href="#/sugarconsumeAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_6(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -9239,14 +9237,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(318:3) <PaginationLink href=\\\"#/sugarconsumeAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(322:3) <PaginationLink href=\\\"#/sugarconsumeAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (317:2) <PaginationItem >
+    // (321:2) <PaginationItem >
     function create_default_slot_5(ctx) {
     	let current;
 
@@ -9296,14 +9294,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(317:2) <PaginationItem >",
+    		source: "(321:2) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (322:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
+    // (326:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
     function create_default_slot_4(ctx) {
     	let current;
 
@@ -9341,14 +9339,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(322:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(326:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (300:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (304:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3(ctx) {
     	let t0;
     	let t1;
@@ -9518,14 +9516,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(300:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(304:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:1) <Button outline color="secondary" on:click="{pop}">
+    // (333:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2(ctx) {
     	let i;
     	let t;
@@ -9535,7 +9533,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$c, 328, 53, 9901);
+    			add_location(i, file$c, 332, 53, 10047);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9551,14 +9549,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(329:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(333:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:1) <Button outline on:click={deletesugarconsumeAll} color="danger">
+    // (335:1) <Button outline on:click={deletesugarconsumeAll} color="danger">
     function create_default_slot_1(ctx) {
     	let i;
     	let t;
@@ -9569,7 +9567,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 330, 66, 10088);
+    			add_location(i, file$c, 334, 66, 10234);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9585,14 +9583,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(331:1) <Button outline on:click={deletesugarconsumeAll} color=\\\"danger\\\">",
+    		source: "(335:1) <Button outline on:click={deletesugarconsumeAll} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:1) <Button outline on:click={loading} color="primary">
+    // (337:1) <Button outline on:click={loading} color="primary">
     function create_default_slot$2(ctx) {
     	let i;
     	let t;
@@ -9603,7 +9601,7 @@ var app = (function () {
     			t = text(" Cargar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 332, 53, 10278);
+    			add_location(i, file$c, 336, 53, 10424);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9619,7 +9617,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(333:1) <Button outline on:click={loading} color=\\\"primary\\\">",
+    		source: "(337:1) <Button outline on:click={loading} color=\\\"primary\\\">",
     		ctx
     	});
 
@@ -9713,9 +9711,9 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t5 = space();
     			create_component(button2.$$.fragment);
-    			add_location(strong, file$c, 229, 5, 6201);
-    			add_location(h7, file$c, 229, 1, 6197);
-    			add_location(main, file$c, 228, 0, 6188);
+    			add_location(strong, file$c, 233, 5, 6347);
+    			add_location(h7, file$c, 233, 1, 6343);
+    			add_location(main, file$c, 232, 0, 6334);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9900,6 +9898,10 @@ var app = (function () {
 
     	//FUNCIÓN PARA INSERTAR UN RECURSO
     	async function insertsugarconsume() {
+    		const res = await fetch("/api/v3/sugarconsume");
+    		const json = await res.json();
+    		let sugarconsumeAll = [];
+    		sugarconsumeAll = json;
     		console.log("Inserting sugarconsume resource...");
     		const pattern = new RegExp("^[A-Z]+$", "i");
     		const pattern2 = new RegExp("^(0*[1-9][0-9]*(.[0-9]+)?|0+.[0-9]*[1-9][0-9]*)$");
@@ -9907,7 +9909,7 @@ var app = (function () {
     		var listaLugares = [];
     		var listaaños = [];
 
-    		sugarconsume.forEach(x => {
+    		sugarconsumeAll.forEach(x => {
     			if (x.place == newsugarconsume.place) {
     				listaLugares.push(x.place);
     				listaaños.push(x.year);
@@ -15037,7 +15039,7 @@ var app = (function () {
     	return block;
     }
 
-    // (226:1) {:then indice_de_masa_corporal}
+    // (232:1) {:then indice_de_masa_corporal}
     function create_then_block$2(ctx) {
     	let t0;
     	let t1;
@@ -15108,14 +15110,14 @@ var app = (function () {
     			ctx = new_ctx;
     			const formgroup0_changes = {};
 
-    			if (dirty[0] & /*currentplace, places*/ 10 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentplace, sitios*/ 10 | dirty[1] & /*$$scope*/ 1024) {
     				formgroup0_changes.$$scope = { dirty, ctx };
     			}
 
     			formgroup0.$set(formgroup0_changes);
     			const formgroup1_changes = {};
 
-    			if (dirty[0] & /*currentYear, years*/ 20 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentYear, años*/ 20 | dirty[1] & /*$$scope*/ 1024) {
     				formgroup1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15165,14 +15167,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(226:1) {:then indice_de_masa_corporal}",
+    		source: "(232:1) {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (230:3) <Label for="selectCountry">
+    // (236:3) <Label for="selectCountry">
     function create_default_slot_21$1(ctx) {
     	let t;
 
@@ -15192,14 +15194,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$1.name,
     		type: "slot",
-    		source: "(230:3) <Label for=\\\"selectCountry\\\">",
+    		source: "(236:3) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (232:4) {#each places as place}
+    // (238:4) {#each sitios as place}
     function create_each_block_2$1(ctx) {
     	let option;
     	let t_value = /*place*/ ctx[38] + "";
@@ -15212,16 +15214,16 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*place*/ ctx[38];
     			option.value = option.__value;
-    			add_location(option, file$u, 232, 4, 6571);
+    			add_location(option, file$u, 238, 4, 6649);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*places*/ 2 && t_value !== (t_value = /*place*/ ctx[38] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*sitios*/ 2 && t_value !== (t_value = /*place*/ ctx[38] + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*places*/ 2 && option_value_value !== (option_value_value = /*place*/ ctx[38])) {
+    			if (dirty[0] & /*sitios*/ 2 && option_value_value !== (option_value_value = /*place*/ ctx[38])) {
     				prop_dev(option, "__value", option_value_value);
     			}
 
@@ -15236,18 +15238,18 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(232:4) {#each places as place}",
+    		source: "(238:4) {#each sitios as place}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (231:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
+    // (237:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentplace}">
     function create_default_slot_20$1(ctx) {
     	let t0;
     	let option;
-    	let each_value_2 = /*places*/ ctx[1];
+    	let each_value_2 = /*sitios*/ ctx[1];
     	validate_each_argument(each_value_2);
     	let each_blocks = [];
 
@@ -15266,7 +15268,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$u, 234, 4, 6614);
+    			add_location(option, file$u, 240, 4, 6692);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -15277,8 +15279,8 @@ var app = (function () {
     			insert_dev(target, option, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*places*/ 2) {
-    				each_value_2 = /*places*/ ctx[1];
+    			if (dirty[0] & /*sitios*/ 2) {
+    				each_value_2 = /*sitios*/ ctx[1];
     				validate_each_argument(each_value_2);
     				let i;
 
@@ -15312,14 +15314,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$1.name,
     		type: "slot",
-    		source: "(231:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentplace}\\\">",
+    		source: "(237:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentplace}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (229:2) <FormGroup>
+    // (235:2) <FormGroup>
     function create_default_slot_19$1(ctx) {
     	let t;
     	let updating_value;
@@ -15375,7 +15377,7 @@ var app = (function () {
     			label.$set(label_changes);
     			const input_changes = {};
 
-    			if (dirty[0] & /*places*/ 2 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*sitios*/ 2 | dirty[1] & /*$$scope*/ 1024) {
     				input_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15409,14 +15411,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$1.name,
     		type: "slot",
-    		source: "(229:2) <FormGroup>",
+    		source: "(235:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (240:3) <Label for="selectYear">
+    // (246:3) <Label for="selectYear">
     function create_default_slot_18$1(ctx) {
     	let t;
 
@@ -15436,14 +15438,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$1.name,
     		type: "slot",
-    		source: "(240:3) <Label for=\\\"selectYear\\\">",
+    		source: "(246:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (242:4) {#each years as year}
+    // (248:4) {#each años as year}
     function create_each_block_1$1(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[35] + "";
@@ -15456,16 +15458,16 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[35];
     			option.value = option.__value;
-    			add_location(option, file$u, 242, 4, 6858);
+    			add_location(option, file$u, 248, 4, 6935);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[35] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*años*/ 4 && t_value !== (t_value = /*year*/ ctx[35] + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[35])) {
+    			if (dirty[0] & /*años*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[35])) {
     				prop_dev(option, "__value", option_value_value);
     			}
 
@@ -15480,18 +15482,18 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(242:4) {#each years as year}",
+    		source: "(248:4) {#each años as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (241:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+    // (247:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
     function create_default_slot_17$1(ctx) {
     	let t0;
     	let option;
-    	let each_value_1 = /*years*/ ctx[2];
+    	let each_value_1 = /*años*/ ctx[2];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -15510,7 +15512,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$u, 244, 4, 6900);
+    			add_location(option, file$u, 250, 4, 6977);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -15521,8 +15523,8 @@ var app = (function () {
     			insert_dev(target, option, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*years*/ 4) {
-    				each_value_1 = /*years*/ ctx[2];
+    			if (dirty[0] & /*años*/ 4) {
+    				each_value_1 = /*años*/ ctx[2];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -15556,14 +15558,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$1.name,
     		type: "slot",
-    		source: "(241:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
+    		source: "(247:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (239:2) <FormGroup>
+    // (245:2) <FormGroup>
     function create_default_slot_16$1(ctx) {
     	let t;
     	let updating_value;
@@ -15619,7 +15621,7 @@ var app = (function () {
     			label.$set(label_changes);
     			const input_changes = {};
 
-    			if (dirty[0] & /*years*/ 4 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*años*/ 4 | dirty[1] & /*$$scope*/ 1024) {
     				input_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15653,14 +15655,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$1.name,
     		type: "slot",
-    		source: "(239:2) <FormGroup>",
+    		source: "(245:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (249:2) <Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" >
+    // (255:2) <Button outline color="secondary" on:click="{search(currentplace, currentYear)}" class="button-search" >
     function create_default_slot_15$1(ctx) {
     	let i;
     	let t;
@@ -15670,7 +15672,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$u, 248, 107, 7058);
+    			add_location(i, file$u, 254, 107, 7135);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15686,14 +15688,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$1.name,
     		type: "slot",
-    		source: "(249:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentplace, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(255:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentplace, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:10) <Button outline color="primary" on:click={insertindice_de_masa_corporal}>
+    // (276:10) <Button outline color="primary" on:click={insertindice_de_masa_corporal}>
     function create_default_slot_14$1(ctx) {
     	let i;
     	let t;
@@ -15703,7 +15705,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" AÑADIR");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$u, 269, 84, 8025);
+    			add_location(i, file$u, 275, 84, 8102);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15719,14 +15721,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(270:10) <Button outline color=\\\"primary\\\" on:click={insertindice_de_masa_corporal}>",
+    		source: "(276:10) <Button outline color=\\\"primary\\\" on:click={insertindice_de_masa_corporal}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (283:10) <Button outline color="danger" on:click="{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}">
+    // (289:10) <Button outline color="danger" on:click="{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}">
     function create_default_slot_13$1(ctx) {
     	let i;
     	let t;
@@ -15737,7 +15739,7 @@ var app = (function () {
     			t = text(" ELIMINAR");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$u, 282, 148, 8727);
+    			add_location(i, file$u, 288, 148, 8804);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15753,14 +15755,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$1.name,
     		type: "slot",
-    		source: "(283:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}\\\">",
+    		source: "(289:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteindice_de_masa_corporal(indices_de_masa_corporal.place, indices_de_masa_corporal.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}
+    // (278:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -15826,14 +15828,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/indice_de_masa_corporal/" + /*indices_de_masa_corporal*/ ctx[32].place + "/" + /*indices_de_masa_corporal*/ ctx[32].year);
-    			add_location(a, file$u, 274, 6, 8183);
-    			add_location(td0, file$u, 273, 5, 8168);
-    			add_location(td1, file$u, 278, 5, 8359);
-    			add_location(td2, file$u, 279, 5, 8426);
-    			add_location(td3, file$u, 280, 5, 8475);
-    			add_location(td4, file$u, 281, 5, 8526);
-    			add_location(td5, file$u, 282, 5, 8584);
-    			add_location(tr, file$u, 272, 4, 8157);
+    			add_location(a, file$u, 280, 6, 8260);
+    			add_location(td0, file$u, 279, 5, 8245);
+    			add_location(td1, file$u, 284, 5, 8436);
+    			add_location(td2, file$u, 285, 5, 8503);
+    			add_location(td3, file$u, 286, 5, 8552);
+    			add_location(td4, file$u, 287, 5, 8603);
+    			add_location(td5, file$u, 288, 5, 8661);
+    			add_location(tr, file$u, 278, 4, 8234);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -15897,14 +15899,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(272:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}",
+    		source: "(278:4) {#each indice_de_masa_corporal as indices_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:2) <Table bordered>
+    // (258:2) <Table bordered>
     function create_default_slot_12$1(ctx) {
     	let thead;
     	let tr0;
@@ -16082,22 +16084,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$u, 254, 5, 7159);
-    			add_location(th1, file$u, 255, 5, 7182);
-    			add_location(th2, file$u, 256, 5, 7202);
-    			add_location(th3, file$u, 257, 5, 7223);
-    			add_location(th4, file$u, 258, 5, 7247);
-    			add_location(th5, file$u, 259, 5, 7281);
-    			add_location(tr0, file$u, 253, 4, 7148);
-    			add_location(thead, file$u, 252, 3, 7135);
-    			add_location(td0, file$u, 264, 5, 7353);
-    			add_location(td1, file$u, 265, 5, 7459);
-    			add_location(td2, file$u, 266, 5, 7604);
-    			add_location(td3, file$u, 267, 5, 7710);
-    			add_location(td4, file$u, 268, 5, 7821);
-    			add_location(td5, file$u, 269, 5, 7946);
-    			add_location(tr1, file$u, 263, 4, 7342);
-    			add_location(tbody, file$u, 262, 3, 7329);
+    			add_location(th0, file$u, 260, 5, 7236);
+    			add_location(th1, file$u, 261, 5, 7259);
+    			add_location(th2, file$u, 262, 5, 7279);
+    			add_location(th3, file$u, 263, 5, 7300);
+    			add_location(th4, file$u, 264, 5, 7324);
+    			add_location(th5, file$u, 265, 5, 7358);
+    			add_location(tr0, file$u, 259, 4, 7225);
+    			add_location(thead, file$u, 258, 3, 7212);
+    			add_location(td0, file$u, 270, 5, 7430);
+    			add_location(td1, file$u, 271, 5, 7536);
+    			add_location(td2, file$u, 272, 5, 7681);
+    			add_location(td3, file$u, 273, 5, 7787);
+    			add_location(td4, file$u, 274, 5, 7898);
+    			add_location(td5, file$u, 275, 5, 8023);
+    			add_location(tr1, file$u, 269, 4, 7419);
+    			add_location(tbody, file$u, 268, 3, 7406);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -16271,14 +16273,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$1.name,
     		type: "slot",
-    		source: "(252:2) <Table bordered>",
+    		source: "(258:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (224:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}
+    // (230:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -16301,14 +16303,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(224:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}",
+    		source: "(230:33)     Loading indice_de_masa_corporal resources...   {:then indice_de_masa_corporal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (295:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+    // (301:2) <PaginationItem class="{pgactual === 1 ? 'disabled' : ''}">
     function create_default_slot_11$1(ctx) {
     	let current;
 
@@ -16349,14 +16351,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(295:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(301:2) <PaginationItem class=\\\"{pgactual === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (299:2) {#if currentPage != 1}
+    // (305:2) {#if pgactual != 1}
     function create_if_block_1$3(ctx) {
     	let current;
 
@@ -16379,7 +16381,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationitem_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgactual*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				paginationitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16403,16 +16405,16 @@ var app = (function () {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(299:2) {#if currentPage != 1}",
+    		source: "(305:2) {#if pgactual != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >
+    // (307:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10$1(ctx) {
-    	let t_value = /*currentPage*/ ctx[5] - 1 + "";
+    	let t_value = /*pgactual*/ ctx[5] - 1 + "";
     	let t;
 
     	const block = {
@@ -16423,7 +16425,7 @@ var app = (function () {
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*currentPage*/ 32 && t_value !== (t_value = /*currentPage*/ ctx[5] - 1 + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*pgactual*/ 32 && t_value !== (t_value = /*pgactual*/ ctx[5] - 1 + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -16434,14 +16436,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(301:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(307:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (300:2) <PaginationItem>
+    // (306:2) <PaginationItem>
     function create_default_slot_9$1(ctx) {
     	let current;
 
@@ -16467,7 +16469,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationlink_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgactual*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				paginationlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16491,26 +16493,26 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(300:2) <PaginationItem>",
+    		source: "(306:2) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (305:3) <PaginationLink href="#/indice_de_masa_corporal" >
+    // (311:3) <PaginationLink href="#/indice_de_masa_corporal" >
     function create_default_slot_8$1(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text(/*currentPage*/ ctx[5]);
+    			t = text(/*pgactual*/ ctx[5]);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*currentPage*/ 32) set_data_dev(t, /*currentPage*/ ctx[5]);
+    			if (dirty[0] & /*pgactual*/ 32) set_data_dev(t, /*pgactual*/ ctx[5]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -16521,14 +16523,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(305:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" >",
+    		source: "(311:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:2) <PaginationItem active>
+    // (310:2) <PaginationItem active>
     function create_default_slot_7$1(ctx) {
     	let current;
 
@@ -16552,7 +16554,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationlink_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgactual*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				paginationlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16576,14 +16578,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(304:2) <PaginationItem active>",
+    		source: "(310:2) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:2) {#if moreData}
+    // (314:2) {#if pgsiguiente}
     function create_if_block$8(ctx) {
     	let current;
 
@@ -16606,7 +16608,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationitem_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgactual*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				paginationitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16630,16 +16632,16 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(308:2) {#if moreData}",
+    		source: "(314:2) {#if pgsiguiente}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">
+    // (316:3) <PaginationLink href="#/indice_de_masa_corporal" on:click="{() => addOffset(1)}">
     function create_default_slot_6$1(ctx) {
-    	let t_value = /*currentPage*/ ctx[5] + 1 + "";
+    	let t_value = /*pgactual*/ ctx[5] + 1 + "";
     	let t;
 
     	const block = {
@@ -16650,7 +16652,7 @@ var app = (function () {
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*currentPage*/ 32 && t_value !== (t_value = /*currentPage*/ ctx[5] + 1 + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*pgactual*/ 32 && t_value !== (t_value = /*pgactual*/ ctx[5] + 1 + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -16661,14 +16663,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(310:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(316:3) <PaginationLink href=\\\"#/indice_de_masa_corporal\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:2) <PaginationItem >
+    // (315:2) <PaginationItem >
     function create_default_slot_5$1(ctx) {
     	let current;
 
@@ -16694,7 +16696,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationlink_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgactual*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				paginationlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16718,14 +16720,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(309:2) <PaginationItem >",
+    		source: "(315:2) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
+    // (320:2) <PaginationItem class="{pgsiguiente ? '' : 'disabled'}">
     function create_default_slot_4$1(ctx) {
     	let current;
 
@@ -16766,14 +16768,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(314:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(320:2) <PaginationItem class=\\\"{pgsiguiente ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (292:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (298:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3$1(ctx) {
     	let t0;
     	let t1;
@@ -16783,14 +16785,14 @@ var app = (function () {
 
     	const paginationitem0 = new PaginationItem({
     			props: {
-    				class: /*currentPage*/ ctx[5] === 1 ? "disabled" : "",
+    				class: /*pgactual*/ ctx[5] === 1 ? "disabled" : "",
     				$$slots: { default: [create_default_slot_11$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	let if_block0 = /*currentPage*/ ctx[5] != 1 && create_if_block_1$3(ctx);
+    	let if_block0 = /*pgactual*/ ctx[5] != 1 && create_if_block_1$3(ctx);
 
     	const paginationitem1 = new PaginationItem({
     			props: {
@@ -16801,11 +16803,11 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	let if_block1 = /*moreData*/ ctx[6] && create_if_block$8(ctx);
+    	let if_block1 = /*pgsiguiente*/ ctx[6] && create_if_block$8(ctx);
 
     	const paginationitem2 = new PaginationItem({
     			props: {
-    				class: /*moreData*/ ctx[6] ? "" : "disabled",
+    				class: /*pgsiguiente*/ ctx[6] ? "" : "disabled",
     				$$slots: { default: [create_default_slot_4$1] },
     				$$scope: { ctx }
     			},
@@ -16838,7 +16840,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const paginationitem0_changes = {};
-    			if (dirty[0] & /*currentPage*/ 32) paginationitem0_changes.class = /*currentPage*/ ctx[5] === 1 ? "disabled" : "";
+    			if (dirty[0] & /*pgactual*/ 32) paginationitem0_changes.class = /*pgactual*/ ctx[5] === 1 ? "disabled" : "";
 
     			if (dirty[1] & /*$$scope*/ 1024) {
     				paginationitem0_changes.$$scope = { dirty, ctx };
@@ -16846,11 +16848,11 @@ var app = (function () {
 
     			paginationitem0.$set(paginationitem0_changes);
 
-    			if (/*currentPage*/ ctx[5] != 1) {
+    			if (/*pgactual*/ ctx[5] != 1) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
 
-    					if (dirty[0] & /*currentPage*/ 32) {
+    					if (dirty[0] & /*pgactual*/ 32) {
     						transition_in(if_block0, 1);
     					}
     				} else {
@@ -16871,17 +16873,17 @@ var app = (function () {
 
     			const paginationitem1_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgactual*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				paginationitem1_changes.$$scope = { dirty, ctx };
     			}
 
     			paginationitem1.$set(paginationitem1_changes);
 
-    			if (/*moreData*/ ctx[6]) {
+    			if (/*pgsiguiente*/ ctx[6]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty[0] & /*moreData*/ 64) {
+    					if (dirty[0] & /*pgsiguiente*/ 64) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -16901,7 +16903,7 @@ var app = (function () {
     			}
 
     			const paginationitem2_changes = {};
-    			if (dirty[0] & /*moreData*/ 64) paginationitem2_changes.class = /*moreData*/ ctx[6] ? "" : "disabled";
+    			if (dirty[0] & /*pgsiguiente*/ 64) paginationitem2_changes.class = /*pgsiguiente*/ ctx[6] ? "" : "disabled";
 
     			if (dirty[1] & /*$$scope*/ 1024) {
     				paginationitem2_changes.$$scope = { dirty, ctx };
@@ -16943,14 +16945,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(292:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(298:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:1) <Button outline color="secondary" on:click="{pop}">
+    // (327:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2$2(ctx) {
     	let i;
     	let t;
@@ -16960,7 +16962,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" ATRAS");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$u, 320, 53, 9937);
+    			add_location(i, file$u, 326, 53, 10005);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -16976,14 +16978,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(321:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(327:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (323:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color="danger">
+    // (329:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color="danger">
     function create_default_slot_1$2(ctx) {
     	let i;
     	let t;
@@ -16994,7 +16996,7 @@ var app = (function () {
     			t = text(" BORRAR TODO");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$u, 322, 77, 10120);
+    			add_location(i, file$u, 328, 77, 10188);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17010,14 +17012,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(323:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color=\\\"danger\\\">",
+    		source: "(329:1) <Button outline on:click={deleteindice_de_masa_corporalAll} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:1) <Button outline on:click={loading} color="primary">
+    // (331:1) <Button outline on:click={loading} color="primary">
     function create_default_slot$k(ctx) {
     	let i;
     	let t;
@@ -17028,7 +17030,7 @@ var app = (function () {
     			t = text(" PRIMEROS DATOS");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$u, 324, 53, 10279);
+    			add_location(i, file$u, 330, 53, 10347);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -17044,7 +17046,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$k.name,
     		type: "slot",
-    		source: "(325:1) <Button outline on:click={loading} color=\\\"primary\\\">",
+    		source: "(331:1) <Button outline on:click={loading} color=\\\"primary\\\">",
     		ctx
     	});
 
@@ -17131,7 +17133,7 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t3 = space();
     			create_component(button2.$$.fragment);
-    			add_location(main, file$u, 222, 0, 6220);
+    			add_location(main, file$u, 228, 0, 6298);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17163,7 +17165,7 @@ var app = (function () {
 
     			const pagination_changes = {};
 
-    			if (dirty[0] & /*moreData, currentPage*/ 96 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*pgsiguiente, pgactual*/ 96 | dirty[1] & /*$$scope*/ 1024) {
     				pagination_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17245,35 +17247,35 @@ var app = (function () {
     		"tasa_obesidad": ""
     	};
 
-    	let places = [];
-    	let years = [];
+    	let sitios = [];
+    	let años = [];
     	let currentplace = "-";
     	let currentYear = "-";
     	let numberElementsPages = 10;
     	let offset = 0;
-    	let currentPage = 1;
-    	let moreData = true;
+    	let pgactual = 1;
+    	let pgsiguiente = true;
     	onMount(getindice_de_masa_corporal);
-    	onMount(getyears);
+    	onMount(getaños);
 
-    	async function getyears() {
+    	async function getaños() {
     		const res = await fetch("/api/v3/indice_de_masa_corporal");
 
     		if (res.ok) {
     			const json = await res.json();
 
-    			$$invalidate(1, places = json.map(d => {
+    			$$invalidate(1, sitios = json.map(d => {
     				return d.place;
     			}));
 
-    			$$invalidate(1, places = Array.from(new Set(places)));
+    			$$invalidate(1, sitios = Array.from(new Set(sitios)));
 
-    			$$invalidate(2, years = json.map(d => {
+    			$$invalidate(2, años = json.map(d => {
     				return d.year;
     			}));
 
-    			$$invalidate(2, years = Array.from(new Set(years)));
-    			console.log("Paises: " + places.length + "Años " + years.length);
+    			$$invalidate(2, años = Array.from(new Set(años)));
+    			console.log("Paises: " + sitios.length + "Años " + años.length);
     		} else {
     			console.log("ERROR!");
     		}
@@ -17299,9 +17301,9 @@ var app = (function () {
     			$$invalidate(7, indice_de_masa_corporal = json);
 
     			if (jsonNext.length == 0) {
-    				$$invalidate(6, moreData = false);
+    				$$invalidate(6, pgsiguiente = false);
     			} else {
-    				$$invalidate(6, moreData = true);
+    				$$invalidate(6, pgsiguiente = true);
     			}
 
     			console.log("Existen " + indice_de_masa_corporal.length + " recursos.");
@@ -17318,13 +17320,16 @@ var app = (function () {
     	const pattern3 = new RegExp("^[0-9]+$");
 
     	async function insertindice_de_masa_corporal() {
-    		var listaLugares = [];
-    		var listaaños = [];
+    		let indices = [];
+    		var Lugares = [];
+    		var años = [];
+    		const res = await fetch("/api/v3/indice_de_masa_corporal");
+    		indices = await res.json();
     		console.log("Inserting indice_de_masa_corporal resource...");
 
-    		indice_de_masa_corporal.forEach(x => {
-    			listaLugares.push(x.place);
-    			listaaños.push(x.year);
+    		indices.forEach(data => {
+    			Lugares.push(data.place);
+    			años.push(data.year);
     		});
 
     		if (newindice_de_masa_corporal.place == "" || newindice_de_masa_corporal.place == null || newindice_de_masa_corporal.year == "" || newindice_de_masa_corporal.year == null) {
@@ -17333,7 +17338,7 @@ var app = (function () {
     			alert("El Lugar no puede contener números.");
     		} else if (!pattern2.test(newindice_de_masa_corporal.indice_de_masa_corporal) || !pattern2.test(newindice_de_masa_corporal.altura) || !pattern2.test(newindice_de_masa_corporal.tasa_obesidad) || !pattern3.test(newindice_de_masa_corporal.year)) {
     			alert("No has introducido un número correcto");
-    		} else if (listaLugares.includes(newindice_de_masa_corporal.place) && listaaños.includes(newindice_de_masa_corporal.year)) {
+    		} else if (Lugares.includes(newindice_de_masa_corporal.place) && años.includes(newindice_de_masa_corporal.year)) {
     			alert("El recurso que intentas insertar ya existe");
     		} else if (newindice_de_masa_corporal.year < 0 || newindice_de_masa_corporal.indice_de_masa_corporal < 0 || newindice_de_masa_corporal.altura < 0 || newindice_de_masa_corporal.tasa_obesidad < 0) {
     			alert("Has intentado introducir un número negativo.");
@@ -17349,7 +17354,7 @@ var app = (function () {
     				}
     			}).then(function (res) {
     				getindice_de_masa_corporal();
-    				getyears();
+    				getaños();
     			});
 
     			alert("Insertado con éxito.");
@@ -17362,7 +17367,7 @@ var app = (function () {
 
     		const res = await fetch("/api/v3/indice_de_masa_corporal/" + place + "/" + year, { method: "DELETE" }).then(function (res) {
     			getindice_de_masa_corporal();
-    			getyears();
+    			getaños();
     		});
 
     		alert("Éxito");
@@ -17374,7 +17379,7 @@ var app = (function () {
 
     		const res = await fetch("/api/v3/indice_de_masa_corporal/", { method: "DELETE" }).then(function (res) {
     			getindice_de_masa_corporal();
-    			getyears();
+    			getaños();
     		});
 
     		alert("Éxito");
@@ -17407,7 +17412,7 @@ var app = (function () {
 
     	function addOffset(increment) {
     		offset += increment;
-    		$$invalidate(5, currentPage += increment);
+    		$$invalidate(5, pgactual += increment);
     		getindice_de_masa_corporal();
     	}
 
@@ -17473,15 +17478,15 @@ var app = (function () {
     		PaginationLink,
     		indice_de_masa_corporal,
     		newindice_de_masa_corporal,
-    		places,
-    		years,
+    		sitios,
+    		años,
     		currentplace,
     		currentYear,
     		numberElementsPages,
     		offset,
-    		currentPage,
-    		moreData,
-    		getyears,
+    		pgactual,
+    		pgsiguiente,
+    		getaños,
     		loading,
     		getindice_de_masa_corporal,
     		pattern,
@@ -17497,14 +17502,14 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ("indice_de_masa_corporal" in $$props) $$invalidate(7, indice_de_masa_corporal = $$props.indice_de_masa_corporal);
     		if ("newindice_de_masa_corporal" in $$props) $$invalidate(0, newindice_de_masa_corporal = $$props.newindice_de_masa_corporal);
-    		if ("places" in $$props) $$invalidate(1, places = $$props.places);
-    		if ("years" in $$props) $$invalidate(2, years = $$props.years);
+    		if ("sitios" in $$props) $$invalidate(1, sitios = $$props.sitios);
+    		if ("años" in $$props) $$invalidate(2, años = $$props.años);
     		if ("currentplace" in $$props) $$invalidate(3, currentplace = $$props.currentplace);
     		if ("currentYear" in $$props) $$invalidate(4, currentYear = $$props.currentYear);
     		if ("numberElementsPages" in $$props) numberElementsPages = $$props.numberElementsPages;
     		if ("offset" in $$props) offset = $$props.offset;
-    		if ("currentPage" in $$props) $$invalidate(5, currentPage = $$props.currentPage);
-    		if ("moreData" in $$props) $$invalidate(6, moreData = $$props.moreData);
+    		if ("pgactual" in $$props) $$invalidate(5, pgactual = $$props.pgactual);
+    		if ("pgsiguiente" in $$props) $$invalidate(6, pgsiguiente = $$props.pgsiguiente);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -17513,12 +17518,12 @@ var app = (function () {
 
     	return [
     		newindice_de_masa_corporal,
-    		places,
-    		years,
+    		sitios,
+    		años,
     		currentplace,
     		currentYear,
-    		currentPage,
-    		moreData,
+    		pgactual,
+    		pgsiguiente,
     		indice_de_masa_corporal,
     		loading,
     		insertindice_de_masa_corporal,
@@ -17528,7 +17533,7 @@ var app = (function () {
     		addOffset,
     		offset,
     		numberElementsPages,
-    		getyears,
+    		getaños,
     		getindice_de_masa_corporal,
     		pattern,
     		pattern2,
@@ -17760,25 +17765,25 @@ var app = (function () {
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$v, 83, 16, 3204);
-    			add_location(th1, file$v, 84, 16, 3236);
-    			add_location(th2, file$v, 85, 16, 3267);
-    			add_location(th3, file$v, 86, 16, 3297);
-    			add_location(th4, file$v, 87, 16, 3330);
-    			add_location(th5, file$v, 88, 16, 3373);
-    			add_location(tr0, file$v, 82, 12, 3182);
-    			add_location(thead, file$v, 81, 8, 3161);
-    			add_location(td0, file$v, 93, 16, 3480);
-    			add_location(input0, file$v, 94, 20, 3525);
-    			add_location(td1, file$v, 94, 16, 3521);
-    			add_location(td2, file$v, 95, 16, 3601);
-    			add_location(input1, file$v, 96, 20, 3645);
-    			add_location(td3, file$v, 96, 16, 3641);
-    			add_location(input2, file$v, 97, 20, 3708);
-    			add_location(td4, file$v, 97, 16, 3704);
-    			add_location(td5, file$v, 98, 16, 3765);
-    			add_location(tr1, file$v, 92, 12, 3458);
-    			add_location(tbody, file$v, 91, 8, 3437);
+    			add_location(th0, file$v, 83, 16, 3257);
+    			add_location(th1, file$v, 84, 16, 3289);
+    			add_location(th2, file$v, 85, 16, 3320);
+    			add_location(th3, file$v, 86, 16, 3350);
+    			add_location(th4, file$v, 87, 16, 3383);
+    			add_location(th5, file$v, 88, 16, 3426);
+    			add_location(tr0, file$v, 82, 12, 3235);
+    			add_location(thead, file$v, 81, 8, 3214);
+    			add_location(td0, file$v, 93, 16, 3533);
+    			add_location(input0, file$v, 94, 20, 3578);
+    			add_location(td1, file$v, 94, 16, 3574);
+    			add_location(td2, file$v, 95, 16, 3654);
+    			add_location(input1, file$v, 96, 20, 3698);
+    			add_location(td3, file$v, 96, 16, 3694);
+    			add_location(input2, file$v, 97, 20, 3761);
+    			add_location(td4, file$v, 97, 16, 3757);
+    			add_location(td5, file$v, 98, 16, 3818);
+    			add_location(tr1, file$v, 92, 12, 3511);
+    			add_location(tbody, file$v, 91, 8, 3490);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -17922,7 +17927,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[6]);
     			set_style(p, "color", "red");
-    			add_location(p, file$v, 104, 4, 3948);
+    			add_location(p, file$v, 104, 4, 4001);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -18027,9 +18032,9 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong, file$v, 76, 37, 2981);
-    			add_location(h3, file$v, 76, 4, 2948);
-    			add_location(main, file$v, 75, 0, 2936);
+    			add_location(strong, file$v, 76, 37, 3034);
+    			add_location(h3, file$v, 76, 4, 3001);
+    			add_location(main, file$v, 75, 0, 2989);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18160,7 +18165,7 @@ var app = (function () {
     		if (updatedindice_de_masa_corporal == "" || updatedaltura == "" || updatedtasa == "") {
     			alert("no pueden haber valores en blanco");
     		} else if (!pattern2.test(updatedindice_de_masa_corporal) || !pattern2.test(updatedaltura) || !pattern2.test(updatedtasa)) {
-    			alert("deben ser numeros (positivos)");
+    			alert("deben ser numeros (positivos) o se ha intentado poner un porcentaje en vez de tasa");
     		} else {
     			const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
     				method: "PUT",
@@ -19011,7 +19016,7 @@ var app = (function () {
     /* src\front\imcAPI\graficas\Myimcgraph.svelte.html generated by Svelte v3.21.0 */
     const file$z = "src\\front\\imcAPI\\graficas\\Myimcgraph.svelte.html";
 
-    // (91:0) <Button outline color="secondary" on:click="{pop}">
+    // (86:0) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$p(ctx) {
     	let i;
     	let t;
@@ -19021,7 +19026,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$z, 90, 52, 2838);
+    			add_location(i, file$z, 85, 52, 2489);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -19037,7 +19042,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$p.name,
     		type: "slot",
-    		source: "(91:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(86:0) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -19045,23 +19050,13 @@ var app = (function () {
     }
 
     function create_fragment$A(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let figure;
     	let div;
-    	let t1;
+    	let t0;
     	let p;
-    	let t3;
+    	let t2;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -19077,53 +19072,33 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			figure = element("figure");
     			div = element("div");
-    			t1 = space();
+    			t0 = space();
     			p = element("p");
     			p.textContent = "Aqui mostramos una grafica en la que podemos observar el imc(indice de masa corporal) que tienen ciertos paises del continente europeo\r\n        En negro veríamos los paises en el año 2020 y en azul el 2019";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$z, 75, 4, 2119);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$z, 76, 4, 2190);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$z, 77, 4, 2266);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$z, 78, 4, 2344);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$z, 83, 4, 2509);
-    			add_location(p, file$z, 84, 4, 2541);
+    			add_location(div, file$z, 78, 4, 2160);
+    			add_location(p, file$z, 79, 4, 2192);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$z, 82, 0, 2469);
-    			add_location(main, file$z, 81, 0, 2461);
+    			add_location(figure, file$z, 77, 0, 2120);
+    			add_location(main, file$z, 76, 0, 2112);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
     			append_dev(figure, div);
-    			append_dev(figure, t1);
+    			append_dev(figure, t0);
     			append_dev(figure, p);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraph$f, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -19144,14 +19119,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -19225,6 +19194,7 @@ var app = (function () {
     }
 
     function instance$A($$self, $$props, $$invalidate) {
+    	loadGraph$f();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -44314,9 +44284,11 @@ var app = (function () {
     var bb = unwrapExports(billboard);
 
     /* src\front\imcAPI\graficas\Myimcgraph2.svelte.html generated by Svelte v3.21.0 */
+
+    const { console: console_1$c } = globals;
     const file$A = "src\\front\\imcAPI\\graficas\\Myimcgraph2.svelte.html";
 
-    // (81:3) <Button outline color="secondary" on:click="{pop}">
+    // (93:3) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$q(ctx) {
     	let i;
     	let t;
@@ -44326,7 +44298,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$A, 80, 55, 2295);
+    			add_location(i, file$A, 92, 55, 2516);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -44342,7 +44314,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$q.name,
     		type: "slot",
-    		source: "(81:3) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(93:3) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -44389,14 +44361,14 @@ var app = (function () {
     			t4 = space();
     			create_component(button.$$.fragment);
     			if (script.src !== (script_src_value = "https://d3js.org/d3.v5.min.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$A, 70, 4, 1698);
+    			add_location(script, file$A, 82, 4, 1919);
     			attr_dev(div, "id", "lineChart");
-    			add_location(div, file$A, 73, 3, 1802);
-    			add_location(p, file$A, 74, 0, 1830);
+    			add_location(div, file$A, 85, 3, 2023);
+    			add_location(p, file$A, 86, 0, 2051);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://naver.github.io/billboard.js/release/latest/dist/billboard.css");
-    			add_location(link, file$A, 78, 3, 2045);
-    			add_location(main, file$A, 72, 0, 1791);
+    			add_location(link, file$A, 90, 3, 2266);
+    			add_location(main, file$A, 84, 0, 2012);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -44484,6 +44456,8 @@ var app = (function () {
     		lineas.push(line);
     	}
 
+    	console.log(lineas);
+
     	for (var j = 0; j < paises2.length; j++) {
     		let imcporpais = [paises2[j]];
 
@@ -44494,9 +44468,17 @@ var app = (function () {
     		});
 
     		for (var z = 0; z < años2.length; z++) {
+    			let x = [];
+
     			guardado_de_datos.filter(data => data.place == paises[0] & data.year == años[0]).forEach(data => {
-    				imcporpais.push(data.indice_de_masa_corporal);
+    				x.push(data.indice_de_masa_corporal);
     			});
+
+    			if (x.length == 0) {
+    				imcporpais.push(null);
+    			} else {
+    				imcporpais.push(x[0]);
+    			}
 
     			años.shift(0);
     		}
@@ -44504,6 +44486,8 @@ var app = (function () {
     		imcporpaises.push(imcporpais);
     		paises.shift(0);
     	}
+
+    	console.log(imcporpaises);
 
     	var chart = bb.generate({
     		data: { columns: imcporpaises },
@@ -44516,7 +44500,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Myimcgraph2_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$c.warn(`<Myimcgraph2_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -44541,7 +44525,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\offworks.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$c } = globals;
+    const { console: console_1$d } = globals;
     const file$B = "src\\front\\imcAPI\\Graficas_integradas\\offworks.svelte.html";
 
     // (93:4) <Button outline color="secondary" on:click="{pop}">
@@ -44740,7 +44724,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$c.warn(`<Offworks_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$d.warn(`<Offworks_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -44765,7 +44749,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\rentspercapita.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$d } = globals;
+    const { console: console_1$e } = globals;
     const file$C = "src\\front\\imcAPI\\Graficas_integradas\\rentspercapita.svelte.html";
 
     // (89:4) <Button outline color="secondary" on:click="{pop}">
@@ -44958,7 +44942,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$d.warn(`<Rentspercapita_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$e.warn(`<Rentspercapita_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -44983,7 +44967,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\traffic_injuries.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$e } = globals;
+    const { console: console_1$f } = globals;
     const file$D = "src\\front\\imcAPI\\Graficas_integradas\\traffic_injuries.svelte.html";
 
     // (91:4) <Button outline color="secondary" on:click="{pop}">
@@ -45176,7 +45160,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$e.warn(`<Traffic_injuries_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$f.warn(`<Traffic_injuries_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -45201,7 +45185,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\global_coef.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$f } = globals;
+    const { console: console_1$g } = globals;
     const file$E = "src\\front\\imcAPI\\Graficas_integradas\\global_coef.svelte.html";
 
     // (92:4) <Button outline color="secondary" on:click="{pop}">
@@ -45400,7 +45384,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$f.warn(`<Global_coef_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$g.warn(`<Global_coef_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -45425,7 +45409,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\books_exports.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$g } = globals;
+    const { console: console_1$h } = globals;
     const file$F = "src\\front\\imcAPI\\Graficas_integradas\\books_exports.svelte.html";
 
     // (90:4) <Button outline color="secondary" on:click="{pop}">
@@ -45624,7 +45608,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$g.warn(`<Books_exports_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$h.warn(`<Books_exports_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -45649,7 +45633,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\ppas.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$h } = globals;
+    const { console: console_1$i } = globals;
     const file$G = "src\\front\\imcAPI\\Graficas_integradas\\ppas.svelte.html";
 
     // (62:4) <Button outline color="secondary" on:click="{pop}">
@@ -45826,7 +45810,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$h.warn(`<Ppas_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$i.warn(`<Ppas_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -46066,7 +46050,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\apiextcalorias.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$i } = globals;
+    const { console: console_1$j } = globals;
     const file$I = "src\\front\\imcAPI\\Graficas_integradas\\apiextcalorias.svelte.html";
 
     // (120:4) <Button outline color="secondary" on:click="{pop}">
@@ -46322,7 +46306,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$i.warn(`<Apiextcalorias_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$j.warn(`<Apiextcalorias_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -46347,7 +46331,7 @@ var app = (function () {
 
     /* src\front\imcAPI\Graficas_integradas\apiextfrutas.svelte.html generated by Svelte v3.21.0 */
 
-    const { console: console_1$j } = globals;
+    const { console: console_1$k } = globals;
     const file$J = "src\\front\\imcAPI\\Graficas_integradas\\apiextfrutas.svelte.html";
 
     // (102:4) <Button outline color="secondary" on:click="{pop}">
@@ -46360,7 +46344,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$J, 101, 56, 2868);
+    			add_location(i, file$J, 101, 56, 2867);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -46416,7 +46400,7 @@ var app = (function () {
     			div = element("div");
     			t0 = space();
     			p0 = element("p");
-    			p0.textContent = "Grafica que muestra el imc por sitios en 2019 y lac kcal que tienen algunas frutas. \r\n            Muy útil para comparar con la otra grafica de kcal en hamburguesas y hot dogs para ver la tremenda diferencia.";
+    			p0.textContent = "Grafica que muestra el imc por sitios en 2019 y las cal que tienen algunas frutas. \r\n            Muy útil para comparar con la otra grafica de kcal en hamburguesas y hot dogs para ver la tremenda diferencia.";
     			t2 = space();
     			p1 = element("p");
     			button0 = element("button");
@@ -46431,12 +46415,12 @@ var app = (function () {
     			attr_dev(figure, "class", "highcharts-figure");
     			add_location(figure, file$J, 91, 4, 2231);
     			attr_dev(i, "class", "fas fa-leaf");
-    			add_location(i, file$J, 99, 112, 2719);
+    			add_location(i, file$J, 99, 112, 2718);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "color", "primary");
     			attr_dev(button0, "onclick", "window.location.href='#/imc/graficas_integradas/ext1'");
-    			add_location(button0, file$J, 99, 8, 2615);
-    			add_location(p1, file$J, 98, 4, 2602);
+    			add_location(button0, file$J, 99, 8, 2614);
+    			add_location(p1, file$J, 98, 4, 2601);
     			add_location(main, file$J, 90, 0, 2219);
     		},
     		l: function claim(nodes) {
@@ -46569,7 +46553,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$j.warn(`<Apiextfrutas_svelte> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$k.warn(`<Apiextfrutas_svelte> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -46775,4 +46759,3 @@ var app = (function () {
 
 }());
 //# sourceMappingURL=bundle.js.map
->>>>>>> 149f8d2991e5b4786432a6acaf02caa4a3b35d57

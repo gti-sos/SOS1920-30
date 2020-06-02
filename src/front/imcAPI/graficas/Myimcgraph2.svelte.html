@@ -15,6 +15,7 @@
     let paises2=[];
     let imcporpaises=[];
     let imcporpais = [];
+    let distincionpaises = [];
     const Datos = await fetch("/api/v3/indice_de_masa_corporal");
     guardado_de_datos = await Datos.json();
     guardado_de_datos.forEach((data)=>{
@@ -36,7 +37,9 @@
     	};
         lineas.push(line);
     }
+    console.log(lineas);
     
+ 
     for (var j=0; j<paises2.length; j++){
     let imcporpais = [paises2[j]];
     guardado_de_datos.forEach((data)=>{
@@ -44,14 +47,23 @@
             años.push(data.year)}
     })
     for (var z=0; z<años2.length; z++){
-    guardado_de_datos.filter(data => data.place == paises[0] & data.year == años[0]).forEach((data)=>{
-        imcporpais.push(data.indice_de_masa_corporal);
-    }) 
-    años.shift(0);
+    let x = [];
+    guardado_de_datos.filter(data =>  data.place == paises[0] & data.year == años[0]).forEach((data)=>{
+            x.push(data.indice_de_masa_corporal);
+        }) 
+    if(x.length == 0){
+        imcporpais.push(null);
+    }else{
+        imcporpais.push(x[0]);
+    }
+
+        años.shift(0);
     }  
     imcporpaises.push(imcporpais);
     paises.shift(0);
     }
+
+console.log(imcporpaises);
 
     var chart = bb.generate({
   data: {

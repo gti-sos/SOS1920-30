@@ -51,7 +51,7 @@
         if (updatedindice_de_masa_corporal == "" || updatedaltura == "" || updatedtasa == "") {
 			alert("no pueden haber valores en blanco");
         }else if(!pattern2.test(updatedindice_de_masa_corporal) || !pattern2.test(updatedaltura) || !pattern2.test(updatedtasa) ){
-            alert("deben ser numeros (positivos)" );
+            alert("deben ser numeros (positivos) o se ha intentado poner un porcentaje en vez de tasa" );
         }else{
 		const res = await fetch("/api/v3/indice_de_masa_corporal/" + params.placename + "/" + params.year, {
             method: "PUT",
