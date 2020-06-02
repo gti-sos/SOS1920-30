@@ -1,5 +1,6 @@
 {"place":"Polonia","indice_de_masa_corporal":73.68,"year":2020,"altura":172.7,"tasa_obesidad":0.2,"_id":"4l4Lro63cRgwzijD"}
 {"place":"Alemania","indice_de_masa_corporal":103.2,"year":2021,"altura":172.9,"tasa_obesidad":0.2,"_id":"6vRH3w5fNiT9o5QL"}
+{"place":"Abc","indice_de_masa_corporal":321,"year":2020,"altura":321,"tasa_obesidad":23,"_id":"BqzaxJn980u3gKpM"}
 {"place":"Belgica","indice_de_masa_corporal":24.15,"year":2019,"altura":172.9,"tasa_obesidad":20.2,"_id":"EsOoGfG8OeGgxvaX"}
 {"place":"Hungria","indice_de_masa_corporal":32.13,"year":2021,"altura":170.9,"tasa_obesidad":0.22,"_id":"I5MoGCmsFS7dBOPh"}
 {"place":"Alemania","indice_de_masa_corporal":65.98,"year":2019,"altura":172.9,"tasa_obesidad":0.2,"_id":"JcTEr6G98QnbJOL5"}
@@ -9,6 +10,7 @@
 {"place":"China","indice_de_masa_corporal":23.78,"year":2019,"altura":173.2,"tasa_obesidad":0.18,"_id":"MXOnCIUwJhJY8GEy"}
 {"place":"Belgica","indice_de_masa_corporal":51.93,"year":2020,"altura":173.4,"tasa_obesidad":0.19,"_id":"NbnUT0R5HcVWpKDH"}
 {"place":"Belgica","indice_de_masa_corporal":65.93,"year":2021,"altura":173.4,"tasa_obesidad":0.19,"_id":"SAKEiOyZSj9CxGBm"}
+{"place":"Abc","indice_de_masa_corporal":52,"year":2019,"altura":324,"tasa_obesidad":0.32,"_id":"Y8I5SFXZH5H3oVoc"}
 {"place":"Hungria","indice_de_masa_corporal":23.13,"year":2020,"altura":170.2,"tasa_obesidad":0.21,"_id":"e3bKz5t3E9IZbKtl"}
 {"place":"China","indice_de_masa_corporal":65.86,"year":2020,"altura":172.9,"tasa_obesidad":0.19,"_id":"hbPMT0XWcHoCSWPu"}
 {"place":"Polonia","indice_de_masa_corporal":96.32,"year":2019,"altura":173.6,"tasa_obesidad":0.19,"_id":"hoquzw0r73UYWdvI"}
@@ -16,6 +18,4 @@
 {"place":"Hungria","indice_de_masa_corporal":59.45,"year":2019,"altura":170.9,"tasa_obesidad":0.22,"_id":"kEQamyxferjoj9Rt"}
 {"place":"Alemania","indice_de_masa_corporal":78.13,"year":2020,"altura":173,"tasa_obesidad":0.19,"_id":"nCBrsMFO01BquHDj"}
 {"place":"Polonia","indice_de_masa_corporal":89.4,"year":2021,"altura":173.6,"tasa_obesidad":0.19,"_id":"y9z4okA4CAsMAgje"}
-{"place":"Abc","indice_de_masa_corporal":52,"year":2019,"altura":324,"tasa_obesidad":0.32,"_id":"Y8I5SFXZH5H3oVoc"}
-{"place":"Abc","indice_de_masa_corporal":321,"year":2020,"altura":321,"tasa_obesidad":23,"_id":"BqzaxJn980u3gKpM"}
 {"place":"Abc","indice_de_masa_corporal":321,"year":2021,"altura":321,"tasa_obesidad":23,"_id":"zGlLdU9E76cYQxsF"}

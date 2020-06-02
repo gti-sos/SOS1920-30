@@ -44336,7 +44336,7 @@ var app = (function () {
     /***/ })
     /******/ ]);
     });
-    //# sourceMappingURL=billboard.js.map
+
     });
 
     var bb = unwrapExports(billboard);
@@ -44937,7 +44937,7 @@ var app = (function () {
     	let Susdatos = [];
     	console.log("recogiendo valores de la api externa");
     	const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    	const datos2 = await fetch("http://sos1920-11.herokuapp.com/api/v2/rents-per-capita");
+    	const datos2 = await fetch("http://sos1920-11.herokuapp.com/api/v3/rents-per-capita");
     	Misdatos = await datos1.json();
     	Susdatos = await datos2.json();
     	console.log("datos recogidos");
