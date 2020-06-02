@@ -1,0 +1,121 @@
+<script>
+    import {
+            pop
+        } from "svelte-spa-router";
+    import Button from "sveltestrap/src/Button.svelte";
+async function loadGraph(){
+    let Datos = [];
+    let Datos2 = [];
+    let Misdatos = [];
+    let imc2019 = [];
+    let caloriashotdog = [];
+    let caloriasburger = [];
+    const resData = await fetch("https://food-calorie-data-search.p.rapidapi.com/api/search?keyword=hotdog", {
+        "method": 
+            "GET",
+        "headers": {
+            "x-rapidapi-host": "food-calorie-data-search.p.rapidapi.com",
+            "x-rapidapi-key": "d4b6d198e8msh7cb79ab7000e2a0p1da3b3jsn01fefb4e5a73"}
+    })
+    Datos = await resData.json();
+    const resData2 = await fetch("https://food-calorie-data-search.p.rapidapi.com/api/search?keyword=burger", {
+        "method": 
+            "GET",
+        "headers": {
+            "x-rapidapi-host": "food-calorie-data-search.p.rapidapi.com",
+            "x-rapidapi-key": "d4b6d198e8msh7cb79ab7000e2a0p1da3b3jsn01fefb4e5a73"}
+    })
+    Datos2 = await resData2.json();
+    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");  
+    Misdatos = await datos1.json();
+    console.log(Datos2);
+    Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
+            let x = { 
+		        'name': data.place,
+                'value': parseFloat(data.indice_de_masa_corporal)
+    	};
+            imc2019.push(x);
+        });     
+    Datos.forEach((data) => {
+    let y = { 
+		 'name': data.shrt_desc,
+         'value': parseFloat(data.energ_kcal)
+    };
+    caloriashotdog.push(y);
+    });    
+    Datos2.forEach((data) => {
+    let z= { 
+		 'name': data.shrt_desc,
+         'value': parseFloat(data.energ_kcal)
+    };
+    caloriasburger.push(z);
+    });        
+    Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'IMC en 2019 y el valor calorico de hamburguesa(por ingredientes) y perritos calientes(por ingredientes)'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}</sub>'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'imc 2019',
+        data: imc2019
+    }, {
+        name: 'calorias perritos calientes',
+        data: caloriashotdog
+    },{
+        name: 'calorias hamburguesas',
+        data: caloriasburger
+    }
+    ]
+});
+}
+
+loadGraph();
+
+</script>
+
+<main>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Grafica que muestra el imc por sitios en 2019 y lac kcal que tienen comidas tan demandadas como son las hamburguesas y los perritos calientes
+        </p>
+    </figure>
+    <p>
+        Grafica para comparar la diferencia en calorias: 
+        <button type="button"  color='primary'  onclick="window.location.href='#/imc/graficas_integradas/ext2'"><i class='fas fa-leaf' ></i> Grafica externa  "calorias frutas" </button>
+    </p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+</main>

@@ -46,14 +46,13 @@
     for (var z=0; z<años2.length; z++){
     guardado_de_datos.filter(data => data.place == paises[0] & data.year == años[0]).forEach((data)=>{
         imcporpais.push(data.indice_de_masa_corporal);
-        console.log("el nuevo indice de masa seria: ", imcporpais);
     }) 
     años.shift(0);
     }  
     imcporpaises.push(imcporpais);
     paises.shift(0);
     }
-    console.log("el nuevo mega indice de masa seria: ", imcporpaises);
+
     var chart = bb.generate({
   data: {
     columns: imcporpaises},
@@ -73,9 +72,10 @@
 </svelte:head>
 <main>
    <div id="lineChart"></div>
-
-   <p>grafica comparativa entre paises durante el paso de los años respecto de su indice de masa indice_de_masa_corpora
-   </p>
+<p>
+grafica comparativa entre paises durante el paso de los años respecto de su indice de masa corporal. 
+Un buen ejemplo podria ser añadir varios imcs de distintos años para probar su funcionalidad.   
+</p>
    <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/billboard.css"> 
   <!-- esto es porque por defecto sale sombreado, se lo quitamos ya que no lo usamos. -->
    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button> 

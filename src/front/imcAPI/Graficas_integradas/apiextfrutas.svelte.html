@@ -1,34 +1,39 @@
 <script>
-    import {pop} from "svelte-spa-router";
+    import {
+            pop
+        } from "svelte-spa-router";
     import Button from "sveltestrap/src/Button.svelte";
-    async function loadGraph(){
-
-    let paises2019 = [];
-    let coefficient = [];
+async function loadGraph(){
+    let Datos = [];
     let Misdatos = [];
-    let Susdatos = [];
-    console.log("recogiendo valores de la api externa");
-    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
-    const datos2 = await fetch("https://sos1920-26.herokuapp.com/api/v3/global-coef")
+    let imc2019 = [];
+    let caloriasfrutas = [];
+    const resData = await fetch("/api/fruit/all")//mediante un proxy
+    Datos = await resData.json();
+    console.log(Datos);
+    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");  
     Misdatos = await datos1.json();
-    Susdatos = await datos2.json();
-    console.log("valores recogidos");
+
+
+
     Misdatos.filter(data =>  data.year == 2019 ).forEach((data) => {
-            let paises = { 
+            let x = { 
 		        'name': data.place,
                 'value': parseFloat(data.indice_de_masa_corporal)
     	};
-            paises2019.push(paises);
-        });     
-    Susdatos.filter(data =>  data.year == 2018).forEach((data) => {
-        let lugares = { 
-	        'name': data.country,
-            'value': data.coefficient
-    };
-        coefficient.push(lugares);
+            imc2019.push(x);
+        });
 
-    });
     
+    Datos.forEach((data) => {
+    let y = { 
+		 'name': data.name,
+         'value': parseInt(data.nutritions.calories)
+    };
+        caloriasfrutas.push(y);
+    });  
+    console.log(caloriasfrutas);
+
 
         Highcharts.chart('container', {
     chart: {
@@ -36,7 +41,7 @@
         height: '100%'
     },
     title: {
-        text: 'IMC en 2019 y coeficientes de la uefa del 2018'
+        text: 'IMC en 2019 y el valor calorico de diferentes frutas'
     },
     tooltip: {
         useHTML: true,
@@ -70,25 +75,29 @@
     },
     series: [{
         name: 'imc 2019',
-        data: paises2019
+        data: imc2019
     }, {
-        name: 'coeficientes 2018',
-        data: coefficient
+        name: 'calorias frutas',
+        data: caloriasfrutas
     }
     ]
 });
 }
+
 loadGraph();
-    </script>
-    
-  
-<main>      
+
+</script>
+
+<main>
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Grafica que muestra el imc por sitios en 2019 y lo mismo de coeficientes de la uefa en 2018
+            Grafica que muestra el imc por sitios en 2019 y lac kcal que tienen algunas frutas. 
+            Muy útil para comparar con la otra grafica de kcal en hamburguesas y hot dogs para ver la tremenda diferencia.
         </p>
     </figure>
+    <p>
+        <button type="button"  color='primary'  onclick="window.location.href='#/imc/graficas_integradas/ext1'"><i class='fas fa-leaf' ></i> Grafica externa  "calorias-burguer-hotdog" </button>
+    </p>
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>
-    

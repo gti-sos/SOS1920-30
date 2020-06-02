@@ -4,16 +4,29 @@
     async function loadGraph(){
         let lugares = [];
         let ppas = [];
+        let places =[];
         let recogidadeinfo= [];
+        let misdatos = [];
+        let imcs = [];
+    console.log("recogiendo valores de la api externa(proxy)");
     const resData = await fetch("/api/v1/ppas");
     recogidadeinfo = await resData.json();
+    const datos1 = await fetch("/api/v3/indice_de_masa_corporal");
+    misdatos= await datos1.json();
+    console.log("valores recogidos");
     recogidadeinfo.filter(i => i.year == 2017).forEach((i) => {
             let lugar = i.country;
                 lugares.push(lugar);
             let ppa = i.ppa_per_capita;
                 ppas.push(ppa);
-            });     
-  
+            }); 
+    misdatos.filter(i => i.year ==2019).forEach((i)=>{
+            let plac = i.place;
+              places.push(plac);
+            let imc = i.indice_de_masa_corporal
+              imcs.push(imc);
+    });
+    
     var Datos = [
       {
         x: lugares,
@@ -21,9 +34,18 @@
         type: 'bar'
       }
     ];
+    var Datos1 = [
+      {
+        x: places,
+        y: imcs,
+        type: 'bar'
+      }
+    ];
     Plotly.newPlot('myDiv', Datos);
-    console.log(Datos);  
+    Plotly.newPlot('myDiv1', Datos1);
+
     }
+
     </script>
     
     <svelte:head>
@@ -32,8 +54,10 @@
     
     <main>
     
-  GRAFICA PAISES POR SALARIO PROMEDIO ANUAL:
+  GRAFICA PAISES POR SALARIO PROMEDIO EN EL AÑO 2017:
   <div id='myDiv'> </div>
+  GRAFICA POR PAISES DEL IMC EN EL AÑO 2019:
+  <div id='myDiv1'> </div>
 <p>
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 
