@@ -62,14 +62,14 @@ var initialimc = [
 	},{
 		place: "Alemania",
 		indice_de_masa_corporal: 103.2,
-		year: 2021,
+		year: 2018,
 		altura: 172.9,
 		tasa_obesidad:0.20
 	},
 	{
 		place: "Polonia",
 		indice_de_masa_corporal: 89.4,
-		year: 2021,
+		year: 2018,
 		altura: 173.6,
 		tasa_obesidad:0.19
 		
@@ -77,7 +77,7 @@ var initialimc = [
 	{
 		place: "Hungria",
 		indice_de_masa_corporal: 32.13,
-		year: 2021,
+		year: 2018,
 		altura: 170.9,
 		tasa_obesidad:0.22	
 	},
@@ -108,7 +108,7 @@ var initialimc = [
 	{
 		place: "China",
 		indice_de_masa_corporal: 40.52,
-		year: 2021,
+		year: 2018,
 		altura: 172.9,
 		tasa_obesidad:0.19
 		
@@ -123,7 +123,7 @@ var initialimc = [
 	},{
 		place: "Belgica",
 		indice_de_masa_corporal: 65.93,
-		year: 2021,
+		year: 2018,
 		altura: 173.4,
 		tasa_obesidad:0.19
 		
