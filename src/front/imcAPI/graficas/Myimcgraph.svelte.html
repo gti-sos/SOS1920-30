@@ -7,7 +7,7 @@
         let categorias = [];
         let imc2019=[];
         let imc2020=[];
-        let imc2021=[];
+        let imc2018=[];
         let guardado_de_datos = [];
         let años = [2019,2020,2021];
         const Datos = await fetch("/api/v3/indice_de_masa_corporal");
@@ -69,9 +69,9 @@
                    
             })
             if(x2.length != 0){
-                imc2021.push(x2);
+                imc2018.push(x2);
             }else{                
-                  imc2021.push(null);
+                  imc2018.push(null);
             }
             
         paises.shift(0);
@@ -96,7 +96,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Population (millions)',
+            text: 'INDICE DE MASA CORPORAL',
             align: 'high'
         },
         labels: {
@@ -135,8 +135,8 @@
         name: 'año 2020',
         data: imc2020
     }, {
-        name: 'año 2021',
-        data: imc2021
+        name: 'año 2018',
+        data: imc2018
     }]
 });
 }
