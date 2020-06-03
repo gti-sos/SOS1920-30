@@ -1,3 +1,10 @@
+
+<script>
+import {pop} from "svelte-spa-router";
+import Button from "sveltestrap/src/Button.svelte";
+</script>
 <main>
     <p><a href="https://www.youtube.com/watch?v=9LvzMWPLjh4&feature=youtu.be">Vídeo sobre la API de Fran Zájara Gómez(Sugarconsume)</a></p>
+    <p><a href="https://www.youtube.com/watch?v=HOWPAvQJmzA&feature=youtu.be">Vídeo sobre la API de Raúl Ojeda Robles(Indice de masa corporal)</a></p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>
