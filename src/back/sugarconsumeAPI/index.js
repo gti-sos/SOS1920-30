@@ -195,7 +195,6 @@ app.get(BASE_API_URL+"/sugarconsume/:place/:year",(req,res) => {
 	 //GET SUGARCONSUME
 
 app.get(BASE_API_URL+"/sugarconsume", (req,res) =>{
-	
 	let offset = 0;
 	let limit = Number.MAX_SAFE_INTEGER;
        if (req.query.offset) {
@@ -232,7 +231,6 @@ app.get(BASE_API_URL+"/sugarconsume", (req,res) =>{
 				if(req.query.year){
 					search["year"] = parseInt(req.query.year);
 				}
-	
 			
 		db.find(search).sort({place:1,year:-1}).skip(offset).limit(limit).exec((error, sugarconsume) =>{
 			console.log("valor del offset: " +offset);
@@ -249,17 +247,23 @@ app.get(BASE_API_URL+"/sugarconsume", (req,res) =>{
 
 	
 	//POST SUGARCONSUME
-
 app.post(BASE_API_URL+"/sugarconsume",(req,res) => {
+
+
 	var newSugarconsume = req.body;
 	if((newSugarconsume == "") || (newSugarconsume.place == null || newSugarconsume.year == null || newSugarconsume.pg_diabetes == null || newSugarconsume.poblacion == null)){
 			res.sendStatus(400, "BAD REQUEST(no name provided or no year provided)");
 	}
 	else{
+		
+
 		db.insert(newSugarconsume);
 		res.sendStatus(201, "CREATED");
 	}
+
 });
+
+
 	 
 	 
 	 //POST SUGARCONSUME/XXX
@@ -380,5 +384,5 @@ app.delete(BASE_API_URL+"/sugarconsume/:place/:year", (req,res)=>{
 	
 	 
 	 
-	 console.log("OK");
+	 console.log("OK2");
 }
