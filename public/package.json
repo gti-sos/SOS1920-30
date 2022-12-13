@@ -22,7 +22,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cool-ascii-faces": "^1.3.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nedb-models": "^3.0.3",
     "svelte-spa-router": "^2.1.0",
     "sveltestrap": "^3.3.3"
